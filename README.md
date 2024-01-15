@@ -13,8 +13,10 @@ Current working features:
 * HP going down with an animation and ending the battle at low health.
 * Roaming across maps to new places
 * A single map with a following critter example.
+* Basic saving.
 
 While I am aware there was another example monster catcher project, it seemed to be for 2.0 and wasn't very developed.
+The combat system currently is set up so you win every time, which isn't very interesting, but it's a start.
 
 Related Projects:
 
