@@ -33485,8 +33485,8 @@
                                                     "command": "EVENT_SWITCH_SCENE",
                                                     "args": {
                                                         "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
-                                                        "x": 0,
-                                                        "y": 0,
+                                                        "x": 6,
+                                                        "y": 11,
                                                         "direction": "",
                                                         "fadeSpeed": "2"
                                                     },
@@ -33885,8 +33885,8 @@
                                                     "command": "EVENT_SWITCH_SCENE",
                                                     "args": {
                                                         "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
-                                                        "x": 0,
-                                                        "y": 0,
+                                                        "x": 6,
+                                                        "y": 11,
                                                         "direction": "",
                                                         "fadeSpeed": "2"
                                                     },
@@ -34148,8 +34148,8 @@
                                                     "command": "EVENT_SWITCH_SCENE",
                                                     "args": {
                                                         "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
-                                                        "x": 0,
-                                                        "y": 0,
+                                                        "x": 6,
+                                                        "y": 11,
                                                         "direction": "",
                                                         "fadeSpeed": "2"
                                                     },
@@ -42874,6 +42874,13 @@
             "height": 18,
             "type": "POINTNCLICK",
             "paletteIds": [
+                "dmg",
+                null,
+                null,
+                null,
+                null,
+                null,
+                "5dafcf6e-b1d8-4c6b-b105-32d877f561e4",
                 "dmg"
             ],
             "spritePaletteIds": [],
@@ -43289,7 +43296,7 @@
                     "hit3Script": [],
                     "id": "b84e3cbe-239a-464d-a727-c1d872522c39",
                     "x": 16,
-                    "y": 5
+                    "y": 6
                 },
                 {
                     "name": "Health",
@@ -43406,47 +43413,106 @@
                             "id": "d87340b4-a9ab-4363-b939-2929b3c6c42c"
                         },
                         {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "509",
+                                "value": {
+                                    "type": "number",
+                                    "value": 119
+                                }
+                            },
+                            "id": "0b528a70-eb85-451c-96db-e8bfb82e0b06"
+                        },
+                        {
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
                                     "Attack 1: #511##508##507##506##510##509#",
                                     "2: Growl"
                                 ],
-                                "avatarId": ""
+                                "avatarId": "",
+                                "__comment": true,
+                                "__collapse": false
                             },
                             "id": "366553f9-42b4-4819-af1a-4aa216573952"
                         },
                         {
-                            "command": "EVENT_GBVM_SCRIPT",
+                            "command": "PT_EVENT_BACKGROUND_TEXT",
                             "args": {
-                                "references": [],
-                                "script": "      ; Variable Set To Value\n        VM_SET_CONST            VAR_LETTER2, 5\n        VM_LOAD_TEXT            6\n        .dw VAR_WORDY1, VAR_WORDY2, VAR_WORDY3, VAR_WORDY4, VAR_LETTER1, VAR_LETTER2\n        .asciz \" Attack 1 %c%c%c \\n Attack 2 %c%c\"\n        ;  .asciz \"\\001\\001\\003\\003\\002\\002\\001Attack 1\\n\\002\\001Attack 2\"\n        VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/\n        VM_OVERLAY_MOVE_TO      0, 14, .OVERLAY_IN_SPEED\n        VM_DISPLAY_TEXT\n        VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/\n        VM_CHOICE               VAR_S18T0_LOCAL_1, .UI_MENU_CANCEL_B, 2\n            .MENUITEM           1, 1, 1, 2, 0, 2\n            .MENUITEM           1, 2, 1, 2, 1, 0\n        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED\n        VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/\n"
+                                "text": "Metalclaw",
+                                "x": 2,
+                                "y": 4
                             },
-                            "id": "93c51b87-9b7a-4af7-9030-42f7ae7d783a"
+                            "id": "6f568ea4-c3e1-4c1b-83ee-8a3ef377197f"
+                        },
+                        {
+                            "command": "PT_EVENT_BACKGROUND_TEXT",
+                            "args": {
+                                "text": "Waterblast",
+                                "x": 2,
+                                "y": 5
+                            },
+                            "id": "d11e22f2-dbe6-4005-b833-fa24158d6d77"
+                        },
+                        {
+                            "command": "PT_EVENT_BACKGROUND_TEXT",
+                            "args": {
+                                "text": "Woodhammer",
+                                "x": 2,
+                                "y": 6
+                            },
+                            "id": "72877eb5-475e-4c64-90a1-0e2bba314655"
+                        },
+                        {
+                            "command": "PT_EVENT_BACKGROUND_TEXT",
+                            "args": {
+                                "text": "Earthwall",
+                                "x": 2,
+                                "y": 8
+                            },
+                            "id": "b783ae61-9372-4ee3-82fd-2f3c597ea3ee"
+                        },
+                        {
+                            "command": "PT_EVENT_BACKGROUND_TEXT",
+                            "args": {
+                                "text": "Firefart",
+                                "x": 2,
+                                "y": 7
+                            },
+                            "id": "e34fa899-97b5-4f9a-8e87-6d0dd9b2bf72"
                         },
                         {
                             "command": "EVENT_MENU",
                             "args": {
                                 "variable": "L1",
-                                "items": 2,
+                                "items": 5,
                                 "option1": "Attack 1",
                                 "option2": "Attack 2",
-                                "option3": "",
-                                "option4": "",
-                                "option5": "",
+                                "option3": "Attack 3",
+                                "option4": "Attack 4",
+                                "option5": "Attack 5",
                                 "option6": "",
                                 "option7": "",
                                 "option8": "",
                                 "cancelOnB": true,
                                 "layout": "dialogue"
                             },
-                            "id": "2dfc7c3b-ff52-4bfe-9f06-6fae1ea513e7"
+                            "id": "6b0824d2-66a3-42a9-827a-718a0400a642"
+                        },
+                        {
+                            "command": "EVENT_GBVM_SCRIPT",
+                            "args": {
+                                "references": [],
+                                "script": ";You can load individual letters, if you set the var to the ascii numeric value. So we can do a menu with specific attacks or whatever. But it's a bit of a pain to set all the ascii!\n        \n        VM_LOAD_TEXT            6\n        .dw VAR_WORDY1, VAR_WORDY2, VAR_WORDY3, VAR_WORDY4, VAR_LETTER1, VAR_LETTER2\n        .asciz \"  Attack 1 %c%c%c \\n  Attack 2 %c%c%c\"\n        ;  .asciz \"\\001\\001\\003\\003\\002\\002\\001Attack 1\\n\\002\\001Attack 2\"\n        VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/\n        VM_OVERLAY_MOVE_TO      0, 14, .OVERLAY_IN_SPEED\n        VM_DISPLAY_TEXT\n\n        VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/\n        VM_CHOICE               VAR_S18T0_LOCAL_1, .UI_MENU_CANCEL_B, 2\n            .MENUITEM           1, 1, 1, 2, 0, 2\n            .MENUITEM           1, 2, 1, 2, 1, 0\n        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED\n        VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/\n",
+                                "__comment": true
+                            },
+                            "id": "93c51b87-9b7a-4af7-9030-42f7ae7d783a"
                         },
                         {
                             "command": "EVENT_SWITCH",
                             "args": {
                                 "variable": "L1",
-                                "choices": 2,
+                                "choices": 4,
                                 "__collapseCase0": false,
                                 "value0": 1,
                                 "__collapseCase1": false,
@@ -43542,8 +43608,30 @@
                                         "id": "1db1032c-ca50-4e9c-999e-836dde20937a"
                                     }
                                 ],
-                                "true2": [],
-                                "true3": [],
+                                "true2": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Attack!"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "5ad16574-75d2-45a3-ba15-e9150e95caba"
+                                    }
+                                ],
+                                "true3": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Missed!"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "bd1b6fd5-d8ef-403f-8c5e-5f05e268cb25"
+                                    }
+                                ],
                                 "true4": [],
                                 "true5": [],
                                 "true6": [],
@@ -43665,7 +43753,7 @@
                         }
                     ],
                     "leaveScript": [],
-                    "notes": "Use hashtags (#MyVar and vars set to display certain ASCII values (like 97 for a) and thus changeable attack names. Kind of a pain in the butt. Use $MyVar to display the number beside the letter.\nAlternatively, create some way to call stored strings; if you only have 16 attacks then a simple switch statement depending on var stored number would work fine.\nIn actual game boy game asm I have seen tables used, but I don't know about gb studio. I think indexes probably could with a loop but it sounds like a bit of a pain."
+                    "notes": "Use hashtags (#MyVar and vars set to display certain ASCII values (like 97 for a) and thus changeable names. Kind of a pain in the butt. Use $MyVar to display the number beside the letter.\nAlternatively, create some way to call stored strings; if you only have 16 attacks then a simple switch statement depending on var stored number would work fine.\nIn actual game boy game asm I have seen tables used, but I don't know about gb studio. I think indexes probably could with a loop but it sounds like a bit of a pain."
                 },
                 {
                     "name": "Items",
@@ -43803,6 +43891,27 @@
                                     "spriteSheetId": "36060001-b219-44b4-b614-d3d60547a898"
                                 },
                                 "id": "a978e619-e523-405a-b7dd-290b1686ad12"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "Mickey Mouse challenges \nyou!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "3f79b8b5-2d47-4490-af66-ac4a72d072bf"
                             }
                         ],
                         "true1": [
@@ -43813,6 +43922,27 @@
                                     "spriteSheetId": "1e27bb8e-c805-435a-8b87-05b4f50da4f0"
                                 },
                                 "id": "7f8ea9a4-8266-4bed-a598-3c8bbabd7004"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "A witty kitty challenges \nyou!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "d1cb97c2-f0cb-43fe-be89-de357135eb3b"
                             }
                         ],
                         "true2": [
@@ -43823,9 +43953,40 @@
                                     "spriteSheetId": "ede130e6-013a-42d1-a786-1aed3fd3cf32"
                                 },
                                 "id": "bc9fab13-f6f1-497a-a433-f5abbd053643"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "A foul fowl challenges \nyou!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "6ab809cd-5785-4df7-abed-b92911cfcdb0"
                             }
                         ],
-                        "true3": [],
+                        "true3": [
+                            {
+                                "command": "PT_EVENT_BACKGROUND_TEXT",
+                                "args": {
+                                    "text": "Enemy Turnip",
+                                    "x": 1,
+                                    "y": 1
+                                },
+                                "id": "77595a7a-30b0-43fa-932d-a72edf818988"
+                            }
+                        ],
                         "true4": [
                             {
                                 "command": "EVENT_ACTOR_SET_SPRITE",
@@ -43834,6 +43995,27 @@
                                     "spriteSheetId": "17219846-cda9-4e84-bdfa-c3ff105d42cc"
                                 },
                                 "id": "65e45561-0401-45c7-8147-b761af7675e4"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "A dog challenges \nyou!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "c0c47ca4-80fa-46b9-995e-f22435813e25"
                             }
                         ],
                         "true5": [
@@ -43844,6 +44026,27 @@
                                     "spriteSheetId": "f4784e64-56da-40ed-9346-51dbcac8feb3"
                                 },
                                 "id": "4a5f6f5f-1fd0-4065-8a90-c1b2a55d8711"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "A frog challenges \nyou!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "8c264089-ff2d-4e3e-b566-1ee40418cc49"
                             }
                         ],
                         "true6": [
@@ -43854,6 +44057,27 @@
                                     "spriteSheetId": "55561033-cbbb-4d7b-9961-4db33c1d596c"
                                 },
                                 "id": "10d22d00-a6ff-4a0c-b0d2-c198865c4cfc"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "layout",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "An elephant challenges \nyou!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "2bf635fc-e621-4a05-90c6-00c07378c93e"
                             }
                         ],
                         "true7": [
@@ -43864,6 +44088,27 @@
                                     "spriteSheetId": "17d6d60e-0588-4f67-ba0c-489ba4a659c5"
                                 },
                                 "id": "5d3c67ca-c419-4057-b86e-1b90320fb20b"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "A murdermonk challenges \nyou!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "ecf33525-a529-4973-8d8f-5d513e2e8bcf"
                             }
                         ],
                         "true8": [
@@ -43874,6 +44119,27 @@
                                     "spriteSheetId": "4e6b722e-5634-4672-b97e-7c3f80e59daf"
                                 },
                                 "id": "72fe6e2a-b15d-4602-8faf-702b70aa1995"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "A ferrinous faerie-et\nchallenges you!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "c5f0320f-a3cc-4211-8245-4a4e8748c964"
                             }
                         ],
                         "true9": [
@@ -43884,6 +44150,27 @@
                                     "spriteSheetId": "185f3030-4621-4292-aa3b-fa5fb4c8a88b"
                                 },
                                 "id": "5113924b-c698-4d41-9248-ad9fd43e6123"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "A gibbering gerbil\nchallenges you!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "60ffd004-9eb3-400c-bf09-a6d1b49e0fdf"
                             }
                         ],
                         "true10": [
@@ -43894,6 +44181,27 @@
                                     "spriteSheetId": "64388fb5-492a-48f1-8832-e761fa04ded5"
                                 },
                                 "id": "d4ac0218-1ab7-46d7-b12b-26b33d248988"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "A hedgefundhog challenges \nyou!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "17940dfa-ada7-4b62-8c38-8602669632d2"
                             }
                         ],
                         "true11": [
@@ -43904,6 +44212,27 @@
                                     "spriteSheetId": "5ab15c2b-ef47-437f-be56-6dba100543f7"
                                 },
                                 "id": "5100d5f9-234c-469d-b486-90309f5c7fed"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "Squire El challenges \nyou!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "a585fbc2-9f08-4184-9e88-9e209f161f7c"
                             }
                         ],
                         "true12": [
@@ -43914,6 +44243,27 @@
                                     "spriteSheetId": "ca9d8e99-6850-4bde-841d-562e77c3bee1"
                                 },
                                 "id": "d18e4fff-4e89-4de2-a045-8b06b951045c"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "Ung, U Late! challenges \nyou!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "12889c75-b274-4496-8ac2-b788a9481673"
                             }
                         ],
                         "true13": [
@@ -43924,6 +44274,27 @@
                                     "spriteSheetId": "3939e8d2-3987-4a22-953e-f1d82134eccf"
                                 },
                                 "id": "b933bb20-1f91-4944-8a95-8d4d59ec782c"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "A... rock???"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "ef0865c1-4d4f-4587-95a8-f68f7e2cc5b7"
                             }
                         ],
                         "true14": [],
@@ -43981,6 +44352,27 @@
                                     "spriteSheetId": "36060001-b219-44b4-b614-d3d60547a898"
                                 },
                                 "id": "bf14293a-fa4b-4a12-9e3a-6dacbc04e805"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "You send out a\nmighty mouse."
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "3821eafc-c30a-49c6-ba9b-5e3c971cb447"
                             }
                         ],
                         "true1": [
@@ -43991,6 +44383,27 @@
                                     "spriteSheetId": "1e27bb8e-c805-435a-8b87-05b4f50da4f0"
                                 },
                                 "id": "ab3ebb63-6e36-419f-a0f5-79618be1cfb3"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "You send out a\nWitty Kitty."
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "ecbed412-00ec-42ff-ae38-f5358af02f08"
                             }
                         ],
                         "true2": [
@@ -44001,6 +44414,27 @@
                                     "spriteSheetId": "ede130e6-013a-42d1-a786-1aed3fd3cf32"
                                 },
                                 "id": "b51de437-bfb5-4501-a79c-89f87ee36ee3"
+                            },
+                            {
+                                "command": "PT_EVENT_ADVANCED_DIALOGUE",
+                                "args": {
+                                    "__scriptTabs": "text",
+                                    "minHeight": 5,
+                                    "maxHeight": 7,
+                                    "position": "bottom",
+                                    "showBorder": true,
+                                    "clearPrevious": true,
+                                    "textX": 1,
+                                    "textY": 1,
+                                    "textHeight": 3,
+                                    "closeWhen": "text",
+                                    "closeButton": "any",
+                                    "text": [
+                                        "You send out your\nbizarro roommate."
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "3a8121c0-de17-49c6-b6cd-c7c01e2963ad"
                             }
                         ],
                         "true3": [
@@ -44140,7 +44574,8 @@
                         "text": [
                             "$25$ species was\ncalled out against $23$"
                         ],
-                        "avatarId": ""
+                        "avatarId": "",
+                        "__comment": true
                     },
                     "id": "2602a060-bced-4cbf-9958-678f615d64ec"
                 },
@@ -56868,8 +57303,8 @@
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
-                                "x": 0,
-                                "y": 0,
+                                "x": 6,
+                                "y": 9,
                                 "direction": "",
                                 "fadeSpeed": "2"
                             },
@@ -75123,7 +75558,368 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "placeholder1.png",
-            "tileColors": []
+            "tileColors": [
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                6,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
         },
         {
             "id": "b50cefc6-72dc-44c0-947d-f5d4d533a97a",
@@ -104304,8 +105100,8 @@
                                 "command": "EVENT_SWITCH_SCENE",
                                 "args": {
                                     "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
-                                    "x": 0,
-                                    "y": 0,
+                                    "x": 6,
+                                    "y": 11,
                                     "direction": "",
                                     "fadeSpeed": "2"
                                 },
@@ -105783,6 +106579,91 @@
             "id": "ab5f1cff-ce60-4197-b00c-e2c6a2057cdf__L0",
             "name": "Local 0",
             "symbol": "var_local_4"
+        },
+        {
+            "id": "501",
+            "name": "Wordy5",
+            "symbol": "var_wordy5"
+        },
+        {
+            "id": "500",
+            "name": "Wordy6",
+            "symbol": "var_wordy6"
+        },
+        {
+            "id": "499",
+            "name": "Letter4",
+            "symbol": "var_letter4"
+        },
+        {
+            "id": "498",
+            "name": "Letter5",
+            "symbol": "var_letter5"
+        },
+        {
+            "id": "497",
+            "name": "Letter6",
+            "symbol": "var_letter6"
+        },
+        {
+            "id": "496",
+            "name": "Word1",
+            "symbol": "var_word1"
+        },
+        {
+            "id": "495",
+            "name": "Word2",
+            "symbol": "var_word2"
+        },
+        {
+            "id": "494",
+            "name": "Word3",
+            "symbol": "var_word3"
+        },
+        {
+            "id": "493",
+            "name": "Word4",
+            "symbol": "var_word4"
+        },
+        {
+            "id": "492",
+            "name": "Word5",
+            "symbol": "var_word5"
+        },
+        {
+            "id": "491",
+            "name": "Word6",
+            "symbol": "var_word6"
+        },
+        {
+            "id": "490",
+            "name": "Letters1",
+            "symbol": "var_letters1"
+        },
+        {
+            "id": "489",
+            "name": "Letters2",
+            "symbol": "var_letters2"
+        },
+        {
+            "id": "488",
+            "name": "Letters3",
+            "symbol": "var_letters3"
+        },
+        {
+            "id": "487",
+            "name": "Letters4",
+            "symbol": "var_letters4"
+        },
+        {
+            "id": "486",
+            "name": "Letters5",
+            "symbol": "var_letters5"
+        },
+        {
+            "id": "485",
+            "name": "Letters6",
+            "symbol": "var_letters6"
         }
     ],
     "engineFieldValues": [
@@ -105800,8 +106681,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1393.5999755859375,
-        "worldScrollY": 34.400001525878906,
+        "worldScrollX": 1446.4000244140625,
+        "worldScrollY": 37.599998474121094,
         "zoom": 115.88104721903801,
         "customColorsEnabled": true,
         "sgbEnabled": false,

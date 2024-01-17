@@ -43388,7 +43388,7 @@
                                 "variable": "506",
                                 "value": {
                                     "type": "number",
-                                    "value": 1
+                                    "value": 119
                                 },
                                 "__collapse": false
                             },
@@ -43400,7 +43400,7 @@
                                 "variable": "510",
                                 "value": {
                                     "type": "number",
-                                    "value": 5
+                                    "value": 119
                                 }
                             },
                             "id": "d87340b4-a9ab-4363-b939-2929b3c6c42c"
@@ -43415,6 +43415,14 @@
                                 "avatarId": ""
                             },
                             "id": "366553f9-42b4-4819-af1a-4aa216573952"
+                        },
+                        {
+                            "command": "EVENT_GBVM_SCRIPT",
+                            "args": {
+                                "references": [],
+                                "script": "      ; Variable Set To Value\n        VM_SET_CONST            VAR_LETTER2, 5\n        VM_LOAD_TEXT            6\n        .dw VAR_WORDY1, VAR_WORDY2, VAR_WORDY3, VAR_WORDY4, VAR_LETTER1, VAR_LETTER2\n        .asciz \" Attack 1 %c%c%c \\n Attack 2 %c%c\"\n        ;  .asciz \"\\001\\001\\003\\003\\002\\002\\001Attack 1\\n\\002\\001Attack 2\"\n        VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/\n        VM_OVERLAY_MOVE_TO      0, 14, .OVERLAY_IN_SPEED\n        VM_DISPLAY_TEXT\n        VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/\n        VM_CHOICE               VAR_S18T0_LOCAL_1, .UI_MENU_CANCEL_B, 2\n            .MENUITEM           1, 1, 1, 2, 0, 2\n            .MENUITEM           1, 2, 1, 2, 1, 0\n        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED\n        VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/\n"
+                            },
+                            "id": "93c51b87-9b7a-4af7-9030-42f7ae7d783a"
                         },
                         {
                             "command": "EVENT_MENU",
