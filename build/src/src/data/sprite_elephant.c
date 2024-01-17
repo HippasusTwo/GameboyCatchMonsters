@@ -6,9 +6,9 @@
 
 BANKREF(sprite_elephant)
 
-#define SPRITE_34_STATE_DEFAULT 0
-#define SPRITE_34_STATE_EXPLODE 0
-#define SPRITE_34_STATE_OPEN 0
+#define SPRITE_7_STATE_DEFAULT 0
+#define SPRITE_7_STATE_EXPLODE 0
+#define SPRITE_7_STATE_OPEN 0
 
 const metasprite_t sprite_elephant_metasprite_0[]  = {
     { -10, 26, 0, 1 }, { 10, -8, 2, 1 }, { -16, 0, 4, 1 }, { -16, 0, 6, 1 }, { 32, -8, 8, 1 }, { -16, 0, 10, 1 }, { -16, 0, 12, 1 }, { 32, -8, 14, 1 }, { -16, 0, 10, 33 }, { -16, 0, 16, 1 }, { 32, -8, 18, 1 }, { -16, 0, 20, 1 }, { -16, 0, 22, 1 }, { 16, -8, 24, 1 }, { -16, 0, 26, 1 }, { 32, -8, 28, 1 }, { -16, 0, 30, 1 }, { -16, 0, 6, 33 },
@@ -91,7 +91,7 @@ const struct animation_t sprite_elephant_animations[] = {
 };
 
 const UWORD sprite_elephant_animations_lookup[] = {
-    SPRITE_34_STATE_DEFAULT
+    SPRITE_7_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_elephant = {

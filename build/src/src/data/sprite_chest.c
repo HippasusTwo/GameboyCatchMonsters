@@ -6,9 +6,9 @@
 
 BANKREF(sprite_chest)
 
-#define SPRITE_33_STATE_DEFAULT 0
-#define SPRITE_33_STATE_EXPLODE 0
-#define SPRITE_33_STATE_OPEN 8
+#define SPRITE_42_STATE_DEFAULT 0
+#define SPRITE_42_STATE_EXPLODE 0
+#define SPRITE_42_STATE_OPEN 8
 
 const metasprite_t sprite_chest_metasprite_0[]  = {
     { 0, 8, 0, 0 }, { 0, -8, 0, 32 },
@@ -93,9 +93,9 @@ const struct animation_t sprite_chest_animations[] = {
 };
 
 const UWORD sprite_chest_animations_lookup[] = {
-    SPRITE_33_STATE_DEFAULT,
-    SPRITE_33_STATE_EXPLODE,
-    SPRITE_33_STATE_OPEN
+    SPRITE_42_STATE_DEFAULT,
+    SPRITE_42_STATE_EXPLODE,
+    SPRITE_42_STATE_OPEN
 };
 
 const struct spritesheet_t sprite_chest = {

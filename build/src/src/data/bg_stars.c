@@ -5,7 +5,7 @@
 #include "gbs_types.h"
 #include "data/bg_stars_tileset.h"
 #include "data/bg_stars_tilemap.h"
-#include "data/bg_stars_tilemap_attr.h"
+#include "data/bg_police_station_tilemap_attr.h"
 
 BANKREF(bg_stars)
 
@@ -15,5 +15,5 @@ const struct background_t bg_stars = {
     .tileset = TO_FAR_PTR_T(bg_stars_tileset),
     .cgb_tileset = { NULL, NULL },
     .tilemap = TO_FAR_PTR_T(bg_stars_tilemap),
-    .cgb_tilemap_attr = TO_FAR_PTR_T(bg_stars_tilemap_attr)
+    .cgb_tilemap_attr = TO_FAR_PTR_T(bg_police_station_tilemap_attr)
 };

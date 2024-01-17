@@ -6,8 +6,8 @@
 #include "data/bg_logo.h"
 #include "data/scene_logo_collisions.h"
 #include "data/palette_2.h"
-#include "data/palette_12.h"
-#include "data/sprite_player.h"
+#include "data/palette_17.h"
+#include "data/sprite_blackplayer.h"
 #include "data/scene_logo_init.h"
 
 BANKREF(scene_logo)
@@ -22,9 +22,9 @@ const struct scene_t scene_logo = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_2),
-    .sprite_palette = TO_FAR_PTR_T(palette_12),
+    .sprite_palette = TO_FAR_PTR_T(palette_17),
     .reserve_tiles = 0,
-    .player_sprite = TO_FAR_PTR_T(sprite_player),
+    .player_sprite = TO_FAR_PTR_T(sprite_blackplayer),
     .n_actors = 0,
     .n_triggers = 0,
     .n_sprites = 0,

@@ -16,7 +16,7 @@ const metasprite_t sprite_duck_metasprite_0[]  = {
 };
 
 const metasprite_t sprite_duck_metasprite_1[]  = {
-    { 0, 8, 4, 0 }, { 0, -8, 6, 0 },
+    { 0, 8, 4, 1 }, { 0, -8, 6, 1 },
     {metasprite_end}
 };
 

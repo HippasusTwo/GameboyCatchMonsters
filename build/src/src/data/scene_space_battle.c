@@ -6,7 +6,7 @@
 #include "data/bg_leaving_earth.h"
 #include "data/scene_space_battle_collisions.h"
 #include "data/palette_5.h"
-#include "data/palette_12.h"
+#include "data/palette_17.h"
 #include "data/sprite_player_ship.h"
 #include "data/scene_space_battle_actors.h"
 #include "data/scene_space_battle_triggers.h"
@@ -27,7 +27,7 @@ const struct scene_t scene_space_battle = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_5),
-    .sprite_palette = TO_FAR_PTR_T(palette_12),
+    .sprite_palette = TO_FAR_PTR_T(palette_17),
     .reserve_tiles = 0,
     .player_sprite = TO_FAR_PTR_T(sprite_player_ship),
     .n_actors = 16,

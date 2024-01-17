@@ -45,10 +45,10 @@ _actor_gardener_interact::
 2$:
 
         ; If Variable .EQ Value
-        VM_IF_CONST             .EQ, VAR_VARIABLE_12, 0, 3$, 0
+        VM_IF_CONST             .EQ, VAR_TURNIP_COUNTER, 0, 3$, 0
         ; Text Dialogue
         VM_LOAD_TEXT            1
-        .dw VAR_VARIABLE_12
+        .dw VAR_TURNIP_COUNTER
         .asciz "Please help me,\nthere is %d left"
         VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/
         VM_OVERLAY_MOVE_TO      0, 14, .OVERLAY_IN_SPEED

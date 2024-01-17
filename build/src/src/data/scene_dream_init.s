@@ -58,7 +58,7 @@ _scene_dream_init::
         VM_SET_CONST_INT8       _fade_frames_per_step, 15
         VM_FADE_OUT             1
         VM_SET_CONST            .LOCAL_ACTOR, 0
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 512
+        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 3456
         VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 1664
         VM_ACTOR_SET_POS        .LOCAL_ACTOR
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_RIGHT

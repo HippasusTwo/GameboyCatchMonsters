@@ -5,7 +5,7 @@
 #include "gbs_types.h"
 #include "data/bg_black_tileset.h"
 #include "data/bg_black_tilemap.h"
-#include "data/bg_black_tilemap_attr.h"
+#include "data/bg_insidestation2_tilemap_attr.h"
 
 BANKREF(bg_black)
 
@@ -15,5 +15,5 @@ const struct background_t bg_black = {
     .tileset = TO_FAR_PTR_T(bg_black_tileset),
     .cgb_tileset = { NULL, NULL },
     .tilemap = TO_FAR_PTR_T(bg_black_tilemap),
-    .cgb_tilemap_attr = TO_FAR_PTR_T(bg_black_tilemap_attr)
+    .cgb_tilemap_attr = TO_FAR_PTR_T(bg_insidestation2_tilemap_attr)
 };

@@ -6,7 +6,7 @@
 #include "data/bg_black.h"
 #include "data/scene_menu_3_collisions.h"
 #include "data/palette_4.h"
-#include "data/palette_14.h"
+#include "data/palette_18.h"
 #include "data/sprite_cursor.h"
 #include "data/scene_menu_3_actors.h"
 #include "data/scene_menu_3_sprites.h"
@@ -24,7 +24,7 @@ const struct scene_t scene_menu_3 = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_4),
-    .sprite_palette = TO_FAR_PTR_T(palette_14),
+    .sprite_palette = TO_FAR_PTR_T(palette_18),
     .reserve_tiles = 0,
     .player_sprite = TO_FAR_PTR_T(sprite_cursor),
     .n_actors = 6,

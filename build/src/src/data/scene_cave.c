@@ -6,8 +6,8 @@
 #include "data/bg_cave.h"
 #include "data/scene_cave_collisions.h"
 #include "data/palette_1.h"
-#include "data/palette_12.h"
-#include "data/sprite_player.h"
+#include "data/palette_17.h"
+#include "data/sprite_blackplayer.h"
 #include "data/scene_cave_actors.h"
 #include "data/scene_cave_triggers.h"
 #include "data/scene_cave_sprites.h"
@@ -25,12 +25,12 @@ const struct scene_t scene_cave = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_1),
-    .sprite_palette = TO_FAR_PTR_T(palette_12),
+    .sprite_palette = TO_FAR_PTR_T(palette_17),
     .reserve_tiles = 0,
-    .player_sprite = TO_FAR_PTR_T(sprite_player),
-    .n_actors = 6,
+    .player_sprite = TO_FAR_PTR_T(sprite_blackplayer),
+    .n_actors = 7,
     .n_triggers = 1,
-    .n_sprites = 4,
+    .n_sprites = 5,
     .n_projectiles = 0,
     .actors = TO_FAR_PTR_T(scene_cave_actors),
     .triggers = TO_FAR_PTR_T(scene_cave_triggers),

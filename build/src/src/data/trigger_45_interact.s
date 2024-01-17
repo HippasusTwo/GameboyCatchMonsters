@@ -14,6 +14,9 @@ ___bank_trigger_45_interact = 255
 _trigger_45_interact::
         VM_LOCK
 
+        ; Music Play
+        VM_MUSIC_PLAY           ___bank_song_rulz_outside_0_Data, _song_rulz_outside_0_Data, .MUSIC_NO_LOOP
+
         ; Pop Scene State
         VM_SET_CONST_INT8       _fade_frames_per_step, 3
         VM_FADE_OUT             1

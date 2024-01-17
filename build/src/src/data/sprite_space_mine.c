@@ -6,9 +6,9 @@
 
 BANKREF(sprite_space_mine)
 
-#define SPRITE_23_STATE_DEFAULT 0
-#define SPRITE_23_STATE_EXPLODE 8
-#define SPRITE_23_STATE_OPEN 0
+#define SPRITE_34_STATE_DEFAULT 0
+#define SPRITE_34_STATE_EXPLODE 8
+#define SPRITE_34_STATE_OPEN 0
 
 const metasprite_t sprite_space_mine_metasprite_0[]  = {
     { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
@@ -117,8 +117,8 @@ const struct animation_t sprite_space_mine_animations[] = {
 };
 
 const UWORD sprite_space_mine_animations_lookup[] = {
-    SPRITE_23_STATE_DEFAULT,
-    SPRITE_23_STATE_EXPLODE
+    SPRITE_34_STATE_DEFAULT,
+    SPRITE_34_STATE_EXPLODE
 };
 
 const struct spritesheet_t sprite_space_mine = {

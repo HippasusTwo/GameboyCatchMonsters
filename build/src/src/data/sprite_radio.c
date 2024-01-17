@@ -6,9 +6,9 @@
 
 BANKREF(sprite_radio)
 
-#define SPRITE_16_STATE_DEFAULT 0
-#define SPRITE_16_STATE_EXPLODE 0
-#define SPRITE_16_STATE_OPEN 0
+#define SPRITE_27_STATE_DEFAULT 0
+#define SPRITE_27_STATE_EXPLODE 0
+#define SPRITE_27_STATE_OPEN 0
 
 const metasprite_t sprite_radio_metasprite_0[]  = {
     { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
@@ -55,7 +55,7 @@ const struct animation_t sprite_radio_animations[] = {
 };
 
 const UWORD sprite_radio_animations_lookup[] = {
-    SPRITE_16_STATE_DEFAULT
+    SPRITE_27_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_radio = {

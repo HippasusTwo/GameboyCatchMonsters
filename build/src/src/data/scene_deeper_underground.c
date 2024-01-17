@@ -6,7 +6,7 @@
 #include "data/bg_hidden_cave.h"
 #include "data/scene_deeper_underground_collisions.h"
 #include "data/palette_1.h"
-#include "data/palette_12.h"
+#include "data/palette_17.h"
 #include "data/sprite_player_platform.h"
 #include "data/scene_deeper_underground_actors.h"
 #include "data/scene_deeper_underground_triggers.h"
@@ -25,12 +25,12 @@ const struct scene_t scene_deeper_underground = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_1),
-    .sprite_palette = TO_FAR_PTR_T(palette_12),
+    .sprite_palette = TO_FAR_PTR_T(palette_17),
     .reserve_tiles = 0,
     .player_sprite = TO_FAR_PTR_T(sprite_player_platform),
-    .n_actors = 1,
+    .n_actors = 3,
     .n_triggers = 1,
-    .n_sprites = 1,
+    .n_sprites = 3,
     .n_projectiles = 0,
     .actors = TO_FAR_PTR_T(scene_deeper_underground_actors),
     .triggers = TO_FAR_PTR_T(scene_deeper_underground_triggers),

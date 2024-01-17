@@ -6,7 +6,7 @@
 #include "data/bg_room.h"
 #include "data/scene_player_s_house_collisions.h"
 #include "data/palette_6.h"
-#include "data/palette_12.h"
+#include "data/palette_17.h"
 #include "data/sprite_cursor.h"
 #include "data/scene_player_s_house_triggers.h"
 #include "data/scene_player_s_house_init.h"
@@ -23,7 +23,7 @@ const struct scene_t scene_player_s_house = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_6),
-    .sprite_palette = TO_FAR_PTR_T(palette_12),
+    .sprite_palette = TO_FAR_PTR_T(palette_17),
     .reserve_tiles = 0,
     .player_sprite = TO_FAR_PTR_T(sprite_cursor),
     .n_actors = 0,

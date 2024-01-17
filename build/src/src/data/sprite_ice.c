@@ -6,9 +6,9 @@
 
 BANKREF(sprite_ice)
 
-#define SPRITE_17_STATE_DEFAULT 0
-#define SPRITE_17_STATE_EXPLODE 0
-#define SPRITE_17_STATE_OPEN 0
+#define SPRITE_28_STATE_DEFAULT 0
+#define SPRITE_28_STATE_EXPLODE 0
+#define SPRITE_28_STATE_OPEN 0
 
 const metasprite_t sprite_ice_metasprite_0[]  = {
     { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
@@ -55,7 +55,7 @@ const struct animation_t sprite_ice_animations[] = {
 };
 
 const UWORD sprite_ice_animations_lookup[] = {
-    SPRITE_17_STATE_DEFAULT
+    SPRITE_28_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_ice = {

@@ -6,7 +6,7 @@
 #include "data/bg_platform_path.h"
 #include "data/scene_path_to_sample_town_collisions.h"
 #include "data/palette_7.h"
-#include "data/palette_12.h"
+#include "data/palette_17.h"
 #include "data/sprite_player_platform.h"
 #include "data/scene_path_to_sample_town_actors.h"
 #include "data/scene_path_to_sample_town_triggers.h"
@@ -25,7 +25,7 @@ const struct scene_t scene_path_to_sample_town = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_7),
-    .sprite_palette = TO_FAR_PTR_T(palette_12),
+    .sprite_palette = TO_FAR_PTR_T(palette_17),
     .reserve_tiles = 0,
     .player_sprite = TO_FAR_PTR_T(sprite_player_platform),
     .n_actors = 6,

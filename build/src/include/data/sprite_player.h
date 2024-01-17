@@ -1,7 +1,7 @@
 #ifndef SPRITE_PLAYER_H
 #define SPRITE_PLAYER_H
 
-// SpriteSheet: player
+// SpriteSheet: playeralt
 
 #include "gbs_types.h"
 

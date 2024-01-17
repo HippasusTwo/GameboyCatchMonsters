@@ -6,8 +6,8 @@
 #include "data/bg_house2.h"
 #include "data/scene_top_house_collisions.h"
 #include "data/palette_1.h"
-#include "data/palette_12.h"
-#include "data/sprite_player.h"
+#include "data/palette_17.h"
+#include "data/sprite_blackplayer.h"
 #include "data/scene_top_house_actors.h"
 #include "data/scene_top_house_triggers.h"
 #include "data/scene_top_house_sprites.h"
@@ -25,9 +25,9 @@ const struct scene_t scene_top_house = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_1),
-    .sprite_palette = TO_FAR_PTR_T(palette_12),
+    .sprite_palette = TO_FAR_PTR_T(palette_17),
     .reserve_tiles = 0,
-    .player_sprite = TO_FAR_PTR_T(sprite_player),
+    .player_sprite = TO_FAR_PTR_T(sprite_blackplayer),
     .n_actors = 5,
     .n_triggers = 1,
     .n_sprites = 3,

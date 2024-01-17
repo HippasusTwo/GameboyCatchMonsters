@@ -23,7 +23,7 @@ _trigger_15_interact::
         VM_FADE_OUT             1
         VM_SET_CONST            .LOCAL_ACTOR, 0
         VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 1280
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 1152
+        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 1280
         VM_ACTOR_SET_POS        .LOCAL_ACTOR
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_DOWN
         VM_RAISE                EXCEPTION_CHANGE_SCENE, 3

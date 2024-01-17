@@ -36,11 +36,14 @@ _scene_path_to_sample_town_init::
         ; Call Script: Init Menu
         VM_CALL_FAR             ___bank_script_init_menu, _script_init_menu
 
+        ; Variable Set To Value
+        VM_SET_CONST            VAR_BATTLERENEMYSPECIES1, 4
+
         ; Music Play
         VM_MUSIC_PLAY           ___bank_song_rulz_outside_0_Data, _song_rulz_outside_0_Data, .MUSIC_NO_LOOP
 
         ; Variable Set To Value
-        VM_SET_CONST            VAR_VARIABLE_12, 3
+        VM_SET_CONST            VAR_TURNIP_COUNTER, 3
 
         ; Actor Set Active
         VM_SET_CONST            .LOCAL_ACTOR, 1
@@ -60,11 +63,11 @@ _scene_path_to_sample_town_init::
 
         ; Variable Decrement By 1
         VM_RPN
-            .R_REF      VAR_VARIABLE_12
+            .R_REF      VAR_TURNIP_COUNTER
             .R_INT8     1
             .R_OPERATOR .SUB
             .R_STOP
-        VM_SET                  VAR_VARIABLE_12, .ARG0
+        VM_SET                  VAR_TURNIP_COUNTER, .ARG0
         VM_POP                  1
 
         VM_JUMP                 2$
@@ -89,11 +92,11 @@ _scene_path_to_sample_town_init::
 
         ; Variable Decrement By 1
         VM_RPN
-            .R_REF      VAR_VARIABLE_12
+            .R_REF      VAR_TURNIP_COUNTER
             .R_INT8     1
             .R_OPERATOR .SUB
             .R_STOP
-        VM_SET                  VAR_VARIABLE_12, .ARG0
+        VM_SET                  VAR_TURNIP_COUNTER, .ARG0
         VM_POP                  1
 
         VM_JUMP                 4$
@@ -118,11 +121,11 @@ _scene_path_to_sample_town_init::
 
         ; Variable Decrement By 1
         VM_RPN
-            .R_REF      VAR_VARIABLE_12
+            .R_REF      VAR_TURNIP_COUNTER
             .R_INT8     1
             .R_OPERATOR .SUB
             .R_STOP
-        VM_SET                  VAR_VARIABLE_12, .ARG0
+        VM_SET                  VAR_TURNIP_COUNTER, .ARG0
         VM_POP                  1
 
         VM_JUMP                 6$

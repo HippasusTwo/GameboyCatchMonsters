@@ -12,6 +12,8 @@
 #include "data/sprite_fire.h"
 #include "data/sprite_savepoint.h"
 #include "data/actor_save_point_interact.h"
+#include "data/sprite_hedgehog.h"
+#include "data/actor_50_interact.h"
 
 BANKREF(scene_cave_actors)
 
@@ -148,6 +150,29 @@ const struct actor_t scene_cave_actors[] = {
         .collision_group = COLLISION_GROUP_NONE,
         .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_save_point_interact),
+        .reserve_tiles = 0
+    },
+    {
+        // Actor 7,
+        .pos = {
+            .x = 40 * 16,
+            .y = 80 * 16
+        },
+        .bounds = {
+            .left = 0,
+            .bottom = 7,
+            .right = 15,
+            .top = -8
+        },
+        .dir = DIR_DOWN,
+        .sprite = TO_FAR_PTR_T(sprite_hedgehog),
+        .move_speed = 16,
+        .anim_tick = 15,
+        .pinned = FALSE,
+        .persistent = FALSE,
+        .collision_group = COLLISION_GROUP_NONE,
+        .collision_enabled = TRUE,
+        .script = TO_FAR_PTR_T(actor_50_interact),
         .reserve_tiles = 0
     }
 };

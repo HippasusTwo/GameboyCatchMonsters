@@ -6,9 +6,9 @@
 
 BANKREF(sprite_hidden_stairs)
 
-#define SPRITE_18_STATE_DEFAULT 0
-#define SPRITE_18_STATE_EXPLODE 0
-#define SPRITE_18_STATE_OPEN 0
+#define SPRITE_29_STATE_DEFAULT 0
+#define SPRITE_29_STATE_EXPLODE 0
+#define SPRITE_29_STATE_OPEN 0
 
 const metasprite_t sprite_hidden_stairs_metasprite_0[]  = {
     { 0, 8, 0, 0 }, { 0, -8, 0, 32 },
@@ -55,7 +55,7 @@ const struct animation_t sprite_hidden_stairs_animations[] = {
 };
 
 const UWORD sprite_hidden_stairs_animations_lookup[] = {
-    SPRITE_18_STATE_DEFAULT
+    SPRITE_29_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_hidden_stairs = {

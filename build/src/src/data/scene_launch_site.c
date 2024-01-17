@@ -6,8 +6,8 @@
 #include "data/bg_launch_site.h"
 #include "data/scene_launch_site_collisions.h"
 #include "data/palette_9.h"
-#include "data/palette_12.h"
-#include "data/sprite_player.h"
+#include "data/palette_17.h"
+#include "data/sprite_blackplayer.h"
 #include "data/scene_launch_site_actors.h"
 #include "data/scene_launch_site_triggers.h"
 #include "data/scene_launch_site_sprites.h"
@@ -25,9 +25,9 @@ const struct scene_t scene_launch_site = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_9),
-    .sprite_palette = TO_FAR_PTR_T(palette_12),
+    .sprite_palette = TO_FAR_PTR_T(palette_17),
     .reserve_tiles = 0,
-    .player_sprite = TO_FAR_PTR_T(sprite_player),
+    .player_sprite = TO_FAR_PTR_T(sprite_blackplayer),
     .n_actors = 6,
     .n_triggers = 2,
     .n_sprites = 3,

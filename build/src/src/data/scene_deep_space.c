@@ -6,8 +6,8 @@
 #include "data/bg_stars.h"
 #include "data/scene_deep_space_collisions.h"
 #include "data/palette_8.h"
-#include "data/palette_12.h"
-#include "data/sprite_player.h"
+#include "data/palette_17.h"
+#include "data/sprite_blackplayer.h"
 #include "data/scene_deep_space_actors.h"
 #include "data/scene_deep_space_triggers.h"
 #include "data/scene_deep_space_sprites.h"
@@ -25,9 +25,9 @@ const struct scene_t scene_deep_space = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_8),
-    .sprite_palette = TO_FAR_PTR_T(palette_12),
+    .sprite_palette = TO_FAR_PTR_T(palette_17),
     .reserve_tiles = 0,
-    .player_sprite = TO_FAR_PTR_T(sprite_player),
+    .player_sprite = TO_FAR_PTR_T(sprite_blackplayer),
     .n_actors = 3,
     .n_triggers = 1,
     .n_sprites = 3,

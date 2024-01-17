@@ -6,9 +6,9 @@
 
 BANKREF(sprite_frog)
 
-#define SPRITE_38_STATE_DEFAULT 0
-#define SPRITE_38_STATE_EXPLODE 0
-#define SPRITE_38_STATE_OPEN 0
+#define SPRITE_6_STATE_DEFAULT 0
+#define SPRITE_6_STATE_EXPLODE 0
+#define SPRITE_6_STATE_OPEN 0
 
 const metasprite_t sprite_frog_metasprite_0[]  = {
     { 0, 8, 0, 2 }, { 0, -8, 2, 2 },
@@ -61,7 +61,7 @@ const struct animation_t sprite_frog_animations[] = {
 };
 
 const UWORD sprite_frog_animations_lookup[] = {
-    SPRITE_38_STATE_DEFAULT
+    SPRITE_6_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_frog = {

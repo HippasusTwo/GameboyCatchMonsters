@@ -6,9 +6,9 @@
 
 BANKREF(sprite_cursor)
 
-#define SPRITE_24_STATE_DEFAULT 0
-#define SPRITE_24_STATE_EXPLODE 0
-#define SPRITE_24_STATE_OPEN 0
+#define SPRITE_35_STATE_DEFAULT 0
+#define SPRITE_35_STATE_EXPLODE 0
+#define SPRITE_35_STATE_OPEN 0
 
 const metasprite_t sprite_cursor_metasprite_0[]  = {
     { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
@@ -67,7 +67,7 @@ const struct animation_t sprite_cursor_animations[] = {
 };
 
 const UWORD sprite_cursor_animations_lookup[] = {
-    SPRITE_24_STATE_DEFAULT
+    SPRITE_35_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_cursor = {

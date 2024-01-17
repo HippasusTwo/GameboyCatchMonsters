@@ -14,11 +14,11 @@
 #include "data/actor_cat_interact.h"
 #include "data/sprite_npc001.h"
 #include "data/actor_angry_guy_interact.h"
-#include "data/sprite_npc001.h"
+#include "data/sprite_npc004.h"
 #include "data/actor_oblivious_guy_interact.h"
 #include "data/sprite_signpost.h"
 #include "data/actor_sign_post_interact.h"
-#include "data/sprite_npc004.h"
+#include "data/sprite_squirrel.h"
 #include "data/actor_hider_interact.h"
 #include "data/sprite_npc007.h"
 
@@ -153,7 +153,7 @@ const struct actor_t scene_sample_town_actors[] = {
             .top = -8
         },
         .dir = DIR_DOWN,
-        .sprite = TO_FAR_PTR_T(sprite_npc001),
+        .sprite = TO_FAR_PTR_T(sprite_npc004),
         .move_speed = 16,
         .anim_tick = 15,
         .pinned = FALSE,
@@ -199,7 +199,7 @@ const struct actor_t scene_sample_town_actors[] = {
             .top = -8
         },
         .dir = DIR_DOWN,
-        .sprite = TO_FAR_PTR_T(sprite_npc004),
+        .sprite = TO_FAR_PTR_T(sprite_squirrel),
         .move_speed = 16,
         .anim_tick = 15,
         .pinned = FALSE,

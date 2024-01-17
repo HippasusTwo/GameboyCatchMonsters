@@ -6,8 +6,8 @@
 #include "data/bg_sample_town.h"
 #include "data/scene_sample_town_collisions.h"
 #include "data/palette_0.h"
-#include "data/palette_12.h"
-#include "data/sprite_player.h"
+#include "data/palette_17.h"
+#include "data/sprite_blackplayer.h"
 #include "data/scene_sample_town_actors.h"
 #include "data/scene_sample_town_triggers.h"
 #include "data/scene_sample_town_sprites.h"
@@ -25,9 +25,9 @@ const struct scene_t scene_sample_town = {
         PARALLAX_STEP(0,0,0)
     },
     .palette = TO_FAR_PTR_T(palette_0),
-    .sprite_palette = TO_FAR_PTR_T(palette_12),
+    .sprite_palette = TO_FAR_PTR_T(palette_17),
     .reserve_tiles = 0,
-    .player_sprite = TO_FAR_PTR_T(sprite_player),
+    .player_sprite = TO_FAR_PTR_T(sprite_blackplayer),
     .n_actors = 9,
     .n_triggers = 14,
     .n_sprites = 8,

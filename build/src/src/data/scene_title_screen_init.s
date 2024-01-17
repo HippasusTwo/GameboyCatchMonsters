@@ -4,7 +4,7 @@
 .include "data/game_globals.i"
 .include "macro.i"
 
-.globl b_wait_frames, _wait_frames, _fade_frames_per_step, ___bank_scene_path_to_sample_town, _scene_path_to_sample_town
+.globl b_wait_frames, _wait_frames, _fade_frames_per_step, ___bank_scene_parallax_example, _scene_parallax_example
 
 .area _CODE_255
 
@@ -85,12 +85,12 @@ _scene_title_screen_init::
         VM_SET_CONST_INT8       _fade_frames_per_step, 15
         VM_FADE_OUT             1
         VM_SET_CONST            .LOCAL_ACTOR, 0
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 8448
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 1024
+        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 2048
+        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 1664
         VM_ACTOR_SET_POS        .LOCAL_ACTOR
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_RIGHT
         VM_RAISE                EXCEPTION_CHANGE_SCENE, 3
-            IMPORT_FAR_PTR_DATA _scene_path_to_sample_town
+            IMPORT_FAR_PTR_DATA _scene_parallax_example
 
 4$:
 
