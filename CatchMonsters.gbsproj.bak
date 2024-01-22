@@ -41389,6 +41389,79 @@
                     "height": 5,
                     "script": [
                         {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "479",
+                                "operator": "==",
+                                "comparator": "0",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_SET_VALUE",
+                                        "args": {
+                                            "variable": "479",
+                                            "value": {
+                                                "type": "number",
+                                                "value": 1
+                                            }
+                                        },
+                                        "id": "0964e878-c229-4d13-94bc-a355e03839ae"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_VALUE",
+                                        "args": {
+                                            "variable": "26",
+                                            "value": {
+                                                "type": "number",
+                                                "value": 0
+                                            }
+                                        },
+                                        "id": "1a47df04-a21a-4aa1-beed-4657e3d7adff"
+                                    },
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "You're in a real hurry\nto get there, huh?",
+                                                "Just a quick question.\nWhich is best?"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "5f120c79-c0ab-4495-b0a8-c42ee060458e"
+                                    },
+                                    {
+                                        "command": "EVENT_MENU",
+                                        "args": {
+                                            "variable": "25",
+                                            "items": 3,
+                                            "option1": "Mouse",
+                                            "option2": "Cat",
+                                            "option3": "Duck",
+                                            "option4": "",
+                                            "option5": "",
+                                            "option6": "",
+                                            "option7": "",
+                                            "option8": "",
+                                            "cancelOnB": false,
+                                            "layout": "dialogue"
+                                        },
+                                        "id": "0d8eab88-d60e-4e65-aaa1-ad497e5b170e"
+                                    },
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "fa072bdc-fa97-4a43-893c-8d9e1dd39c1c"
+                                        },
+                                        "id": "ff98ea23-c1fd-474d-bb4c-07aa2563b435"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "82d8bc57-b29d-4638-8d1f-73913e9f5ff7"
+                        },
+                        {
                             "id": "a4598537-8f50-4c1a-8129-6cce72c7f212",
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
@@ -41396,7 +41469,8 @@
                                 "x": 73,
                                 "y": 20,
                                 "direction": "right",
-                                "fadeSpeed": "4"
+                                "fadeSpeed": "4",
+                                "__collapse": true
                             }
                         }
                     ],
@@ -105984,7 +106058,7 @@
                 {
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
-                        "script": "; VM_RAND VAR_BATTLERENEMYHP1, 2, 3\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 1, EnemyGrab,0  \n ;not enemy\n  VM_SET VAR_TEMP3,VAR_BATTLERSPECIES\n  VM_JUMP Lookup\n EnemyGrab:\n VM_SET VAR_TEMP3, VAR_BATTLERENEMYSPECIES1\n Lookup:\n VM_IF_CONST .EQ,  VAR_TEMP3, 1, Monster1, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 2, Monster2, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 3, Monster3, 0\nVM_IF_CONST .EQ,  VAR_TEMP3, 4, Monster4, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 7, MonsterElephant, 0\n VM_JUMP GenericMonster\n\nMonster1:\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 1\n  VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 3\n VM_JUMP LoadMonsterData\nMonster2:\n VM_SET_CONST VAR_WSTR, 2\n VM_SET_CONST VAR_WHP, 5\n VM_SET_CONST VAR_WTYPE, 2\n  VM_SET_CONST VAR_WDEF, 2\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nMonster3:\n VM_SET_CONST VAR_WSTR, 5\n VM_SET_CONST VAR_WHP, 2\n VM_SET_CONST VAR_WTYPE, 3\n  VM_SET_CONST VAR_WDEF, 2\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nMonster4:\n  VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 3\n VM_SET_CONST VAR_WTYPE, 4\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n MonsterElephant:\n   VM_SET_CONST VAR_BATTLERENEMYLVL,2\n VM_SET_CONST VAR_WSTR, 5\n VM_SET_CONST VAR_WHP, 10\n VM_SET_CONST VAR_WTYPE, 4\n  VM_SET_CONST VAR_WDEF, 10\n VM_SET_CONST VAR_WSPECIAL, 5\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nGenericMonster:\n  VM_SET VAR_BATTLERENEMYLVL,VAR_BATTLER1LVL\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 5\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nLoadMonsterData:\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 0, LABEL1, 0;if player jump\n ;load monster data into enemy\n VM_SET VAR_BATTLERENEMYSTR, VAR_WSTR\n VM_SET VAR_BATTLERENEMYHP1, VAR_WHP\n VM_SET VAR_BATTLERENEMYTYPE, VAR_WTYPE\n VM_JUMP end\n LABEL1:\n ;load monster data into player\n  VM_SET VAR_BATTLERSTR, VAR_WSTR\n VM_SET VAR_BATTLERMAXHP, VAR_WHP\n VM_SET VAR_BATTLERTYPE, VAR_WTYPE\n end:\n  ",
+                        "script": "; VM_RAND VAR_BATTLERENEMYHP1, 2, 3\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 1, EnemyGrab,0  \n ;not enemy\n  VM_SET VAR_TEMP3,VAR_BATTLERSPECIES\n  VM_JUMP Lookup\n EnemyGrab:\n VM_SET VAR_TEMP3, VAR_BATTLERENEMYSPECIES1\n Lookup:\n VM_IF_CONST .EQ,  VAR_TEMP3, 1, Monster1, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 2, Monster2, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 3, Monster3, 0\nVM_IF_CONST .EQ,  VAR_TEMP3, 4, Monster4, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 7, MonsterElephant, 0\n VM_JUMP GenericMonster\n\nMonster1:\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 1\n  VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 3\n VM_JUMP LoadMonsterData\nMonster2:\n VM_SET_CONST VAR_WSTR, 2\n VM_SET_CONST VAR_WHP, 5\n VM_SET_CONST VAR_WTYPE, 2\n  VM_SET_CONST VAR_WDEF, 2\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nMonster3:\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 6\n VM_SET_CONST VAR_WTYPE, 3\n  VM_SET_CONST VAR_WDEF, 2\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nMonster4:\n  VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 3\n VM_SET_CONST VAR_WTYPE, 4\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n MonsterElephant:\n   VM_SET_CONST VAR_BATTLERENEMYLVL,2\n VM_SET_CONST VAR_WSTR, 5\n VM_SET_CONST VAR_WHP, 10\n VM_SET_CONST VAR_WTYPE, 4\n  VM_SET_CONST VAR_WDEF, 10\n VM_SET_CONST VAR_WSPECIAL, 5\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nGenericMonster:\n  VM_SET VAR_BATTLERENEMYLVL,VAR_BATTLER1LVL\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 5\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nLoadMonsterData:\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 0, LABEL1, 0;if player jump\n ;load monster data into enemy\n VM_SET VAR_BATTLERENEMYSTR, VAR_WSTR\n VM_SET VAR_BATTLERENEMYHP1, VAR_WHP\n VM_SET VAR_BATTLERENEMYTYPE, VAR_WTYPE\n VM_JUMP end\n LABEL1:\n ;load monster data into player\n  VM_SET VAR_BATTLERSTR, VAR_WSTR\n VM_SET VAR_BATTLERMAXHP, VAR_WHP\n VM_SET VAR_BATTLERTYPE, VAR_WTYPE\n end:\n  ",
                         "references": [
                             {
                                 "type": "variable",
@@ -106775,7 +106849,7 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 460,
+        "worldScrollX": 265.6000061035156,
         "worldScrollY": 103.19999694824219,
         "zoom": 115.88104721903801,
         "customColorsEnabled": true,
