@@ -15,7 +15,7 @@ const struct actor_t scene_battle_actors[] = {
     {
         // ActorBattler,
         .pos = {
-            .x = 24 * 16,
+            .x = 88 * 16,
             .y = 88 * 16
         },
         .bounds = {
@@ -60,7 +60,7 @@ const struct actor_t scene_battle_actors[] = {
         // Health,
         .pos = {
             .x = 72 * 16,
-            .y = 16 * 16
+            .y = 88 * 16
         },
         .bounds = {
             .left = 0,
@@ -81,8 +81,8 @@ const struct actor_t scene_battle_actors[] = {
     {
         // Health2,
         .pos = {
-            .x = 136 * 16,
-            .y = 80 * 16
+            .x = 72 * 16,
+            .y = 16 * 16
         },
         .bounds = {
             .left = 0,

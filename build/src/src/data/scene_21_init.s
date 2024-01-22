@@ -19,6 +19,12 @@ _scene_21_init::
         VM_RESERVE              4
 
         ; Actor Set Active
+        VM_SET_CONST            .LOCAL_ACTOR, 4
+
+        ; Actor Set Collisions
+        VM_ACTOR_SET_COLL_ENABLED .LOCAL_ACTOR, 0
+
+        ; Actor Set Active
         VM_SET_CONST            .LOCAL_ACTOR, 5
 
         ; Actor Set Collisions

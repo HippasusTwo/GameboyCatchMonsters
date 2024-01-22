@@ -56,5 +56,14 @@ _actor_56_interact::
         ; Variable Set To True
         VM_SET_CONST            VAR_S15A15_LOCAL_1, 1
 
+        ; Variable Set To True
+        VM_SET_CONST            VAR_BATTLER1LVL, 1
+
+        ; Variable Set To False
+        VM_SET_CONST            VAR_WLOOKINGFOR, 0
+
+        ; Call Script: DatabaseMons
+        VM_CALL_FAR             ___bank_script_15, _script_15
+
         ; Stop Script
         VM_STOP

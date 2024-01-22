@@ -31,10 +31,10 @@ _trigger_fight_interact::
         VM_SET_CONST            VAR_WORDY4, 119
 
         ; Variable Set To Value
-        VM_SET_CONST            VAR_LETTER1, 119
+        VM_SET_CONST            VAR_WORDY5, 119
 
         ; Variable Set To Value
-        VM_SET_CONST            VAR_LETTER2, 119
+        VM_SET_CONST            VAR_WORDY6, 119
 
         ; Background Text
         VM_PUSH_CONST 0
@@ -166,51 +166,18 @@ _trigger_fight_interact::
         VM_SET                  VAR_BATTLERENEMYHP1, .ARG0
         VM_POP                  1
 
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 3
-
-        ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; Variables .SUB Value
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    -128
-            .R_OPERATOR .ADD
             .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    0
-            .R_OPERATOR .ADD
-            .R_INT16    0
+            .R_INT16    255
+            .R_REF      VAR_BATTLERHP1
+            .R_INT16    1
+            .R_OPERATOR .SUB
+            .R_OPERATOR .MIN
             .R_OPERATOR .MAX
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_H_FIRST
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
-
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 4
-
-        ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
-        VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    -128
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    0
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_H_FIRST
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        VM_SET                  VAR_BATTLERHP1, .ARG0
+        VM_POP                  1
 
         VM_JUMP                 5$
         ; case 2:
@@ -254,8 +221,66 @@ _trigger_fight_interact::
         VM_JUMP                 5$
 5$:
 
-        ; If Variable .EQ Value
-        VM_IF_CONST             .EQ, VAR_BATTLERHP1, 0, 6$, 0
+        VM_SET_CONST            .LOCAL_ACTOR, 3
+        ; Store Y Position In Variable
+        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        VM_RPN
+            .R_REF      ^/(.LOCAL_ACTOR + 2)/
+            .R_INT16    128
+            .R_OPERATOR .DIV
+            .R_STOP
+        VM_SET                  VAR_TEMP_1, .ARG0
+        VM_POP                  1
+
+        ; Actor Set Active
+        VM_SET_CONST            .LOCAL_ACTOR, 3
+
+        ; Actor Move To Variables
+        VM_RPN
+            .R_REF      VAR_BATTLERHP1
+            .R_INT16    128
+            .R_OPERATOR .MUL
+            .R_REF      VAR_TEMP_1
+            .R_INT16    128
+            .R_OPERATOR .MUL
+            .R_STOP
+        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
+        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
+        VM_POP                  2
+        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_H_FIRST
+        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+
+        VM_SET_CONST            .LOCAL_ACTOR, 4
+        ; Store Y Position In Variable
+        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        VM_RPN
+            .R_REF      ^/(.LOCAL_ACTOR + 2)/
+            .R_INT16    128
+            .R_OPERATOR .DIV
+            .R_STOP
+        VM_SET                  VAR_TEMP_1, .ARG0
+        VM_POP                  1
+
+        ; Actor Set Active
+        VM_SET_CONST            .LOCAL_ACTOR, 4
+
+        ; Actor Move To Variables
+        VM_RPN
+            .R_REF      VAR_BATTLERENEMYHP1
+            .R_INT16    128
+            .R_OPERATOR .MUL
+            .R_REF      VAR_TEMP_1
+            .R_INT16    128
+            .R_OPERATOR .MUL
+            .R_STOP
+        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
+        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
+        VM_POP                  2
+        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_H_FIRST
+        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+
+        ; If Variable .LT Value
+        VM_IF_CONST             .LT, VAR_BATTLERHP1, 1, 6$, 0
         VM_JUMP                 7$
 6$:
         ; Text Dialogue

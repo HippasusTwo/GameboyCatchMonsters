@@ -16,7 +16,7 @@ _start_scene::
 _start_player_move_speed:: 
         .db 16
 _start_player_anim_tick:: 
-        .db 15
+        .db 31
 _ui_fonts:: 
         IMPORT_FAR_PTR_DATA _font_gbs_variable_width
         IMPORT_FAR_PTR_DATA _avatar_font_0

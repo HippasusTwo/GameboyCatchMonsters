@@ -40,7 +40,7 @@ _scene_logo_init::
         VM_OVERLAY_WAIT         .UI_MODAL, .UI_WAIT_WINDOW
 
         ; Wait N Frames
-        VM_SET_CONST            .LOCAL_TMP2_WAIT_ARGS, 120
+        VM_SET_CONST            .LOCAL_TMP2_WAIT_ARGS, 90
         VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP2_WAIT_ARGS
 
         ; Load Scene
