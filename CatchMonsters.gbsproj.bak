@@ -43690,7 +43690,7 @@
                                 "option2": "Attack 2",
                                 "option3": "Attack 3",
                                 "option4": "Attack 4",
-                                "option5": "Attack 5",
+                                "option5": "Info",
                                 "option6": "",
                                 "option7": "",
                                 "option8": "",
@@ -43713,9 +43713,9 @@
                             "args": {
                                 "variable": "L1",
                                 "choices": 4,
-                                "__collapseCase0": false,
+                                "__collapseCase0": true,
                                 "value0": 1,
-                                "__collapseCase1": false,
+                                "__collapseCase1": true,
                                 "value1": 2,
                                 "__collapseCase2": false,
                                 "value2": 3,
@@ -43836,7 +43836,47 @@
                                 "true13": [],
                                 "true14": [],
                                 "true15": [],
-                                "false": []
+                                "false": [
+                                    {
+                                        "command": "EVENT_SET_VALUE",
+                                        "args": {
+                                            "variable": "27",
+                                            "value": {
+                                                "type": "number",
+                                                "value": 1
+                                            }
+                                        },
+                                        "id": "df3b7073-d010-4e45-a440-6fc11ac6d465"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_VALUE",
+                                        "args": {
+                                            "variable": "32",
+                                            "value": {
+                                                "type": "number",
+                                                "value": 2
+                                            }
+                                        },
+                                        "id": "0de3f8da-ab4d-4194-bbf4-a91fa8256480"
+                                    },
+                                    {
+                                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                                        "args": {
+                                            "customEventId": "29781ec5-f87f-4750-b25c-eda85289c09d"
+                                        },
+                                        "id": "fc4b475d-1bd7-45d9-abc1-baa0a286db6f"
+                                    },
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "$26$ $412$ has $496$ \npower, type $491$"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "abd59d77-11d4-4f3b-a692-10909a88ffe7"
+                                    }
+                                ]
                             },
                             "id": "f7e700f1-d653-42d1-be4c-7b1218b43049"
                         },
@@ -46830,8 +46870,8 @@
                 15,
                 15,
                 15,
-                0,
-                0,
+                15,
+                15,
                 15,
                 15,
                 15,
@@ -84398,7 +84438,8 @@
             "height": 14,
             "imageWidth": 128,
             "imageHeight": 112,
-            "filename": "textmap.png"
+            "filename": "textmap.png",
+            "tileColors": []
         },
         {
             "id": "f047ff0e-58ad-49fc-bd2b-ec84fc1f7ab3",
@@ -89763,29 +89804,60 @@
                                     "id": "54698cfa-8372-45d4-8564-97f852027cc2",
                                     "tiles": [
                                         {
-                                            "id": "8e9014e8-9e54-4c96-91c1-ff7641797e25",
+                                            "id": "f907dadd-624d-4032-ab47-8862d31e1143",
                                             "x": 0,
-                                            "y": 0,
+                                            "y": -1,
                                             "sliceX": 0,
                                             "sliceY": 0,
+                                            "palette": 0,
                                             "flipX": false,
                                             "flipY": false,
-                                            "palette": 0,
-                                            "paletteIndex": 0,
                                             "objPalette": "OBP0",
+                                            "paletteIndex": 0,
                                             "priority": false
                                         },
                                         {
-                                            "id": "f2b1c49d-1c41-4106-bec4-e901550ca165",
+                                            "id": "e8759551-057e-486f-898e-3029647d6532",
                                             "x": 8,
-                                            "y": 0,
+                                            "y": -1,
                                             "sliceX": 8,
                                             "sliceY": 0,
+                                            "palette": 0,
                                             "flipX": false,
                                             "flipY": false,
-                                            "palette": 0,
-                                            "paletteIndex": 0,
                                             "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "212449a9-6329-4e16-8266-604cf0aea830",
+                                    "tiles": [
+                                        {
+                                            "id": "b2499f62-afbb-422f-b464-d812f287c4da",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 16,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "b5b7922d-5eac-426a-ae76-b7c8dc00851f",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 24,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
                                             "priority": false
                                         }
                                     ]
@@ -104028,7 +104100,7 @@
             "numFrames": 3.0625,
             "type": "animated",
             "filename": "type2.png",
-            "checksum": "49e4183cfbb5988a757f003e016b650f8904c2fa",
+            "checksum": "82c08f217ec1b75b205ccd2bef2054245b471cd5",
             "width": 49,
             "height": 8,
             "states": [
@@ -104046,7 +104118,7 @@
                                     "tiles": [
                                         {
                                             "id": "fecbc06c-ba8b-42ea-9a80-c5533effb0de",
-                                            "x": -8,
+                                            "x": -9,
                                             "y": 0,
                                             "sliceX": 0,
                                             "sliceY": -8,
@@ -104058,8 +104130,8 @@
                                             "priority": false
                                         },
                                         {
-                                            "id": "5c94d1fb-769b-4525-a246-ad0d22b1f35c",
-                                            "x": 0,
+                                            "id": "5b325fa8-c204-43f1-8d6a-c93574bb52f2",
+                                            "x": -1,
                                             "y": 0,
                                             "sliceX": 8,
                                             "sliceY": -8,
@@ -104071,10 +104143,36 @@
                                             "priority": false
                                         },
                                         {
-                                            "id": "156075ce-3d25-44d4-a0ba-53e6a9e56c87",
-                                            "x": 8,
+                                            "id": "1dc9bf82-c786-4ddd-a5a8-f8bf206de2ae",
+                                            "x": 7,
                                             "y": 0,
                                             "sliceX": 16,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "45f4931b-ab2e-42c6-b769-c3090e9b9104",
+                                            "x": 14,
+                                            "y": 0,
+                                            "sliceX": 24,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "8966d525-376f-4cbd-a28a-b8b241a266fb",
+                                            "x": 22,
+                                            "y": 0,
+                                            "sliceX": 32,
                                             "sliceY": -8,
                                             "palette": 0,
                                             "flipX": false,
@@ -104089,8 +104187,8 @@
                                     "id": "b3a459b6-a479-46bc-b092-5a19cec6518b",
                                     "tiles": [
                                         {
-                                            "id": "a4567266-f6f7-44fe-ba39-fe5e2ced3543",
-                                            "x": -8,
+                                            "id": "c76a6d8e-932a-4abc-ad7a-a729d0d5a3c3",
+                                            "x": -9,
                                             "y": 1,
                                             "sliceX": 0,
                                             "sliceY": -8,
@@ -104102,8 +104200,8 @@
                                             "priority": false
                                         },
                                         {
-                                            "id": "0b6f0e11-cae2-4991-b74b-57ccc7886dbe",
-                                            "x": 0,
+                                            "id": "14f7c83c-6081-4125-b66c-90e12039e92f",
+                                            "x": -1,
                                             "y": 1,
                                             "sliceX": 8,
                                             "sliceY": -8,
@@ -104115,10 +104213,36 @@
                                             "priority": false
                                         },
                                         {
-                                            "id": "06167ed2-a37e-4698-92c4-3c12ffaa4218",
-                                            "x": 8,
+                                            "id": "b171bed7-1371-4bae-9328-e9eace80a2d6",
+                                            "x": 7,
                                             "y": 1,
                                             "sliceX": 16,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "23eedc31-af1b-46b9-bb8a-777db473e55a",
+                                            "x": 14,
+                                            "y": 1,
+                                            "sliceX": 24,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "f5a441ab-7d68-4018-a9df-a97abb484596",
+                                            "x": 22,
+                                            "y": 1,
+                                            "sliceX": 32,
                                             "sliceY": -8,
                                             "palette": 0,
                                             "flipX": false,
@@ -104197,7 +104321,7 @@
                     ]
                 }
             ],
-            "numTiles": 3,
+            "numTiles": 5,
             "canvasWidth": 32,
             "canvasHeight": 32,
             "boundsX": 0,
@@ -104437,7 +104561,7 @@
             "numFrames": 3.0625,
             "type": "animated",
             "filename": "type4.png",
-            "checksum": "50d9ac6d021e876b238d399d1bf19e27e8dd01e8",
+            "checksum": "62edd1a7b03f40e32cab1fc243fed80d005e4beb",
             "width": 49,
             "height": 8,
             "states": [
@@ -105486,6 +105610,107 @@
             "boundsY": 0,
             "boundsWidth": 16,
             "boundsHeight": 32,
+            "animSpeed": 15
+        },
+        {
+            "id": "ddcd7bbd-f7c4-463e-bbe7-269fb6e74ba2",
+            "name": "williemouse",
+            "symbol": "sprite_williemouse",
+            "numFrames": 4.6875,
+            "type": "animated",
+            "filename": "williemouse.png",
+            "checksum": "c388d2cf159b5eb2ac391642e6d26988f8f089c0",
+            "width": 75,
+            "height": 74,
+            "states": [
+                {
+                    "id": "c48aa99a-6c43-4086-b1a6-3f7bb65985ac",
+                    "name": "",
+                    "animationType": "multi_movement",
+                    "flipLeft": true,
+                    "animations": [
+                        {
+                            "id": "2969984f-d8ec-4406-b13f-8cff9f1ce275",
+                            "frames": [
+                                {
+                                    "id": "2096815d-4f33-42c1-bb29-88587d5107cd",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e0784c96-6e5b-45aa-a5ce-6eb20db40835",
+                            "frames": [
+                                {
+                                    "id": "13bd5243-02d5-4c0c-ad3f-6f6a9ecd714a",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0ec00607-2702-432e-9de2-aa4f826b0871",
+                            "frames": [
+                                {
+                                    "id": "48436980-903b-43f3-b713-0979bfee4551",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "8e24fdaa-2e68-4615-a3e9-74d7c14210ed",
+                            "frames": [
+                                {
+                                    "id": "c285d43d-60b1-48bc-8445-ef85f537b6f5",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "72a546cc-2380-41a5-8855-d623bb240b51",
+                            "frames": [
+                                {
+                                    "id": "282ba928-238d-4aa0-ae9d-c7c49fdc8064",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1d0b0b1a-55ba-472b-ac08-7709d318e68b",
+                            "frames": [
+                                {
+                                    "id": "a34e51ba-9342-4105-819c-e60178bbd2a5",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0ac3d7ba-f881-4749-95df-c513714a53f2",
+                            "frames": [
+                                {
+                                    "id": "6385e906-76ff-4559-81ef-4735ba5ad60c",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b95e0eaf-01af-420e-a5b0-0e91b3cdceab",
+                            "frames": [
+                                {
+                                    "id": "6b4dd965-567f-4710-abd4-8813aac9d3f5",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 0,
+            "canvasWidth": 32,
+            "canvasHeight": 32,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
             "animSpeed": 15
         },
         {
@@ -107273,7 +107498,7 @@
         },
         {
             "id": "f84d7e71-20cf-4a7a-b370-d9b7f857bf93",
-            "name": "Database",
+            "name": "DatabaseMaybe",
             "description": "Database of values is kinda important for more complicated games. I see lots of vm methods for manipulating memory but not so much pointers.\nThis doesn't actually work atm. Might have to overhaul the engine actually...",
             "variables": {},
             "actors": {},
@@ -107291,7 +107516,7 @@
         {
             "id": "fa072bdc-fa97-4a43-893c-8d9e1dd39c1c",
             "name": "DatabaseMons",
-            "description": "Extremely inefficient but OK if you want to ensure battle monster data and enemy match. Use wLookingFor beforehand to tell it to look for enemy or ally data.",
+            "description": "Extremely inefficient but OK if you want to ensure battle monster data and enemy match. Use wLookingFor beforehand to tell it to look for enemy or ally data. temp3 is a var for temporarily setting the species to lookup and could probably be replaced by something else.",
             "variables": {},
             "actors": {},
             "symbol": "script_15",
@@ -107424,6 +107649,57 @@
                         ]
                     },
                     "id": "c71df877-365c-4a39-8788-7a6fbc696f50"
+                }
+            ]
+        },
+        {
+            "id": "29781ec5-f87f-4750-b25c-eda85289c09d",
+            "name": "DatabaseChosenAttack",
+            "description": "wlookingfor decides if enemy or friend's technique being looked at.\nvar_temp3 then has the appropriate technique, friend or foe's, loaded.\nwstr determines the power of the attack. wtype the type.\nwhp could be used for healing maybe at some point?\nwdef for techniques that raise stats?\nwspecial for deciding what kind of technique it is.\nwspeed could be used for priority at some point.",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_16",
+            "script": [
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "; VM_RAND VAR_BATTLERENEMYHP1, 2, 3\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 1, EnemyG, 0 \n ;not enemy\n  VM_SET VAR_TEMP3,VAR_TECHNIQUECHOSEN\n  VM_JUMP Lookup1\n EnemyG:\n VM_SET VAR_TEMP3, VAR_TECHNIQUEFOE\n Lookup1:\n VM_IF_CONST .EQ,  VAR_TEMP3, 1, Attack1, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 2, Attack2, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 3, Attack3, 0\nVM_IF_CONST .EQ,  VAR_TEMP3, 4, Attack4, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 5, Attack5, 0\n VM_JUMP GenericAttack\n\nAttack1:\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 1\n ; VM_SET_CONST VAR_WDEF, 1\n ;VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 3\n VM_JUMP LoadMonsterData\nAttack2:\n VM_SET_CONST VAR_WSTR, 2\n; VM_SET_CONST VAR_WHP, 5\n VM_SET_CONST VAR_WTYPE, 2\n;  VM_SET_CONST VAR_WDEF, 2\n; VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nAttack3:\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 6\n VM_SET_CONST VAR_WTYPE, 3\n;  VM_SET_CONST VAR_WDEF, 2\n; VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nAttack4:\n  VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 3\n VM_SET_CONST VAR_WTYPE, 4\n ;VM_SET_CONST VAR_WDEF, 1\n ;VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n Attack5:\n   VM_SET_CONST VAR_BATTLERENEMYLVL,2\n VM_SET_CONST VAR_WSTR, 5\n VM_SET_CONST VAR_WHP, 10\n VM_SET_CONST VAR_WTYPE, 5\n  VM_SET_CONST VAR_WDEF, 10\n VM_SET_CONST VAR_WSPECIAL, 5\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nGenericAttack:\n\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 1\n \n; VM_SET_CONST VAR_WDEF, 1\n; VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nLoadMonsterData:\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 0, LABEL1, 0;if player jump\n ;load monster data into enemy attack. Could use this for stat raising techniques.\n ;VM_SET VAR_BATTLERENEMYSTR, VAR_WSTR\n ;VM_SET VAR_BATTLERENEMYHP1, VAR_WHP\n ;VM_SET VAR_BATTLERENEMYTYPE, VAR_WTYPE\n VM_JUMP end\n LABEL1:\n ;load monster data into player\n  ;VM_SET VAR_BATTLERSTR, VAR_WSTR\n; VM_SET VAR_BATTLERMAXHP, VAR_WHP\n ;VM_SET VAR_BATTLERTYPE, VAR_WTYPE\n end:\n  ",
+                        "references": [
+                            {
+                                "type": "variable",
+                                "id": "20"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "503"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "477"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "481"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "412"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "488"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "18"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "480"
+                            }
+                        ]
+                    },
+                    "id": "28d24a0e-04c8-4800-ac3d-b404ded1ef2d"
                 }
             ]
         }
@@ -107834,14 +108110,224 @@
             "symbol": "var_battlerspecies"
         },
         {
+            "id": "26",
+            "name": "wLookingFor",
+            "symbol": "var_wlookingfor"
+        },
+        {
+            "id": "27",
+            "name": "TechniqueChosen",
+            "symbol": "var_techniquechosen"
+        },
+        {
             "id": "28",
             "name": "BattlerEnemySpecies2",
             "symbol": "var_battlerenemyspecies2"
         },
         {
+            "id": "29",
+            "name": "BattlerEnemyMove2",
+            "symbol": "var_battlerenemymove2"
+        },
+        {
+            "id": "30",
+            "name": "BattlerEnemyMove4",
+            "symbol": "var_battlerenemymove4"
+        },
+        {
+            "id": "31",
+            "name": "BattlerMove2",
+            "symbol": "var_battlermove2"
+        },
+        {
+            "id": "32",
+            "name": "TechniqueFoe",
+            "symbol": "var_techniquefoe"
+        },
+        {
+            "id": "37",
+            "name": "Battler3LVL",
+            "symbol": "var_battler3lvl"
+        },
+        {
+            "id": "69",
+            "name": "Battler2LVL",
+            "symbol": "var_battler2lvl"
+        },
+        {
+            "id": "72",
+            "name": "BattlerEnemyMove3",
+            "symbol": "var_battlerenemymove3"
+        },
+        {
+            "id": "412",
+            "name": "temp3",
+            "symbol": "var_temp3"
+        },
+        {
             "id": "447",
             "name": "BattlerSpecies2",
             "symbol": "var_battlerspecies2"
+        },
+        {
+            "id": "449",
+            "name": "BattlerDEF",
+            "symbol": "var_battlerdef"
+        },
+        {
+            "id": "468",
+            "name": "BattlerSPEED",
+            "symbol": "var_battlerspeed"
+        },
+        {
+            "id": "472",
+            "name": "wMove4",
+            "symbol": "var_wmove4"
+        },
+        {
+            "id": "473",
+            "name": "wMove3",
+            "symbol": "var_wmove3"
+        },
+        {
+            "id": "474",
+            "name": "wMove2",
+            "symbol": "var_wmove2"
+        },
+        {
+            "id": "475",
+            "name": "wMove1",
+            "symbol": "var_wmove1"
+        },
+        {
+            "id": "476",
+            "name": "wType2",
+            "symbol": "var_wtype2"
+        },
+        {
+            "id": "477",
+            "name": "BattlerEnemyLVL",
+            "symbol": "var_battlerenemylvl"
+        },
+        {
+            "id": "478",
+            "name": "BattlerSPECIAL",
+            "symbol": "var_battlerspecial"
+        },
+        {
+            "id": "479",
+            "name": "Battler1LVL",
+            "symbol": "var_battler1lvl"
+        },
+        {
+            "id": "480",
+            "name": "BattlerTYPE",
+            "symbol": "var_battlertype"
+        },
+        {
+            "id": "481",
+            "name": "BattlerEnemyTYPE",
+            "symbol": "var_battlerenemytype"
+        },
+        {
+            "id": "482",
+            "name": "BattlerEnemySPEED",
+            "symbol": "var_battlerenemyspeed"
+        },
+        {
+            "id": "483",
+            "name": "BattlerEnemySPECIAL",
+            "symbol": "var_battlerenemyspecial"
+        },
+        {
+            "id": "484",
+            "name": "BattlerEnemyMove1",
+            "symbol": "var_battlerenemymove1"
+        },
+        {
+            "id": "485",
+            "name": "BattlerMove1",
+            "symbol": "var_battlermove1"
+        },
+        {
+            "id": "486",
+            "name": "BattlerMove3",
+            "symbol": "var_battlermove3"
+        },
+        {
+            "id": "487",
+            "name": "BattlerMove4",
+            "symbol": "var_battlermove4"
+        },
+        {
+            "id": "488",
+            "name": "BattlerMaxHP",
+            "symbol": "var_battlermaxhp"
+        },
+        {
+            "id": "489",
+            "name": "Letters2",
+            "symbol": "var_letters2"
+        },
+        {
+            "id": "490",
+            "name": "Letters1",
+            "symbol": "var_letters1"
+        },
+        {
+            "id": "491",
+            "name": "wType",
+            "symbol": "var_wtype"
+        },
+        {
+            "id": "492",
+            "name": "wSpecial",
+            "symbol": "var_wspecial"
+        },
+        {
+            "id": "493",
+            "name": "wDef",
+            "symbol": "var_wdef"
+        },
+        {
+            "id": "494",
+            "name": "wHP",
+            "symbol": "var_whp"
+        },
+        {
+            "id": "495",
+            "name": "wSpeed",
+            "symbol": "var_wspeed"
+        },
+        {
+            "id": "496",
+            "name": "wStr",
+            "symbol": "var_wstr"
+        },
+        {
+            "id": "497",
+            "name": "Letter6",
+            "symbol": "var_letter6"
+        },
+        {
+            "id": "498",
+            "name": "Letter5",
+            "symbol": "var_letter5"
+        },
+        {
+            "id": "499",
+            "name": "Letter4",
+            "symbol": "var_letter4"
+        },
+        {
+            "id": "500",
+            "name": "Wordy6",
+            "symbol": "var_wordy6"
+        },
+        {
+            "id": "501",
+            "name": "Wordy5",
+            "symbol": "var_wordy5"
         },
         {
             "id": "502",
@@ -107958,206 +108444,6 @@
             "symbol": "var_local_4"
         },
         {
-            "id": "501",
-            "name": "Wordy5",
-            "symbol": "var_wordy5"
-        },
-        {
-            "id": "500",
-            "name": "Wordy6",
-            "symbol": "var_wordy6"
-        },
-        {
-            "id": "499",
-            "name": "Letter4",
-            "symbol": "var_letter4"
-        },
-        {
-            "id": "498",
-            "name": "Letter5",
-            "symbol": "var_letter5"
-        },
-        {
-            "id": "497",
-            "name": "Letter6",
-            "symbol": "var_letter6"
-        },
-        {
-            "id": "496",
-            "name": "wStr",
-            "symbol": "var_wstr"
-        },
-        {
-            "id": "495",
-            "name": "wSpeed",
-            "symbol": "var_wspeed"
-        },
-        {
-            "id": "494",
-            "name": "wHP",
-            "symbol": "var_whp"
-        },
-        {
-            "id": "493",
-            "name": "wDef",
-            "symbol": "var_wdef"
-        },
-        {
-            "id": "492",
-            "name": "wSpecial",
-            "symbol": "var_wspecial"
-        },
-        {
-            "id": "491",
-            "name": "wType",
-            "symbol": "var_wtype"
-        },
-        {
-            "id": "490",
-            "name": "Letters1",
-            "symbol": "var_letters1"
-        },
-        {
-            "id": "489",
-            "name": "Letters2",
-            "symbol": "var_letters2"
-        },
-        {
-            "id": "488",
-            "name": "BattlerMaxHP",
-            "symbol": "var_battlermaxhp"
-        },
-        {
-            "id": "487",
-            "name": "BattlerMove4",
-            "symbol": "var_battlermove4"
-        },
-        {
-            "id": "486",
-            "name": "BattlerMove3",
-            "symbol": "var_battlermove3"
-        },
-        {
-            "id": "485",
-            "name": "BattlerMove1",
-            "symbol": "var_battlermove1"
-        },
-        {
-            "id": "26",
-            "name": "wLookingFor",
-            "symbol": "var_wlookingfor"
-        },
-        {
-            "id": "484",
-            "name": "BattlerEnemyMove1",
-            "symbol": "var_battlerenemymove1"
-        },
-        {
-            "id": "483",
-            "name": "BattlerEnemySPECIAL",
-            "symbol": "var_battlerenemyspecial"
-        },
-        {
-            "id": "482",
-            "name": "BattlerEnemySPEED",
-            "symbol": "var_battlerenemyspeed"
-        },
-        {
-            "id": "481",
-            "name": "BattlerEnemyTYPE",
-            "symbol": "var_battlerenemytype"
-        },
-        {
-            "id": "480",
-            "name": "BattlerTYPE",
-            "symbol": "var_battlertype"
-        },
-        {
-            "id": "468",
-            "name": "BattlerSPEED",
-            "symbol": "var_battlerspeed"
-        },
-        {
-            "id": "478",
-            "name": "BattlerSPECIAL",
-            "symbol": "var_battlerspecial"
-        },
-        {
-            "id": "479",
-            "name": "Battler1LVL",
-            "symbol": "var_battler1lvl"
-        },
-        {
-            "id": "477",
-            "name": "BattlerEnemyLVL",
-            "symbol": "var_battlerenemylvl"
-        },
-        {
-            "id": "449",
-            "name": "BattlerDEF",
-            "symbol": "var_battlerdef"
-        },
-        {
-            "id": "476",
-            "name": "wType2",
-            "symbol": "var_wtype2"
-        },
-        {
-            "id": "475",
-            "name": "wMove1",
-            "symbol": "var_wmove1"
-        },
-        {
-            "id": "474",
-            "name": "wMove2",
-            "symbol": "var_wmove2"
-        },
-        {
-            "id": "473",
-            "name": "wMove3",
-            "symbol": "var_wmove3"
-        },
-        {
-            "id": "472",
-            "name": "wMove4",
-            "symbol": "var_wmove4"
-        },
-        {
-            "id": "29",
-            "name": "BattlerEnemyMove2",
-            "symbol": "var_battlerenemymove2"
-        },
-        {
-            "id": "72",
-            "name": "BattlerEnemyMove3",
-            "symbol": "var_battlerenemymove3"
-        },
-        {
-            "id": "30",
-            "name": "BattlerEnemyMove4",
-            "symbol": "var_battlerenemymove4"
-        },
-        {
-            "id": "31",
-            "name": "BattlerMove2",
-            "symbol": "var_battlermove2"
-        },
-        {
-            "id": "37",
-            "name": "Battler3LVL",
-            "symbol": "var_battler3lvl"
-        },
-        {
-            "id": "69",
-            "name": "Battler2LVL",
-            "symbol": "var_battler2lvl"
-        },
-        {
-            "id": "412",
-            "name": "temp3",
-            "symbol": "var_temp3"
-        },
-        {
             "id": "ba78d94d-8180-48ae-bbc9-b6ae8abd56e1__L2",
             "name": "Local 2",
             "symbol": "var_local_1"
@@ -108183,8 +108469,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1421.5999755859375,
-        "worldScrollY": 165.60000610351562,
+        "worldScrollX": 2608.800048828125,
+        "worldScrollY": 88.80000305175781,
         "zoom": 115.88104721903801,
         "customColorsEnabled": true,
         "sgbEnabled": false,

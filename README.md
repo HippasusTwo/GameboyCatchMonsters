@@ -12,6 +12,7 @@ Current working features:
 * Starting a battle with many different monsters (actually mostly just generic animal sprites at the moment).
 * HP going down with an animation and ending the battle at low health.
 * Different HP and stats for different creatures, you can see your creature's type.
+* Typed attacks
 * Roaming across maps to new places
 * A single map with a following critter example.
 * Basic saving.

@@ -43639,7 +43639,7 @@
                         {
                             "command": "PT_EVENT_BACKGROUND_TEXT",
                             "args": {
-                                "text": "Metalclaw",
+                                "text": "Vines",
                                 "x": 2,
                                 "y": 4
                             },
@@ -43648,7 +43648,7 @@
                         {
                             "command": "PT_EVENT_BACKGROUND_TEXT",
                             "args": {
-                                "text": "Waterblast",
+                                "text": "Gale",
                                 "x": 2,
                                 "y": 5
                             },
@@ -43657,20 +43657,11 @@
                         {
                             "command": "PT_EVENT_BACKGROUND_TEXT",
                             "args": {
-                                "text": "Woodhammer",
+                                "text": "Waterblast",
                                 "x": 2,
                                 "y": 6
                             },
                             "id": "72877eb5-475e-4c64-90a1-0e2bba314655"
-                        },
-                        {
-                            "command": "PT_EVENT_BACKGROUND_TEXT",
-                            "args": {
-                                "text": "Earthwall",
-                                "x": 2,
-                                "y": 8
-                            },
-                            "id": "b783ae61-9372-4ee3-82fd-2f3c597ea3ee"
                         },
                         {
                             "command": "PT_EVENT_BACKGROUND_TEXT",
@@ -43682,9 +43673,18 @@
                             "id": "e34fa899-97b5-4f9a-8e87-6d0dd9b2bf72"
                         },
                         {
+                            "command": "PT_EVENT_BACKGROUND_TEXT",
+                            "args": {
+                                "text": "Metalclaw",
+                                "x": 2,
+                                "y": 8
+                            },
+                            "id": "b783ae61-9372-4ee3-82fd-2f3c597ea3ee"
+                        },
+                        {
                             "command": "EVENT_MENU",
                             "args": {
-                                "variable": "L1",
+                                "variable": "27",
                                 "items": 5,
                                 "option1": "Attack 1",
                                 "option2": "Attack 2",
@@ -43711,7 +43711,7 @@
                         {
                             "command": "EVENT_SWITCH",
                             "args": {
-                                "variable": "L1",
+                                "variable": "27",
                                 "choices": 4,
                                 "__collapseCase0": false,
                                 "value0": 1,
@@ -43745,7 +43745,8 @@
                                 "value14": 15,
                                 "__collapseCase15": false,
                                 "value15": 16,
-                                "__collapseElse": false
+                                "__collapseElse": false,
+                                "__collapse": false
                             },
                             "children": {
                                 "true0": [
@@ -43762,30 +43763,16 @@
                                     {
                                         "command": "EVENT_VARIABLE_MATH",
                                         "args": {
-                                            "vectorX": "503",
-                                            "operation": "sub",
-                                            "other": "val",
-                                            "vectorY": "12",
-                                            "value": 1,
-                                            "minValue": "0",
-                                            "maxValue": "32767",
+                                            "vectorX": "32",
+                                            "operation": "set",
+                                            "other": "rnd",
+                                            "vectorY": "L0",
+                                            "value": "0",
+                                            "minValue": 1,
+                                            "maxValue": 4,
                                             "clamp": false
                                         },
-                                        "id": "2e40d16d-8c7c-40d1-83e1-1a182f8ce2e1"
-                                    },
-                                    {
-                                        "command": "EVENT_VARIABLE_MATH",
-                                        "args": {
-                                            "vectorX": "504",
-                                            "operation": "sub",
-                                            "other": "val",
-                                            "vectorY": "12",
-                                            "value": 1,
-                                            "minValue": "0",
-                                            "maxValue": "32767",
-                                            "clamp": true
-                                        },
-                                        "id": "eb6ecfe2-3a18-4d11-8059-78bde672cc56"
+                                        "id": "9e51eeb9-fa16-4e72-bc60-d7f7f8d0fd73"
                                     }
                                 ],
                                 "true1": [
@@ -43793,11 +43780,25 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Attack 2 unleashed!\n Not very effective."
+                                                "Attack 2 unleashed!"
                                             ],
                                             "avatarId": ""
                                         },
                                         "id": "1db1032c-ca50-4e9c-999e-836dde20937a"
+                                    },
+                                    {
+                                        "command": "EVENT_VARIABLE_MATH",
+                                        "args": {
+                                            "vectorX": "32",
+                                            "operation": "set",
+                                            "other": "rnd",
+                                            "vectorY": "L0",
+                                            "value": "0",
+                                            "minValue": 1,
+                                            "maxValue": 4,
+                                            "clamp": false
+                                        },
+                                        "id": "921e74fd-839b-4a91-a149-abe78962e627"
                                     }
                                 ],
                                 "true2": [
@@ -43810,6 +43811,20 @@
                                             "avatarId": ""
                                         },
                                         "id": "5ad16574-75d2-45a3-ba15-e9150e95caba"
+                                    },
+                                    {
+                                        "command": "EVENT_VARIABLE_MATH",
+                                        "args": {
+                                            "vectorX": "32",
+                                            "operation": "set",
+                                            "other": "rnd",
+                                            "vectorY": "L0",
+                                            "value": "0",
+                                            "minValue": 1,
+                                            "maxValue": 4,
+                                            "clamp": false
+                                        },
+                                        "id": "2a8e8b06-a387-49cc-b9ee-181765420cd2"
                                     }
                                 ],
                                 "true3": [
@@ -43817,11 +43832,25 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "Missed!"
+                                                "Attacked!"
                                             ],
                                             "avatarId": ""
                                         },
                                         "id": "bd1b6fd5-d8ef-403f-8c5e-5f05e268cb25"
+                                    },
+                                    {
+                                        "command": "EVENT_VARIABLE_MATH",
+                                        "args": {
+                                            "vectorX": "32",
+                                            "operation": "set",
+                                            "other": "rnd",
+                                            "vectorY": "L0",
+                                            "value": "0",
+                                            "minValue": 1,
+                                            "maxValue": 4,
+                                            "clamp": false
+                                        },
+                                        "id": "5ce19507-60b2-4c32-a989-37a2f97108e1"
                                     }
                                 ],
                                 "true4": [],
@@ -43836,9 +43865,154 @@
                                 "true13": [],
                                 "true14": [],
                                 "true15": [],
-                                "false": []
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Move 5."
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "33fba06e-ccf1-4a1b-a3f3-426c6b8f9366"
+                                    },
+                                    {
+                                        "command": "EVENT_VARIABLE_MATH",
+                                        "args": {
+                                            "vectorX": "32",
+                                            "operation": "set",
+                                            "other": "rnd",
+                                            "vectorY": "L0",
+                                            "value": "0",
+                                            "minValue": 1,
+                                            "maxValue": 4,
+                                            "clamp": false
+                                        },
+                                        "id": "d9d19f19-4b7b-4fb9-98d8-b86154134a12"
+                                    }
+                                ]
                             },
                             "id": "f7e700f1-d653-42d1-be4c-7b1218b43049"
+                        },
+                        {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "26",
+                                "value": {
+                                    "type": "number",
+                                    "value": 1
+                                },
+                                "__collapse": false
+                            },
+                            "id": "27484f44-67c6-45fa-9419-11c01f1ce4b5"
+                        },
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "29781ec5-f87f-4750-b25c-eda85289c09d"
+                            },
+                            "id": "fc4b475d-1bd7-45d9-abc1-baa0a286db6f"
+                        },
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "2298dcca-fd75-4d04-bf87-815a1dc892d0",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "491"
+                                },
+                                "$variable[V1]$": {
+                                    "type": "variable",
+                                    "value": "26"
+                                },
+                                "$variable[V2]$": {
+                                    "type": "variable",
+                                    "value": "496"
+                                },
+                                "$variable[V3]$": {
+                                    "type": "variable",
+                                    "value": "412"
+                                },
+                                "$variable[V4]$": {
+                                    "type": "variable",
+                                    "value": "20"
+                                },
+                                "$variable[V5]$": {
+                                    "type": "variable",
+                                    "value": "18"
+                                }
+                            },
+                            "id": "103daa36-06cf-4adf-9eb3-42696bf83843"
+                        },
+                        {
+                            "command": "EVENT_VARIABLE_MATH",
+                            "args": {
+                                "vectorX": "503",
+                                "operation": "sub",
+                                "other": "var",
+                                "vectorY": "496",
+                                "value": "0",
+                                "minValue": "0",
+                                "maxValue": "32767",
+                                "clamp": true
+                            },
+                            "id": "7c953fdd-51d2-44e7-ad73-2fab93ab2c86"
+                        },
+                        {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "26",
+                                "value": {
+                                    "type": "number",
+                                    "value": 0
+                                },
+                                "__collapse": false
+                            },
+                            "id": "a52183c7-d7da-4935-a27c-3aeb0129737b"
+                        },
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "29781ec5-f87f-4750-b25c-eda85289c09d"
+                            },
+                            "id": "3d8aae6d-25f9-4792-a7dc-fa39548f87b3"
+                        },
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "2298dcca-fd75-4d04-bf87-815a1dc892d0",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "491"
+                                },
+                                "$variable[V1]$": {
+                                    "type": "variable",
+                                    "value": "26"
+                                },
+                                "$variable[V2]$": {
+                                    "type": "variable",
+                                    "value": "496"
+                                },
+                                "$variable[V3]$": {
+                                    "type": "variable",
+                                    "value": "412"
+                                }
+                            },
+                            "id": "a3275d8f-d6d0-45af-93ae-584e14ad5fdc"
+                        },
+                        {
+                            "command": "EVENT_VARIABLE_MATH",
+                            "args": {
+                                "vectorX": "504",
+                                "operation": "sub",
+                                "other": "var",
+                                "vectorY": "496",
+                                "value": "0",
+                                "minValue": "0",
+                                "maxValue": "32767",
+                                "clamp": true
+                            },
+                            "id": "f6b50b56-efa8-461f-9129-0e69f933d6a5"
                         },
                         {
                             "command": "EVENT_ACTOR_MOVE_TO",
@@ -46830,8 +47004,8 @@
                 15,
                 15,
                 15,
-                0,
-                0,
+                15,
+                15,
                 15,
                 15,
                 15,
@@ -84398,7 +84572,8 @@
             "height": 14,
             "imageWidth": 128,
             "imageHeight": 112,
-            "filename": "textmap.png"
+            "filename": "textmap.png",
+            "tileColors": []
         },
         {
             "id": "f047ff0e-58ad-49fc-bd2b-ec84fc1f7ab3",
@@ -89763,29 +89938,60 @@
                                     "id": "54698cfa-8372-45d4-8564-97f852027cc2",
                                     "tiles": [
                                         {
-                                            "id": "8e9014e8-9e54-4c96-91c1-ff7641797e25",
+                                            "id": "f907dadd-624d-4032-ab47-8862d31e1143",
                                             "x": 0,
-                                            "y": 0,
+                                            "y": -1,
                                             "sliceX": 0,
                                             "sliceY": 0,
+                                            "palette": 0,
                                             "flipX": false,
                                             "flipY": false,
-                                            "palette": 0,
-                                            "paletteIndex": 0,
                                             "objPalette": "OBP0",
+                                            "paletteIndex": 0,
                                             "priority": false
                                         },
                                         {
-                                            "id": "f2b1c49d-1c41-4106-bec4-e901550ca165",
+                                            "id": "e8759551-057e-486f-898e-3029647d6532",
                                             "x": 8,
-                                            "y": 0,
+                                            "y": -1,
                                             "sliceX": 8,
                                             "sliceY": 0,
+                                            "palette": 0,
                                             "flipX": false,
                                             "flipY": false,
-                                            "palette": 0,
-                                            "paletteIndex": 0,
                                             "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "212449a9-6329-4e16-8266-604cf0aea830",
+                                    "tiles": [
+                                        {
+                                            "id": "b2499f62-afbb-422f-b464-d812f287c4da",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 16,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "b5b7922d-5eac-426a-ae76-b7c8dc00851f",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 24,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
                                             "priority": false
                                         }
                                     ]
@@ -105541,6 +105747,107 @@
             "animSpeed": 15
         },
         {
+            "id": "ddcd7bbd-f7c4-463e-bbe7-269fb6e74ba2",
+            "name": "williemouse",
+            "symbol": "sprite_williemouse",
+            "numFrames": 4.6875,
+            "type": "animated",
+            "filename": "williemouse.png",
+            "checksum": "c388d2cf159b5eb2ac391642e6d26988f8f089c0",
+            "width": 75,
+            "height": 74,
+            "states": [
+                {
+                    "id": "c48aa99a-6c43-4086-b1a6-3f7bb65985ac",
+                    "name": "",
+                    "animationType": "multi_movement",
+                    "flipLeft": true,
+                    "animations": [
+                        {
+                            "id": "2969984f-d8ec-4406-b13f-8cff9f1ce275",
+                            "frames": [
+                                {
+                                    "id": "2096815d-4f33-42c1-bb29-88587d5107cd",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e0784c96-6e5b-45aa-a5ce-6eb20db40835",
+                            "frames": [
+                                {
+                                    "id": "13bd5243-02d5-4c0c-ad3f-6f6a9ecd714a",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0ec00607-2702-432e-9de2-aa4f826b0871",
+                            "frames": [
+                                {
+                                    "id": "48436980-903b-43f3-b713-0979bfee4551",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "8e24fdaa-2e68-4615-a3e9-74d7c14210ed",
+                            "frames": [
+                                {
+                                    "id": "c285d43d-60b1-48bc-8445-ef85f537b6f5",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "72a546cc-2380-41a5-8855-d623bb240b51",
+                            "frames": [
+                                {
+                                    "id": "282ba928-238d-4aa0-ae9d-c7c49fdc8064",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1d0b0b1a-55ba-472b-ac08-7709d318e68b",
+                            "frames": [
+                                {
+                                    "id": "a34e51ba-9342-4105-819c-e60178bbd2a5",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0ac3d7ba-f881-4749-95df-c513714a53f2",
+                            "frames": [
+                                {
+                                    "id": "6385e906-76ff-4559-81ef-4735ba5ad60c",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b95e0eaf-01af-420e-a5b0-0e91b3cdceab",
+                            "frames": [
+                                {
+                                    "id": "6b4dd965-567f-4710-abd4-8813aac9d3f5",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 0,
+            "canvasWidth": 32,
+            "canvasHeight": 32,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
+            "animSpeed": 15
+        },
+        {
             "id": "21807bfb-daea-469b-bd7a-2dfedef173b3",
             "name": "woman_platform",
             "symbol": "sprite_woman_platform",
@@ -107325,7 +107632,7 @@
         },
         {
             "id": "f84d7e71-20cf-4a7a-b370-d9b7f857bf93",
-            "name": "Database",
+            "name": "DatabaseMaybe",
             "description": "Database of values is kinda important for more complicated games. I see lots of vm methods for manipulating memory but not so much pointers.\nThis doesn't actually work atm. Might have to overhaul the engine actually...",
             "variables": {},
             "actors": {},
@@ -107343,7 +107650,7 @@
         {
             "id": "fa072bdc-fa97-4a43-893c-8d9e1dd39c1c",
             "name": "DatabaseMons",
-            "description": "Extremely inefficient but OK if you want to ensure battle monster data and enemy match. Use wLookingFor beforehand to tell it to look for enemy or ally data.",
+            "description": "Extremely inefficient but OK if you want to ensure battle monster data and enemy match. Use wLookingFor beforehand to tell it to look for enemy or ally data. temp3 is a var for temporarily setting the species to lookup and could probably be replaced by something else.",
             "variables": {},
             "actors": {},
             "symbol": "script_15",
@@ -107439,7 +107746,7 @@
                 {
                     "command": "EVENT_GBVM_SCRIPT",
                     "args": {
-                        "script": "; VM_RAND VAR_BATTLERENEMYHP1, 2, 3\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 1, EnemyGrab,0  \n ;not enemy\n  VM_SET VAR_TEMP3,VAR_BATTLERSPECIES\n  VM_JUMP Lookup\n EnemyGrab:\n VM_SET VAR_TEMP3, VAR_BATTLERENEMYSPECIES1\n Lookup:\n VM_IF_CONST .EQ,  VAR_TEMP3, 1, Monster1, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 2, Monster2, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 3, Monster3, 0\nVM_IF_CONST .EQ,  VAR_TEMP3, 4, Monster4, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 7, MonsterElephant, 0\n VM_JUMP GenericMonster\n\nMonster1:\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 2\n  VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 3\n VM_JUMP LoadMonsterData\nMonster2:\n VM_SET_CONST VAR_WSTR, 2\n VM_SET_CONST VAR_WHP, 5\n VM_SET_CONST VAR_WTYPE, 4\n  VM_SET_CONST VAR_WDEF, 2\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nMonster3:\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 6\n VM_SET_CONST VAR_WTYPE, 3\n  VM_SET_CONST VAR_WDEF, 2\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nMonster4:\n  VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 3\n VM_SET_CONST VAR_WTYPE, 1\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n MonsterElephant:\n   VM_SET_CONST VAR_BATTLERENEMYLVL,2\n VM_SET_CONST VAR_WSTR, 5\n VM_SET_CONST VAR_WHP, 10\n VM_SET_CONST VAR_WTYPE, 5\n  VM_SET_CONST VAR_WDEF, 10\n VM_SET_CONST VAR_WSPECIAL, 5\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nGenericMonster:\n  VM_SET VAR_BATTLERENEMYLVL,VAR_BATTLER1LVL\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 2\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nLoadMonsterData:\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 0, LABEL1, 0;if player jump\n ;load monster data into enemy\n VM_SET VAR_BATTLERENEMYSTR, VAR_WSTR\n VM_SET VAR_BATTLERENEMYHP1, VAR_WHP\n VM_SET VAR_BATTLERENEMYTYPE, VAR_WTYPE\n VM_JUMP end\n LABEL1:\n ;load monster data into player\n  VM_SET VAR_BATTLERSTR, VAR_WSTR\n VM_SET VAR_BATTLERMAXHP, VAR_WHP\n VM_SET VAR_BATTLERTYPE, VAR_WTYPE\n end:\n  ",
+                        "script": "; VM_RAND VAR_BATTLERENEMYHP1, 2, 3\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 1, EnemyGrab,0  \n ;not enemy\n  VM_SET VAR_TEMP3,VAR_BATTLERSPECIES\n  VM_JUMP Lookup\n EnemyGrab:\n VM_SET VAR_TEMP3, VAR_BATTLERENEMYSPECIES1\n Lookup:\n VM_IF_CONST .EQ,  VAR_TEMP3, 1, Monster1, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 2, Monster2, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 3, Monster3, 0\nVM_IF_CONST .EQ,  VAR_TEMP3, 4, Monster4, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 7, MonsterElephant, 0\n VM_JUMP GenericMonster\n\nMonster1:\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 6\n VM_SET_CONST VAR_WTYPE, 2\n  VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 3\n VM_JUMP LoadMonsterData\nMonster2:\n VM_SET_CONST VAR_WSTR, 2\n VM_SET_CONST VAR_WHP, 7\n VM_SET_CONST VAR_WTYPE, 4\n  VM_SET_CONST VAR_WDEF, 2\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nMonster3:\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 8\n VM_SET_CONST VAR_WTYPE, 3\n  VM_SET_CONST VAR_WDEF, 2\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nMonster4:\n  VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 3\n VM_SET_CONST VAR_WTYPE, 1\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n MonsterElephant:\n   VM_SET_CONST VAR_BATTLERENEMYLVL,2\n VM_SET_CONST VAR_WSTR, 5\n VM_SET_CONST VAR_WHP, 10\n VM_SET_CONST VAR_WTYPE, 5\n  VM_SET_CONST VAR_WDEF, 10\n VM_SET_CONST VAR_WSPECIAL, 5\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nGenericMonster:\n  VM_SET VAR_BATTLERENEMYLVL,VAR_BATTLER1LVL\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 2\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nLoadMonsterData:\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 0, LABEL1, 0;if player jump\n ;load monster data into enemy\n VM_SET VAR_BATTLERENEMYSTR, VAR_WSTR\n VM_SET VAR_BATTLERENEMYHP1, VAR_WHP\n VM_SET VAR_BATTLERENEMYTYPE, VAR_WTYPE\n VM_JUMP end\n LABEL1:\n ;load monster data into player\n  VM_SET VAR_BATTLERSTR, VAR_WSTR\n VM_SET VAR_BATTLERMAXHP, VAR_WHP\n VM_SET VAR_BATTLERTYPE, VAR_WTYPE\n end:\n  ",
                         "references": [
                             {
                                 "type": "variable",
@@ -107476,6 +107783,492 @@
                         ]
                     },
                     "id": "c71df877-365c-4a39-8788-7a6fbc696f50"
+                }
+            ]
+        },
+        {
+            "id": "29781ec5-f87f-4750-b25c-eda85289c09d",
+            "name": "DatabaseChosenAttack",
+            "description": "wlookingfor decides if enemy or friend's technique being looked at.\nvar_temp3 then has the appropriate technique, friend or foe's, loaded.\nwstr determines the power of the attack. wtype the type.\nwhp could be used for healing maybe at some point?\nwdef for techniques that raise stats?\nwspecial for deciding what kind of technique it is.\nwspeed could be used for priority at some point.",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_16",
+            "script": [
+                {
+                    "command": "EVENT_GBVM_SCRIPT",
+                    "args": {
+                        "script": "; VM_RAND VAR_BATTLERENEMYHP1, 2, 3\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 0, EnemyG,0\n ;not enemy\n  VM_SET VAR_TEMP3,VAR_TECHNIQUECHOSEN\n  VM_JUMP Lookup1\n EnemyG:\n VM_SET VAR_TEMP3, VAR_TECHNIQUEFOE\n Lookup1:\n VM_IF_CONST .EQ,  VAR_TEMP3, 1, Attack1, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 2, Attack2, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 3, Attack3, 0\nVM_IF_CONST .EQ,  VAR_TEMP3, 4, Attack4, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 5, Attack5, 0\n VM_JUMP GenericAttack\n\nAttack1:\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 1\n ; VM_SET_CONST VAR_WDEF, 1\n ;VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 3\n VM_JUMP LoadMonsterData\nAttack2:\n VM_SET_CONST VAR_WSTR, 2\n; VM_SET_CONST VAR_WHP, 5\n VM_SET_CONST VAR_WTYPE, 2\n;  VM_SET_CONST VAR_WDEF, 2\n; VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nAttack3:\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 6\n VM_SET_CONST VAR_WTYPE, 3\n;  VM_SET_CONST VAR_WDEF, 2\n; VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nAttack4:\n  VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 3\n VM_SET_CONST VAR_WTYPE, 4\n ;VM_SET_CONST VAR_WDEF, 1\n ;VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n Attack5:\n   VM_SET_CONST VAR_BATTLERENEMYLVL,2\n VM_SET_CONST VAR_WSTR, 5\n VM_SET_CONST VAR_WHP, 10\n VM_SET_CONST VAR_WTYPE, 5\n  VM_SET_CONST VAR_WDEF, 10\n VM_SET_CONST VAR_WSPECIAL, 5\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nGenericAttack:\n\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 1\n \n; VM_SET_CONST VAR_WDEF, 1\n; VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nLoadMonsterData:\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 0, LABEL1, 0;if player jump\n ;load monster data into enemy attack. Could use this for stat raising techniques.\n ;VM_SET VAR_BATTLERENEMYSTR, VAR_WSTR\n ;VM_SET VAR_BATTLERENEMYHP1, VAR_WHP\n ;VM_SET VAR_BATTLERENEMYTYPE, VAR_WTYPE\n VM_JUMP end\n LABEL1:\n ;load monster data into player\n  ;VM_SET VAR_BATTLERSTR, VAR_WSTR\n; VM_SET VAR_BATTLERMAXHP, VAR_WHP\n ;VM_SET VAR_BATTLERTYPE, VAR_WTYPE\n end:\n  ",
+                        "references": [
+                            {
+                                "type": "variable",
+                                "id": "20"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "503"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "477"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "481"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "412"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "488"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "18"
+                            },
+                            {
+                                "type": "variable",
+                                "id": "480"
+                            }
+                        ]
+                    },
+                    "id": "28d24a0e-04c8-4800-ac3d-b404ded1ef2d"
+                }
+            ]
+        },
+        {
+            "id": "2298dcca-fd75-4d04-bf87-815a1dc892d0",
+            "name": "DBTypedAttack",
+            "description": "0 - Aether?\n1 - Wood\n2 - Storm/Air\n3 - Water\n4 - Fire\n5 - Steel/Metal\nEvaluate attack type and alter its strength.",
+            "variables": {
+                "V0": {
+                    "id": "V0",
+                    "name": "wType",
+                    "passByReference": true
+                },
+                "V1": {
+                    "id": "V1",
+                    "name": "wLookingFor",
+                    "passByReference": true
+                },
+                "V2": {
+                    "id": "V2",
+                    "name": "wStr",
+                    "passByReference": true
+                },
+                "V3": {
+                    "id": "V3",
+                    "name": "temp3",
+                    "passByReference": true
+                },
+                "V4": {
+                    "id": "V4",
+                    "name": "BattlerEnemyStr",
+                    "passByReference": true
+                },
+                "V5": {
+                    "id": "V5",
+                    "name": "BattlerStr",
+                    "passByReference": true
+                }
+            },
+            "actors": {},
+            "symbol": "script_17",
+            "script": [
+                {
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "V1",
+                        "operator": "==",
+                        "comparator": "0",
+                        "__collapseElse": false,
+                        "__collapse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_COMMENT",
+                                "args": {
+                                    "text": "Enemy attacking. Store opposing player's monster in temp.",
+                                    "__collapse": false
+                                },
+                                "id": "fce16182-422b-48bc-b228-5df11a8cea3b"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "V3",
+                                    "expression": "$480$"
+                                },
+                                "id": "b7c60057-177f-4902-af83-fb52c2be02fb"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "V2",
+                                    "expression": "$V2$ + $20$"
+                                },
+                                "id": "6e1deb4a-1440-413e-8957-693567c24bcf"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH",
+                                "args": {
+                                    "vectorX": "V4",
+                                    "operation": "set",
+                                    "other": "var",
+                                    "vectorY": "V4",
+                                    "value": "0",
+                                    "minValue": "0",
+                                    "maxValue": "32767",
+                                    "clamp": false
+                                },
+                                "id": "8c6a701e-6cc2-41be-8f71-074ac8fceb20"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_COMMENT",
+                                "args": {
+                                    "text": "Player move. Store opposing monster's type in temp."
+                                },
+                                "id": "2ce77574-426d-4096-9e06-a8b801062092"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "V3",
+                                    "expression": "$481$"
+                                },
+                                "id": "90dec84c-cdb1-4e8d-ba9d-a529df60b72d"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "You attack!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "8ac9467d-fb66-4eaf-b9d0-cfbd9315241e"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                "args": {
+                                    "variable": "V2",
+                                    "expression": "$V2$ + $18$"
+                                },
+                                "id": "6525f24a-e10f-4e22-9be9-b5c36c2b57bc"
+                            },
+                            {
+                                "command": "EVENT_VARIABLE_MATH",
+                                "args": {
+                                    "vectorX": "V5",
+                                    "operation": "set",
+                                    "other": "var",
+                                    "vectorY": "V5",
+                                    "value": "0",
+                                    "minValue": "0",
+                                    "maxValue": "32767",
+                                    "clamp": false
+                                },
+                                "id": "8fbd6333-e78f-4e80-a916-c477e67b2e00"
+                            }
+                        ]
+                    },
+                    "id": "3bd55b9f-0351-4b7f-97c0-b6661a79d150"
+                },
+                {
+                    "command": "EVENT_SWITCH",
+                    "args": {
+                        "variable": "V0",
+                        "choices": 5,
+                        "__collapseCase0": false,
+                        "value0": 1,
+                        "__collapseCase1": false,
+                        "value1": 2,
+                        "__collapseCase2": false,
+                        "value2": 3,
+                        "__collapseCase3": false,
+                        "value3": 4,
+                        "__collapseCase4": false,
+                        "value4": 5,
+                        "__collapseCase5": false,
+                        "value5": 6,
+                        "__collapseCase6": false,
+                        "value6": 7,
+                        "__collapseCase7": false,
+                        "value7": 8,
+                        "__collapseCase8": false,
+                        "value8": 9,
+                        "__collapseCase9": false,
+                        "value9": 10,
+                        "__collapseCase10": false,
+                        "value10": 11,
+                        "__collapseCase11": false,
+                        "value11": 12,
+                        "__collapseCase12": false,
+                        "value12": 13,
+                        "__collapseCase13": false,
+                        "value13": 14,
+                        "__collapseCase14": false,
+                        "value14": 15,
+                        "__collapseCase15": false,
+                        "value15": 16,
+                        "__collapseElse": false,
+                        "__collapse": false
+                    },
+                    "children": {
+                        "true0": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Wood! Power $V2$!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "e78a691b-e004-4f3c-a760-4cfd8a6279b3"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "V3",
+                                    "operator": "==",
+                                    "comparator": 2,
+                                    "__collapseElse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                            "args": {
+                                                "variable": "V2",
+                                                "expression": "$V2$ * 2"
+                                            },
+                                            "id": "73c7faea-8555-46fa-8b96-443bc3e7d58c"
+                                        },
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Supereffective! $V2$"
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "0967d6e9-ca9c-41cd-8f59-0e6819811f35"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "17bd836a-7a5f-43bd-b39b-39d174ff2c85"
+                            }
+                        ],
+                        "true1": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Air/Storm! Power $V2$!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "f8514eb2-9ecb-4d92-a499-f8811846d168"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "V3",
+                                    "operator": "==",
+                                    "comparator": 3,
+                                    "__collapseElse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                            "args": {
+                                                "variable": "V2",
+                                                "expression": "$V2$ * 2"
+                                            },
+                                            "id": "57813260-7bdf-4ef5-a3c5-ad5475fdf2be"
+                                        },
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Supereffective! $V2$!"
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "14922f14-138c-4094-a1e6-00e9e6b27094"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "1eef3e36-49ad-4db0-8b5f-687b2935dff6"
+                            }
+                        ],
+                        "true2": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Water! Power $V2$!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "9242fbbf-15aa-4718-bea6-6da83fa4db64"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "V3",
+                                    "operator": "==",
+                                    "comparator": 4,
+                                    "__collapseElse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                            "args": {
+                                                "variable": "V2",
+                                                "expression": "$V2$ * 2"
+                                            },
+                                            "id": "a18f650e-cbe5-4d31-bfd0-b3bb93026df3"
+                                        },
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Supereffective! $V2$"
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "fc7e336f-5579-426f-a08a-21479671c49d"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "f888535a-71b2-4e1d-a915-c1e22c451aaf"
+                            }
+                        ],
+                        "true3": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Fire! Power $V2$!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "ae59488e-6bcf-47e6-85d9-986c314c1a6f"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "V3",
+                                    "operator": "==",
+                                    "comparator": 5,
+                                    "__collapseElse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Supereffective!"
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "e9981bca-e7ad-439f-b0ac-15bd8a8b5a55"
+                                        },
+                                        {
+                                            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                            "args": {
+                                                "variable": "V2",
+                                                "expression": "$V2$ * 2"
+                                            },
+                                            "id": "23e3b452-4ed7-4bea-a861-54482911cdce"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "b2e64383-2875-49fc-9665-73840e63db58"
+                            }
+                        ],
+                        "true4": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Metal! Power $V2$!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "7333e775-8621-49b3-b8ab-b6bfac45f666"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "V3",
+                                    "operator": "==",
+                                    "comparator": 1,
+                                    "__collapseElse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                                            "args": {
+                                                "variable": "V2",
+                                                "expression": "$V2$ * 2"
+                                            },
+                                            "id": "65b1a2c8-e1f2-47a9-b496-96e00ba8b1eb"
+                                        },
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "Supereffective! $V2$."
+                                                ],
+                                                "avatarId": ""
+                                            },
+                                            "id": "050520cd-53d4-4c35-b1ad-a2a4821fc549"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "837e31e7-3ab2-4f26-ad20-a0eaee535975"
+                            }
+                        ],
+                        "true5": [],
+                        "true6": [],
+                        "true7": [],
+                        "true8": [],
+                        "true9": [],
+                        "true10": [],
+                        "true11": [],
+                        "true12": [],
+                        "true13": [],
+                        "true14": [],
+                        "true15": [],
+                        "false": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Aether. It's effective."
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "0a846b23-2a82-4132-8c72-7d95d69aab41"
+                            }
+                        ]
+                    },
+                    "id": "9e09c5d3-3e74-4898-a59d-e07df7de45e5"
                 }
             ]
         }
@@ -107886,14 +108679,224 @@
             "symbol": "var_battlerspecies"
         },
         {
+            "id": "26",
+            "name": "wLookingFor",
+            "symbol": "var_wlookingfor"
+        },
+        {
+            "id": "27",
+            "name": "TechniqueChosen",
+            "symbol": "var_techniquechosen"
+        },
+        {
             "id": "28",
             "name": "BattlerEnemySpecies2",
             "symbol": "var_battlerenemyspecies2"
         },
         {
+            "id": "29",
+            "name": "BattlerEnemyMove2",
+            "symbol": "var_battlerenemymove2"
+        },
+        {
+            "id": "30",
+            "name": "BattlerEnemyMove4",
+            "symbol": "var_battlerenemymove4"
+        },
+        {
+            "id": "31",
+            "name": "BattlerMove2",
+            "symbol": "var_battlermove2"
+        },
+        {
+            "id": "32",
+            "name": "TechniqueFoe",
+            "symbol": "var_techniquefoe"
+        },
+        {
+            "id": "37",
+            "name": "Battler3LVL",
+            "symbol": "var_battler3lvl"
+        },
+        {
+            "id": "69",
+            "name": "Battler2LVL",
+            "symbol": "var_battler2lvl"
+        },
+        {
+            "id": "72",
+            "name": "BattlerEnemyMove3",
+            "symbol": "var_battlerenemymove3"
+        },
+        {
+            "id": "412",
+            "name": "temp3",
+            "symbol": "var_temp3"
+        },
+        {
             "id": "447",
             "name": "BattlerSpecies2",
             "symbol": "var_battlerspecies2"
+        },
+        {
+            "id": "449",
+            "name": "BattlerDEF",
+            "symbol": "var_battlerdef"
+        },
+        {
+            "id": "468",
+            "name": "BattlerSPEED",
+            "symbol": "var_battlerspeed"
+        },
+        {
+            "id": "472",
+            "name": "wMove4",
+            "symbol": "var_wmove4"
+        },
+        {
+            "id": "473",
+            "name": "wMove3",
+            "symbol": "var_wmove3"
+        },
+        {
+            "id": "474",
+            "name": "wMove2",
+            "symbol": "var_wmove2"
+        },
+        {
+            "id": "475",
+            "name": "wMove1",
+            "symbol": "var_wmove1"
+        },
+        {
+            "id": "476",
+            "name": "wType2",
+            "symbol": "var_wtype2"
+        },
+        {
+            "id": "477",
+            "name": "BattlerEnemyLVL",
+            "symbol": "var_battlerenemylvl"
+        },
+        {
+            "id": "478",
+            "name": "BattlerSPECIAL",
+            "symbol": "var_battlerspecial"
+        },
+        {
+            "id": "479",
+            "name": "Battler1LVL",
+            "symbol": "var_battler1lvl"
+        },
+        {
+            "id": "480",
+            "name": "BattlerTYPE",
+            "symbol": "var_battlertype"
+        },
+        {
+            "id": "481",
+            "name": "BattlerEnemyTYPE",
+            "symbol": "var_battlerenemytype"
+        },
+        {
+            "id": "482",
+            "name": "BattlerEnemySPEED",
+            "symbol": "var_battlerenemyspeed"
+        },
+        {
+            "id": "483",
+            "name": "BattlerEnemySPECIAL",
+            "symbol": "var_battlerenemyspecial"
+        },
+        {
+            "id": "484",
+            "name": "BattlerEnemyMove1",
+            "symbol": "var_battlerenemymove1"
+        },
+        {
+            "id": "485",
+            "name": "BattlerMove1",
+            "symbol": "var_battlermove1"
+        },
+        {
+            "id": "486",
+            "name": "BattlerMove3",
+            "symbol": "var_battlermove3"
+        },
+        {
+            "id": "487",
+            "name": "BattlerMove4",
+            "symbol": "var_battlermove4"
+        },
+        {
+            "id": "488",
+            "name": "BattlerMaxHP",
+            "symbol": "var_battlermaxhp"
+        },
+        {
+            "id": "489",
+            "name": "Letters2",
+            "symbol": "var_letters2"
+        },
+        {
+            "id": "490",
+            "name": "Letters1",
+            "symbol": "var_letters1"
+        },
+        {
+            "id": "491",
+            "name": "wType",
+            "symbol": "var_wtype"
+        },
+        {
+            "id": "492",
+            "name": "wSpecial",
+            "symbol": "var_wspecial"
+        },
+        {
+            "id": "493",
+            "name": "wDef",
+            "symbol": "var_wdef"
+        },
+        {
+            "id": "494",
+            "name": "wHP",
+            "symbol": "var_whp"
+        },
+        {
+            "id": "495",
+            "name": "wSpeed",
+            "symbol": "var_wspeed"
+        },
+        {
+            "id": "496",
+            "name": "wStr",
+            "symbol": "var_wstr"
+        },
+        {
+            "id": "497",
+            "name": "Letter6",
+            "symbol": "var_letter6"
+        },
+        {
+            "id": "498",
+            "name": "Letter5",
+            "symbol": "var_letter5"
+        },
+        {
+            "id": "499",
+            "name": "Letter4",
+            "symbol": "var_letter4"
+        },
+        {
+            "id": "500",
+            "name": "Wordy6",
+            "symbol": "var_wordy6"
+        },
+        {
+            "id": "501",
+            "name": "Wordy5",
+            "symbol": "var_wordy5"
         },
         {
             "id": "502",
@@ -108010,206 +109013,6 @@
             "symbol": "var_local_4"
         },
         {
-            "id": "501",
-            "name": "Wordy5",
-            "symbol": "var_wordy5"
-        },
-        {
-            "id": "500",
-            "name": "Wordy6",
-            "symbol": "var_wordy6"
-        },
-        {
-            "id": "499",
-            "name": "Letter4",
-            "symbol": "var_letter4"
-        },
-        {
-            "id": "498",
-            "name": "Letter5",
-            "symbol": "var_letter5"
-        },
-        {
-            "id": "497",
-            "name": "Letter6",
-            "symbol": "var_letter6"
-        },
-        {
-            "id": "496",
-            "name": "wStr",
-            "symbol": "var_wstr"
-        },
-        {
-            "id": "495",
-            "name": "wSpeed",
-            "symbol": "var_wspeed"
-        },
-        {
-            "id": "494",
-            "name": "wHP",
-            "symbol": "var_whp"
-        },
-        {
-            "id": "493",
-            "name": "wDef",
-            "symbol": "var_wdef"
-        },
-        {
-            "id": "492",
-            "name": "wSpecial",
-            "symbol": "var_wspecial"
-        },
-        {
-            "id": "491",
-            "name": "wType",
-            "symbol": "var_wtype"
-        },
-        {
-            "id": "490",
-            "name": "Letters1",
-            "symbol": "var_letters1"
-        },
-        {
-            "id": "489",
-            "name": "Letters2",
-            "symbol": "var_letters2"
-        },
-        {
-            "id": "488",
-            "name": "BattlerMaxHP",
-            "symbol": "var_battlermaxhp"
-        },
-        {
-            "id": "487",
-            "name": "BattlerMove4",
-            "symbol": "var_battlermove4"
-        },
-        {
-            "id": "486",
-            "name": "BattlerMove3",
-            "symbol": "var_battlermove3"
-        },
-        {
-            "id": "485",
-            "name": "BattlerMove1",
-            "symbol": "var_battlermove1"
-        },
-        {
-            "id": "26",
-            "name": "wLookingFor",
-            "symbol": "var_wlookingfor"
-        },
-        {
-            "id": "484",
-            "name": "BattlerEnemyMove1",
-            "symbol": "var_battlerenemymove1"
-        },
-        {
-            "id": "483",
-            "name": "BattlerEnemySPECIAL",
-            "symbol": "var_battlerenemyspecial"
-        },
-        {
-            "id": "482",
-            "name": "BattlerEnemySPEED",
-            "symbol": "var_battlerenemyspeed"
-        },
-        {
-            "id": "481",
-            "name": "BattlerEnemyTYPE",
-            "symbol": "var_battlerenemytype"
-        },
-        {
-            "id": "480",
-            "name": "BattlerTYPE",
-            "symbol": "var_battlertype"
-        },
-        {
-            "id": "468",
-            "name": "BattlerSPEED",
-            "symbol": "var_battlerspeed"
-        },
-        {
-            "id": "478",
-            "name": "BattlerSPECIAL",
-            "symbol": "var_battlerspecial"
-        },
-        {
-            "id": "479",
-            "name": "Battler1LVL",
-            "symbol": "var_battler1lvl"
-        },
-        {
-            "id": "477",
-            "name": "BattlerEnemyLVL",
-            "symbol": "var_battlerenemylvl"
-        },
-        {
-            "id": "449",
-            "name": "BattlerDEF",
-            "symbol": "var_battlerdef"
-        },
-        {
-            "id": "476",
-            "name": "wType2",
-            "symbol": "var_wtype2"
-        },
-        {
-            "id": "475",
-            "name": "wMove1",
-            "symbol": "var_wmove1"
-        },
-        {
-            "id": "474",
-            "name": "wMove2",
-            "symbol": "var_wmove2"
-        },
-        {
-            "id": "473",
-            "name": "wMove3",
-            "symbol": "var_wmove3"
-        },
-        {
-            "id": "472",
-            "name": "wMove4",
-            "symbol": "var_wmove4"
-        },
-        {
-            "id": "29",
-            "name": "BattlerEnemyMove2",
-            "symbol": "var_battlerenemymove2"
-        },
-        {
-            "id": "72",
-            "name": "BattlerEnemyMove3",
-            "symbol": "var_battlerenemymove3"
-        },
-        {
-            "id": "30",
-            "name": "BattlerEnemyMove4",
-            "symbol": "var_battlerenemymove4"
-        },
-        {
-            "id": "31",
-            "name": "BattlerMove2",
-            "symbol": "var_battlermove2"
-        },
-        {
-            "id": "37",
-            "name": "Battler3LVL",
-            "symbol": "var_battler3lvl"
-        },
-        {
-            "id": "69",
-            "name": "Battler2LVL",
-            "symbol": "var_battler2lvl"
-        },
-        {
-            "id": "412",
-            "name": "temp3",
-            "symbol": "var_temp3"
-        },
-        {
             "id": "ba78d94d-8180-48ae-bbc9-b6ae8abd56e1__L2",
             "name": "Local 2",
             "symbol": "var_local_1"
@@ -108235,8 +109038,8 @@
         "startDirection": "right",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1421.5999755859375,
-        "worldScrollY": 165.60000610351562,
+        "worldScrollX": 1531.199951171875,
+        "worldScrollY": 320,
         "zoom": 115.88104721903801,
         "customColorsEnabled": true,
         "sgbEnabled": false,
@@ -108291,7 +109094,10 @@
             "EVENT_SET_VALUE",
             "EVENT_CALL_CUSTOM_EVENT",
             "EVENT_ACTOR_SET_SPRITE",
-            "EVENT_SCENE_PUSH_STATE"
+            "EVENT_SCENE_PUSH_STATE",
+            "EVENT_IF_VALUE_COMPARE",
+            "EVENT_VARIABLE_MATH_EVALUATE",
+            "EVENT_VARIABLE_MATH"
         ],
         "customColorsWhite": "E8F8E0",
         "customColorsLight": "B0F088",
