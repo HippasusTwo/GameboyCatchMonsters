@@ -16,9 +16,10 @@ Current working features:
 * Roaming across maps to new places
 * A single map with a following critter example.
 * Basic saving.
+* Switching partially implemented, but not very complex.
+* Some very short, simple quests to do.
 
 While I am aware there was another example monster catcher project, it seemed to be for 2.0 and wasn't very developed.
-The combat system currently is set up so you win every time, which isn't very interesting, but it's a start.
 
 There mayyy be an issue trying to use music from this repo as github changes line endings.
 
