@@ -1,0 +1,159 @@
+{
+  "_resourceType": "actor",
+  "id": "787cf46e-12e4-4ed2-849e-2e6eaca8a2f6",
+  "_index": 1,
+  "symbol": "actor_56",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 20,
+  "y": 13,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "21807bfb-daea-469b-bd7a-2dfedef173b3",
+  "paletteId": "",
+  "direction": "left",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Let's head to town. I \ncan't believe an elephant",
+          "walloped you. You have a \nfunny roommate, right?"
+        ],
+        "avatarId": ""
+      },
+      "id": "3a952f9e-c457-43aa-9c83-02d26e6f9e12"
+    },
+    {
+      "command": "EVENT_MENU",
+      "args": {
+        "variable": "25",
+        "items": 8,
+        "option1": "Mouse",
+        "option2": "Cat",
+        "option3": "Duck",
+        "option4": "Turnip",
+        "option5": "     Dog",
+        "option6": "I forget",
+        "option7": "Mantis",
+        "option8": "Chipmunk",
+        "cancelOnB": false,
+        "layout": "dialogue"
+      },
+      "id": "afc18124-d177-4f62-8984-5bde6c0003b4"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_TO",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 13
+        },
+        "moveType": "horizontal",
+        "useCollisions": false,
+        "collideWith": []
+      },
+      "id": "4602678f-10c4-4132-9445-c4726482e6aa"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "L1",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "id": "427d452f-3df7-414d-9f44-3bb5b479d0f7"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "479",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "id": "b399d073-747e-4562-b480-4e6b77768b57"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "26",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "26fb2509-7350-4d44-ae15-96a250d15847"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "fa072bdc-fa97-4a43-893c-8d9e1dd39c1c"
+      },
+      "id": "79ec1d02-638c-49f6-84da-a2490f6f1e43"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "L1",
+        "__collapseElse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "L1"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Hey! You woke up!"
+              ],
+              "avatarId": ""
+            },
+            "id": "ebbc1c9a-0332-4f54-95d7-57714ce827f5"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "ace18239-f54f-48ff-af8a-8ec51ea98cb6"
+          }
+        ]
+      },
+      "id": "4bda74fc-65af-4f4f-b2dc-77c31d7772a9"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

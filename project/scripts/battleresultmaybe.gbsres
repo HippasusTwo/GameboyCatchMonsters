@@ -1,0 +1,125 @@
+{
+  "_resourceType": "script",
+  "id": "f660a3cf-9126-4b39-89c1-645d8b738634",
+  "name": "BattleResultMaybe",
+  "symbol": "script_14",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "504",
+        "operator": "==",
+        "comparator": "0",
+        "__collapseElse": false,
+        "__collapse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "504"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You lost!"
+              ],
+              "avatarId": "6845dca5-d9d8-472a-93a7-81889d878516"
+            },
+            "id": "43480b10-6a04-404d-a592-48ed76be3e57"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "504",
+              "value": {
+                "type": "number",
+                "value": 5
+              }
+            },
+            "id": "6f08d46b-0d3d-413e-ae49-08dbf8802c6d"
+          },
+          {
+            "command": "EVENT_SCENE_RESET_STATE",
+            "args": {},
+            "id": "d71e28a9-c155-4bb8-b65f-42957c275c41"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "c22cad6f-1191-4623-911d-1ec9a7b52fe6",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              },
+              "direction": "",
+              "fadeSpeed": "2"
+            },
+            "id": "71836e0f-67ca-4903-8994-ad9261ed52d8"
+          }
+        ],
+        "false": []
+      },
+      "id": "687ff7f4-525f-4f15-8640-40b291147d00"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "503",
+        "operator": "==",
+        "comparator": "0",
+        "__collapseElse": true,
+        "__collapse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "503"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You won!"
+              ],
+              "avatarId": "6845dca5-d9d8-472a-93a7-81889d878516"
+            },
+            "id": "c3dc9ed5-44ec-4d5a-b4a2-f04f54925aee"
+          },
+          {
+            "command": "EVENT_SCENE_POP_STATE",
+            "args": {
+              "fadeSpeed": 1
+            },
+            "id": "64f19d11-c7a4-40d8-a3bb-299ed660f8b6"
+          }
+        ],
+        "false": []
+      },
+      "id": "3acb0f3c-d0f1-40cf-9933-bd1c7882cbf3"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "_resourceType": "sprite",
+  "id": "7fe8a0ef-0a6d-4fdf-a52d-60447d03b9d1",
+  "name": "fish",
+  "symbol": "sprite_fish",
+  "states": [
+    {
+      "id": "cccb47b2-3f6d-42ec-add5-080c19dc5057",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "39691f87-a6b0-4e31-a181-de072ba4d417",
+          "frames": [
+            {
+              "id": "b9dfd698-d237-4f99-a168-aebe9c08907f",
+              "tiles": [
+                {
+                  "id": "c5ccc873-4af9-4125-8097-4c062d48a4b4",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 6,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "e526a54d-0101-4d47-af79-f08bcde7a508",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 6,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            },
+            {
+              "id": "5a2e5f79-9344-4051-a370-4cb6cbd34919",
+              "tiles": [
+                {
+                  "id": "e3d1d6d6-cc98-475b-a782-8143aaf413ce",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 6,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "262221f4-11cd-4517-ad10-74921793226e",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 24,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 6,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "8d4cfeaf-487f-4ce8-b45c-eded0e860cf7",
+          "frames": [
+            {
+              "id": "a41e4ba6-c3db-4a4b-a817-c495ad9e6040",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "cae26dae-578d-454e-9fa8-e2949018b4e8",
+          "frames": [
+            {
+              "id": "dda43126-3791-4501-a88c-9f43dd2b6d66",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0426f1a9-afe7-4943-9579-ce98ad3da99b",
+          "frames": [
+            {
+              "id": "b43cebbd-04de-46e7-b043-5e4ea638b788",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "4ad8f031-ed94-4c93-965f-9c030455e530",
+          "frames": [
+            {
+              "id": "1f814fa9-c776-4f89-b959-efde69ec94ac",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1f149806-4480-4343-8923-f9f62d25b95a",
+          "frames": [
+            {
+              "id": "d07c09f1-e570-4ff7-a088-57eb5ff8360d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "04c9eb5a-8c78-484e-b636-1eae38e8110f",
+          "frames": [
+            {
+              "id": "0fbc9a27-b2ad-48bd-b4aa-d783a4f7cd41",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "84c2a973-9989-465b-b812-394cd6f368f8",
+          "frames": [
+            {
+              "id": "96db6979-a2d3-49fe-a9f2-679d44bacc28",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 4,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "fish.png",
+  "width": 32,
+  "height": 16,
+  "checksum": "af5f022deac7b8e1c32a2627d73a11ddb36bb487"
+}

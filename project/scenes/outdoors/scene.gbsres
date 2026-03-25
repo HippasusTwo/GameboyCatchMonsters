@@ -1,0 +1,81 @@
+{
+  "_resourceType": "scene",
+  "id": "13a5ec14-6d25-4992-8727-75cf2e7d4310",
+  "_index": 26,
+  "type": "TOPDOWN",
+  "name": "Outdoors",
+  "symbol": "scene_27",
+  "x": 2038.3593508941972,
+  "y": 939.8191594826828,
+  "width": 32,
+  "height": 32,
+  "backgroundId": "07016701-d5df-4983-8a5a-3930c7f45822",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "dmg",
+    "",
+    "",
+    "",
+    "036c985f-d774-4a94-813c-9ac43c52627f",
+    "",
+    "320dcbf4-2760-4e0d-8e2b-41970675034f"
+  ],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [
+    {
+      "id": "83160f32-c76d-4e43-865d-fdc1d3f72840",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "bc9f67e9-b6f2-4216-b8b6-63505f3b7118",
+        "__name": "Init Menu"
+      },
+      "children": {
+        "script": [
+          {
+            "id": "43239af7-dda5-4686-be01-908651f3bbde",
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "start"
+              ],
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "50382cfd-1c2e-4fd0-b929-c262588d17b2",
+                  "command": "EVENT_SCENE_PUSH_STATE",
+                  "args": {}
+                },
+                {
+                  "id": "e0b1bfd0-13cf-4796-bf3f-fbcdeff7bc44",
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "fd223a5f-7148-4705-98a7-b0ef56cb5c74",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "direction": "",
+                    "fadeSpeed": "2"
+                  }
+                }
+              ]
+            },
+            "__type": "event"
+          }
+        ]
+      }
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "0024+0fb+0012+0f11+00f+0f!00f+0f2+00!0f2+00b+0f!006+0f6+004+0f!00d+0f!007+0f!004+0f!004+0f2+00c+0f!007+0f!003+0f2+005+0f2+00b+0f!007+0f2+002+0f2+006+0fd+001f+0f!001f+0f!001f+0f!001f+0f!003+0f4+0018+0f!003+0f4+0018+0f!003+0f4+0018+0f!001f+0f!001f+0f!001f+0f!001f+0f!001f+0f!001f+0f!001f+0f!001f+0f!001f+0f!001f+0f!001f+0f!001f+0f!001d+0f!00!0f5+002+0f18+006+0f6+0012+0f2+0041+"
+}

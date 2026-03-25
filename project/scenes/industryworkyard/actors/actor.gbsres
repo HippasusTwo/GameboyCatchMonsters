@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "300cada8-fbda-4295-86ec-e0fc72a5a193",
+  "_index": 0,
+  "symbol": "actor_52",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 11,
+  "y": 14,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "c475c713-9fd8-455a-b9bc-8c62b2b8fd5e",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "There's a missing robot.\nCan you find it?"
+        ],
+        "avatarId": ""
+      },
+      "id": "42378808-9654-4f16-9a16-879112279b3d"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

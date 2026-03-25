@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "30386eb2-a563-401d-b414-83487e62fba1",
+  "_index": 1,
+  "symbol": "actor_66",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 14,
+  "y": 14,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "46a3db76-878e-4896-892b-d1afa7d5e2f0",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "I saw a man traipsing\nbehind the bushes."
+        ],
+        "avatarId": ""
+      },
+      "id": "e04b9208-b063-4f5d-974e-67f548bf2beb"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

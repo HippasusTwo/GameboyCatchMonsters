@@ -1,0 +1,75 @@
+{
+  "_resourceType": "scene",
+  "id": "774f8da1-eff2-4226-830d-ef6cffffd0bb",
+  "_index": 24,
+  "type": "TOPDOWN",
+  "name": "IndustryWorkyard",
+  "symbol": "scene_25",
+  "x": 2647.7775536634927,
+  "y": 470.96943569564854,
+  "width": 40,
+  "height": 40,
+  "backgroundId": "0c33cf46-9722-43a0-803f-8ed6a539fb10",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "default-bg-5"
+  ],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [
+    {
+      "id": "82f4f4fb-8326-4fba-be1c-ccd8fe0326b3",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "bc9f67e9-b6f2-4216-b8b6-63505f3b7118",
+        "__name": "Init Menu"
+      },
+      "children": {
+        "script": [
+          {
+            "id": "33a87478-983b-49a4-b7f5-3308080a7982",
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "start"
+              ],
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "6f6a09b3-dcb6-47b3-be62-3d2d265f1e15",
+                  "command": "EVENT_SCENE_PUSH_STATE",
+                  "args": {}
+                },
+                {
+                  "id": "c6089d78-49d5-46ed-a19f-7d243792c5c2",
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "fd223a5f-7148-4705-98a7-b0ef56cb5c74",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "direction": "",
+                    "fadeSpeed": "2"
+                  }
+                }
+              ]
+            },
+            "__type": "event"
+          }
+        ]
+      }
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "0fe+003+0f9+00c+0f10+003+0fa+00b+0f2+003+0f7+002+0f2+004+0f2+002+0f2+0013+0f5+0023+0f5+0023+0f5+0023+0f5+0023+0f5+0023+0f5+0023+0f5+002+0f4+001d+0f5+002+0f4+001d+0f5+002+0f9+0018+0f5+002+0f4+007+0f13+003+0f5+002+0f4+007+0f13+0015+0f13+0015+0f24+0017+0f11+0017+0f11+004+0f13+0064+012+002+012+002b+0f6+00!0f!0015+0f6+008+0f6+0014+0f6+008+0f6+0014+0f6+008+0f6+0014+0f6+008+0f6+0014+0f6+008+0f6+0014+0f6+008+0f6+0014+0f6+002+0f2+004+0f6+003+012+004+0f2+012+0f!006+0fa+004+0f6+003+0f2+002+0f4+002+0f!004+0f8+002+0f2+004+0f6+003+0f2+002+0f4+002+0f!00!0f2+00!0f8+008+0f6+00d+0f!00!0f2+00!0f8+008+0f6+003+0f2+004+0f2+002+0f!004+0f8+008+0f6+003+0f2+002+0f4+002+0f!004+0f8+008+0f6+003+0f2+002+0f4+002+0f!00!0f2+00!0f2+0021+0f!00!0f2+00!0f2+0017+0f2+004+012+002+0f!004+0f2+0017+0f2+002+0f4+002+0f!005+0f!0016+"
+}

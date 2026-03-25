@@ -1,0 +1,56 @@
+{
+  "_resourceType": "actor",
+  "id": "dbdb617c-7d69-4e92-8872-3f9ed025dc97",
+  "_index": 0,
+  "symbol": "actor33",
+  "prefabId": "",
+  "name": "ActorBattler",
+  "coordinateType": "tiles",
+  "x": 11,
+  "y": 11,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "1e27bb8e-c805-435a-8b87-05b4f50da4f0",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "STR $496$ SPD $495$ D $493$\nHP: $494$ /$488$ SP $492$",
+          "Lvl $479$ Type $480$\nSpeciesID $25$"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30
+      },
+      "id": "cef066fb-47a9-496b-a57e-69342313b05b"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

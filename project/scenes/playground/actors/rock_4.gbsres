@@ -1,0 +1,37 @@
+{
+  "_resourceType": "actor",
+  "id": "346370d2-e5f8-4fbc-bf92-fdca60041385",
+  "_index": 5,
+  "symbol": "actor_70",
+  "prefabId": "",
+  "name": "Rock 2",
+  "coordinateType": "tiles",
+  "x": 8,
+  "y": 4,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "3939e8d2-3987-4a22-953e-f1d82134eccf",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 0.5,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "id": "b20f6349-0237-4fdf-a73c-dc610e89089c",
+      "command": "EVENT_ACTOR_PUSH",
+      "args": {
+        "continue": false
+      }
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

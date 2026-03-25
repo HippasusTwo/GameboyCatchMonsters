@@ -1,0 +1,118 @@
+{
+  "_resourceType": "settings",
+  "startSceneId": "382961a1-e615-4b92-92a7-f1a791b50b7a",
+  "startX": 0,
+  "startY": 0,
+  "startMoveSpeed": 1,
+  "startAnimSpeed": 31,
+  "startDirection": "right",
+  "showCollisionExtraTiles": false,
+  "showCollisionTileValues": false,
+  "collisionLayerOpacity": 50,
+  "sgbEnabled": false,
+  "customHead": "",
+  "defaultBackgroundPaletteIds": [
+    "default-bg-1",
+    "default-bg-2",
+    "default-bg-3",
+    "default-bg-4",
+    "default-bg-5",
+    "default-bg-6",
+    "dmg",
+    "default-ui"
+  ],
+  "defaultSpritePaletteIds": [
+    "default-sprite",
+    "c2af2d33-8fcb-4a07-b9a0-15d6b7a98767",
+    "default-bg-2",
+    "50946de3-f3bf-48c6-a42c-795e07e01fa5",
+    "05dae336-3181-48de-99cd-9c9c0c5866e5",
+    "cfb65aab-6ab6-4a9e-bebf-b86d17a937d4",
+    "db15fdf1-c597-4a2f-bd32-86015f54c675",
+    "default-bg-3"
+  ],
+  "defaultSpritePaletteId": "default-sprite",
+  "defaultUIPaletteId": "default-ui",
+  "playerPaletteId": "",
+  "defaultMonoBGP": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "defaultMonoOBP0": [
+    0,
+    1,
+    3
+  ],
+  "defaultMonoOBP1": [
+    0,
+    2,
+    3
+  ],
+  "defaultFontId": "948c169c-8e4b-491c-a5f0-66898bbf45d9",
+  "defaultCharacterEncoding": "",
+  "defaultPlayerSprites": {
+    "TOPDOWN": "26ba843c-e41d-4ff7-9de9-d1aa17d89cb9",
+    "PLATFORM": "c0310735-3e7c-4ff1-bcff-b07d818d433b",
+    "ADVENTURE": "26ba843c-e41d-4ff7-9de9-d1aa17d89cb9",
+    "SHMUP": "2f2d492c-dba2-434c-93c9-d1301e88d5e9",
+    "POINTNCLICK": "a827b612-578f-4cb9-a2bf-fd54b197b83f",
+    "LOGO": "185f3030-4621-4292-aa3b-fa5fb4c8a88b"
+  },
+  "musicDriver": "huge",
+  "cartType": "mbc5",
+  "batterylessEnabled": false,
+  "customColorsWhite": "E8F8E0",
+  "customColorsLight": "B0F088",
+  "customColorsDark": "509878",
+  "customColorsBlack": "202850",
+  "customControlsUp": [
+    "ArrowUp",
+    "w"
+  ],
+  "customControlsDown": [
+    "ArrowDown",
+    "s"
+  ],
+  "customControlsLeft": [
+    "ArrowLeft"
+  ],
+  "customControlsRight": [
+    "ArrowRight",
+    "d"
+  ],
+  "customControlsA": [
+    "Alt",
+    "z",
+    "j",
+    "a"
+  ],
+  "customControlsB": [
+    "Control",
+    "k",
+    "x",
+    "b"
+  ],
+  "customControlsStart": [
+    "Enter"
+  ],
+  "customControlsSelect": [
+    "Shift",
+    "/"
+  ],
+  "colorMode": "mixed",
+  "colorCorrection": "default",
+  "generateDebugFilesEnabled": false,
+  "compilerPreset": 3000,
+  "scriptEventPresets": {},
+  "scriptEventDefaultPresets": {},
+  "runSceneSelectionOnly": false,
+  "spriteMode": "8x16",
+  "openBuildFolderOnExport": true,
+  "showRomUsageAfterBuild": false,
+  "romFilename": "",
+  "defaultSceneTypeId": "TOPDOWN",
+  "disabledSceneTypeIds": [],
+  "autoTileFlipEnabled": false
+}

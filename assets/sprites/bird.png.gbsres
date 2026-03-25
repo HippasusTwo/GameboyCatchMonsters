@@ -1,0 +1,160 @@
+{
+  "_resourceType": "sprite",
+  "id": "bb825be9-2111-41b1-9ff8-ae8981be2582",
+  "name": "bird",
+  "symbol": "sprite_bird",
+  "states": [
+    {
+      "id": "424c71aa-afdb-4395-a2a9-c17518b995b5",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "b1ec081c-6ebd-4cf6-80e3-4a9293b7405b",
+          "frames": [
+            {
+              "id": "be56fad9-ede3-4a64-89ae-a2f1b662d2bf",
+              "tiles": [
+                {
+                  "id": "64407ea1-cb63-400a-aa7d-c740d1b7609e",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 3,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "7cedfc06-cc17-4aae-8865-8a02f0fa331f",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 3,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            },
+            {
+              "id": "e5d1315a-6c94-431e-9924-c93cb5b48dd2",
+              "tiles": [
+                {
+                  "id": "f14554c0-23d4-43b8-99db-9c72f3757750",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 3,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "d73b08cd-cbd1-438f-b57e-40457b47e52f",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 24,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 3,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "0d3d64f0-ce26-4a84-9382-4e21bd5f7194",
+          "frames": [
+            {
+              "id": "7ea062c4-a39a-48b5-8531-05b04724203d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0d84ce62-8b85-43e5-8fde-ef1e4d902301",
+          "frames": [
+            {
+              "id": "13e8951a-5821-4a74-ab96-700ac66d527a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c533bd5f-2104-4307-b964-265d73ae1eb0",
+          "frames": [
+            {
+              "id": "d023b853-a7d7-42af-865e-e2e7815a9e7c",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6c67b010-c965-4d42-97bd-ea38c9c505e4",
+          "frames": [
+            {
+              "id": "c54436ed-dcc5-4d14-98bc-023dfd5823df",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a9580d5b-a40a-4ebd-aa5d-6082490f4dd4",
+          "frames": [
+            {
+              "id": "982780ca-4818-4179-971c-476e451d0cda",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "98c6b8af-bd6c-4f9a-b41a-444224281712",
+          "frames": [
+            {
+              "id": "bc59ce9c-3675-4795-801f-98f3498533ab",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "fbfa8b1e-be7b-4c51-8bda-aea32c375c7e",
+          "frames": [
+            {
+              "id": "205a6345-ae8d-4a9d-838f-fbbbfebcdc3b",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 4,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "bird.png",
+  "width": 32,
+  "height": 16,
+  "checksum": "5cb1f5222f6f466f90511173c592e3426b3f04de"
+}

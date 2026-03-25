@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "cc884a9c-7ef1-4dfb-85f3-040747074893",
+  "_index": 3,
+  "symbol": "actor_45",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 15,
+  "y": 15,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "ac1e8ef4-ffe6-47cd-b16f-9af5da77ec26",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Voting is important, but\nI really wish we had ONE\nwho wasn't pro-Omnicorp"
+        ],
+        "avatarId": ""
+      },
+      "id": "37213fd4-1973-44cb-b7d7-a5cebe163c0c"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

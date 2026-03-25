@@ -1,0 +1,84 @@
+{
+  "_resourceType": "scene",
+  "id": "d0c3e2dd-38b6-4a2b-9c90-5a079631544a",
+  "_index": 21,
+  "type": "TOPDOWN",
+  "name": "CityHall",
+  "symbol": "scene_22",
+  "x": 2351.9569194400506,
+  "y": 479.0017646598536,
+  "width": 32,
+  "height": 32,
+  "backgroundId": "9b759619-0b99-450e-91a3-97452b3ed765",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "dmg"
+  ],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "playerSpriteSheetId": "26ba843c-e41d-4ff7-9de9-d1aa17d89cb9",
+  "script": [
+    {
+      "id": "d6a7859a-029f-4f30-8904-d7a979e66b2d",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "bc9f67e9-b6f2-4216-b8b6-63505f3b7118",
+        "__name": "Init Menu"
+      },
+      "children": {
+        "script": [
+          {
+            "id": "08e12c0c-dff1-429d-9140-24185a11439b",
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "start"
+              ],
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "2af05793-add6-4b78-a0ce-230307b670e3",
+                  "command": "EVENT_SCENE_PUSH_STATE",
+                  "args": {}
+                },
+                {
+                  "id": "093937a8-0721-44c5-aa5b-7ef4284e6130",
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "fd223a5f-7148-4705-98a7-b0ef56cb5c74",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "direction": "",
+                    "fadeSpeed": "2"
+                  }
+                }
+              ]
+            },
+            "__type": "event"
+          }
+        ]
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "15f99150-e8d9-4117-99ad-2f112df523d0",
+        "__collapse": true
+      },
+      "id": "46bc08ff-a900-46c4-ad47-ea79dc9f0623"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "00e7+0f12+00e+0f!0010+0f!00e+0f!0010+0f!00e+0f!0010+0f!00e+0f!00f+0f2+00e+0f!004+0f7+004+0f2+00e+0f!002+0f4+004+0f7+00e+0f!00!0f!00c+0f3+00e+0f3+00c5+0f2+001e+0f2+0012f+"
+}

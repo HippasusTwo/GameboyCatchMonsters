@@ -1,0 +1,18 @@
+{
+  "_resourceType": "script",
+  "id": "f84d7e71-20cf-4a7a-b370-d9b7f857bf93",
+  "name": "DatabaseMaybe",
+  "symbol": "script_0",
+  "description": "Database of values is kinda important for more complicated games. I see lots of vm methods for manipulating memory but not so much pointers.\nThis doesn't actually work atm. Might have to overhaul the engine actually...",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ";const_def constants?\n; const NO_MOVE ;=0\n; const BITE;1\n; const TACKLE;2, etc.\n \nTableNames::\n .asciz \"Attacky\"\n .asciz \"Bite\"\n .asciz \"Tackle\" \n .db 255\n \n TableMoves:\n;  .db NO_MOVE\n  .db 1 ;power \n  .db 2 ; type \n  .db 3 ;effect \n  .db 255\n  ;use dw for storing in a word, db for storing a byte.\n  \nUseTable::  \n        .ld a, 1;[inputVar]\n\t.ld [wLookingFor], a\n\t\n        .ld de, $0\n\t.ld hl, TableNames\nNamesLoop:\n\t.ld a, [hli]\n\t.ld b, a\n\t.cp 255\n\t.jr z, noMatch\n\t.ld a, [wLookingFor]\n\t.cp b\n\t.jr z, foundMatching\n\t.inc de\n\t;inc de ;table with multiple values per entry\n\t.jr NamesLoop\nfoundMatching:\nnoMatch:\n   .ret"
+      },
+      "id": "9ed27448-5972-4878-9e6f-9719734b6545"
+    }
+  ]
+}

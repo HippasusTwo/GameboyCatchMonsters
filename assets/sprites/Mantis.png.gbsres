@@ -1,0 +1,160 @@
+{
+  "_resourceType": "sprite",
+  "id": "3445a315-8a6c-486c-bc40-c0caad5f3da7",
+  "name": "Mantis",
+  "symbol": "sprite_mantis",
+  "states": [
+    {
+      "id": "20172314-587d-49c3-ac52-30dd735f8b69",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "91198fbd-b910-42b7-a2e8-3576c249184a",
+          "frames": [
+            {
+              "id": "94805e37-4611-47e5-a33c-212d3fd3d954",
+              "tiles": [
+                {
+                  "id": "e4103ba4-9b6b-4d51-931e-06afbdef7eb7",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 2,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "8e7c5874-38ae-4b85-b453-b89c35ad12fe",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 2,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            },
+            {
+              "id": "b0e7f3df-1164-4dcb-a185-5c242a42277e",
+              "tiles": [
+                {
+                  "id": "d2189573-d103-4264-bd00-69b1f96a0454",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 2,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "9713cb42-c06b-412b-b3a0-b11c5e1277b5",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 24,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 2,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7102b2e4-b72e-4635-8d0a-209b1dfdeb2d",
+          "frames": [
+            {
+              "id": "f1db5af8-e384-42cb-85a5-93310c324654",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "a2ced950-9daf-423b-b729-cb457f47192c",
+          "frames": [
+            {
+              "id": "c83b130e-6ac0-4128-92c9-3266c6f4fc0a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5a761281-bb55-4950-aee3-369febf1d1bd",
+          "frames": [
+            {
+              "id": "5951e90a-bc80-47ed-9ab0-7ca9fa9c71b0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e7096262-c5ed-453d-ba21-7dc140efdb36",
+          "frames": [
+            {
+              "id": "2faa32fb-ed29-4345-824a-06aeb1e559e0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1a73e409-dfc6-4a01-9f2d-12fcdf144161",
+          "frames": [
+            {
+              "id": "34473a68-7af2-4327-8c83-efbe89202e13",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "59038e25-8999-4a56-9d11-4c88a46c5bdf",
+          "frames": [
+            {
+              "id": "f8dd07bd-4514-4512-b564-c77204b6bc0e",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "d1bb9f1c-2f2b-4a7d-8028-5aea3f3dbf57",
+          "frames": [
+            {
+              "id": "19f26ecd-e4aa-4bd4-80db-124dfa7edb96",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 4,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Mantis.png",
+  "width": 32,
+  "height": 16,
+  "checksum": "d8dd8e10429a349d0be88e4be0d5708d3fb4e9a7"
+}

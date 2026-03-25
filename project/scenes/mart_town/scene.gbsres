@@ -1,0 +1,108 @@
+{
+  "_resourceType": "scene",
+  "id": "c3ca06b0-1d73-44fa-99ee-3bf6d8b340e8",
+  "_index": 20,
+  "type": "TOPDOWN",
+  "name": "Mart Town",
+  "symbol": "scene_21",
+  "x": 2003.8413007991896,
+  "y": 99.81982587798674,
+  "width": 80,
+  "height": 40,
+  "backgroundId": "5204dea8-cc6c-47bc-af88-dacbfecbeabd",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "c2af2d33-8fcb-4a07-b9a0-15d6b7a98767"
+  ],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "playerSpriteSheetId": "26ba843c-e41d-4ff7-9de9-d1aa17d89cb9",
+  "script": [
+    {
+      "id": "4d298be5-1073-41b8-b24a-70ed0dbd5aa7",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "bc9f67e9-b6f2-4216-b8b6-63505f3b7118",
+        "__name": "Init Menu"
+      },
+      "children": {
+        "script": [
+          {
+            "id": "edf7b69b-1208-457c-bfca-1d89ee452c45",
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "start"
+              ],
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "a51a9611-bf06-491e-9d69-d25d1ff4c2d1",
+                  "command": "EVENT_SCENE_PUSH_STATE",
+                  "args": {}
+                },
+                {
+                  "id": "f9d493d1-1747-46a8-8893-24dfd5a5b798",
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "fd223a5f-7148-4705-98a7-b0ef56cb5c74",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "direction": "",
+                    "fadeSpeed": "2"
+                  }
+                }
+              ]
+            },
+            "__type": "event"
+          }
+        ]
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "15f99150-e8d9-4117-99ad-2f112df523d0",
+        "__collapse": true
+      },
+      "id": "a558cef0-f95e-49e5-81eb-d2d20004b8ad"
+    },
+    {
+      "command": "EVENT_MUSIC_PLAY",
+      "args": {
+        "musicId": "9e63fcea-bb03-4921-81df-6f223d2044ad"
+      },
+      "id": "276bc965-111a-49f2-b520-a6704b25be68"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "45fda399-35e6-492e-9b9d-2214af90cdad",
+        "x": {
+          "type": "property",
+          "target": "$self$",
+          "property": "xpos"
+        },
+        "y": {
+          "type": "property",
+          "target": "player",
+          "property": "ypos"
+        }
+      },
+      "id": "b24de300-4d46-4ae2-a77d-4b8eb99d00de"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "00bd+0f9+0046+0fc+0028+0f7+00!0f7+00!0f7+005+0f2+009+0f!0023+0f3+008+0f!00!0f!005+0f!00!0f!005+0f!005+0f2+009+0f!004+0f7+002+0f7+00d+0f7+006+0f!00!0f!005+0f!00!0f!005+0f!005+0f2+009+0f!004+0f!005+0f!002+0f!006+0f14+006+0f!00!0f7+00!0f!005+0f!005+0f2+009+0f!004+0f!005+0f!002+0f!006+0f5+006+0f3+00c+0f!00!0f!005+0f!00!0f!005+0f!005+0fc+004+0f!005+0f!002+0f!006+0f3+0017+0f!00!0f!005+0f!00!0f!005+0f!005+0fc+004+0f!005+0f!002+0f!006+0f!0019+0f!00!0f!005+0f!00!0f!005+0f!0015+0f!005+0f!002+0f!006+0f!0019+0f!00!0f!005+0f!00!0f!005+0f!0015+0f!005+0f!002+0f!006+0f!0019+0f!00!0f!005+0f!00!0f!005+0f!0015+0f!005+0f!002+0f!006+0f!0019+0f!00!0f!005+0f!00!0f!005+0f!0015+0f!005+0f!002+0f!006+0f!003+0f6+00a+0f7+00!0f7+00!0f7+0015+0f!00!0f!003+0f!002+0f!006+0f!003+0f!004+0f!00a+0f2+002+0f3+00!0f7+00!0f7+0015+0f7+002+0f8+003+0f6+0036+0f2+003+0f2+002+0f!006+0f4+0056+0fa+00fc+0f7+0049+0f!005+0f!0015+0f7+002d+0f!005+0f!0015+0f!005+0f!002d+0f!005+0f!0015+0f!005+0f!002d+0f!005+0f!005+0f7+009+0f!005+0fa+002+0f16+008+0f7+002+0fc+00!0f!009+0f2+00d+0f!002+0f2+001c+0f!00e+0f2+005+0f!009+0f2+00d+0f!002+0f2+001c+0f!00f+0f!005+0f!009+0f!00e+0f!002+0f2+001c+0f!00f+0f!005+0f!009+0f!00e+0f!002+0f2+001c+0f!00f+0f!005+0f!009+0f!00e+0f!002+0f!001d+0f!00f+0f!005+0f!009+0f!00e+0f!002+0f!001d+0f!00f+0f!005+0f!009+0f!00e+0f!002+0f!001d+0f!00f+0f!005+0f!009+0f!00e+0f!002+0f!001d+0f!00f+0f!005+0f!009+0f!006+0f!007+0f!002+0f!00a+0f2+0011+0f!00f+0f!005+0f!009+0f!006+0f9+002+0f16+008+0f17+009+0f!005+0f5+003+0f2+002+0f16+008+0110+005+0f2+009+0f!005+0f!0038+01!005+0f2+009+0f!005+0f!003e+0f2+009+0f!005+0f!0021+"
+}

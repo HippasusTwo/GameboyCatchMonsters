@@ -1,0 +1,138 @@
+{
+  "_resourceType": "scene",
+  "id": "66970f72-cf84-451c-9d1d-0d0a72c0b94b",
+  "_index": 29,
+  "type": "ADVENTURE",
+  "name": "Scene 30",
+  "symbol": "scene_30",
+  "x": 2347.9872472920633,
+  "y": 1125.8719962148286,
+  "width": 40,
+  "height": 40,
+  "backgroundId": "716a0840-ddf0-4e54-a65a-1d3ffdc8dfb7",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "dmg"
+  ],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [
+    {
+      "id": "bc906b3a-c354-4046-8507-7a0c2e18bcd4",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "bc9f67e9-b6f2-4216-b8b6-63505f3b7118",
+        "__name": "Init Menu"
+      },
+      "children": {
+        "script": [
+          {
+            "id": "4eb896b5-9f2d-4770-b797-e9c528d8eb03",
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "start"
+              ],
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "19f83b40-4e0c-4457-b902-a8f044c46484",
+                  "command": "EVENT_SCENE_PUSH_STATE",
+                  "args": {}
+                },
+                {
+                  "id": "1ee085a1-b29b-410d-89c2-44d7df844448",
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "fd223a5f-7148-4705-98a7-b0ef56cb5c74",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "direction": "",
+                    "fadeSpeed": "2"
+                  }
+                }
+              ]
+            },
+            "__type": "event"
+          }
+        ]
+      }
+    }
+  ],
+  "playerHit1Script": [
+    {
+      "command": "EVENT_ACTOR_EMOTE",
+      "args": {
+        "actorId": "$self$",
+        "emoteId": "c8d5eadd-dced-43df-8367-1e4d9bfc7923"
+      },
+      "id": "1973276c-89c0-49ab-8122-94dd7bf7754c"
+    },
+    {
+      "command": "EVENT_IF_ACTOR_DIRECTION",
+      "args": {
+        "actorId": "$self$",
+        "direction": {
+          "type": "direction",
+          "value": "down"
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "player",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": -1
+              },
+              "moveType": "vertical",
+              "useCollisions": false,
+              "collideWith": []
+            },
+            "id": "7a6b80d2-a603-4fa6-9cb6-457a30cca9b4"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "player",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 1
+              },
+              "moveType": "vertical",
+              "useCollisions": false,
+              "collideWith": []
+            },
+            "id": "9361957b-d0ad-4bf7-a7bd-3ede8e503c8d"
+          }
+        ]
+      },
+      "id": "7d9fbcfe-36f6-4408-ad6f-860577152bbd"
+    }
+  ],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "004a+0f!0026+0f5+0023+0f5+0043+0f8+00!0f2+001d+0f!003+0f6+00!0f!001c+0f!005+0f2+00!0f3+001c+0f!006+0f5+00d+0f!00e+0f8+003+0f!00d+0f!00b+0fd+00!0f!00d+0f!00b+0f2+002+0fb+00d+0f!00b+0f4+0024+0f2+0082+0f5+00b+0f4+0013+0f6+00b+0f4+0013+0f6+00b+0f!002+0f!0025+0f3+0018e+0f2+007+0f!00!0f!001c+0f2+007+0f!00!0f!001c+0f2+007+0f!00!0f!001c+0f2+0024+0f4+0024+0f4+0024+0f4+0025+0f2+0026+0f2+0026+0f2+00!01d+00d+"
+}

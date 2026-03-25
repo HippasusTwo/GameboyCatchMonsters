@@ -1,0 +1,74 @@
+{
+  "_resourceType": "actor",
+  "id": "6ffff94c-3806-469d-9a90-4bf62e5862a8",
+  "_index": 7,
+  "symbol": "actor_79",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 34,
+  "y": 25,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "e20ce140-53a5-4b1b-9964-138ba0c86925",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "I'm an innocent old man!\nI swear! Stop hitting me!"
+        ],
+        "avatarId": ""
+      },
+      "id": "41b689cb-3378-44bd-9e91-0505f11aae1e"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "3",
+        "operator": "==",
+        "comparator": 1,
+        "__collapseElse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "3"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "fa96b35d-ce44-4e11-9f9a-e56e9c1fff9a"
+          }
+        ],
+        "false": []
+      },
+      "id": "34d459c6-1bb0-4da7-9c30-7ab591ada29d"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

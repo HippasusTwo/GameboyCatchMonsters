@@ -1,0 +1,41 @@
+{
+  "_resourceType": "actor",
+  "id": "763106d1-60e4-4639-917e-b3e49f714a69",
+  "_index": 0,
+  "symbol": "actor_59",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 20,
+  "y": 19,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "dfa75239-299d-41fe-a6cd-9e9438da1938",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "They modified Tuxechicks\nto feel no pain and to\nenjoy being eaten!",
+          "That makes it perfectly\nabsolutely resolutely\nethical! ...Right?"
+        ],
+        "avatarId": ""
+      },
+      "id": "5699ee1e-3304-4c5a-af62-68d308117475"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

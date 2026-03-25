@@ -1,0 +1,26 @@
+{
+  "_resourceType": "trigger",
+  "id": "d9489c03-8683-4b84-9fc9-c6ef988205e8",
+  "_index": 1,
+  "symbol": "trigger_75",
+  "prefabId": "",
+  "name": "",
+  "x": 10,
+  "y": 11,
+  "width": 2,
+  "height": 1,
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Wanted:\nAnyone against OMNI."
+        ],
+        "avatarId": ""
+      },
+      "id": "a1b4f983-d962-4315-bcde-0d73733550a9"
+    }
+  ],
+  "leaveScript": []
+}

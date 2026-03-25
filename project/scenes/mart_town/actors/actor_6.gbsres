@@ -1,0 +1,138 @@
+{
+  "_resourceType": "actor",
+  "id": "e89c9180-1e20-4433-a7ba-62fa6ace9b0b",
+  "_index": 5,
+  "symbol": "actor_77",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 32,
+  "y": 25,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "d95355be-ad30-4d0d-8932-90c1c99509ab",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_ACTOR_SET_DIRECTION",
+      "args": {
+        "actorId": "$self$",
+        "direction": {
+          "type": "direction",
+          "value": "right"
+        }
+      },
+      "id": "3b8df15a-3fae-47ca-b4e0-2ba806841b3b"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Like I'd believe anything\nfrom a hobo! Let's bus\nyou to the borders."
+        ],
+        "avatarId": ""
+      },
+      "id": "81cf85e1-fc59-4496-84e6-0df28f2c4bf5"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "3",
+        "operator": "==",
+        "comparator": 1,
+        "__collapseElse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "3"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "e03de26a-9139-479d-8fdd-e66eb744344c"
+          }
+        ],
+        "false": []
+      },
+      "id": "fca7be02-4159-4ea6-9753-052932f2571d"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": {
+          "type": "number",
+          "value": 0.5
+        },
+        "frames": {
+          "type": "number",
+          "value": 30
+        }
+      },
+      "id": "a1a36389-c342-4b7a-a0b7-aaf517d6fb7d"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_FRAME",
+      "args": {
+        "actorId": "$self$",
+        "frame": {
+          "type": "number",
+          "value": 0
+        },
+        "__collapse": false
+      },
+      "id": "b3418580-9931-4a31-98b8-270f95608600"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": {
+          "type": "number",
+          "value": 0.5
+        },
+        "frames": {
+          "type": "number",
+          "value": 30
+        }
+      },
+      "id": "1e4d3a8c-ee81-4c77-b81f-34f224dd38c8"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_FRAME",
+      "args": {
+        "actorId": "$self$",
+        "frame": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": false
+      },
+      "id": "4d547f9a-6ee6-473e-bba3-c94eeb21f70c"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

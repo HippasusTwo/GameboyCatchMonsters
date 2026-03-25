@@ -1,0 +1,224 @@
+{
+  "_resourceType": "actor",
+  "id": "21d2ecc6-a27b-45c9-a3de-24d5a8e67186",
+  "_index": 1,
+  "symbol": "actor_74",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 2,
+  "y": 11,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "ac1e8ef4-ffe6-47cd-b16f-9af5da77ec26",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "3",
+        "operator": "==",
+        "comparator": "0",
+        "__collapseElse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "3"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Our Teacher is famous\nfor mistaking phones for\ndeadly weapons."
+              ],
+              "avatarId": ""
+            },
+            "id": "9fe3631d-7939-4de7-aa02-ebd9a7ded127"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "15",
+              "operator": "==",
+              "comparator": "0",
+              "__collapseElse": false,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "15"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Me and the other cops\nwere gonna get tattoos.",
+                      "Roomie: Isn't that what\ngangs do?",
+                      "Her: Nobody asked you!\nIf you don't want to do\nit, then you at least got",
+                      "to do the hazing ritual.\nSneak aboard the space\nship and blow stuff up!",
+                      "Roomie: That sounds not\nvery legal.",
+                      "Her: Bah! You should get\ntheir voicebox removed."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "ffb8a20c-95c1-4984-a52a-eb04ce86a90e"
+                },
+                {
+                  "command": "EVENT_CHOICE",
+                  "args": {
+                    "variable": "15",
+                    "trueText": "Yes",
+                    "falseText": "No"
+                  },
+                  "id": "b274a772-ffa1-41f0-a9f1-ee35e3fd7728"
+                },
+                {
+                  "command": "EVENT_IF",
+                  "args": {
+                    "variable": "15",
+                    "operator": "==",
+                    "comparator": "0",
+                    "__collapseElse": false,
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "15"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 0
+                      }
+                    }
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Cop: You'll regret it.\nThey aren't really people\nyou know?",
+                            "Roomie: ...Thank you.\nI think we should head\nto the Turnip mission.",
+                            "It's back past the\nelephant. Or we could see\nabout that report of a",
+                            "theft, or lost robot, or\nhead up to eat out first."
+                          ],
+                          "avatarId": ""
+                        },
+                        "id": "f49d61ce-710f-49d1-81fa-066ccc44f9e5"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_ACTOR_PUSH",
+                        "args": {
+                          "continue": false
+                        },
+                        "id": "5f124a6a-b2de-4f1c-9731-849e167b1e70"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_TO",
+                        "args": {
+                          "actorId": "4cff9933-4c2a-49e3-ba58-8fb731837e5b",
+                          "x": {
+                            "type": "property",
+                            "target": "$self$",
+                            "property": "xpos"
+                          },
+                          "y": {
+                            "type": "property",
+                            "target": "$self$",
+                            "property": "ypos"
+                          },
+                          "moveType": "horizontal",
+                          "useCollisions": false,
+                          "collideWith": []
+                        },
+                        "id": "54609229-e438-40aa-8c4f-f63425fba0f8"
+                      },
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "A look of panic crosses\nyour roommate's face.\nThey attack!",
+                            "COP: Kill it!\n-shots fire and hit you-"
+                          ],
+                          "avatarId": ""
+                        },
+                        "id": "9a64a136-d736-492d-89f0-25db52cb7418"
+                      },
+                      {
+                        "command": "EVENT_SWITCH_SCENE",
+                        "args": {
+                          "sceneId": "a5f430d1-da9c-4313-934a-79da3c40bbdc",
+                          "x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "direction": "",
+                          "fadeSpeed": "2"
+                        },
+                        "id": "168b2e65-f7a7-4f0f-b25f-fba658552257"
+                      }
+                    ]
+                  },
+                  "id": "3e12edf5-6448-4d8a-b440-5b951a4f25cb"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "You're not overly\nsympathetic to them, are\nyou? They LIKE being\ntreated like tools.",
+                      "Isn't that right?\nRoomie: ...sure.\n-They look discomforted."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "778bb3ff-e95f-4e9b-92a1-9bbfeafd3745"
+                }
+              ]
+            },
+            "id": "d2d9f396-ea52-4c48-90fd-150d8026928e"
+          }
+        ]
+      },
+      "id": "5290a035-080b-428e-84c7-560d28940383"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

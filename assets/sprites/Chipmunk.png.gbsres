@@ -1,0 +1,160 @@
+{
+  "_resourceType": "sprite",
+  "id": "17d6d60e-0588-4f67-ba0c-489ba4a659c5",
+  "name": "Chipmunk",
+  "symbol": "sprite_chipmunk",
+  "states": [
+    {
+      "id": "acd31f60-90f8-4178-8baa-6d1535094350",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "50f35066-8ba1-4a14-82d5-8c1eb39c495e",
+          "frames": [
+            {
+              "id": "d9da31ae-ce85-4e47-8182-0f471fc0b3ac",
+              "tiles": [
+                {
+                  "id": "2e89f7f8-d28b-455e-8afc-fc78d08cfbd7",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "58c2e5c6-8069-429a-8f22-96727781912a",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 5,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            },
+            {
+              "id": "215aeaa2-f256-4627-87c0-41ed87f58ad0",
+              "tiles": [
+                {
+                  "id": "914787a6-4f60-4bcd-a4f2-0ea394df7949",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 0,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "bc500fe5-7539-40ce-88ff-7cfc42cc1fd5",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 24,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 5,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "b0a0c4d2-7971-40cd-8944-0c9bc094c152",
+          "frames": [
+            {
+              "id": "c86335f3-f149-4ded-a6c1-e0958781c123",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "47a77b4d-5019-4e14-806d-07da537b4256",
+          "frames": [
+            {
+              "id": "e2d30bd8-feb8-4a4c-9820-68d6bf973508",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7ac85aa7-125e-45ac-a31f-bec62903a6d3",
+          "frames": [
+            {
+              "id": "39e057b6-54b5-41f2-aec2-4285cc85f034",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "5ea1d139-252d-4ecb-9611-588b3492b9e4",
+          "frames": [
+            {
+              "id": "43e5131a-8f9a-4c89-af24-9987cc4f4972",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "dd007cb0-2079-4c2c-b5cb-ba4f88d3c69f",
+          "frames": [
+            {
+              "id": "94bea5bb-97e9-4efa-9884-dbd1992fb317",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "fd6e45d1-47e7-4e45-8d51-8ac410ea5307",
+          "frames": [
+            {
+              "id": "92815626-110c-4e50-b2db-092ab7d365f6",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "bd7181cd-d6c9-4e47-96c8-8fe3e92c7e15",
+          "frames": [
+            {
+              "id": "9cd4b57e-960e-497b-9eb8-e79ac8bcff10",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 4,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Chipmunk.png",
+  "width": 32,
+  "height": 16,
+  "checksum": "210a3eb6b252762423b0626c5dfd760407c3f5f7"
+}

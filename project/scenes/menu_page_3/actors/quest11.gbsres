@@ -1,0 +1,60 @@
+{
+  "_resourceType": "actor",
+  "id": "c2cfcb6a-c204-4a0f-98fe-5522c1bb4418",
+  "_index": 7,
+  "symbol": "actor_88",
+  "prefabId": "",
+  "name": "Quest11",
+  "coordinateType": "tiles",
+  "x": 5,
+  "y": 12,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f0c3033d-e82a-407d-9fe2-3d5da4f59c09",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "id": "5955a8bd-5aa3-4827-bfe5-42598a6892bf",
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "10",
+        "__collapseElse": true,
+        "__label": "Quest Check",
+        "__collapse": false,
+        "condition": {
+          "type": "variable",
+          "value": "10"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "9df84da2-07b4-4e9a-9d8f-d6d7a37bc792",
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "$self$",
+              "frame": {
+                "type": "number",
+                "value": 1
+              }
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

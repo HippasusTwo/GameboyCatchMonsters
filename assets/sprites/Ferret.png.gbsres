@@ -1,0 +1,160 @@
+{
+  "_resourceType": "sprite",
+  "id": "4e6b722e-5634-4672-b97e-7c3f80e59daf",
+  "name": "Ferret",
+  "symbol": "sprite_ferret",
+  "states": [
+    {
+      "id": "f0270584-727d-4646-8582-04e7c067b275",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "a6a1219a-1c42-4c16-835e-46626fbe1794",
+          "frames": [
+            {
+              "id": "2467af82-ac61-40db-81d0-626f17d02a4b",
+              "tiles": [
+                {
+                  "id": "8b153013-c9fa-4dbf-8eb4-af80735393d1",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 4,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "4aca1287-3c38-40a2-b066-1179c1a03133",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 4,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            },
+            {
+              "id": "330adfe7-4cc5-45c1-82b0-1a9e2735c5e9",
+              "tiles": [
+                {
+                  "id": "8b579a7d-36b7-4898-bcf1-a5fecb7692cd",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 4,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "d5f03300-513d-43f1-a9aa-53f95f920172",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 24,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 4,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "24fd36fe-bcdf-4954-9b26-117288cd9621",
+          "frames": [
+            {
+              "id": "dceadc9d-01e5-45cd-a796-f022709de7e2",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8f88d82e-b303-4197-835f-a12c00d35808",
+          "frames": [
+            {
+              "id": "7be56f7c-07f5-4894-be0b-097455728f84",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c83441e9-86fc-4259-b26e-3c5273528233",
+          "frames": [
+            {
+              "id": "f2fb0acf-79b8-47a8-860d-66c54217b1ba",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "8c1dc40f-25d2-4b00-9e4b-d024f6fffc60",
+          "frames": [
+            {
+              "id": "3920595b-6bd8-4e88-acd3-5de4e751919d",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "cadb3631-8470-41b4-9453-7a29ac441371",
+          "frames": [
+            {
+              "id": "3504df5c-b072-4566-bf0f-c5bfd408f045",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b067ea3c-2f08-4cdf-84f3-a9532f88948b",
+          "frames": [
+            {
+              "id": "f20b8414-43fd-4d62-a9b2-abf42e199178",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "2ef40547-23d7-414c-b1aa-63c2c754e6e6",
+          "frames": [
+            {
+              "id": "10a42842-8f57-446a-ac9f-9b88c940b9ce",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 4,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Ferret.png",
+  "width": 32,
+  "height": 16,
+  "checksum": "eb41784871476a5dd0ab310ddc0ad01c48a41edd"
+}

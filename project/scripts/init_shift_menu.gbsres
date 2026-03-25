@@ -1,0 +1,48 @@
+{
+  "_resourceType": "script",
+  "id": "15f99150-e8d9-4117-99ad-2f112df523d0",
+  "name": "Init Shift Menu",
+  "symbol": "script_12",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "id": "074a44c0-7669-4065-844d-027cdc257d33",
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "select"
+        ],
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "id": "199f8337-fbc6-4b2f-9492-08d196221e72",
+            "command": "EVENT_SCENE_PUSH_STATE",
+            "args": {}
+          },
+          {
+            "id": "29692787-66cd-452f-b203-76c86c0dd171",
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "d78f80fc-4217-4950-8891-8993dd0cb915",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              },
+              "direction": "",
+              "fadeSpeed": "2"
+            }
+          }
+        ]
+      },
+      "__type": "event"
+    }
+  ]
+}

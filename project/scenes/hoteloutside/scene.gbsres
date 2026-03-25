@@ -1,0 +1,81 @@
+{
+  "_resourceType": "scene",
+  "id": "f02b7e3d-5beb-483a-b826-25e21a1d2d0d",
+  "_index": 28,
+  "type": "TOPDOWN",
+  "name": "HotelOutside",
+  "symbol": "scene_29",
+  "x": 2682.813355021832,
+  "y": 859.2986843513078,
+  "width": 40,
+  "height": 40,
+  "backgroundId": "28afcba8-315e-4103-b851-fa10f54cdfaf",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "aa5d38da-49d6-4160-a033-a54ec7964f47",
+    "",
+    "",
+    "",
+    "",
+    "c2af2d33-8fcb-4a07-b9a0-15d6b7a98767",
+    "default-sprite"
+  ],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [
+    {
+      "id": "2f6bcb9b-7764-4bd1-acb4-ca68cafaab4e",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "bc9f67e9-b6f2-4216-b8b6-63505f3b7118",
+        "__name": "Init Menu"
+      },
+      "children": {
+        "script": [
+          {
+            "id": "c0ea13db-f4b5-4907-8592-33de0d5a7aa8",
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "start"
+              ],
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "8affa62c-f057-4471-aed9-0aa3ad63b3fe",
+                  "command": "EVENT_SCENE_PUSH_STATE",
+                  "args": {}
+                },
+                {
+                  "id": "a895fc70-43ac-4976-8ca6-78aac6e345a9",
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "fd223a5f-7148-4705-98a7-b0ef56cb5c74",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "direction": "",
+                    "fadeSpeed": "2"
+                  }
+                }
+              ]
+            },
+            "__type": "event"
+          }
+        ]
+      }
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "00e+0fd+001b+0f!00b+0f!001b+0f!00b+0f!008+0f2+009+0f9+00b+0fe+006+0f9+00b+0f!0013+0f!007+0f!00b+0f!0013+0f!007+0f!00b+0f!0013+0f!007+0f!00b+0f!00d+0f7+007+0f!00b+0f!00d+0f7+007+0f!00b+0f!001b+0f!00b+0f!00d+0fc+002+0f!00b+0f!004+0f7+00a+0f4+002+0f!00b+0f!005+0f6+00c+0f2+002+0f!00b+0f!004+0f2+003+0f2+00c+0f2+002+0f!00a+0f2+004+0f!004+0f2+00c+0f2+002+0f!00a+0f!005+0f!004+0f!00d+0f2+002+0f2+003+0f3+003+0f!005+0f!004+0f!00d+0f2+002+0fc+005+0f!004+0f!00d+0f2+003+0fb+005+0f!004+0f!00d+0f2+007+0f4+008+0f!004+0f!00d+0f2+0013+0f!004+0f!003+0fc+0013+0f!004+0f!003+0fb+0014+0f6+0018+0f3+0010+0f2+0013+0f3+0011+0f!0014+0f4+00e+0f6+003+0f7+006+0f4+0013+0f!003+0f2+002+0f3+00d+0f7+009+0f!003+0f2+003+0f2+00d+0f!005+0f!009+0f!003+0f!005+0f!00d+0f!005+0f!009+0f!003+0f!005+0f!00d+0f2+004+0f5+005+0f!003+0f!005+0f!00d+0f2+00e+0f!003+0f!005+0f!00d+0f2+00e+0f!003+0f!005+0f!00d+0f2+00e+0f!003+0f!005+0f!00d+0f2+00e+0f!003+0f!005+0f!00d+0f2+009+0f6+003+0f7+00d+0f!00a+0f6+003+0f7+00d+0f7+0014+0fb+008+0f2+006+0f7+006+0fb+009+0f!003+"
+}

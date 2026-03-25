@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "bfe7d696-8da8-482a-a275-68ebd892d094",
+  "_index": 2,
+  "symbol": "actor_67",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 23,
+  "y": 8,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "46a3db76-878e-4896-892b-d1afa7d5e2f0",
+  "paletteId": "",
+  "direction": "left",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Why doesn't it go up,\nonly down when I sit?"
+        ],
+        "avatarId": ""
+      },
+      "id": "44c8398f-b5b7-4dd6-aef0-a0f292d0086c"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "6d60517e-163e-46b5-bdb6-dd5f3f3751ea",
+  "name": "scorpion",
+  "symbol": "sprite_scorpion",
+  "states": [
+    {
+      "id": "804ae3f0-76df-406f-81af-36757af80e09",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "f6daf919-0aa3-4db3-bec2-068b3ba103a4",
+          "frames": [
+            {
+              "id": "0e64fe96-50b8-480c-ad43-acd308fdcdb3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "71f29a48-955b-496b-8ac0-ce3db7413e59",
+          "frames": [
+            {
+              "id": "e3a8bafe-a781-4395-845f-2acf4da997c7",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "99ca1243-3e12-4848-8d1b-5188ebc39731",
+          "frames": [
+            {
+              "id": "d4bfdbfd-4947-4979-a329-d0e3ff25fc9f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c667f0a6-4ad2-4b3b-a64e-64ca25ed7bd3",
+          "frames": [
+            {
+              "id": "d1671594-41f7-48ad-beed-789f241c139f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "ed93244a-613d-4049-8213-e440eff40387",
+          "frames": [
+            {
+              "id": "8a5b5f93-eba3-4b7c-82e9-71f8b150766a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "304b7829-04d6-45f3-b337-3ce32ad1e58d",
+          "frames": [
+            {
+              "id": "9f206962-a4e3-479f-abf6-a71736b13b07",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0aa46c1b-4e2d-47d5-8f5d-d91ae037e942",
+          "frames": [
+            {
+              "id": "2ecaac8a-a17a-4ac3-89c1-4ad827e0ba48",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "96bcbddd-5313-4550-9e1a-0d79ee267585",
+          "frames": [
+            {
+              "id": "84b3f0ed-5995-47c1-aca4-02292f75f54c",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "scorpion.png",
+  "width": 32,
+  "height": 32,
+  "checksum": "1d31566a406f666d3bed9e0c192ca330d2abaa19"
+}

@@ -1,0 +1,80 @@
+{
+  "_resourceType": "actor",
+  "id": "076a0612-024a-426a-85fc-3e1054b9f74e",
+  "_index": 3,
+  "symbol": "actor_cat",
+  "prefabId": "",
+  "name": "Cat",
+  "coordinateType": "tiles",
+  "x": 23,
+  "y": 2,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "1e27bb8e-c805-435a-8b87-05b4f50da4f0",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "id": "9769786a-b499-4657-917e-05c7e96cf2f4",
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": "Meow!"
+      }
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "23",
+        "value": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "6cace3f4-5b5f-452d-941c-5178345609e5"
+    },
+    {
+      "id": "c585ca68-8cb8-4a26-bcff-072845e80702",
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "13",
+        "value": {
+          "type": "true"
+        }
+      }
+    },
+    {
+      "command": "EVENT_SCENE_PUSH_STATE",
+      "args": {},
+      "id": "163642c4-7f2c-4720-be7d-61dd458f8784"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "0e431a44-43a7-44ce-ac96-c17bf49e0593"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

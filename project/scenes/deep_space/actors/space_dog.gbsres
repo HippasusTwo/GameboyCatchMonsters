@@ -1,0 +1,161 @@
+{
+  "_resourceType": "actor",
+  "id": "8b18019e-754f-4cbb-9676-ca3901b2bc96",
+  "_index": 0,
+  "symbol": "actor_space_dog",
+  "prefabId": "",
+  "name": "Space Dog",
+  "coordinateType": "tiles",
+  "x": 14,
+  "y": 14,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "17219846-cda9-4e84-bdfa-c3ff105d42cc",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "23",
+        "value": {
+          "type": "number",
+          "value": 5
+        }
+      },
+      "id": "80bbfeab-2feb-40bb-9d68-81c1cfdcb675"
+    },
+    {
+      "id": "c8f60bb4-d40a-4994-b819-e18b569372a0",
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "5",
+        "__collapseElse": false,
+        "condition": {
+          "type": "variable",
+          "value": "5"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "877d5cb7-0d8d-410b-a5ed-0d4356c96e10",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You can use the\nportal behind me\nto get home."
+              ],
+              "avatarId": ""
+            }
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "34",
+              "operator": "==",
+              "comparator": "0",
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "34"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "You've got tenacity, I\nwill give you that. If you",
+                      "aren't planning to drag\nme to the pound, I guess",
+                      "I could go with you. This\nvoid gets lonely."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "d05ab1bc-2008-4ffc-bd68-4732d2b26c5f"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "34",
+                    "value": {
+                      "type": "number",
+                      "value": 5
+                    }
+                  },
+                  "id": "44cf6b1b-0103-4ffe-ae29-f1cc03c6687c"
+                }
+              ],
+              "false": []
+            },
+            "id": "da48ff21-3059-4f82-9c4b-6cb9e4d7b6c9"
+          }
+        ],
+        "false": [
+          {
+            "id": "2564e652-8f4f-4012-8b6b-c43335e4d583",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "How did you get\nhere!?",
+                "I came here specifically\nto get away from people\ncalling me rabid simply\nfor wandering loose."
+              ],
+              "avatarId": ""
+            }
+          },
+          {
+            "id": "afb820b9-6653-44af-b38b-b2cfa488b79d",
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "5",
+              "value": {
+                "type": "true"
+              }
+            }
+          },
+          {
+            "command": "EVENT_SCENE_PUSH_STATE",
+            "args": {},
+            "id": "06bb1b51-0081-40f0-907a-7d1b697cb4ef"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              },
+              "direction": "",
+              "fadeSpeed": "2"
+            },
+            "id": "0b65e926-bd95-4b03-b412-cf5d6677e2e3"
+          }
+        ]
+      }
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

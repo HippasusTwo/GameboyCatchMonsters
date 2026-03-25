@@ -1,0 +1,86 @@
+{
+  "_resourceType": "actor",
+  "id": "49f1ce6f-8fbb-4520-bcb8-72fd4839d55d",
+  "_index": 9,
+  "symbol": "actor_81",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 30,
+  "y": 24,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "d95355be-ad30-4d0d-8932-90c1c99509ab",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_ACTOR_SET_DIRECTION",
+      "args": {
+        "actorId": "$self$",
+        "direction": {
+          "type": "direction",
+          "value": "right"
+        }
+      },
+      "id": "1d187e25-8c0f-4b73-8183-948735e446e8"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "There was minor protest\nahead, but don't worry.",
+          "We arrested them all\nalready. Some were even\nshot, isn't that great?"
+        ],
+        "avatarId": ""
+      },
+      "id": "e2009dca-a9b2-400d-a5ec-adc09d10df36"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "3",
+        "operator": "==",
+        "comparator": 1,
+        "__collapseElse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "3"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "ab8b1231-fba9-4176-bf57-9a44a6123faa"
+          }
+        ],
+        "false": []
+      },
+      "id": "1ec5b43e-7600-4ea0-8eed-1497abde5547"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

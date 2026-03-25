@@ -1,0 +1,160 @@
+{
+  "_resourceType": "sprite",
+  "id": "5ab15c2b-ef47-437f-be56-6dba100543f7",
+  "name": "Squirrel",
+  "symbol": "sprite_squirrel",
+  "states": [
+    {
+      "id": "8514c118-dc80-4ae3-9b73-878efce78ff4",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": false,
+      "animations": [
+        {
+          "id": "c60c4b02-6b27-4f2a-ac26-f84a482bc70f",
+          "frames": [
+            {
+              "id": "e4fa650c-9095-4982-ab9e-b5ead0dfb74e",
+              "tiles": [
+                {
+                  "id": "d1521645-d2fb-45d8-8b44-e9cf06f36421",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 3,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "42d0b0e9-b2a9-4568-be1e-cc29000cbcdc",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 3,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            },
+            {
+              "id": "74a623a1-6f01-40d3-9920-474112b6b4f7",
+              "tiles": [
+                {
+                  "id": "77731beb-8cd3-4cf4-893a-8e1ecad95af2",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 16,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 3,
+                  "objPalette": "OBP0",
+                  "priority": false
+                },
+                {
+                  "id": "aadff026-e7f0-46f6-9f7a-51cb8f843de2",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 24,
+                  "sliceY": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "palette": 0,
+                  "paletteIndex": 3,
+                  "objPalette": "OBP0",
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "75d0eb8c-918e-40ef-9244-394e3da07826",
+          "frames": [
+            {
+              "id": "c22a68c3-62bd-4fe7-a66a-eca1b57ed726",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0002c3b5-3b71-4dcd-a88e-4c5ab1fe2af2",
+          "frames": [
+            {
+              "id": "42198193-3a83-4754-b6c4-bcd3641185d4",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "22dd7d76-4acb-4172-92fb-e1ed2dc84801",
+          "frames": [
+            {
+              "id": "86da48c0-2506-4091-b37d-51c7b3f1dd02",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "659771c8-7e92-4469-b3a8-7ac46974074e",
+          "frames": [
+            {
+              "id": "50987633-1c6a-4b71-9cd6-992723bd1de0",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "aec54ff4-d9d1-412b-b404-27b6d08db542",
+          "frames": [
+            {
+              "id": "9d6a3e0f-e6f3-497f-b9aa-c9161c878f78",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b8a3e5c9-c33b-4709-8502-62c78d72b8cf",
+          "frames": [
+            {
+              "id": "b4eddd32-fc90-4307-b7d0-028fb684d343",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7f46123c-9d46-48df-a39f-61c222c37a28",
+          "frames": [
+            {
+              "id": "16a143c7-847b-4b5d-8431-e876ac05d919",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 4,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "Squirrel.png",
+  "width": 32,
+  "height": 16,
+  "checksum": "32d627236d31ccb8f6cd9e8d0452c697c1b03a7d"
+}

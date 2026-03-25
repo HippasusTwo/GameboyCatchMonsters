@@ -1,0 +1,85 @@
+{
+  "_resourceType": "actor",
+  "id": "1c36a47c-721f-463c-a0eb-d83b9973af2a",
+  "_index": 6,
+  "symbol": "actor_78",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 36,
+  "y": 25,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "d95355be-ad30-4d0d-8932-90c1c99509ab",
+  "paletteId": "",
+  "direction": "left",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_ACTOR_SET_DIRECTION",
+      "args": {
+        "actorId": "$self$",
+        "direction": {
+          "type": "direction",
+          "value": "left"
+        }
+      },
+      "id": "6241d934-df2e-437e-a648-8aac892594b9"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Confess! You pirated a\nGB game, didn't you?"
+        ],
+        "avatarId": ""
+      },
+      "id": "49f729a5-84d8-4b45-8d2d-bef6a8cf67c2"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "3",
+        "operator": "==",
+        "comparator": 1,
+        "__collapseElse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "3"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "5da8a74f-a732-4849-9fd2-d8ca7c1a00ba"
+          }
+        ],
+        "false": []
+      },
+      "id": "317f091a-28f5-4280-9094-a87892a0dbd4"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

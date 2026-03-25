@@ -1,0 +1,531 @@
+{
+  "_resourceType": "variables",
+  "variables": [
+    {
+      "id": "0",
+      "name": "Quest1",
+      "symbol": "var_quest1"
+    },
+    {
+      "id": "1",
+      "name": "Quest2",
+      "symbol": "var_quest2"
+    },
+    {
+      "id": "2",
+      "name": "Quest3",
+      "symbol": "var_quest3"
+    },
+    {
+      "id": "3",
+      "name": "CopQuest",
+      "symbol": "var_copquest"
+    },
+    {
+      "id": "4",
+      "name": "QuestGrumpy",
+      "symbol": "var_questgrumpy"
+    },
+    {
+      "id": "5",
+      "name": "QuestSpace",
+      "symbol": "var_questspace"
+    },
+    {
+      "id": "6",
+      "name": "QuestFlorist",
+      "symbol": "var_questflorist"
+    },
+    {
+      "id": "7",
+      "name": "QuestTurnip",
+      "symbol": "var_questturnip"
+    },
+    {
+      "id": "8",
+      "name": "QuestLaunch",
+      "symbol": "var_questlaunch"
+    },
+    {
+      "id": "9",
+      "name": "Quest10",
+      "symbol": "var_quest10"
+    },
+    {
+      "id": "10",
+      "name": "QuestSquireEl",
+      "symbol": "var_questsquireel"
+    },
+    {
+      "id": "11",
+      "name": "Quest12",
+      "symbol": "var_quest12"
+    },
+    {
+      "id": "12",
+      "name": "Turnip Counter",
+      "symbol": "var_turnip_counter"
+    },
+    {
+      "id": "13",
+      "name": "Seen Cat",
+      "symbol": "var_seen_cat"
+    },
+    {
+      "id": "14",
+      "name": "Used Radio",
+      "symbol": "var_used_radio"
+    },
+    {
+      "id": "15",
+      "name": "Voicebox",
+      "symbol": "var_voicebox"
+    },
+    {
+      "id": "16",
+      "name": "Pushed Ice Block",
+      "symbol": "var_pushed_ice_block"
+    },
+    {
+      "id": "17",
+      "name": "Music House Playing",
+      "symbol": "var_music_house_playing"
+    },
+    {
+      "id": "18",
+      "name": "BattlerSTR",
+      "symbol": "var_battlerstr"
+    },
+    {
+      "id": "19",
+      "name": "BattlerHP2",
+      "symbol": "var_battlerhp2"
+    },
+    {
+      "id": "20",
+      "name": "BattlerEnemySTR",
+      "symbol": "var_battlerenemystr"
+    },
+    {
+      "id": "21",
+      "name": "BattlerHP3",
+      "symbol": "var_battlerhp3"
+    },
+    {
+      "id": "22",
+      "name": "BattlerSpecies1",
+      "symbol": "var_battlerspecies1"
+    },
+    {
+      "id": "23",
+      "name": "BattlerEnemySpecies1",
+      "symbol": "var_battlerenemyspecies1"
+    },
+    {
+      "id": "24",
+      "name": "Talked",
+      "symbol": "var_talked"
+    },
+    {
+      "id": "25",
+      "name": "BattlerSpecies",
+      "symbol": "var_battlerspecies"
+    },
+    {
+      "id": "26",
+      "name": "wLookingFor",
+      "symbol": "var_wlookingfor"
+    },
+    {
+      "id": "27",
+      "name": "TechniqueChosen",
+      "symbol": "var_techniquechosen"
+    },
+    {
+      "id": "28",
+      "name": "BattlerEnemySpecies2",
+      "symbol": "var_battlerenemyspecies2"
+    },
+    {
+      "id": "29",
+      "name": "BattlerEnemyMove2",
+      "symbol": "var_battlerenemymove2"
+    },
+    {
+      "id": "30",
+      "name": "BattlerEnemyMove4",
+      "symbol": "var_battlerenemymove4"
+    },
+    {
+      "id": "31",
+      "name": "BattlerMove2",
+      "symbol": "var_battlermove2"
+    },
+    {
+      "id": "32",
+      "name": "TechniqueFoe",
+      "symbol": "var_techniquefoe"
+    },
+    {
+      "id": "33",
+      "name": "QuestProtest",
+      "symbol": "var_questprotest"
+    },
+    {
+      "id": "34",
+      "name": "BattlerSpecies4",
+      "symbol": "var_battlerspecies4"
+    },
+    {
+      "id": "35",
+      "name": "BattlerSpecies5",
+      "symbol": "var_battlerspecies5"
+    },
+    {
+      "id": "36",
+      "name": "CaughtCount",
+      "symbol": "var_caughtcount"
+    },
+    {
+      "id": "37",
+      "name": "Battler3LVL",
+      "symbol": "var_battler3lvl"
+    },
+    {
+      "id": "69",
+      "name": "Battler2LVL",
+      "symbol": "var_battler2lvl"
+    },
+    {
+      "id": "72",
+      "name": "BattlerEnemyMove3",
+      "symbol": "var_battlerenemymove3"
+    },
+    {
+      "id": "412",
+      "name": "temp3",
+      "symbol": "var_temp3"
+    },
+    {
+      "id": "447",
+      "name": "BattlerSpecies5",
+      "symbol": "var_battlerspecies5_1"
+    },
+    {
+      "id": "449",
+      "name": "BattlerDEF",
+      "symbol": "var_battlerdef"
+    },
+    {
+      "id": "468",
+      "name": "BattlerSPEED",
+      "symbol": "var_battlerspeed"
+    },
+    {
+      "id": "472",
+      "name": "wMove4",
+      "symbol": "var_wmove4"
+    },
+    {
+      "id": "473",
+      "name": "wMove3",
+      "symbol": "var_wmove3"
+    },
+    {
+      "id": "474",
+      "name": "wMove2",
+      "symbol": "var_wmove2"
+    },
+    {
+      "id": "475",
+      "name": "wMove1",
+      "symbol": "var_wmove1"
+    },
+    {
+      "id": "476",
+      "name": "wType2",
+      "symbol": "var_wtype2"
+    },
+    {
+      "id": "477",
+      "name": "BattlerEnemyLVL",
+      "symbol": "var_battlerenemylvl"
+    },
+    {
+      "id": "478",
+      "name": "BattlerSPECIAL",
+      "symbol": "var_battlerspecial"
+    },
+    {
+      "id": "479",
+      "name": "Battler1LVL",
+      "symbol": "var_battler1lvl"
+    },
+    {
+      "id": "480",
+      "name": "BattlerTYPE",
+      "symbol": "var_battlertype"
+    },
+    {
+      "id": "481",
+      "name": "BattlerEnemyTYPE",
+      "symbol": "var_battlerenemytype"
+    },
+    {
+      "id": "482",
+      "name": "BattlerEnemySPEED",
+      "symbol": "var_battlerenemyspeed"
+    },
+    {
+      "id": "483",
+      "name": "BattlerEnemySPECIAL",
+      "symbol": "var_battlerenemyspecial"
+    },
+    {
+      "id": "484",
+      "name": "BattlerEnemyMove1",
+      "symbol": "var_battlerenemymove1"
+    },
+    {
+      "id": "485",
+      "name": "BattlerMove1",
+      "symbol": "var_battlermove1"
+    },
+    {
+      "id": "486",
+      "name": "BattlerMove3",
+      "symbol": "var_battlermove3"
+    },
+    {
+      "id": "487",
+      "name": "BattlerMove4",
+      "symbol": "var_battlermove4"
+    },
+    {
+      "id": "488",
+      "name": "BattlerMaxHP",
+      "symbol": "var_battlermaxhp"
+    },
+    {
+      "id": "489",
+      "name": "Letters2",
+      "symbol": "var_letters2"
+    },
+    {
+      "id": "490",
+      "name": "Letters1",
+      "symbol": "var_letters1"
+    },
+    {
+      "id": "491",
+      "name": "wType",
+      "symbol": "var_wtype"
+    },
+    {
+      "id": "492",
+      "name": "wSpecial",
+      "symbol": "var_wspecial"
+    },
+    {
+      "id": "493",
+      "name": "wDef",
+      "symbol": "var_wdef"
+    },
+    {
+      "id": "494",
+      "name": "wHP",
+      "symbol": "var_whp"
+    },
+    {
+      "id": "495",
+      "name": "wSpeed",
+      "symbol": "var_wspeed"
+    },
+    {
+      "id": "496",
+      "name": "wStr",
+      "symbol": "var_wstr"
+    },
+    {
+      "id": "497",
+      "name": "Letter6",
+      "symbol": "var_letter6"
+    },
+    {
+      "id": "498",
+      "name": "Letter5",
+      "symbol": "var_letter5"
+    },
+    {
+      "id": "499",
+      "name": "Letter4",
+      "symbol": "var_letter4"
+    },
+    {
+      "id": "500",
+      "name": "Wordy6",
+      "symbol": "var_wordy6"
+    },
+    {
+      "id": "501",
+      "name": "Wordy5",
+      "symbol": "var_wordy5"
+    },
+    {
+      "id": "502",
+      "name": "BattlerSpecies3",
+      "symbol": "var_battlerspecies3"
+    },
+    {
+      "id": "503",
+      "name": "BattlerEnemyHP1",
+      "symbol": "var_battlerenemyhp1"
+    },
+    {
+      "id": "504",
+      "name": "BattlerHP1",
+      "symbol": "var_battlerhp1"
+    },
+    {
+      "id": "505",
+      "name": "Letter3",
+      "symbol": "var_letter3"
+    },
+    {
+      "id": "506",
+      "name": "Wordy4",
+      "symbol": "var_wordy4"
+    },
+    {
+      "id": "507",
+      "name": "Wordy3",
+      "symbol": "var_wordy3"
+    },
+    {
+      "id": "508",
+      "name": "Wordy2",
+      "symbol": "var_wordy2"
+    },
+    {
+      "id": "509",
+      "name": "Letter2",
+      "symbol": "var_letter2"
+    },
+    {
+      "id": "510",
+      "name": "Letter1",
+      "symbol": "var_letter1"
+    },
+    {
+      "id": "511",
+      "name": "Wordy1",
+      "symbol": "var_wordy1"
+    },
+    {
+      "id": "871ea302-1cc1-463c-b9d7-530aac38fe81__L0",
+      "name": "Spoken to gardener",
+      "symbol": "var_spoken_to_gardener"
+    },
+    {
+      "id": "dee20f46-fcaa-4473-94b1-9817dbd99fd8__L0",
+      "name": "Save Choice",
+      "symbol": "var_save_choice"
+    },
+    {
+      "id": "4159e95b-34e4-42e8-bf25-67f2078e804f__L0",
+      "name": "Defeated",
+      "symbol": "var_defeated"
+    },
+    {
+      "id": "2f01ca47-9361-4271-b1f2-75d55e85bf1f__L0",
+      "name": "Defeated",
+      "symbol": "var_defeated_0"
+    },
+    {
+      "id": "98159e3a-0bfe-44ec-8312-9dcef04c253f__L0",
+      "name": "Defeated",
+      "symbol": "var_defeated_1"
+    },
+    {
+      "id": "4912bee2-387a-472f-ae4f-6679b6149517__L0",
+      "name": "Menu Choice",
+      "symbol": "var_menu_choice"
+    },
+    {
+      "id": "02504caf-8b1c-42b1-986f-bf5014097aa6__L0",
+      "name": "Playing",
+      "symbol": "var_playing_0"
+    },
+    {
+      "id": "b624beb1-cc63-4529-9f9e-4ad68beb09cb__L0",
+      "name": "Playing",
+      "symbol": "var_playing"
+    },
+    {
+      "id": "ba78d94d-8180-48ae-bbc9-b6ae8abd56e1__L0",
+      "name": "Local 0",
+      "symbol": "var_local_5"
+    },
+    {
+      "id": "132fc1e8-ee26-4c6d-b80e-d65000cd7f0c__L0",
+      "name": "BattlerSpecies",
+      "symbol": "var_battlerspecies_0"
+    },
+    {
+      "id": "19c13a21-06dc-48ba-b5f5-0513a6dd38be__L0",
+      "name": "Local 0",
+      "symbol": "var_local_0"
+    },
+    {
+      "id": "960ee983-2664-4f88-95e3-cb4ba129dacf__L0",
+      "name": "Local 0",
+      "symbol": "var_local_2"
+    },
+    {
+      "id": "cbbf77fc-015b-4ea8-8450-7dc1d9eec58e__L0",
+      "name": "Local 0",
+      "symbol": "var_local_3"
+    },
+    {
+      "id": "ab5f1cff-ce60-4197-b00c-e2c6a2057cdf__L0",
+      "name": "Local 0",
+      "symbol": "var_local_4"
+    },
+    {
+      "id": "ba78d94d-8180-48ae-bbc9-b6ae8abd56e1__L2",
+      "name": "Local 2",
+      "symbol": "var_local_1"
+    },
+    {
+      "id": "fb71276e-5343-46df-9089-45c49341ec62__L0",
+      "name": "BattlerTYPE",
+      "symbol": "var_battlertype_1"
+    },
+    {
+      "id": "3ac9ee72-9860-405c-ad7c-65669d0e920f__L0",
+      "name": "BattlerTYPE",
+      "symbol": "var_battlertype_0"
+    },
+    {
+      "id": "4b0d0755-14dc-42c2-a12d-68efb8365ec7__L0",
+      "name": "BattlerTYPE",
+      "symbol": "var_battlertype_2"
+    },
+    {
+      "id": "debb22aa-2f34-477d-8a23-deed34e8c201__L0",
+      "name": "BattlerHP",
+      "symbol": "var_battlerhp"
+    },
+    {
+      "id": "38",
+      "name": "Variable 38",
+      "symbol": "var_variable_38"
+    },
+    {
+      "id": "471",
+      "name": "BattlerSpecies2",
+      "symbol": "var_battlerspecies2"
+    }
+  ],
+  "constants": []
+}

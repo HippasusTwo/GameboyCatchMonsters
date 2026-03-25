@@ -1,0 +1,1240 @@
+{
+  "_resourceType": "script",
+  "id": "2298dcca-fd75-4d04-bf87-815a1dc892d0",
+  "name": "DBTypedAttack",
+  "symbol": "script_17",
+  "description": "0 - Aether?\n1 - Wood\n2 - Storm/Air\n3 - Water\n4 - Fire\n5 - Steel/Metal\nmaybe 6 - Strong, 7 - Spacetime\n1-4 is good against the number +1 ahead, 4/Fire is good against 1/Wood. Aether is neutral to these. \nMight do: Strong is good against earlier numbers, but can be hit double by Weak, which is also weak to Spacetime. Spacetime and Aether are mutually weak to each other maybe, as the two concepts don't go together!\nScript evaluates attack type versus defender and alters move strength.",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "wType",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "wLookingFor",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "wStr",
+      "passByReference": true
+    },
+    "V3": {
+      "id": "V3",
+      "name": "temp3",
+      "passByReference": true
+    },
+    "V4": {
+      "id": "V4",
+      "name": "BattlerEnemyStr",
+      "passByReference": true
+    },
+    "V5": {
+      "id": "V5",
+      "name": "BattlerStr",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "V1",
+        "operator": "==",
+        "comparator": "0",
+        "__collapseElse": false,
+        "__collapse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "V1"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Enemy attacking. Store opposing player's monster in temp.",
+              "__collapse": false
+            },
+            "id": "fce16182-422b-48bc-b228-5df11a8cea3b"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+            "args": {
+              "variable": "V3",
+              "expression": "$480$"
+            },
+            "id": "b7c60057-177f-4902-af83-fb52c2be02fb"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+            "args": {
+              "variable": "V2",
+              "expression": "$V2$ + $20$"
+            },
+            "id": "6e1deb4a-1440-413e-8957-693567c24bcf"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "The enemy's turn."
+              ],
+              "avatarId": "",
+              "__comment": false,
+              "__collapse": false
+            },
+            "id": "8ac9467d-fb66-4eaf-b9d0-cfbd9315241e"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "V4",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "V4",
+              "value": "0",
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false
+            },
+            "id": "8c6a701e-6cc2-41be-8f71-074ac8fceb20"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Player move. Store opposing monster's type in temp."
+            },
+            "id": "2ce77574-426d-4096-9e06-a8b801062092"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "vectorX": "V0",
+              "operator": "==",
+              "vectorY": "480",
+              "__collapseElse": false,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V0"
+                },
+                "valueB": {
+                  "type": "variable",
+                  "value": "480"
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "V2",
+                    "operation": "add",
+                    "other": "val",
+                    "vectorY": "V0",
+                    "value": 1,
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": true
+                  },
+                  "id": "7d6459c0-eadf-4fb7-9ae4-2b92719ce0a2"
+                }
+              ],
+              "false": []
+            },
+            "id": "4aed5da2-4b87-469a-babd-0a4276657048"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+            "args": {
+              "variable": "V3",
+              "expression": "$481$"
+            },
+            "id": "90dec84c-cdb1-4e8d-ba9d-a529df60b72d"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+            "args": {
+              "variable": "V2",
+              "expression": "$V2$ + $18$"
+            },
+            "id": "6525f24a-e10f-4e22-9be9-b5c36c2b57bc"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "V5",
+              "operation": "set",
+              "other": "var",
+              "vectorY": "V5",
+              "value": "0",
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false
+            },
+            "id": "8fbd6333-e78f-4e80-a916-c477e67b2e00"
+          }
+        ]
+      },
+      "id": "3bd55b9f-0351-4b7f-97c0-b6661a79d150"
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "V0",
+        "choices": 7,
+        "__collapseCase0": false,
+        "value0": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapseCase1": false,
+        "value1": {
+          "type": "number",
+          "value": 2
+        },
+        "__collapseCase2": true,
+        "value2": {
+          "type": "number",
+          "value": 3
+        },
+        "__collapseCase3": false,
+        "value3": {
+          "type": "number",
+          "value": 4
+        },
+        "__collapseCase4": true,
+        "value4": {
+          "type": "number",
+          "value": 5
+        },
+        "__collapseCase5": false,
+        "value5": {
+          "type": "number",
+          "value": 6
+        },
+        "__collapseCase6": false,
+        "value6": {
+          "type": "number",
+          "value": 7
+        },
+        "__collapseCase7": false,
+        "value7": {
+          "type": "number",
+          "value": 8
+        },
+        "__collapseCase8": false,
+        "value8": {
+          "type": "number",
+          "value": 9
+        },
+        "__collapseCase9": false,
+        "value9": {
+          "type": "number",
+          "value": 10
+        },
+        "__collapseCase10": false,
+        "value10": {
+          "type": "number",
+          "value": 11
+        },
+        "__collapseCase11": false,
+        "value11": {
+          "type": "number",
+          "value": 12
+        },
+        "__collapseCase12": false,
+        "value12": {
+          "type": "number",
+          "value": 13
+        },
+        "__collapseCase13": false,
+        "value13": {
+          "type": "number",
+          "value": 14
+        },
+        "__collapseCase14": false,
+        "value14": {
+          "type": "number",
+          "value": 15
+        },
+        "__collapseCase15": false,
+        "value15": {
+          "type": "number",
+          "value": 16
+        },
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Wood! Power $V2$!"
+              ],
+              "avatarId": ""
+            },
+            "id": "e78a691b-e004-4f3c-a760-4cfd8a6279b3"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 2,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "73c7faea-8555-46fa-8b96-443bc3e7d58c"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Supereffective! $V2$\nLife uses electricity, &",
+                      "evolves to take advant-\n-age of weakness."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "0967d6e9-ca9c-41cd-8f59-0e6819811f35"
+                }
+              ],
+              "false": []
+            },
+            "id": "17bd836a-7a5f-43bd-b39b-39d174ff2c85"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 6,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 6
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ / 2"
+                  },
+                  "id": "172177f5-3402-4f66-abb9-790c0868bbec"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Ineffective vs strong! \nPower $V2$"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "da4e0bf3-061a-4e4b-9cbc-75f20506a4fc"
+                }
+              ],
+              "false": []
+            },
+            "id": "d6a6f5df-da2b-4f3a-8a69-8471ec0889ad"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Storm! Power $V2$!"
+              ],
+              "avatarId": ""
+            },
+            "id": "f8514eb2-9ecb-4d92-a499-f8811846d168"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 3,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 3
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "57813260-7bdf-4ef5-a3c5-ad5475fdf2be"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Supereffective! \nPower $V2$! Electricity",
+                      "utilizes even small \nimpurities in water."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "14922f14-138c-4094-a1e6-00e9e6b27094"
+                }
+              ],
+              "false": []
+            },
+            "id": "1eef3e36-49ad-4db0-8b5f-687b2935dff6"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 4,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 4
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ / 2"
+                  },
+                  "id": "18af8192-9fa1-48d7-84e8-a2483eb0fc7d"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Ineffective vs fire! $V2$\nWhy would adding energy\nto a fire help put it out?"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "58c9011c-1204-4a14-8a3e-2ef4b367d4b2"
+                }
+              ],
+              "false": []
+            },
+            "id": "eff57cc7-5cb8-462d-aa74-c955bbb1ddd6"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 6,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 6
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "2a2d30fb-bf05-4c7e-81c8-32b9d43d7948"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Supereffective! $V2$\nLeptons emit & a quark\nchanges flavor."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "21f9e962-ca54-455f-b75b-0dd4c48ee157"
+                }
+              ],
+              "false": []
+            },
+            "id": "fea1da9a-bdd6-48d0-9628-9c4e665f1ed5"
+          }
+        ],
+        "true2": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Water! Power $V2$!"
+              ],
+              "avatarId": ""
+            },
+            "id": "9242fbbf-15aa-4718-bea6-6da83fa4db64"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 4,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 4
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "a18f650e-cbe5-4d31-bfd0-b3bb93026df3"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Supereffective! $V2$\nThe fire dims."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "fc7e336f-5579-426f-a08a-21479671c49d"
+                }
+              ],
+              "false": []
+            },
+            "id": "f888535a-71b2-4e1d-a915-c1e22c451aaf"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 7,
+              "__collapseElse": true,
+              "__collapse": false,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 7
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ / 2"
+                  },
+                  "id": "1eb4021a-af9f-447f-854f-539902a59892"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Ineffective. Power $V2$\nOver time, water turns\nto vapor and dissipates."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "63ade526-aba9-4d70-a29d-65e7259da28c"
+                }
+              ],
+              "false": []
+            },
+            "id": "507062ef-9a43-4835-914c-1b2591cb98eb"
+          }
+        ],
+        "true3": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Fire! Power $V2$!"
+              ],
+              "avatarId": ""
+            },
+            "id": "ae59488e-6bcf-47e6-85d9-986c314c1a6f"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 5,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 5
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Supereffective vs metal!\nMelted!"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "e9981bca-e7ad-439f-b0ac-15bd8a8b5a55"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "23e3b452-4ed7-4bea-a861-54482911cdce"
+                }
+              ],
+              "false": []
+            },
+            "id": "b2e64383-2875-49fc-9665-73840e63db58"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 1,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "655d7083-ec77-4925-9aed-711ec9feff1e"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Supereffective vs wood!\nPower $V2$. Wood takes\neffort to burn but is\nhelpless once you do."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "1463a048-e031-4c14-bc4d-5b73fc9c0aae"
+                }
+              ],
+              "false": []
+            },
+            "id": "8e611e8d-4381-400f-9704-fc51f6fddb2c"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 3,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 3
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ / 2"
+                  },
+                  "id": "4408db03-995a-4d9e-a43a-c5e4988dcdd6"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Ineffective vs water!\nDo you burn pots when\ncooking? Power $V2$."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "acd3f7fe-f3f8-44be-8595-fe85af02d2f5"
+                }
+              ],
+              "false": []
+            },
+            "id": "37f9601d-8ee7-4f04-8eb6-99c3ad1bcafb"
+          }
+        ],
+        "true4": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Metal! Power $V2$!"
+              ],
+              "avatarId": ""
+            },
+            "id": "7333e775-8621-49b3-b8ab-b6bfac45f666"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 1,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "65b1a2c8-e1f2-47a9-b496-96e00ba8b1eb"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Supereffective! $V2$.\nCut!"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "050520cd-53d4-4c35-b1ad-a2a4821fc549"
+                }
+              ],
+              "false": []
+            },
+            "id": "837e31e7-3ab2-4f26-ad20-a0eaee535975"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 2,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ / 2"
+                  },
+                  "id": "56a17f1c-6f75-46a9-8d50-53ae3634b426"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Ineffective vs weak! $V2$"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "4e5540af-7818-4c94-b4b9-9cbf260bfe7e"
+                }
+              ],
+              "false": []
+            },
+            "id": "3be040e0-e177-4691-b17d-2c4c39203f33"
+          }
+        ],
+        "true5": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Strong attack! $V2$\nQuark blast!"
+              ],
+              "avatarId": ""
+            },
+            "id": "7084cc48-6c81-41a3-a08f-63566d571860"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 2,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "fe202e97-2109-4c5f-a11d-cb55bf3fc60a"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Strong against\nweak! $V2$"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "bcd0bc45-c703-4d2b-aed0-4325ed47409d"
+                }
+              ],
+              "false": []
+            },
+            "id": "9a821049-5fe5-4878-9f0e-9f9ebc68f409"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 5,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 5
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ / 2"
+                  },
+                  "id": "d0560c6c-aaa8-459f-879d-4291fc249c7f"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Ineffective! $V2$\nThe metal just turns into\ndifferent metal."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "ce5a3a45-67aa-4b88-84a8-3448f4743b72"
+                }
+              ],
+              "false": []
+            },
+            "id": "e1765210-7ade-4a7c-9834-e4437263db42"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 7,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 7
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "4df9fd78-136b-4133-899a-51ba3f3ddf65"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Supereffective! $V2$\nGravity is a weak force."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "ae3ac2a0-1820-42f3-93ea-6d36d38ad075"
+                }
+              ],
+              "false": []
+            },
+            "id": "6723e321-6038-494f-a840-4fa0e136488a"
+          }
+        ],
+        "true6": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Spacetime power $V2$."
+              ],
+              "avatarId": ""
+            },
+            "id": "5e293c32-53cb-4845-812e-bba95d1ad952"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 0,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "c5f8bc6f-3aba-446d-b081-f3522a40cabf"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Supereffective! $V2$\nRelativity vs aether!"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "ead39c54-cc6e-46ef-96ee-2a5b8dc1c61a"
+                }
+              ],
+              "false": []
+            },
+            "id": "57da7d0a-cd68-4631-b0f4-bdd4e80a21ab"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 1,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ / 2"
+                  },
+                  "id": "9017f42c-318f-4174-ad31-c0ced7b69b3c"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Ineffective! $V2$\nThe wood sprouts clones\nunder the flow of time,\nsoaking up temporal dmg."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "e31c635a-cf16-4010-a77e-46c10f01c43f"
+                }
+              ],
+              "false": []
+            },
+            "id": "bb2892d6-dc08-497a-9a39-1f12420e6522"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "V3",
+              "operator": "==",
+              "comparator": 4,
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "V3"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 4
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "V2",
+                    "expression": "$V2$ * 2"
+                  },
+                  "id": "7bdb50b1-ceaf-4922-b9ea-f97d41e0e441"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Supereffective! $V2$\nNo fire burns forever."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "0fe5646e-90f3-44d3-8781-383a97a370bd"
+                }
+              ],
+              "false": []
+            },
+            "id": "c6609995-cf76-4449-aaeb-b0e87326f3b3"
+          }
+        ],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Aether."
+              ],
+              "avatarId": ""
+            },
+            "id": "0a846b23-2a82-4132-8c72-7d95d69aab41"
+          }
+        ]
+      },
+      "id": "9e09c5d3-3e74-4898-a59d-e07df7de45e5"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "vectorX": "V0",
+        "operator": "==",
+        "vectorY": "V3",
+        "__collapseElse": true,
+        "__collapse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "V0"
+          },
+          "valueB": {
+            "type": "variable",
+            "value": "V3"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "V2",
+              "operation": "div",
+              "other": "val",
+              "vectorY": "V0",
+              "value": 2,
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": true
+            },
+            "id": "cefc88e9-dbf4-4f79-8d41-3d6cb3ff7d01"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Ineffective vs own type."
+              ],
+              "avatarId": ""
+            },
+            "id": "ff77484f-9fa5-49a9-927a-795c71215a43"
+          }
+        ],
+        "false": []
+      },
+      "id": "2869158c-0ea7-4c14-8819-edb834c75f9e"
+    }
+  ]
+}

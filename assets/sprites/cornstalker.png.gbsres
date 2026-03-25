@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "706012c6-8c1d-49d5-b22f-1a0eb98e81e5",
+  "name": "cornstalker",
+  "symbol": "sprite_cornstalker",
+  "states": [
+    {
+      "id": "fc232a2f-35cf-49b8-97a9-9024bd195ee2",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "d15e8704-ce23-404f-9b90-3224981bafbe",
+          "frames": [
+            {
+              "id": "fdae60a1-64c9-4c67-a7a1-19a361a24d74",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c5453721-4a7e-4494-8dc9-84a225d1c769",
+          "frames": [
+            {
+              "id": "09f3a18a-2e83-4eaa-b962-d108d213598b",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "cae8f354-14fd-4d11-98b5-74187016e59c",
+          "frames": [
+            {
+              "id": "62a1a536-88d6-4669-8c29-0c9535100954",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "cededf73-affa-4642-b173-2002d31239ab",
+          "frames": [
+            {
+              "id": "a23380fc-3666-4003-9a7a-b2f2bc04417f",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f449a4fc-a164-49f5-8044-7668dd5f9803",
+          "frames": [
+            {
+              "id": "a1d70349-feed-4796-9f66-7dd92416ee07",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "1318c094-2d52-42b3-81a8-0393592229c8",
+          "frames": [
+            {
+              "id": "b8c8a6f0-6335-4945-8b80-76a8d492ff09",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "765b7b4f-7386-4128-9ac9-bea55275c705",
+          "frames": [
+            {
+              "id": "55e69ea7-e408-4b2a-8e7e-53a7511cf333",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "37e898e8-a272-412c-913c-b6e1661bc3b1",
+          "frames": [
+            {
+              "id": "71dd5989-2ccd-4787-8ce7-05a64ebe66f2",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "cornstalker.png",
+  "width": 32,
+  "height": 32,
+  "checksum": "b859b70589764f4b563ff5b87ae4315bbdbe315a"
+}

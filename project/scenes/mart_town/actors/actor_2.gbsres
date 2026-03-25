@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "36151690-120d-4c8f-846c-72268ee90a58",
+  "_index": 1,
+  "symbol": "actor_37",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 51,
+  "y": 18,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "03cf3740-af08-44bc-84b4-dd31d381f002",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "The police station? Up\nahead, just keep left."
+        ],
+        "avatarId": ""
+      },
+      "id": "37f84ca8-385d-4914-8eee-f5f5dd84150b"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

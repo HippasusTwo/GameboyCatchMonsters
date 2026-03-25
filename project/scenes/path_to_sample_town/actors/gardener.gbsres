@@ -1,0 +1,221 @@
+{
+  "_resourceType": "actor",
+  "id": "871ea302-1cc1-463c-b9d7-530aac38fe81",
+  "_index": 1,
+  "symbol": "actor_gardener",
+  "prefabId": "",
+  "name": "Gardener",
+  "coordinateType": "tiles",
+  "x": 45,
+  "y": 13,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "b073d693-12e6-43bf-bb2b-d7e78641fed3",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "id": "0846c4dc-f631-429b-9a84-ee2dab5b76e1",
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "L0",
+        "__collapseElse": false,
+        "__disableElse": true,
+        "__collapse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "L0"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "b0b9eb08-2f9f-410e-9d45-49ced279a11f",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You're training to be\nan officer, right?"
+              ],
+              "avatarId": ""
+            }
+          },
+          {
+            "id": "3cb785b3-96e0-4b62-a743-14057e40785b",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "!S4!TURNIPS!\nGet rid of them!"
+              ],
+              "avatarId": ""
+            }
+          },
+          {
+            "id": "96e63d51-0006-4f7d-9e0e-28186f6dc0ca",
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "L0",
+              "value": {
+                "type": "true"
+              }
+            }
+          }
+        ],
+        "false": []
+      }
+    },
+    {
+      "id": "584589d0-422d-4abf-bf45-949db9f534f3",
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "12",
+        "operator": "==",
+        "comparator": "0",
+        "__collapseElse": false,
+        "__collapse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "12"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "47425956-cf57-4e4a-8e47-338087c7cbf5",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Thank you\nso much!!"
+              ],
+              "avatarId": "",
+              "__collapse": false
+            }
+          },
+          {
+            "id": "151c3edb-404b-41fe-aa85-54178268d123",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "I'm not planting\nthose next year!"
+              ],
+              "avatarId": "",
+              "__collapse": false
+            }
+          },
+          {
+            "id": "88bd4a38-faed-403e-a6ee-c81569ad79f1",
+            "command": "EVENT_ACTOR_EMOTE",
+            "args": {
+              "actorId": "$self$",
+              "emoteId": "4bc2c3bd-f20f-4497-af7c-38d1653b6e72"
+            }
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "7",
+              "operator": "==",
+              "comparator": "0",
+              "__collapseElse": true,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "7"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "de6e9177-51ea-4573-b448-96538026fefb",
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "7",
+                    "value": {
+                      "type": "true"
+                    }
+                  }
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "I'll give you one of the\nseeds to study."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "431e903e-f08b-4134-bde2-c09126b69a33"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "447",
+                    "value": {
+                      "type": "number",
+                      "value": 4
+                    }
+                  },
+                  "id": "85b19439-4d2c-49d7-a667-db06157df754"
+                }
+              ],
+              "false": []
+            },
+            "id": "02bd0afd-d74b-4181-b01d-5f765f6cf637"
+          }
+        ],
+        "false": [
+          {
+            "id": "75ea9719-7d3b-4215-bee0-c60b17cf4021",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Please help me,\nthere is $12$ left"
+              ],
+              "avatarId": ""
+            }
+          },
+          {
+            "id": "7bc8c0a9-9f4e-45ac-ac5b-60cd877f4f6d",
+            "command": "EVENT_ACTOR_SET_DIRECTION",
+            "args": {
+              "actorId": "$self$",
+              "direction": {
+                "type": "direction",
+                "value": "right"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

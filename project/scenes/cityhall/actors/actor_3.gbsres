@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "8027cbc2-49d4-4c03-8ce1-d27bb0660546",
+  "_index": 2,
+  "symbol": "actor_44",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 12,
+  "y": 19,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "2b18f935-85a3-4f38-9f52-e5c4ea20776a",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "The news will probably\nreport the long lines as\na sign of great turnout,\ninstead of the fact we\nonly have one voting\nbooth in town."
+        ],
+        "avatarId": ""
+      },
+      "id": "1f94718c-8128-4e56-9685-cd3834ac8955"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

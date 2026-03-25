@@ -1,0 +1,52 @@
+{
+  "_resourceType": "script",
+  "id": "29781ec5-f87f-4750-b25c-eda85289c09d",
+  "name": "DatabaseChosenAttack",
+  "symbol": "script_16",
+  "description": "wlookingfor decides if enemy or friend's technique being looked at.\nvar_temp3 then has the appropriate technique, friend or foe's, loaded.\nwstr determines the power of the attack. wtype the type.\nwhp could be used for healing maybe at some point?\nwdef for techniques that raise stats?\nwspecial for deciding what kind of technique it is.\nwspeed could be used for priority at some point.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "; VM_RAND VAR_BATTLERENEMYHP1, 2, 3\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 0, EnemyG,0\n ;not enemy\n  VM_SET VAR_TEMP3,VAR_TECHNIQUECHOSEN\n  VM_JUMP Lookup1\n EnemyG:\n VM_SET VAR_TEMP3, VAR_TECHNIQUEFOE\n Lookup1:\n VM_IF_CONST .EQ,  VAR_TEMP3, 1, Attack1, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 2, Attack2, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 3, Attack3, 0\nVM_IF_CONST .EQ,  VAR_TEMP3, 4, Attack4, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 5, Attack5, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 6, Attack6, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 7, Attack7, 0\n VM_JUMP GenericAttack\n\nAttack1:\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 1\n ; VM_SET_CONST VAR_WDEF, 1\n ;VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 3\n VM_JUMP LoadMonsterData\nAttack2:\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 5\n VM_SET_CONST VAR_WTYPE, 2\n;  VM_SET_CONST VAR_WDEF, 2\n; VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nAttack3:\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 6\n VM_SET_CONST VAR_WTYPE, 3\n;  VM_SET_CONST VAR_WDEF, 2\n; VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nAttack4:\n  VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 3\n VM_SET_CONST VAR_WTYPE, 4\n ;VM_SET_CONST VAR_WDEF, 1\n ;VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n Attack5:\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 10\n VM_SET_CONST VAR_WTYPE, 5\n;  VM_SET_CONST VAR_WDEF, 10\n; VM_SET_CONST VAR_WSPECIAL, 5\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n  Attack6:\n VM_SET_CONST VAR_WSTR, 2\n; VM_SET_CONST VAR_WHP, 10\n VM_SET_CONST VAR_WTYPE, 6\n;  VM_SET_CONST VAR_WDEF, 10\n; VM_SET_CONST VAR_WSPECIAL, 5\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n  Attack7:\n VM_SET_CONST VAR_WSTR, 1\n; VM_SET_CONST VAR_WHP, 10\n VM_SET_CONST VAR_WTYPE, 7\n;  VM_SET_CONST VAR_WDEF, 10\n; VM_SET_CONST VAR_WSPECIAL, 5\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nGenericAttack:\n\n VM_SET_CONST VAR_WSTR, 2\n; VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 0\n \n; VM_SET_CONST VAR_WDEF, 1\n; VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nLoadMonsterData:\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 0, LABEL1, 0;if player jump\n ;load monster data into enemy attack. Could use this for stat raising techniques.\n ;VM_SET VAR_BATTLERENEMYSTR, VAR_WSTR\n ;VM_SET VAR_BATTLERENEMYHP1, VAR_WHP\n ;VM_SET VAR_BATTLERENEMYTYPE, VAR_WTYPE\n VM_JUMP end\n LABEL1:\n ;load monster data into player\n  ;VM_SET VAR_BATTLERSTR, VAR_WSTR\n; VM_SET VAR_BATTLERMAXHP, VAR_WHP\n ;VM_SET VAR_BATTLERTYPE, VAR_WTYPE\n end:\n  ",
+        "references": [
+          {
+            "type": "variable",
+            "id": "20"
+          },
+          {
+            "type": "variable",
+            "id": "503"
+          },
+          {
+            "type": "variable",
+            "id": "477"
+          },
+          {
+            "type": "variable",
+            "id": "481"
+          },
+          {
+            "type": "variable",
+            "id": "412"
+          },
+          {
+            "type": "variable",
+            "id": "488"
+          },
+          {
+            "type": "variable",
+            "id": "18"
+          },
+          {
+            "type": "variable",
+            "id": "480"
+          }
+        ]
+      },
+      "id": "28d24a0e-04c8-4800-ac3d-b404ded1ef2d"
+    }
+  ]
+}

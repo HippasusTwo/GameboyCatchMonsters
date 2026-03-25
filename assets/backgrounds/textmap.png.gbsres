@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "9b7cd132-833b-481a-af66-e7d9ffef5fc0",
+  "name": "textmap",
+  "symbol": "bg_textmap",
+  "tileColors": "",
+  "filename": "textmap.png",
+  "width": 16,
+  "height": 14,
+  "imageWidth": 128,
+  "imageHeight": 112
+}

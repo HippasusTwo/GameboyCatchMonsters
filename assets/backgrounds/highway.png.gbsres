@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "716a0840-ddf0-4e54-a65a-1d3ffdc8dfb7",
+  "name": "highway",
+  "symbol": "bg_highway",
+  "tileColors": "",
+  "filename": "highway.png",
+  "width": 40,
+  "height": 40,
+  "imageWidth": 320,
+  "imageHeight": 320
+}

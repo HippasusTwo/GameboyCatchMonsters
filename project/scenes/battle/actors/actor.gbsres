@@ -1,0 +1,57 @@
+{
+  "_resourceType": "actor",
+  "id": "b84e3cbe-239a-464d-a727-c1d872522c39",
+  "_index": 1,
+  "symbol": "actor_34",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 16,
+  "y": 6,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f88eea80-c5b4-4e10-b49f-7a8aa8bd477e",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "STR $20$ HP $503$ \nSPECIAL $483$",
+          "Lvl $477$ Type $481$ \nSpecies ID $23$\n"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30,
+        "__collapse": false
+      },
+      "id": "83b923b9-aa2d-4522-8f35-df675c99b41e"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

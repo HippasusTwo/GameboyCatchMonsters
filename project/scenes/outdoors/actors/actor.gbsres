@@ -1,0 +1,51 @@
+{
+  "_resourceType": "actor",
+  "id": "98c831b4-8c8d-479c-ac24-59409d781f49",
+  "_index": 0,
+  "symbol": "actor_55",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 10,
+  "y": 9,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "40dcd163-9f72-4861-8131-b01eb9baa000",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "You got me, this is my \nsecret hideout. But can \nyou defeat my rock?"
+        ],
+        "avatarId": ""
+      },
+      "id": "db77d591-7572-4bae-a06b-6a0d79643d26"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "2",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "id": "7d84aa6c-4b8d-416c-b3e5-85ff69bd50a2"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

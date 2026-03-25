@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "dcd6e49b-ad03-4f06-a65a-d104f4a35daf",
+  "_index": 0,
+  "symbol": "actor_42",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 11,
+  "y": 21,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "03cf3740-af08-44bc-84b4-dd31d381f002",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Voting lines are long\nwhen polling booths\nare reduced to a few. \nThis is a common tactic \nto reduce voters."
+        ],
+        "avatarId": ""
+      },
+      "id": "aa58cd50-8983-41a0-86d7-c27ee3eca325"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

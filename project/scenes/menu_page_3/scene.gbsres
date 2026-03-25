@@ -1,0 +1,91 @@
+{
+  "_resourceType": "scene",
+  "id": "d78f80fc-4217-4950-8891-8993dd0cb915",
+  "_index": 17,
+  "type": "TOPDOWN",
+  "name": "Menu Page 3",
+  "symbol": "scene_menu_3",
+  "x": 60,
+  "y": 451.12149631991514,
+  "width": 20,
+  "height": 18,
+  "backgroundId": "b49ea566-b022-478c-979d-ec3ee255fdc5",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "default-ui",
+    "",
+    "",
+    "default-bg-4"
+  ],
+  "spritePaletteIds": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "autoFadeSpeed": 1,
+  "playerSpriteSheetId": "a827b612-578f-4cb9-a2bf-fd54b197b83f",
+  "script": [
+    {
+      "id": "05ccf680-e5a0-4bdc-9830-c24e0c138b67",
+      "command": "EVENT_ACTOR_DEACTIVATE",
+      "args": {
+        "actorId": "player",
+        "__collapse": false
+      }
+    },
+    {
+      "command": "EVENT_MENU",
+      "args": {
+        "variable": "L0",
+        "items": 3,
+        "option1": "Tuxemon",
+        "option2": "Items",
+        "option3": "Exit back",
+        "option4": "",
+        "option5": "",
+        "option6": "",
+        "option7": "",
+        "option8": "",
+        "cancelOnB": true,
+        "layout": "menu"
+      },
+      "id": "017435db-0924-4fe1-8974-aa7291387ccb"
+    },
+    {
+      "id": "77370d55-2e52-45c3-87aa-195e9a7d8431",
+      "command": "EVENT_MUSIC_PLAY",
+      "args": {
+        "musicId": "a48b4a96-9a5a-4511-b38a-98d56dd996ba",
+        "loop": true
+      }
+    },
+    {
+      "id": "3e7f71b7-7766-46df-9a85-a256c1b91b49",
+      "command": "EVENT_AWAIT_INPUT",
+      "args": {
+        "input": [
+          "b",
+          "a"
+        ],
+        "__collapse": false
+      }
+    },
+    {
+      "command": "EVENT_SCENE_POP_STATE",
+      "args": {
+        "fadeSpeed": "2"
+      },
+      "id": "c0a91c47-7739-4c38-b39d-e81c9c767205"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "00168+"
+}

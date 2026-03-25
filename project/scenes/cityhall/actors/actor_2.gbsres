@@ -1,0 +1,73 @@
+{
+  "_resourceType": "actor",
+  "id": "71adade8-d0e6-4346-b788-b844382410f6",
+  "_index": 1,
+  "symbol": "actor_43",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 14,
+  "y": 17,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "17d6d60e-0588-4f67-ba0c-489ba4a659c5",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "I've been in line to vote\nFOREVER. Fight me!"
+        ],
+        "avatarId": ""
+      },
+      "id": "5205e5d3-b02c-48a0-b484-85f10847045b"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "23",
+        "value": {
+          "type": "number",
+          "value": 8
+        }
+      },
+      "id": "a472aadd-1e33-4df7-9aaf-8b982e4cc7b1"
+    },
+    {
+      "command": "EVENT_SCENE_PUSH_STATE",
+      "args": {},
+      "id": "b6a7743a-e1fa-418f-95fe-641e8362b2da"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "cdd90d75-f9a4-48c2-ae62-c4ce490c6b5f"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

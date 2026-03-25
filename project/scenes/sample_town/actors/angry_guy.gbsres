@@ -1,0 +1,157 @@
+{
+  "_resourceType": "actor",
+  "id": "a85c4ba5-9bc0-4daa-94bc-4ef68a690659",
+  "_index": 4,
+  "symbol": "actor_angry_guy",
+  "prefabId": "",
+  "name": "Angry Guy",
+  "coordinateType": "tiles",
+  "x": 21,
+  "y": 24,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "dfa75239-299d-41fe-a6cd-9e9438da1938",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "id": "81f7693e-8544-4bb2-bf47-b8963fe90982",
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "10",
+        "condition": {
+          "type": "variable",
+          "value": "10"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "a991435c-89ad-4303-b6f0-a18054cc0ea7",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Good, you got the\nsquirrel. If I tell ma I\ndid it, maybe she'll let me\nback in."
+              ]
+            }
+          },
+          {
+            "id": "be420a1a-743e-4afc-a997-daf721708b34",
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "4",
+              "value": {
+                "type": "true"
+              }
+            }
+          },
+          {
+            "command": "EVENT_MENU",
+            "args": {
+              "variable": "L0",
+              "items": 2,
+              "option1": "You shouldn't stay.",
+              "option2": "I'll threaten her.",
+              "option3": "",
+              "option4": "",
+              "option5": "",
+              "option6": "",
+              "option7": "",
+              "option8": "",
+              "cancelOnB": false,
+              "layout": "dialogue",
+              "cancelOnLastOption": true
+            },
+            "id": "91076f1f-a03c-4850-a755-4bfe384d0d3f"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "L0",
+              "operator": "==",
+              "comparator": 1,
+              "__collapseElse": false,
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "L0"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Yeah? All my other\noptions suck. I'm too old\nfor foster care and I\nwouldn't want to go into\n that hell system anyway.",
+                      "Rent costs arm and a leg\nand have you SEEN how\nthe homeless get \ntreated? Awful."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "3e85a34b-0627-4a0a-b052-c9c46dd89002"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "I really don't think that\nwill help. You'll just make\nthings worse for me. I\ndon't want to prosecute."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "6c7317ff-0fb9-4086-ad26-a0eb618bd092"
+                }
+              ]
+            },
+            "id": "72db9491-64df-40a3-8e5d-9ae2766ef9e2"
+          }
+        ],
+        "false": [
+          {
+            "id": "1063f8a8-90b7-4126-b6e4-1daf7c359c87",
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Are you here about my\ncomplaints?",
+                "Number one: that vile\nsquirrel is chewing holes",
+                "in my house all through\nthe night.",
+                "Number two: My mom\nwon't let me back in the",
+                "house. I'm gonna freeze!"
+              ]
+            }
+          },
+          {
+            "id": "7a86534c-dd9f-4005-b2e7-c880ea3f9014",
+            "command": "EVENT_ACTOR_SET_DIRECTION",
+            "args": {
+              "actorId": "a85c4ba5-9bc0-4daa-94bc-4ef68a690659",
+              "direction": {
+                "type": "direction",
+                "value": "up"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

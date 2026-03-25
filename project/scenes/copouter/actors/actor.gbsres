@@ -1,0 +1,41 @@
+{
+  "_resourceType": "actor",
+  "id": "1145adca-2735-4eab-8ff6-97657f222fa7",
+  "_index": 0,
+  "symbol": "actor_40",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 24,
+  "y": 25,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "64388fb5-492a-48f1-8832-e761fa04ded5",
+  "paletteId": "",
+  "direction": "left",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Officer, I'd like to\nreport a problem.",
+          "A mouse ate my food.\nAnd a punk beat me up."
+        ],
+        "avatarId": ""
+      },
+      "id": "fa801ed6-3dad-4745-a01b-f8f92c0b309f"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

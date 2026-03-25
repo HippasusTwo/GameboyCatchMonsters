@@ -1,0 +1,95 @@
+{
+  "_resourceType": "actor",
+  "id": "fa28f0ac-c24f-47dc-9c65-054c627f8981",
+  "_index": 0,
+  "symbol": "actor_58",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 24,
+  "y": 23,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "a9ee1856-b62b-49d8-8eb3-cdf681fa2e76",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Icecream, hotdogs!\nCombine 'em!"
+        ],
+        "avatarId": ""
+      },
+      "id": "345bd453-224a-4bf5-9d2c-0e3d71cf3e1a"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "479",
+        "operator": "==",
+        "comparator": 2,
+        "__collapseElse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "479"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "479",
+              "value": {
+                "type": "number",
+                "value": 3
+              }
+            },
+            "id": "03c2774d-b4aa-4e69-bd84-bfcc16de534a"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+            "args": {
+              "variable": "488",
+              "expression": "$488$ + $479$ + 1"
+            },
+            "id": "827799ed-ee2c-4d17-8b78-7ea09f048081"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You got a little fatter.\nLevel: $479$\nHP $488$"
+              ],
+              "avatarId": ""
+            },
+            "id": "b9e93515-66cd-427b-9749-0598e6b633c7"
+          }
+        ],
+        "false": []
+      },
+      "id": "fe24c980-cc6f-4620-89ce-8206064c1383"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

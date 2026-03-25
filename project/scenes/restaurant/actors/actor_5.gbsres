@@ -1,0 +1,41 @@
+{
+  "_resourceType": "actor",
+  "id": "2712ecb9-19aa-48c2-ad26-3cb0f7bf009c",
+  "_index": 4,
+  "symbol": "actor_63",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 33,
+  "y": 33,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "ac1e8ef4-ffe6-47cd-b16f-9af5da77ec26",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Omnicorp has lobbied\nhard for child labor.",
+          "I go straight from \nschool to work."
+        ],
+        "avatarId": ""
+      },
+      "id": "213fed3d-f44f-4c85-94dc-7ee8615dea13"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

@@ -1,0 +1,74 @@
+{
+  "_resourceType": "actor",
+  "id": "819cc761-e412-4259-a7ce-628830cdc47a",
+  "_index": 1,
+  "symbol": "actor_41",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 22,
+  "y": 24,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f4784e64-56da-40ed-9346-51dbcac8feb3",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "23",
+        "value": {
+          "type": "number",
+          "value": 6
+        }
+      },
+      "id": "26c601fe-a2d0-48cb-88cc-3037f7b03516"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "I can't promise any\nhuman officers will care.",
+          "But if you bribe me I'll do\nmy best!"
+        ],
+        "avatarId": ""
+      },
+      "id": "9279c42d-445d-4863-bdfa-68ece05e4b63"
+    },
+    {
+      "command": "EVENT_SCENE_PUSH_STATE",
+      "args": {},
+      "id": "b39e6ab1-ccea-4432-88a6-301555881a44"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "c5455abe-00e1-458a-bb8e-82012076de6e"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

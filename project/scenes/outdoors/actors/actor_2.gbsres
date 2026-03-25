@@ -1,0 +1,73 @@
+{
+  "_resourceType": "actor",
+  "id": "e9e1b597-130f-479d-b9aa-de85f1b5b0ba",
+  "_index": 1,
+  "symbol": "actor_65",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 24,
+  "y": 8,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "3939e8d2-3987-4a22-953e-f1d82134eccf",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "It's a rock. Or is it?\nYou have ANGERED\nthe rock!"
+        ],
+        "avatarId": "6845dca5-d9d8-472a-93a7-81889d878516"
+      },
+      "id": "da593885-3944-47b0-a603-de87e22f199a"
+    },
+    {
+      "command": "EVENT_SCENE_PUSH_STATE",
+      "args": {},
+      "id": "883055fd-f577-47e1-aed3-75412a0265d5"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "23",
+        "value": {
+          "type": "number",
+          "value": 14
+        }
+      },
+      "id": "515c3835-22fb-4a3d-a98a-348e177136c7"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "77583bea-7dda-423f-baa9-1024bc2abece"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

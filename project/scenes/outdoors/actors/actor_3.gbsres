@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "c433b2e5-9344-4dd9-b0d3-e0919f03d5a3",
+  "_index": 2,
+  "symbol": "actor_91",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 3,
+  "y": 24,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "d4206af4-4d12-4cfd-a4a8-faa11d4aff34",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "It's the stolen goods! \nThe thief must be near."
+        ],
+        "avatarId": ""
+      },
+      "id": "eed59159-7924-4cec-837b-7432815fd350"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

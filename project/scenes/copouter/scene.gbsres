@@ -1,0 +1,89 @@
+{
+  "_resourceType": "scene",
+  "id": "b8c5187a-7f96-4250-8707-86c3f363deb3",
+  "_index": 19,
+  "type": "TOPDOWN",
+  "name": "CopOuter",
+  "symbol": "scene_20",
+  "x": 1735.9803935471655,
+  "y": 34.314769429507336,
+  "width": 32,
+  "height": 32,
+  "backgroundId": "e6d58b1d-69f7-48ab-b0b7-8dfb8ef61b70",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [
+    "default-bg-5"
+  ],
+  "spritePaletteIds": [
+    "",
+    "default-bg-4",
+    "default-bg-2"
+  ],
+  "autoFadeSpeed": 1,
+  "autoFadeEventCollapse": true,
+  "playerSpriteSheetId": "26ba843c-e41d-4ff7-9de9-d1aa17d89cb9",
+  "script": [
+    {
+      "id": "8d1b2fb6-d557-4154-a3cc-975628060596",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "bc9f67e9-b6f2-4216-b8b6-63505f3b7118",
+        "__name": "Init Menu"
+      },
+      "children": {
+        "script": [
+          {
+            "id": "d0adcaeb-f055-4f0c-bd65-de1676b4cb98",
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "start"
+              ],
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "4617f758-0ab0-4c91-bb56-7b2d3cee2f12",
+                  "command": "EVENT_SCENE_PUSH_STATE",
+                  "args": {}
+                },
+                {
+                  "id": "36faf6ef-ce11-4563-9343-8d5ce2201920",
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "fd223a5f-7148-4705-98a7-b0ef56cb5c74",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "direction": "",
+                    "fadeSpeed": "2"
+                  }
+                }
+              ]
+            },
+            "__type": "event"
+          }
+        ]
+      }
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "15f99150-e8d9-4117-99ad-2f112df523d0",
+        "__collapse": true
+      },
+      "id": "f2577aee-6bcd-4d72-b632-4a2cfb5e1141"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "00ed+0f5+001a+0f2+003+0f3+0016+08!0f!007+0f2+04!0014+08!0f!008+0f!04!0014+08!0f3+006+0f!04!0014+08!0f!00!0f8+04!0014+08!0f!008+0f!04!0014+08!0f2+007+0f!04!0014+08!0f2+007+0f!04!0014+08!0f2+007+0f!04!0014+08!0f2+007+0f!04!0014+08!0f!008+0f!04!0014+08!0f!008+0f!04!0014+08!0f2+00!0f3+002+0f2+04!0014+08!0f3+003+0f4+04!0014a+"
+}

@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "3b0eb90f-7f3c-4fc1-bbb4-625a79918c83",
+  "_index": 2,
+  "symbol": "actor_38",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 31,
+  "y": 14,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "c3df7553-3f12-432d-98ce-8e8dcc0dbe00",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "I hear the shop got\nransacked by thieves?"
+        ],
+        "avatarId": ""
+      },
+      "id": "3ae5669e-f1f5-488b-b8af-411871e8f44a"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

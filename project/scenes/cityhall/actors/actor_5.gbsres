@@ -1,0 +1,73 @@
+{
+  "_resourceType": "actor",
+  "id": "4c475a02-5385-4abf-99ef-60fe4b48f397",
+  "_index": 4,
+  "symbol": "actor_46",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 9,
+  "y": 22,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "ede130e6-013a-42d1-a786-1aed3fd3cf32",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "I'm voting for the party\nthat wants to eat ducks.\nI'm sure they won't eat\nME, I voted for them!"
+        ],
+        "avatarId": ""
+      },
+      "id": "96bc523b-621e-4df7-b05c-e28015e82ebb"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "23",
+        "value": {
+          "type": "number",
+          "value": 3
+        }
+      },
+      "id": "c1693972-47be-420b-a69b-908b4841d49f"
+    },
+    {
+      "command": "EVENT_SCENE_PUSH_STATE",
+      "args": {},
+      "id": "504e2135-7034-48f9-9f0a-383aa7b7a31b"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "0da671a6-f9d5-478d-86b6-e9c370dba5f2"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

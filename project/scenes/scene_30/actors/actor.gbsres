@@ -1,0 +1,41 @@
+{
+  "_resourceType": "actor",
+  "id": "66b22761-68bc-4493-a823-26a1565429b1",
+  "_index": 0,
+  "symbol": "actor_71",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 30,
+  "y": 15,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "25735963-c005-4474-8d50-4dde29ef5c52",
+  "paletteId": "",
+  "direction": "left",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Some jerk parked in\nfront of the shop.",
+          "You write up a ticket."
+        ],
+        "avatarId": ""
+      },
+      "id": "e091704b-3d31-4aa0-b990-7724437ab67f"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

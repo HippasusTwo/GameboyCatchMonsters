@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "e6d58b1d-69f7-48ab-b0b7-8dfb8ef61b70",
+  "name": "Police Station",
+  "symbol": "bg_police_station",
+  "tileColors": "00400+",
+  "filename": "Police Station.png",
+  "width": 32,
+  "height": 32,
+  "imageWidth": 256,
+  "imageHeight": 256
+}

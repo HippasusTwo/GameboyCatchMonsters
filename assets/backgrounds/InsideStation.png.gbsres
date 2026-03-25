@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "5ee9d680-8f67-4217-8735-a3a7314ef504",
+  "name": "InsideStation",
+  "symbol": "bg_insidestation",
+  "tileColors": "",
+  "filename": "InsideStation.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

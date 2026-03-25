@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "d9fab097-bebb-41b5-8c34-117449a493ee",
+  "name": "house2",
+  "symbol": "bg_house2",
+  "tileColors": "",
+  "filename": "house2.png",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144
+}

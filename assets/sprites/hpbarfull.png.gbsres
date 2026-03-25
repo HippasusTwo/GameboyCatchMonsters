@@ -1,0 +1,116 @@
+{
+  "_resourceType": "sprite",
+  "id": "85bea656-61e0-4d72-8a7d-0ed2e938b2ba",
+  "name": "hpbarfull",
+  "symbol": "sprite_hpbarfull",
+  "states": [
+    {
+      "id": "1373bed4-a1cd-4bc6-b781-fd84400863e0",
+      "name": "",
+      "animationType": "fixed",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "5f0d4be3-b9f4-43b9-ab95-a0d9145159e1",
+          "frames": [
+            {
+              "id": "d6bd37ab-b77f-48bd-9bed-13af5c1f9aeb",
+              "tiles": [
+                {
+                  "id": "bc3ee1d4-d11f-4bc8-9a82-8b70d252cd72",
+                  "x": 4,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": -8,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 3,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "00f933b9-c9f4-4700-99f1-b4d29aea0601",
+          "frames": [
+            {
+              "id": "1c30d371-5685-4939-a362-3dd06615b523",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "12e88c3f-4429-4a5f-b85c-c5de75829f82",
+          "frames": [
+            {
+              "id": "e48e426c-2b05-4464-9d5e-2c0769a02610",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "aefef0ce-d181-4977-84ef-f4de6b342b5e",
+          "frames": [
+            {
+              "id": "408bc320-0a2b-4135-b7e0-105378eb1009",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "e9e7a890-6a90-4c9a-8fd4-595467952469",
+          "frames": [
+            {
+              "id": "4fe8a76c-c819-4cd6-b95c-9499c07fbe61",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c8854d59-2928-40e2-a4f5-01d9dd0295e5",
+          "frames": [
+            {
+              "id": "10972bed-ff4b-4a5d-a9ad-ad44a6fca5fd",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "0e22aa22-cfbd-4844-b34f-c2b09eaf11bd",
+          "frames": [
+            {
+              "id": "bcde149e-f612-431e-b817-13be80be8c90",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "19875e5a-0722-4ccb-b36e-0ed373bb0436",
+          "frames": [
+            {
+              "id": "fe2be059-61e5-43dd-80bc-cc1d6f8c7eae",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 1,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 16,
+  "canvasHeight": 16,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "hpbarfull.png",
+  "width": 8,
+  "height": 8,
+  "checksum": "ddfed3c425367057b912eb74af8fa97b32254f23"
+}

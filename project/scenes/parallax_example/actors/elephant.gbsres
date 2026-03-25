@@ -1,0 +1,128 @@
+{
+  "_resourceType": "actor",
+  "id": "183a084a-fe5e-4583-861c-d6f8f04c7eb8",
+  "_index": 0,
+  "symbol": "actor_elephant",
+  "prefabId": "",
+  "name": "Elephant",
+  "coordinateType": "tiles",
+  "x": 57,
+  "y": 13,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "55561033-cbbb-4d7b-9961-4db33c1d596c",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "The elephant stares at \nyou in disbelief you want\nto fight again."
+        ],
+        "avatarId": ""
+      },
+      "id": "74cf2f12-1c52-40dd-a8b1-1cbe1ef59b4d"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "25",
+        "operator": "==",
+        "comparator": "0",
+        "__collapseElse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "25"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "25",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "84340ff2-c3ab-40b1-b519-c3944f7b5022"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "26",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "c9eca6a6-7372-4812-9a02-db1dc7f7caa9"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "fa072bdc-fa97-4a43-893c-8d9e1dd39c1c"
+            },
+            "id": "5e6728e6-5ec7-4768-8a96-0ba83a8c4268"
+          }
+        ],
+        "false": []
+      },
+      "id": "37f34162-6b48-452a-8599-a8afc3dfbc9b"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "23",
+        "value": {
+          "type": "number",
+          "value": 17
+        }
+      },
+      "id": "264aa2a6-e14f-4b1d-b9a0-ff989f27739c"
+    },
+    {
+      "command": "EVENT_SCENE_PUSH_STATE",
+      "args": {},
+      "id": "6ea868e8-2e3d-4a3c-abee-9fea0f76e07a"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "cc311e9b-b038-4f3e-a610-2ca2cfbc54be"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

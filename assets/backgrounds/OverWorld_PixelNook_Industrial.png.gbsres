@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "0c33cf46-9722-43a0-803f-8ed6a539fb10",
+  "name": "OverWorld_PixelNook_Industrial",
+  "symbol": "bg_overworld_pixelnook_indu",
+  "tileColors": "",
+  "filename": "OverWorld_PixelNook_Industrial.png",
+  "width": 40,
+  "height": 40,
+  "imageWidth": 320,
+  "imageHeight": 320
+}

@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "37701d15-13ce-4470-80c4-520997593e98",
+  "_index": 1,
+  "symbol": "actor_60",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 24,
+  "y": 19,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "4e6b722e-5634-4672-b97e-7c3f80e59daf",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "If I eat my Tuxechicken\nalive, does that make me\na bad person?"
+        ],
+        "avatarId": ""
+      },
+      "id": "2aba8c0b-9af2-4c65-a646-55e0d0f820d6"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

@@ -1,0 +1,183 @@
+{
+  "_resourceType": "sprite",
+  "id": "03cf3740-af08-44bc-84b4-dd31d381f002",
+  "name": "baldguybymonkeyimage",
+  "symbol": "sprite_baldguybymonkeyimage",
+  "states": [
+    {
+      "id": "fec0f7ab-8afa-4a10-8458-b1729df028ff",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "bd41536e-dd21-4e6c-9d5c-f0b3bfef9d7d",
+          "frames": [
+            {
+              "id": "c680fc16-c77b-4aaa-854b-1a8a2c7da928",
+              "tiles": [
+                {
+                  "id": "c6f3ec95-83e4-4699-bf59-17d263e47743",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 32,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "a9256ff7-d078-4e58-8f40-17ea6df24c4a",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 32,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bddbc0b9-3011-4eee-8652-98f56b7962a3",
+          "frames": [
+            {
+              "id": "28adc2e5-b0e0-4b84-9ad2-87a09287f03a",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "86606d74-f198-47b5-a193-27452382f77c",
+          "frames": [
+            {
+              "id": "dfd15a7d-772d-4600-abac-e775c254baa0",
+              "tiles": [
+                {
+                  "id": "7149dfdc-eb0f-424b-8be4-b9db1c5db51e",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "edf6bd33-2fe2-4e0f-ae54-1da6640491c0",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 16,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "33b2d3c1-2909-4558-836f-2bfcd892dddb",
+          "frames": [
+            {
+              "id": "485d2044-429a-4b1b-9d2e-18f4b47000cc",
+              "tiles": [
+                {
+                  "id": "2c9176c6-ca80-45bf-8552-a593a1c0425b",
+                  "x": 0,
+                  "y": 0,
+                  "sliceX": 0,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                },
+                {
+                  "id": "6536467f-fb98-4586-b03d-3f0e3df620d8",
+                  "x": 8,
+                  "y": 0,
+                  "sliceX": 8,
+                  "sliceY": 0,
+                  "palette": 0,
+                  "flipX": false,
+                  "flipY": false,
+                  "objPalette": "OBP0",
+                  "paletteIndex": 0,
+                  "priority": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "d810c1d7-8009-4b3e-966b-c755dfebc3cc",
+          "frames": [
+            {
+              "id": "eb7c97c1-2e72-41fe-af4f-c70e71df05d1",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "aa9d1aa0-4968-414b-807d-7c93229a73cc",
+          "frames": [
+            {
+              "id": "1c4380a1-86a1-44e7-b4da-7a484635cd48",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "62ea48ee-aac3-4e2a-a6f8-2d7aa11af7d1",
+          "frames": [
+            {
+              "id": "e09e3a82-7ebb-4e6a-b160-b8c764828d47",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f0a42546-3df4-4d65-b075-87c7732e4fcf",
+          "frames": [
+            {
+              "id": "ae70d740-8396-43d7-8332-480b0f56ebe1",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 6,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "baldguybymonkeyimage.png",
+  "width": 48,
+  "height": 64,
+  "checksum": "d05e374920c035a33ac37560d7858063b377aa04"
+}

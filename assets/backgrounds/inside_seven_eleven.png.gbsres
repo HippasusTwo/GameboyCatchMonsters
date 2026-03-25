@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "3f9018a2-6cc9-4f55-9fbd-3577a4e041a7",
+  "name": "inside_seven_eleven",
+  "symbol": "sprite_inside_seven_eleven",
+  "tileColors": "",
+  "filename": "inside_seven_eleven.png",
+  "width": 22,
+  "height": 20,
+  "imageWidth": 176,
+  "imageHeight": 160
+}

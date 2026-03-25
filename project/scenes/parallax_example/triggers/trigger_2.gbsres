@@ -1,0 +1,118 @@
+{
+  "_resourceType": "trigger",
+  "id": "5c8b0997-528d-458f-95a2-f3cff1ff23ce",
+  "_index": 1,
+  "symbol": "trigger_46",
+  "prefabId": "",
+  "name": "",
+  "x": 2,
+  "y": 9,
+  "width": 1,
+  "height": 5,
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "479",
+        "operator": "==",
+        "comparator": "0",
+        "__collapseElse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "479"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "479",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "0964e878-c229-4d13-94bc-a355e03839ae"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "26",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "1a47df04-a21a-4aa1-beed-4657e3d7adff"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You're in a real hurry\nto get there, huh?",
+                "Just a quick question.\nWhich is best?"
+              ],
+              "avatarId": ""
+            },
+            "id": "5f120c79-c0ab-4495-b0a8-c42ee060458e"
+          },
+          {
+            "command": "EVENT_MENU",
+            "args": {
+              "variable": "25",
+              "items": 3,
+              "option1": "Mouse",
+              "option2": "Cat",
+              "option3": "Duck",
+              "option4": "",
+              "option5": "",
+              "option6": "",
+              "option7": "",
+              "option8": "",
+              "cancelOnB": false,
+              "layout": "dialogue"
+            },
+            "id": "0d8eab88-d60e-4e65-aaa1-ad497e5b170e"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "fa072bdc-fa97-4a43-893c-8d9e1dd39c1c"
+            },
+            "id": "ff98ea23-c1fd-474d-bb4c-07aa2563b435"
+          }
+        ],
+        "false": []
+      },
+      "id": "82d8bc57-b29d-4638-8d1f-73913e9f5ff7"
+    },
+    {
+      "id": "a4598537-8f50-4c1a-8129-6cce72c7f212",
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "c3ca06b0-1d73-44fa-99ee-3bf6d8b340e8",
+        "x": {
+          "type": "number",
+          "value": 73
+        },
+        "y": {
+          "type": "number",
+          "value": 20
+        },
+        "direction": "right",
+        "fadeSpeed": "4",
+        "__collapse": true
+      }
+    }
+  ],
+  "leaveScript": []
+}

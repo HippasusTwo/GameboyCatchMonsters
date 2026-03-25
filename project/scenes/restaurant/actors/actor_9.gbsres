@@ -1,0 +1,41 @@
+{
+  "_resourceType": "actor",
+  "id": "a96759ee-96dc-4440-820e-cb8dc35f87f9",
+  "_index": 8,
+  "symbol": "actor_93",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 30,
+  "y": 34,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "dfa75239-299d-41fe-a6cd-9e9438da1938",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Down with Omnicorp!\n...Your boss told you to\nmake us disperse?",
+          "Is that really legal???"
+        ],
+        "avatarId": ""
+      },
+      "id": "bca1186f-7160-4f45-8c0d-91c8a79e9e66"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

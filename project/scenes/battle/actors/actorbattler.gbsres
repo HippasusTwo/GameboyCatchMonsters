@@ -1,0 +1,141 @@
+{
+  "_resourceType": "actor",
+  "id": "dbdb617c-7d69-4e92-8872-3f9ed025dc97",
+  "_index": 0,
+  "symbol": "actor33",
+  "prefabId": "",
+  "name": "ActorBattler",
+  "coordinateType": "tiles",
+  "x": 11,
+  "y": 8,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "ec0f660e-c420-43ee-9d1e-6d8e9f320213",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 4,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "STR $18$ SPD $468$ DF $449$\nHP: $504$ /$488$ SP $478$",
+          "Lvl $479$ Type $480$\nSpeciesID $25$"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30,
+        "__collapse": false
+      },
+      "id": "cef066fb-47a9-496b-a57e-69342313b05b"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_VALUE",
+      "args": {
+        "variable": "L4",
+        "operator": "==",
+        "comparator": "0",
+        "__collapseElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_MOVE_TO",
+            "args": {
+              "__section": "movement",
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 11
+              },
+              "y": {
+                "type": "number",
+                "value": 11
+              },
+              "collideWith": [
+                "walls"
+              ],
+              "lockDirection": [],
+              "moveType": "horizontal"
+            },
+            "id": "a70420c2-30d6-44ed-b785-d1e214a6a50b"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": {
+                "type": "number",
+                "value": 0.1
+              },
+              "frames": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "678deeb6-e08c-4640-af95-0b6c9bef60a8"
+          },
+          {
+            "command": "EVENT_ACTOR_MOVE_TO",
+            "args": {
+              "__section": "movement",
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 11
+              },
+              "y": {
+                "type": "number",
+                "value": 10
+              },
+              "collideWith": [
+                "walls"
+              ],
+              "lockDirection": [],
+              "moveType": "horizontal"
+            },
+            "id": "3dad0e75-f6d3-481f-a572-0d2fc7ff0559"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "L4",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "6fdbd2dd-5f6b-4825-a978-1481fb71d821"
+          }
+        ],
+        "false": []
+      },
+      "id": "9747a767-de9a-467d-a289-491d368c6bde"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

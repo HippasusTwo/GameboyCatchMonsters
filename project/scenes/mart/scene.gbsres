@@ -1,0 +1,23 @@
+{
+  "_resourceType": "scene",
+  "id": "0d56494a-8f6b-47e1-9dbd-bb285ab7ed76",
+  "_index": 23,
+  "type": "TOPDOWN",
+  "name": "Mart",
+  "symbol": "scene_24",
+  "x": 1803.6359992700498,
+  "y": 317.36364400518755,
+  "width": 22,
+  "height": 20,
+  "backgroundId": "3f9018a2-6cc9-4f55-9fbd-3577a4e041a7",
+  "tilesetId": "",
+  "colorModeOverride": "none",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "006f+0f14+002+0f!0012+0f!002+0f!0012+0f!002+0f!006+0f8+002+0f!004+0f!002+0f2+002+0f8+002+0f!004+0f!002+0f2+00c+0f!004+0f!002+0f2+00c+0f!007+0f2+002+0f8+002+0f!005+0f4+002+0f8+002+0f!004+0f!0010+0f!004+0f!0010+0f!004+0f!0010+0f!004+0f5+003+0fa+002f+"
+}

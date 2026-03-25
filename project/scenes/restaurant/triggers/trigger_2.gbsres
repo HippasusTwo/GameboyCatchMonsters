@@ -1,0 +1,149 @@
+{
+  "_resourceType": "trigger",
+  "id": "debb22aa-2f34-477d-8a23-deed34e8c201",
+  "_index": 1,
+  "symbol": "trigger_69",
+  "prefabId": "",
+  "name": "",
+  "x": 22,
+  "y": 19,
+  "width": 2,
+  "height": 1,
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Hi, I can take your order!"
+        ],
+        "avatarId": ""
+      },
+      "id": "ee9eedfb-516b-4ef5-959e-c05e0637d7af"
+    },
+    {
+      "command": "EVENT_MENU",
+      "args": {
+        "variable": "L1",
+        "items": 2,
+        "option1": "Meat",
+        "option2": "Vegan",
+        "option3": "",
+        "option4": "",
+        "option5": "",
+        "option6": "",
+        "option7": "",
+        "option8": "",
+        "cancelOnB": true,
+        "layout": "dialogue",
+        "cancelOnLastOption": true
+      },
+      "id": "51d22660-644e-4223-ab82-efa4eb3df9e8"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "L1",
+        "operator": "==",
+        "comparator": 1,
+        "__collapseElse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "L1"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "A live chick leaps\nfrom a bucket into\nyour mouth.",
+                "You gag it down on\nreflex.",
+                "It gives you horrible\nindigestion later."
+              ],
+              "avatarId": ""
+            },
+            "id": "80838313-23f4-45d3-ab82-e6b12e3d2588"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Their vegan food is\njust pure sugar... Yum."
+              ],
+              "avatarId": ""
+            },
+            "id": "b7ce3816-6c54-49f2-9f9e-846a4b825fd2"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "479",
+              "operator": "<",
+              "comparator": 2,
+              "__collapseElse": true,
+              "condition": {
+                "type": "lt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "479"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 2
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "479",
+                    "value": {
+                      "type": "number",
+                      "value": 2
+                    }
+                  },
+                  "id": "79b62497-d798-418d-902b-44c44b83e73d"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                  "args": {
+                    "variable": "488",
+                    "expression": "$488$ + $479$ + 1"
+                  },
+                  "id": "b080c0db-ddca-4920-9887-f7731b10f5aa"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "You got a little fatter.\nLevel: $479$\nHP $488$"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "326ba221-7c8f-42ef-85cf-2811f3467c1b"
+                }
+              ],
+              "false": []
+            },
+            "id": "4f482fcb-a6d6-4049-94c5-80ad7e0d0af7"
+          }
+        ]
+      },
+      "id": "090ef34c-88c7-4d38-a1be-64384a6361e4"
+    }
+  ],
+  "leaveScript": []
+}

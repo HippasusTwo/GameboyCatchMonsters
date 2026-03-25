@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "8a3fa577-dcf5-430b-91f5-49d3a6cad8d2",
+  "_index": 3,
+  "symbol": "actor_62",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 16,
+  "y": 22,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "85bea656-61e0-4d72-8a7d-0ed2e938b2ba",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Tuxechicken, the food\nthat wants to be eaten!"
+        ],
+        "avatarId": ""
+      },
+      "id": "b7c6f26d-8cfb-4c7b-ad4d-45fff016fb77"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

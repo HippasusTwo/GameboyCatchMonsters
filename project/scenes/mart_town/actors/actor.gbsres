@@ -1,0 +1,83 @@
+{
+  "_resourceType": "actor",
+  "id": "f8f5d623-5f16-4b35-9a63-02d51931650b",
+  "_index": 0,
+  "symbol": "actor_33",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 66,
+  "y": 18,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "000a6dde-cb60-436e-b357-30a529daa139",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "id": "e232bbf6-d973-4e91-a16c-4c2f325d958f",
+      "command": "EVENT_CHOICE",
+      "args": {
+        "variable": "L0",
+        "trueText": "Save Game",
+        "falseText": "Cancel"
+      }
+    },
+    {
+      "id": "1f9d62bc-43c5-4584-a17b-82e257a2935f",
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "L0",
+        "__collapseElse": true,
+        "condition": {
+          "type": "variable",
+          "value": "L0"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "id": "ae007032-c148-4ea6-9bbb-d5bffff6ede8",
+            "command": "EVENT_SAVE_DATA",
+            "args": {
+              "saveSlot": 0
+            },
+            "children": {
+              "true": [
+                {
+                  "id": "05dbec97-406d-497b-8315-14aa4c21319b",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": "Game progress has\nbeen saved."
+                  }
+                },
+                {
+                  "id": "0e087f56-972a-4506-87af-e50c79bf18cd",
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "The Church of the Holy\nSavepoint welcomes you."
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

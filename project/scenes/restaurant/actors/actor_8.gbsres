@@ -1,0 +1,40 @@
+{
+  "_resourceType": "actor",
+  "id": "dddcc957-861f-4732-a407-c1ab26ea3c99",
+  "_index": 7,
+  "symbol": "actor_92",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 31,
+  "y": 33,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "30b8266a-0533-4f90-bd33-e97dc1d498ea",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "It's a protest sign."
+        ],
+        "avatarId": ""
+      },
+      "id": "35ce4a25-2ded-44d5-b36c-a66c3e7847b8"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

@@ -1,0 +1,12 @@
+{
+  "_resourceType": "background",
+  "id": "9b759619-0b99-450e-91a3-97452b3ed765",
+  "name": "City Hall proto",
+  "symbol": "bg_city_hall_proto",
+  "tileColors": "0014a+043+026+043+0014+043+026+043+0011+04a+00!047+00e+04a+00!047+00e+04a+00!047+00e+044+003+044+003+044+0095+044+001c+044+001c+07!042+07!001c+074+0010e+",
+  "filename": "City Hall proto.png",
+  "width": 32,
+  "height": 32,
+  "imageWidth": 256,
+  "imageHeight": 256
+}
