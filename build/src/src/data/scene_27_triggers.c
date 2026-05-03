@@ -11,10 +11,10 @@ BANKREF(scene_27_triggers)
 const struct trigger_t scene_27_triggers[] = {
     {
         // Trigger 1,
-        .x = 29,
-        .y = 21,
-        .width = 1,
-        .height = 7,
+        .left = 29,
+        .top = 21,
+        .right = 29,
+        .bottom = 27,
         .script = TO_FAR_PTR_T(trigger_66_interact),
         .script_flags = TRIGGER_HAS_ENTER_SCRIPT
     }

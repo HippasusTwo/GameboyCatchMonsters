@@ -76,11 +76,13 @@
     "s"
   ],
   "customControlsLeft": [
-    "ArrowLeft"
+    "ArrowLeft",
+    "q"
   ],
   "customControlsRight": [
     "ArrowRight",
-    "d"
+    "d",
+    "e"
   ],
   "customControlsA": [
     "Alt",

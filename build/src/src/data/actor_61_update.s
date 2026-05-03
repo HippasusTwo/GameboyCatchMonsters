@@ -18,64 +18,46 @@ _actor_61_update::
         VM_RESERVE              5
 
 1$:
-        ; Wait N Frames
+        ; Wait 60 frames
         VM_SET_CONST            .LOCAL_TMP0_WAIT_ARGS, 60
         VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP0_WAIT_ARGS
 
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 3
-
         ; If Actor Facing Direction
-        VM_ACTOR_GET_DIR        .LOCAL_ACTOR, .LOCAL_TMP2_ACTOR_DIR
-        VM_IF_CONST             .NE, .LOCAL_TMP2_ACTOR_DIR, .DIR_UP, 2$, 0
-
-        ; Actor Set Active
         VM_SET_CONST            .LOCAL_ACTOR, 3
+        VM_ACTOR_GET_DIR        .LOCAL_ACTOR, .LOCAL_TMP2_ACTOR_DIR
+        ; -- Calculate value
+        VM_RPN
+            .R_INT16    .DIR_UP
+            .R_STOP
+        VM_IF                   .NE, ^/(.LOCAL_TMP2_ACTOR_DIR - 1)/, .ARG0, 2$, 1
 
         ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    3
             .R_INT16    0
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    3840
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
+            .R_INT16    7680
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_CHECK_COLL
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        ; -- Move Actor
+        VM_ACTOR_MOVE_TO_INIT   .ARG2, ^/(.ACTOR_ATTR_CHECK_COLL_WALLS | .ACTOR_ATTR_CHECK_COLL_ACTORS | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_ACTOR_MOVE_TO_SET_DIR_Y .ARG2
+        VM_ACTOR_MOVE_TO_Y      .ARG2, ^/(.ACTOR_ATTR_CHECK_COLL_WALLS | .ACTOR_ATTR_CHECK_COLL_ACTORS | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_POP                  3
 
         VM_JUMP                 3$
 2$:
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 3
-
         ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    3
             .R_INT16    0
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    -3840
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
+            .R_INT16    -7680
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_CHECK_COLL
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        ; -- Move Actor
+        VM_ACTOR_MOVE_TO_INIT   .ARG2, ^/(.ACTOR_ATTR_CHECK_COLL_WALLS | .ACTOR_ATTR_CHECK_COLL_ACTORS | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_ACTOR_MOVE_TO_SET_DIR_Y .ARG2
+        VM_ACTOR_MOVE_TO_Y      .ARG2, ^/(.ACTOR_ATTR_CHECK_COLL_WALLS | .ACTOR_ATTR_CHECK_COLL_ACTORS | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_POP                  3
 
 3$:
 

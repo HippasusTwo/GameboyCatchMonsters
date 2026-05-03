@@ -3,7 +3,7 @@
 .include "vm.i"
 .include "data/game_globals.i"
 
-.globl _fade_frames_per_step
+.globl _fade_frames_per_step, _camera_settings
 
 .area _CODE_255
 
@@ -20,6 +20,7 @@ _trigger_45_interact::
         ; Pop Scene State
         VM_SET_CONST_INT8       _fade_frames_per_step, 3
         VM_FADE_OUT             1
+        VM_SET_CONST_INT8       _camera_settings, .CAMERA_LOCK
         VM_SCENE_POP
 
         ; Stop Script

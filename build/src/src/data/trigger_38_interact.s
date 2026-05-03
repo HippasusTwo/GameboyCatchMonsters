@@ -4,15 +4,15 @@
 .include "data/game_globals.i"
 .include "macro.i"
 
-.globl b_wait_frames, _wait_frames, b_camera_shake_frames, _camera_shake_frames, _fade_frames_per_step, ___bank_scene_space_battle, _scene_space_battle
+.globl b_wait_frames, _wait_frames, b_camera_shake_frames, _camera_shake_frames, _fade_frames_per_step, _camera_settings, ___bank_scene_space_battle, _scene_space_battle
 
 .area _CODE_255
 
 .LOCAL_ACTOR = -4
-.LOCAL_TMP1_WAIT_ARGS = -6
-.LOCAL_TMP2_WAIT_ARGS = -6
-.LOCAL_TMP3_WAIT_ARGS = -6
-.LOCAL_TMP4_CAMERA_SHAKE_ARGS = -6
+.LOCAL_TMP1_WAIT_ARGS = -7
+.LOCAL_TMP2_WAIT_ARGS = -7
+.LOCAL_TMP3_WAIT_ARGS = -7
+.LOCAL_TMP4_CAMERA_SHAKE_ARGS = -7
 
 ___bank_trigger_38_interact = 255
 .globl ___bank_trigger_38_interact
@@ -20,19 +20,22 @@ ___bank_trigger_38_interact = 255
 _trigger_38_interact::
         VM_LOCK
 
-        VM_RESERVE              6
-
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 2
+        VM_RESERVE              7
 
         ; If Actor At Position
+        VM_SET_CONST            .LOCAL_ACTOR, 2
         VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    512
+            .R_INT8     8
+            .R_OPERATOR .SHR
+            .R_INT16    4
             .R_OPERATOR .EQ
             .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    1280
+            .R_INT8     8
+            .R_OPERATOR .SHR
+            .R_INT16    10
             .R_OPERATOR .EQ
             .R_OPERATOR .AND
             .R_STOP
@@ -49,101 +52,107 @@ _trigger_38_interact::
         VM_SET_CONST            .LOCAL_ACTOR, 1
         VM_ACTOR_ACTIVATE       .LOCAL_ACTOR
 
-        ; Wait N Frames
+        ; Wait 6 frames
         VM_SET_CONST            .LOCAL_TMP1_WAIT_ARGS, 6
         VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP1_WAIT_ARGS
 
-        ; Actor Set Active
+        ; Actor Set Animation Frame To
+        ; -- Calculate value
+        VM_RPN
+            .R_INT16    1
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_STOP
         VM_SET_CONST            .LOCAL_ACTOR, 1
-
-        ; Actor Set Animation Frame
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 1
         VM_ACTOR_SET_ANIM_FRAME .LOCAL_ACTOR
 
-        ; Wait N Frames
+        ; Wait 6 frames
         VM_SET_CONST            .LOCAL_TMP2_WAIT_ARGS, 6
         VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP2_WAIT_ARGS
 
-        ; Actor Set Active
+        ; Actor Set Animation Frame To
+        ; -- Calculate value
+        VM_RPN
+            .R_INT16    2
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_STOP
         VM_SET_CONST            .LOCAL_ACTOR, 1
-
-        ; Actor Set Animation Frame
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 2
         VM_ACTOR_SET_ANIM_FRAME .LOCAL_ACTOR
 
-        ; Wait N Frames
+        ; Wait 6 frames
         VM_SET_CONST            .LOCAL_TMP3_WAIT_ARGS, 6
         VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP3_WAIT_ARGS
 
         ; Camera Shake
         VM_SET_CONST            .LOCAL_TMP4_CAMERA_SHAKE_ARGS, 60
         VM_SET_CONST            ^/(.LOCAL_TMP4_CAMERA_SHAKE_ARGS + 1)/, .CAMERA_SHAKE_X
+        VM_RPN
+            .R_INT16    5
+            .R_REF_SET  ^/(.LOCAL_TMP4_CAMERA_SHAKE_ARGS + 2)/
+            .R_STOP
         VM_INVOKE               b_camera_shake_frames, _camera_shake_frames, 0, .LOCAL_TMP4_CAMERA_SHAKE_ARGS
 
-        ; Variable Set To True
-        VM_SET_CONST            VAR_VARIABLE_8, 1
+        ; Variable Set To
+        VM_SET_CONST            VAR_QUESTLAUNCH, 1
 
         ; Load Scene
         VM_SET_CONST_INT8       _fade_frames_per_step, 3
         VM_FADE_OUT             1
+        ; -- Calculate coordinate values
+        VM_RPN
+            .R_INT16    0
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    2304
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
+            .R_STOP
         VM_SET_CONST            .LOCAL_ACTOR, 0
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 0
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 1152
         VM_ACTOR_SET_POS        .LOCAL_ACTOR
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_RIGHT
+        VM_SET_CONST_INT8       _camera_settings, .CAMERA_LOCK
         VM_RAISE                EXCEPTION_CHANGE_SCENE, 3
             IMPORT_FAR_PTR_DATA _scene_space_battle
 
         VM_JUMP                 2$
 1$:
-        ; Actor Set Active
+        ; Actor Set Direction To
         VM_SET_CONST            .LOCAL_ACTOR, 2
-
-        ; Actor Set Direction
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_RIGHT
 
         ; Text Dialogue
-        VM_LOAD_TEXT            0
-        .asciz "Hey! Do you want\nto end up in\nspace??"
-        VM_OVERLAY_CLEAR        0, 0, 20, 5, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/
+        VM_OVERLAY_CLEAR        0, 0, 20, 5, .UI_COLOR_WHITE, .UI_DRAW_FRAME
+        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_SPEED_INSTANT
         VM_OVERLAY_MOVE_TO      0, 13, .OVERLAY_IN_SPEED
+        VM_OVERLAY_SET_SCROLL   1, 1, 18, 5, .UI_COLOR_WHITE
+        VM_LOAD_TEXT            0
+        .asciz "Hey! Do you want\012to end up in\012space??"
         VM_DISPLAY_TEXT
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT | .UI_WAIT_BTN_A)/
         VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/
 
         ; Text Dialogue
-        VM_LOAD_TEXT            0
-        .asciz "Because that's how\nyou end up in\nspace..."
-        VM_OVERLAY_CLEAR        0, 0, 20, 5, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/
+        VM_OVERLAY_CLEAR        0, 0, 20, 5, .UI_COLOR_WHITE, .UI_DRAW_FRAME
+        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_SPEED_INSTANT
         VM_OVERLAY_MOVE_TO      0, 13, .OVERLAY_IN_SPEED
+        VM_OVERLAY_SET_SCROLL   1, 1, 18, 5, .UI_COLOR_WHITE
+        VM_LOAD_TEXT            0
+        .asciz "Because that's how\012you end up in\012space..."
         VM_DISPLAY_TEXT
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT | .UI_WAIT_BTN_A)/
         VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/
 
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 0
-
         ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
             .R_INT16    0
-            .R_OPERATOR .ADD
             .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    256
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
+            .R_INT16    512
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_H_FIRST
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        ; -- Move Actor
+        VM_ACTOR_MOVE_TO_INIT   .ARG2, ^/(.ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_ACTOR_MOVE_TO_SET_DIR_Y .ARG2
+        VM_ACTOR_MOVE_TO_Y      .ARG2, ^/(.ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_POP                  3
 
         ; Actor Set Active
         VM_SET_CONST            .LOCAL_ACTOR, 0

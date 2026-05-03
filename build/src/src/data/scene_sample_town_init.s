@@ -3,12 +3,11 @@
 .include "vm.i"
 .include "data/game_globals.i"
 
-.globl b_wait_frames, _wait_frames, _fade_frames_per_step
+.globl _fade_frames_per_step
 
 .area _CODE_255
 
 .LOCAL_ACTOR = -4
-.LOCAL_TMP1_WAIT_ARGS = -4
 
 ___bank_scene_sample_town_init = 255
 .globl ___bank_scene_sample_town_init
@@ -22,6 +21,9 @@ _scene_sample_town_init::
         VM_SET_CONST            .LOCAL_ACTOR, 9
         VM_ACTOR_DEACTIVATE     .LOCAL_ACTOR
 
+        ; Set Sprite Mode: 8x16
+        VM_SET_SPRITE_MODE      .MODE_8X16
+
         ; Call Script: Init Menu
         VM_CALL_FAR             ___bank_script_init_menu, _script_init_menu
 
@@ -31,9 +33,8 @@ _scene_sample_town_init::
         ; Call Script: Init Shift Menu
         VM_CALL_FAR             ___bank_script_12, _script_12
 
-        ; Wait N Frames
-        VM_SET_CONST            .LOCAL_TMP1_WAIT_ARGS, 1
-        VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP1_WAIT_ARGS
+        ; Idle
+        VM_IDLE
 
         ; Fade In
         VM_SET_CONST_INT8       _fade_frames_per_step, 1

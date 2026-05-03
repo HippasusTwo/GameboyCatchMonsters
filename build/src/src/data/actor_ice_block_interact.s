@@ -16,17 +16,20 @@ _actor_ice_block_interact::
 
         VM_RESERVE              5
 
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 2
-
         ; If Actor At Position
+        VM_SET_CONST            .LOCAL_ACTOR, 2
         VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    1920
+            .R_INT8     8
+            .R_OPERATOR .SHR
+            .R_INT16    15
             .R_OPERATOR .EQ
             .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    1280
+            .R_INT8     8
+            .R_OPERATOR .SHR
+            .R_INT16    10
             .R_OPERATOR .EQ
             .R_OPERATOR .AND
             .R_STOP
@@ -47,74 +50,75 @@ _actor_ice_block_interact::
         VM_IF_CONST             .EQ, .LOCAL_TMP1_PUSH_DIR_VAR, .DIR_RIGHT, 5$, 0
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    12800
+            .R_INT16    25600
             .R_OPERATOR .ADD
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 1)/, .ARG0
-        VM_POP                  1
         VM_JUMP                 6$
 3$:
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    12800
+            .R_INT16    25600
             .R_OPERATOR .SUB
             .R_INT16    0
             .R_OPERATOR .MAX
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 1)/, .ARG0
-        VM_POP                  1
         VM_JUMP                 6$
 4$:
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    12800
+            .R_INT16    25600
             .R_OPERATOR .SUB
             .R_INT16    0
             .R_OPERATOR .MAX
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 1)/, .ARG0
-        VM_POP                  1
         VM_JUMP                 6$
 5$:
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    12800
+            .R_INT16    25600
             .R_OPERATOR .ADD
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 1)/, .ARG0
-        VM_POP                  1
 6$:
         VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_CHECK_COLL
         VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
 
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 2
-
         ; If Actor At Position
+        VM_SET_CONST            .LOCAL_ACTOR, 2
         VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    1920
+            .R_INT8     8
+            .R_OPERATOR .SHR
+            .R_INT16    15
             .R_OPERATOR .EQ
             .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    1280
+            .R_INT8     8
+            .R_OPERATOR .SHR
+            .R_INT16    10
             .R_OPERATOR .EQ
             .R_OPERATOR .AND
             .R_STOP
         VM_IF_CONST             .EQ, .ARG0, 0, 7$, 1
 
         ; Text Dialogue
+        VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, .UI_DRAW_FRAME
+        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_SPEED_INSTANT
+        VM_OVERLAY_MOVE_TO      0, 14, .OVERLAY_IN_SPEED
+        VM_OVERLAY_SET_SCROLL   1, 1, 18, 5, .UI_COLOR_WHITE
         VM_LOAD_TEXT            0
         .asciz "Success!"
-        VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/
-        VM_OVERLAY_MOVE_TO      0, 14, .OVERLAY_IN_SPEED
         VM_DISPLAY_TEXT
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT | .UI_WAIT_BTN_A)/
         VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/
 
-        ; Variable Set To True
-        VM_SET_CONST            VAR_VARIABLE_1, 1
+        ; Variable Set To
+        VM_SET_CONST            VAR_QUEST2, 1
 
         ; Actor Activate
         VM_SET_CONST            .LOCAL_ACTOR, 6
@@ -132,8 +136,8 @@ _actor_ice_block_interact::
 
 2$:
 
-        ; Variable Set To True
-        VM_SET_CONST            VAR_VARIABLE_16, 1
+        ; Variable Set To
+        VM_SET_CONST            VAR_PUSHED_ICE_BLOCK, 1
 
         ; Stop Script
         VM_STOP

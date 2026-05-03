@@ -4,7 +4,7 @@
 .include "data/game_globals.i"
 .include "macro.i"
 
-.globl _fade_frames_per_step, ___bank_scene_sample_town, _scene_sample_town
+.globl _fade_frames_per_step, _camera_settings, ___bank_scene_sample_town, _scene_sample_town
 
 .area _CODE_255
 
@@ -21,11 +21,17 @@ _trigger_14_interact::
         ; Load Scene
         VM_SET_CONST_INT8       _fade_frames_per_step, 3
         VM_FADE_OUT             1
+        ; -- Calculate coordinate values
+        VM_RPN
+            .R_INT16    6144
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    2560
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
+            .R_STOP
         VM_SET_CONST            .LOCAL_ACTOR, 0
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 3072
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 1280
         VM_ACTOR_SET_POS        .LOCAL_ACTOR
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_DOWN
+        VM_SET_CONST_INT8       _camera_settings, .CAMERA_LOCK
         VM_RAISE                EXCEPTION_CHANGE_SCENE, 3
             IMPORT_FAR_PTR_DATA _scene_sample_town
 

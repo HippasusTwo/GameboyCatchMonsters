@@ -13,23 +13,21 @@ const struct actor_t scene_24_actors[] = {
     {
         // Actor 1,
         .pos = {
-            .x = 16 * 16,
-            .y = 96 * 16
+            .x = 512,
+            .y = 3072
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -24
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-24)
         },
         .dir = DIR_RIGHT,
         .sprite = TO_FAR_PTR_T(sprite_ungulate),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_51_interact),
         .reserve_tiles = 0
     }

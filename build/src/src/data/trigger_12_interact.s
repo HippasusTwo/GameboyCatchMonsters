@@ -15,19 +15,25 @@ _trigger_12_interact::
 
         VM_RESERVE              4
 
-        ; If Variable True
-        VM_IF_CONST             .GT, VAR_VARIABLE_10, 0, 1$, 0
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 8
-
+        ; If
+        ; -- If Falsy
+        VM_IF_CONST             .EQ, VAR_QUESTSQUIREEL, 0, 1$, 0
+        VM_JUMP                 2$
+1$:
         ; If Actor At Position
+        VM_SET_CONST            .LOCAL_ACTOR, 8
         VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    4608
+            .R_INT8     8
+            .R_OPERATOR .SHR
+            .R_INT16    36
             .R_OPERATOR .EQ
             .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    3072
+            .R_INT8     8
+            .R_OPERATOR .SHR
+            .R_INT16    24
             .R_OPERATOR .EQ
             .R_OPERATOR .AND
             .R_STOP
@@ -35,10 +41,8 @@ _trigger_12_interact::
 
         VM_JUMP                 4$
 3$:
-        ; Actor Set Active
+        ; Actor Set Direction To
         VM_SET_CONST            .LOCAL_ACTOR, 8
-
-        ; Actor Set Direction
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_UP
 
         ; Actor Set Active
@@ -47,28 +51,40 @@ _trigger_12_interact::
         ; Actor Emote
         VM_ACTOR_EMOTE          .LOCAL_ACTOR, ___bank_emote_shock, _emote_shock
 
-        ; Actor Set Active
+        ; Actor Move To
+        ; -- Calculate coordinate values
+        VM_RPN
+            .R_INT16    10752
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    7680
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
+            .R_STOP
+        ; -- Move Actor
         VM_SET_CONST            .LOCAL_ACTOR, 8
+        VM_ACTOR_MOVE_TO_INIT   .LOCAL_ACTOR, 0
+        VM_ACTOR_MOVE_TO_SET_DIR_Y .LOCAL_ACTOR
+        VM_ACTOR_MOVE_TO_Y      .LOCAL_ACTOR, 0
+        VM_ACTOR_MOVE_TO_SET_DIR_X .LOCAL_ACTOR
+        VM_ACTOR_MOVE_TO_X      .LOCAL_ACTOR, 0
 
         ; Actor Move To
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 5376
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 3840
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, 0
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
-
-        ; Actor Set Active
+        ; -- Calculate coordinate values
+        VM_RPN
+            .R_INT16    9216
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    6144
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
+            .R_STOP
+        ; -- Move Actor
         VM_SET_CONST            .LOCAL_ACTOR, 8
-
-        ; Actor Move To
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 4608
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 3072
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_H_FIRST
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        VM_ACTOR_MOVE_TO_INIT   .LOCAL_ACTOR, .ACTOR_ATTR_H_FIRST
+        VM_ACTOR_MOVE_TO_SET_DIR_X .LOCAL_ACTOR
+        VM_ACTOR_MOVE_TO_X      .LOCAL_ACTOR, .ACTOR_ATTR_H_FIRST
+        VM_ACTOR_MOVE_TO_SET_DIR_Y .LOCAL_ACTOR
+        VM_ACTOR_MOVE_TO_Y      .LOCAL_ACTOR, .ACTOR_ATTR_H_FIRST
 
 4$:
 
-        VM_JUMP                 2$
-1$:
 2$:
 
         ; Stop Script

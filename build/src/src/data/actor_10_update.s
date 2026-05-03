@@ -13,7 +13,7 @@ _actor_10_update::
 1$:
         ; Call Script: Enemy Ship Movement Diagonal
         VM_PUSH_CONST           9 ; Actor 0
-        VM_CALL_FAR             ___bank_script_enemy_ship_movement__0, _script_enemy_ship_movement__0
+        VM_CALL_FAR             ___bank_script_enemy_ship_movement_, _script_enemy_ship_movement_
 
         ; Idle
         VM_IDLE

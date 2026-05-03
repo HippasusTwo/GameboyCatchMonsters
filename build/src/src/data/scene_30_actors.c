@@ -12,6 +12,9 @@
 #include "data/sprite_pc_car.h"
 #include "data/actor_72_update.h"
 #include "data/actor_72_interact.h"
+#include "data/sprite_mantis.h"
+#include "data/actor_83_update.h"
+#include "data/actor_83_interact.h"
 
 BANKREF(scene_30_actors)
 
@@ -19,46 +22,42 @@ const struct actor_t scene_30_actors[] = {
     {
         // Actor 1,
         .pos = {
-            .x = 240 * 16,
-            .y = 120 * 16
+            .x = 7680,
+            .y = 3840
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_LEFT,
         .sprite = TO_FAR_PTR_T(sprite_pc_car),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_71_interact),
         .reserve_tiles = 0
     },
     {
         // Actor 2,
         .pos = {
-            .x = 144 * 16,
-            .y = 152 * 16
+            .x = 4608,
+            .y = 4864
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_UP,
         .sprite = TO_FAR_PTR_T(sprite_pc_car),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = TRUE,
+        .flags = ACTOR_FLAG_COLLISION | ACTOR_FLAG_PERSISTENT,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_73_update),
         .script = TO_FAR_PTR_T(actor_73_interact),
         .reserve_tiles = 0
@@ -66,25 +65,45 @@ const struct actor_t scene_30_actors[] = {
     {
         // Actor 3,
         .pos = {
-            .x = 120 * 16,
-            .y = 72 * 16
+            .x = 3840,
+            .y = 2304
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_UP,
         .sprite = TO_FAR_PTR_T(sprite_pc_car),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = TRUE,
+        .flags = ACTOR_FLAG_COLLISION | ACTOR_FLAG_PERSISTENT,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_72_update),
         .script = TO_FAR_PTR_T(actor_72_interact),
+        .reserve_tiles = 0
+    },
+    {
+        // Critter,
+        .pos = {
+            .x = 1280,
+            .y = 7936
+        },
+        .bounds = {
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
+        },
+        .dir = DIR_DOWN,
+        .sprite = TO_FAR_PTR_T(sprite_mantis),
+        .move_speed = 32,
+        .anim_tick = 15,
+        .flags = ACTOR_FLAG_COLLISION,
+        .collision_group = COLLISION_GROUP_NONE,
+        .script_update = TO_FAR_PTR_T(actor_83_update),
+        .script = TO_FAR_PTR_T(actor_83_interact),
         .reserve_tiles = 0
     }
 };

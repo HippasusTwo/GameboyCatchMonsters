@@ -1,0 +1,207 @@
+{
+  "_resourceType": "script",
+  "id": "fa072bdc-fa97-4a43-893c-8d9e1dd39c1c",
+  "name": "DatabaseMons",
+  "symbol": "script_15",
+  "description": "Extremely inefficient but OK if you want to ensure battle monster data and enemy match. Use wLookingFor beforehand to tell it to look for enemy or ally data. temp3 is a var for temporarily setting the species to lookup and could probably be replaced by something else.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "496",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": true
+      },
+      "id": "f085d6e1-41c6-4b23-89cb-d9a6899a58c8"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "492",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": true
+      },
+      "id": "63eaa5e0-6ea1-41fa-96ff-8da66c8d1eb9"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "491",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": true
+      },
+      "id": "26e88770-d810-450e-aae9-44a266ac7654"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "495",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": true
+      },
+      "id": "ca3d162a-4aa2-47e2-8490-dc4f2e4dcd79"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "494",
+        "value": {
+          "type": "number",
+          "value": 5
+        },
+        "__collapse": true
+      },
+      "id": "f19bc92d-cb50-43dc-81a7-1ab73ff491ef"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "493",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": true
+      },
+      "id": "914becc3-87b7-4812-be9a-6598dc5638b6"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "477",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": true
+      },
+      "id": "d8552e66-20a4-4d17-997a-a86b0b70e895"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "503",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": true
+      },
+      "id": "4941b25c-9612-4177-b10e-25c2c446f7b1"
+    },
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": "; VM_RAND VAR_BATTLERENEMYHP1, 2, 3\n;defaults set above\n ;VM_SET_CONST VAR_WSTR, 1\n ;VM_SET_CONST VAR_WHP, 5\n ;VM_SET_CONST VAR_WTYPE, 1;wood\n ; VM_SET_CONST VAR_WDEF, 1\n ;VM_SET_CONST VAR_WSPECIAL, 2\n ;VM_SET_CONST VAR_WSPEED, 2\n ;DB lookup start\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 1, EnemyGrab,0  \n ;not enemy\n  VM_SET VAR_TEMP3,VAR_BATTLERSPECIES\n  VM_JUMP Lookup\n EnemyGrab:\n VM_SET VAR_TEMP3, VAR_BATTLERENEMYSPECIES1\n Lookup:\n VM_IF_CONST .EQ,  VAR_TEMP3, 1, Monster1, 0;Mouse\n VM_IF_CONST .EQ,  VAR_TEMP3, 2, Monster2, 0 ;Cat\n VM_IF_CONST .EQ,  VAR_TEMP3, 3, Monster3, 0 ;Duck\nVM_IF_CONST .EQ,  VAR_TEMP3, 4, Monster4, 0;Turnip\n VM_IF_CONST .EQ,  VAR_TEMP3, 5, MonsterDog, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 6, MonsterFrog, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 7, MonsterMantis, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 8, Monster8, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 9, Monster9, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 10, Monster10, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 11, Monster11, 0\n  VM_IF_CONST .EQ,  VAR_TEMP3, 12, Monster12, 0\n  VM_IF_CONST .EQ,  VAR_TEMP3, 13, MonsterUngulate, 0\n  ;VM_IF_CONST .EQ,  VAR_TEMP3, 14, Monster14, 0\n   VM_IF_CONST .EQ,  VAR_TEMP3, 15, Monster15, 0\n  VM_IF_CONST .EQ,  VAR_TEMP3, 16, MonsterRobot, 0\n  VM_IF_CONST .EQ,  VAR_TEMP3, 17, MonsterElephant, 0\n VM_JUMP GenericMonster\n\nMonster1:\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 6\n VM_SET_CONST VAR_WTYPE, 2\n  VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 3\n VM_JUMP LoadMonsterData\nMonster2:\n VM_SET_CONST VAR_WSTR, 2\n VM_SET_CONST VAR_WHP, 7\n VM_SET_CONST VAR_WTYPE, 4\n  VM_SET_CONST VAR_WDEF, 2\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nMonster3:\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 8\n VM_SET_CONST VAR_WTYPE, 5\n  VM_SET_CONST VAR_WDEF, 2\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 2\n VM_JUMP LoadMonsterData\nMonster4:\n  VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 3\n VM_SET_CONST VAR_WTYPE, 1\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 3\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n MonsterDog:\n  VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 8\n VM_SET_CONST VAR_WTYPE, 7\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 2\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n MonsterFrog:\n  VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 6\n VM_SET_CONST VAR_WTYPE, 3\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n MonsterMantis:\n  VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 7\n VM_SET_CONST VAR_WTYPE, 6\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n Monster8:\n  VM_SET_CONST VAR_WSTR, 2\n VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 0\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n Monster9: ;Faerie Ferret\n VM_SET_CONST VAR_WTYPE, 3\n VM_JUMP LoadMonsterData\n Monster10: ;Gerbil\n  VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 6\n VM_SET_CONST VAR_WTYPE, 2\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\n  Monster11:\n VM_SET_CONST VAR_WTYPE, 1\n VM_JUMP LoadMonsterData\n   Monster12:\n VM_SET_CONST VAR_WTYPE, 4\n VM_JUMP LoadMonsterData\n ;14 is generic\n Monster15:\n VM_SET_CONST VAR_WTYPE, 1\n VM_JUMP LoadMonsterData\n MonsterUngulate: ;13\n VM_SET_CONST VAR_WTYPE, 7\n VM_JUMP LoadMonsterData\nMonsterRobot:\n VM_SET_CONST VAR_WTYPE, 5\n VM_JUMP LoadMonsterData\n MonsterElephant:\n   VM_SET_CONST VAR_BATTLERENEMYLVL,2\n VM_SET_CONST VAR_WSTR, 5\n VM_SET_CONST VAR_WHP, 10\n VM_SET_CONST VAR_WTYPE, 5\n  VM_SET_CONST VAR_WDEF, 10\n VM_SET_CONST VAR_WSPECIAL, 5\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nGenericMonster:\n  VM_SET VAR_BATTLERENEMYLVL,VAR_BATTLER1LVL\n VM_SET_CONST VAR_WSTR, 1\n VM_SET_CONST VAR_WHP, 4\n VM_SET_CONST VAR_WTYPE, 0;Aether\n VM_SET_CONST VAR_WDEF, 1\n VM_SET_CONST VAR_WSPECIAL, 1\n VM_SET_CONST VAR_WSPEED, 1\n VM_JUMP LoadMonsterData\nLoadMonsterData:\n VM_IF_CONST .EQ, VAR_WLOOKINGFOR, 0, LABEL1, 0;if player jump\n ;load monster data into enemy\n VM_SET VAR_BATTLERENEMYSTR, VAR_WSTR\n VM_SET VAR_BATTLERENEMYHP1, VAR_WHP\n VM_SET VAR_BATTLERENEMYTYPE, VAR_WTYPE\n VM_JUMP end\n LABEL1:\n ;load monster data into player\n  VM_SET VAR_BATTLERSTR, VAR_WSTR\n VM_SET VAR_BATTLERMAXHP, VAR_WHP\n VM_SET VAR_BATTLERTYPE, VAR_WTYPE\n end:\n  ",
+        "references": [
+          {
+            "type": "variable",
+            "id": "20"
+          },
+          {
+            "type": "variable",
+            "id": "503"
+          },
+          {
+            "type": "variable",
+            "id": "477"
+          },
+          {
+            "type": "variable",
+            "id": "481"
+          },
+          {
+            "type": "variable",
+            "id": "412"
+          },
+          {
+            "type": "variable",
+            "id": "488"
+          },
+          {
+            "type": "variable",
+            "id": "18"
+          },
+          {
+            "type": "variable",
+            "id": "480"
+          }
+        ]
+      },
+      "id": "c71df877-365c-4a39-8788-7a6fbc696f50"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "26",
+        "operator": "==",
+        "comparator": "0",
+        "__collapseElse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "26"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+            "args": {
+              "variable": "504",
+              "expression": "$Battler1LVL + $BattlerHP1"
+            },
+            "id": "e41701d6-127d-4bbd-b043-6376c698a9b2"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+            "args": {
+              "variable": "18",
+              "expression": "$Battler1LVL + $18$"
+            },
+            "id": "70458e5b-a719-4736-9233-9571f753e1e3"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+            "args": {
+              "variable": "20",
+              "expression": "$477$ + $20$"
+            },
+            "id": "d1471331-11ce-45d5-a3ae-1f2ee0897c17"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH_EVALUATE",
+            "args": {
+              "variable": "503",
+              "expression": "$503$ + $477$"
+            },
+            "id": "0c47fff6-765e-4851-9f64-80a69effce87"
+          }
+        ]
+      },
+      "id": "a94b1126-25ff-4af6-94c3-286ff989df2e"
+    }
+  ]
+}

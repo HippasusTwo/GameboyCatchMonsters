@@ -1,0 +1,125 @@
+{
+  "_resourceType": "script",
+  "id": "f7480d50-347e-470c-9e3a-ea02c347168a",
+  "name": "DB LoadTypeName",
+  "description": " VM_IF_CONST .EQ,  VAR_TEMP3, 1, Type1, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 2, Type2, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 3, Type3, 0\nVM_IF_CONST .EQ,  VAR_TEMP3, 4, Type4, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 5, Type5, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 6, Type6, 0\n VM_IF_CONST .EQ,  VAR_TEMP3, 7, Type7, 0\n VM_JUMP AetherType\n\nType1:\n VM_SET_CONST VAR_Wordy1, \"W\"\nVM_SET_CONST VAR_Wordy2, \"o\"\nVM_SET_CONST VAR_Wordy3, \"o\"\nVM_SET_CONST VAR_Wordy4, \"d\"\nVM_SET_CONST VAR_Wordy5, 0\nVM_SET_CONST VAR_Wordy6, 0\n\n1 = wood\nelectroweak\nwater\nfire\nmetal\nstrong\nspacetime = 7\nelse aether = 0\n\nusing a switch, but alternatively could use code similar to the above",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Variable A",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "symbol": "script_18",
+  "script": [
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "V0",
+        "choices": 7,
+        "__collapseCase0": false,
+        "__collapseCase1": false,
+        "__collapseCase2": false,
+        "__collapseCase3": false,
+        "__collapseCase4": false,
+        "__collapseCase5": false,
+        "__collapseCase6": false,
+        "__collapseCase7": false,
+        "__collapseCase8": false,
+        "__collapseCase9": false,
+        "__collapseCase10": false,
+        "__collapseCase11": false,
+        "__collapseCase12": false,
+        "__collapseCase13": false,
+        "__collapseCase14": false,
+        "__collapseCase15": false,
+        "__collapseElse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": "VM_SET_CONST VAR_WORDY1, \"W\"\nVM_SET_CONST VAR_WORDY2, \"o\"\nVM_SET_CONST VAR_WORDY3, \"o\"\nVM_SET_CONST VAR_WORDY4, \"d\"\nVM_SET_CONST VAR_WORDY5, 0\nVM_SET_CONST VAR_WORDY6, 0"
+            },
+            "id": "f2e60a9f-7bfe-40b2-ad4e-e4232bfdd929"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": " VM_SET_CONST VAR_WORDY1, \"E\"\nVM_SET_CONST VAR_WORDY2, \"l\"\nVM_SET_CONST VAR_WORDY3, \"e\"\nVM_SET_CONST VAR_WORDY4, \"c\"\nVM_SET_CONST VAR_WORDY5, \"t\"\nVM_SET_CONST VAR_WORDY6, \"r\""
+            },
+            "id": "0f143a45-3d9f-4d54-9356-f3d26efb6d43"
+          }
+        ],
+        "true2": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": " VM_SET_CONST VAR_WORDY1, \"W\"\nVM_SET_CONST VAR_WORDY2, \"a\"\nVM_SET_CONST VAR_WORDY3, \"t\"\nVM_SET_CONST VAR_WORDY4, \"e\"\nVM_SET_CONST VAR_WORDY5, \"r\"\nVM_SET_CONST VAR_WORDY6, 0"
+            },
+            "id": "c04aed42-2318-4bbb-a920-0e4c71ffc332"
+          }
+        ],
+        "true3": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": " VM_SET_CONST VAR_WORDY1, \"F\"\nVM_SET_CONST VAR_WORDY2, \"i\"\nVM_SET_CONST VAR_WORDY3, \"r\"\nVM_SET_CONST VAR_WORDY4, \"e\"\nVM_SET_CONST VAR_WORDY5, 0\nVM_SET_CONST VAR_WORDY6, 0"
+            },
+            "id": "032e30c6-261c-47c2-b0fb-51dcbf3fef49"
+          }
+        ],
+        "true4": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": " VM_SET_CONST VAR_WORDY1, \"M\"\nVM_SET_CONST VAR_WORDY2, \"e\"\nVM_SET_CONST VAR_WORDY3, \"t\"\nVM_SET_CONST VAR_WORDY4, \"a\"\nVM_SET_CONST VAR_WORDY5, \"l\"\nVM_SET_CONST VAR_WORDY6, 0"
+            },
+            "id": "05ff9b27-0e81-4fad-b7a8-f12b000436bd"
+          }
+        ],
+        "true5": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": " VM_SET_CONST VAR_WORDY1, \"S\"\nVM_SET_CONST VAR_WORDY2, \"t\"\nVM_SET_CONST VAR_WORDY3, \"r\"\nVM_SET_CONST VAR_WORDY4, \"o\"\nVM_SET_CONST VAR_WORDY5, \"n\"\nVM_SET_CONST VAR_WORDY6, \"g\""
+            },
+            "id": "9a14a7cb-53be-47ae-9c39-f855e59e5165"
+          }
+        ],
+        "true6": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": " VM_SET_CONST VAR_WORDY1, \"S\"\nVM_SET_CONST VAR_WORDY2, \"p\"\nVM_SET_CONST VAR_WORDY3, \"a\"\nVM_SET_CONST VAR_WORDY4, \"c\"\nVM_SET_CONST VAR_WORDY5, \"e\"\nVM_SET_CONST VAR_WORDY6, \"T\""
+            },
+            "id": "779161f8-1f8c-4dc0-bc16-bf0fb9e3afe7"
+          }
+        ],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_GBVM_SCRIPT",
+            "args": {
+              "script": " VM_SET_CONST VAR_WORDY1, \"A\"\nVM_SET_CONST VAR_WORDY2, \"e\"\nVM_SET_CONST VAR_WORDY3, \"t\"\nVM_SET_CONST VAR_WORDY4, \"h\"\nVM_SET_CONST VAR_WORDY5, \"e\"\nVM_SET_CONST VAR_WORDY6, \"r\""
+            },
+            "id": "4dd04271-962d-4260-b904-9492c924d45f"
+          }
+        ]
+      },
+      "id": "128533d3-39af-4e8f-840d-951c7877507f"
+    }
+  ]
+}

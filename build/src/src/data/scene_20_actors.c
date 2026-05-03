@@ -15,46 +15,42 @@ const struct actor_t scene_20_actors[] = {
     {
         // Actor 1,
         .pos = {
-            .x = 192 * 16,
-            .y = 192 * 16
+            .x = 6144,
+            .y = 6400
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_LEFT,
         .sprite = TO_FAR_PTR_T(sprite_hedgehog),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_40_interact),
         .reserve_tiles = 0
     },
     {
         // Actor 2,
         .pos = {
-            .x = 176 * 16,
-            .y = 184 * 16
+            .x = 5632,
+            .y = 6144
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_frog),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_41_interact),
         .reserve_tiles = 0
     }

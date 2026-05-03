@@ -19,11 +19,11 @@ extern const void __bank_song_rulz_spaceemergency_0_Data;
 extern const void song_rulz_spaceemergency_0_Data;
 extern const void __bank_song_rulz_undergroundcave_0_Data;
 extern const void song_rulz_undergroundcave_0_Data;
+extern const void __bank_song_rulz_battletheme_0_Data;
+extern const void song_rulz_battletheme_0_Data;
 extern const void __bank_song_drum_example_Data;
 extern const void song_drum_example_Data;
 extern const void __bank_song_echo_example_Data;
 extern const void song_echo_example_Data;
-extern const void __bank_song_rulz_battletheme_0_Data;
-extern const void song_rulz_battletheme_0_Data;
 
 #endif

@@ -6,7 +6,7 @@
 #include "data/bg_parallax.h"
 #include "data/scene_parallax_example_collisions.h"
 #include "data/palette_10.h"
-#include "data/palette_17.h"
+#include "data/palette_19.h"
 #include "data/sprite_player_platform.h"
 #include "data/scene_parallax_example_actors.h"
 #include "data/scene_parallax_example_triggers.h"
@@ -24,8 +24,14 @@ const struct scene_t scene_parallax_example = {
     .parallax_rows = {
         PARALLAX_STEP(0, 10, 4), PARALLAX_STEP(10, 13, 1), PARALLAX_STEP(13, 0, 0)
     },
+    .scroll_bounds = {
+        .left = 0,
+        .top = 0,
+        .right = 480,
+        .bottom = 0
+    },
     .palette = TO_FAR_PTR_T(palette_10),
-    .sprite_palette = TO_FAR_PTR_T(palette_17),
+    .sprite_palette = TO_FAR_PTR_T(palette_19),
     .reserve_tiles = 0,
     .player_sprite = TO_FAR_PTR_T(sprite_player_platform),
     .n_actors = 2,

@@ -12,14 +12,78 @@
   "prefabScriptOverrides": {},
   "script": [
     {
-      "command": "EVENT_TEXT",
+      "command": "EVENT_IF",
       "args": {
-        "text": [
-          "No potions..."
-        ],
-        "avatarId": ""
+        "condition": {
+          "type": "variable",
+          "value": "11"
+        },
+        "__collapseElse": false
       },
-      "id": "a0ab5bfb-b570-4c6a-b2a5-8b0c74234283"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Got a potion."
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "5008fc0e-ccf2-4d8b-a935-58a43c61c7c1"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "11",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "003a5ef3-e622-411a-90fd-b0ca4238464e"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "504",
+              "value": {
+                "type": "number",
+                "value": 10
+              }
+            },
+            "id": "84dc0dea-7247-480a-88b0-163f38cbbb7d"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "No potions..."
+              ],
+              "avatarId": ""
+            },
+            "id": "a0ab5bfb-b570-4c6a-b2a5-8b0c74234283"
+          }
+        ]
+      },
+      "id": "bad7eb6b-43c3-4a01-a810-85bdf0e64fef"
     }
   ],
   "leaveScript": []

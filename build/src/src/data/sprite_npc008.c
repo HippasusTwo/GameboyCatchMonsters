@@ -4,49 +4,50 @@
 #include "gbs_types.h"
 #include "data/sprite_npc008_tileset.h"
 
+
 BANKREF(sprite_npc008)
 
-#define SPRITE_46_STATE_DEFAULT 0
-#define SPRITE_46_STATE_EXPLODE 0
-#define SPRITE_46_STATE_OPEN 0
+#define SPRITE_40_STATE_DEFAULT 0
+#define SPRITE_40_STATE_EXPLODE 0
+#define SPRITE_40_STATE_OPEN 0
 
 const metasprite_t sprite_npc008_metasprite_0[]  = {
-    { 0, 8, 8, 0 }, { 0, -8, 10, 0 },
+    { 8, 16, 8, 2 }, { 0, -8, 10, 2 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_npc008_metasprite_1[]  = {
-    { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
+    { 8, 16, 0, 2 }, { 0, -8, 2, 2 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_npc008_metasprite_2[]  = {
-    { 0, 8, 4, 0 }, { 0, -8, 6, 0 },
+    { 8, 16, 4, 2 }, { 0, -8, 6, 2 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_npc008_metasprite_3[]  = {
-    { 0, 0, 0, 32 }, { 0, 8, 2, 32 },
+    { 8, 8, 0, 34 }, { 0, 8, 2, 34 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_npc008_metasprite_4[]  = {
-    { 0, 8, 10, 32 }, { 0, -8, 8, 32 },
+    { 8, 16, 10, 34 }, { 0, -8, 8, 34 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_npc008_metasprite_5[]  = {
-    { 0, 8, 12, 0 }, { 0, -8, 14, 0 },
+    { 8, 16, 12, 2 }, { 0, -8, 14, 2 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_npc008_metasprite_6[]  = {
-    { 0, 8, 6, 32 }, { 0, -8, 4, 32 },
+    { 8, 16, 6, 34 }, { 0, -8, 4, 34 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_npc008_metasprite_7[]  = {
-    { 0, 0, 12, 32 }, { 0, 8, 14, 32 },
+    { 8, 8, 12, 34 }, { 0, 8, 14, 34 },
     {metasprite_end}
 };
 
@@ -101,7 +102,7 @@ const struct animation_t sprite_npc008_animations[] = {
 };
 
 const UWORD sprite_npc008_animations_lookup[] = {
-    SPRITE_46_STATE_DEFAULT
+    SPRITE_40_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_npc008 = {
@@ -114,10 +115,10 @@ const struct spritesheet_t sprite_npc008 = {
     .animations = sprite_npc008_animations,
     .animations_lookup = sprite_npc008_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_npc008_tileset),
     .cgb_tileset = { NULL, NULL }

@@ -23,15 +23,125 @@
       "children": {
         "true": [
           {
-            "command": "EVENT_TEXT",
+            "command": "EVENT_IF_VALUE",
             "args": {
-              "text": [
-                "Hello there!"
-              ],
-              "avatarId": "",
-              "__collapse": false
+              "variable": "11",
+              "operator": "!=",
+              "comparator": 1,
+              "__collapseElse": false
             },
-            "id": "c3ab7c07-0457-4b42-8c56-85d4d52de0b8"
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_VALUE",
+                  "args": {
+                    "variable": "9",
+                    "operator": ">=",
+                    "comparator": 1,
+                    "__collapseElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "I see you have money!\nJust got one potion in stock."
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "8b73afaf-4355-439f-843d-1d1182e73b30"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "11",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "1ac8afb6-a440-4aad-878a-29554e25e54f"
+                      },
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "9",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "1fb403b9-56c9-45d8-bf67-f472f9d1a39a"
+                      },
+                      {
+                        "command": "EVENT_STOP",
+                        "args": {},
+                        "id": "7ebdef1e-ce1f-473a-b14d-45223ff2458d"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "I'm a bit busy."
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "88c066ff-923e-4189-b967-f0794c8f8339"
+                      }
+                    ]
+                  },
+                  "id": "a4d03cf9-0021-4def-b711-87478d68c14f"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Hello there!"
+                    ],
+                    "avatarId": "",
+                    "__collapse": false
+                  },
+                  "id": "c3ab7c07-0457-4b42-8c56-85d4d52de0b8"
+                }
+              ]
+            },
+            "id": "07b4c518-bb81-47a8-b4e7-d15374febc95"
           },
           {
             "command": "EVENT_STOP",

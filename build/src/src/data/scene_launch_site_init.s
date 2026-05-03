@@ -3,12 +3,11 @@
 .include "vm.i"
 .include "data/game_globals.i"
 
-.globl b_wait_frames, _wait_frames, _fade_frames_per_step
+.globl _fade_frames_per_step
 
 .area _CODE_255
 
 .LOCAL_ACTOR = -4
-.LOCAL_TMP1_WAIT_ARGS = -4
 
 ___bank_scene_launch_site_init = 255
 .globl ___bank_scene_launch_site_init
@@ -22,15 +21,17 @@ _scene_launch_site_init::
         VM_SET_CONST            .LOCAL_ACTOR, 1
         VM_ACTOR_DEACTIVATE     .LOCAL_ACTOR
 
+        ; Set Sprite Mode: 8x16
+        VM_SET_SPRITE_MODE      .MODE_8X16
+
         ; Call Script: Init Menu
         VM_CALL_FAR             ___bank_script_init_menu, _script_init_menu
 
         ; Music Play
         VM_MUSIC_PLAY           ___bank_song_rulz_outside_0_Data, _song_rulz_outside_0_Data, .MUSIC_NO_LOOP
 
-        ; Wait N Frames
-        VM_SET_CONST            .LOCAL_TMP1_WAIT_ARGS, 1
-        VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP1_WAIT_ARGS
+        ; Idle
+        VM_IDLE
 
         ; Fade In
         VM_SET_CONST_INT8       _fade_frames_per_step, 1

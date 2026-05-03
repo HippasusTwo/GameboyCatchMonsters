@@ -1,0 +1,18 @@
+{
+  "_resourceType": "script",
+  "id": "f84d7e71-20cf-4a7a-b370-d9b7f857bf93",
+  "name": "Database Move Names Maybe",
+  "symbol": "script_0",
+  "description": "Database of values is kinda important for more complicated games. I see lots of vm methods for manipulating memory but not so much pointers.\n  VM_ASM\n .MyString:\n  .db 1,2,3,0\n ld hl, #.MyString\n ld a, (hl)\nld (VAR_LETTER1), a\n VM_ENDASM\nwill compile and could be modified into a loop (using inc hl to get more letters from the string), but couldn't get writing to VAR_LETTER1 to work, so I probably screwed something up there. Possibly it was expecting a c variable instead?\nVM_GET_FAR VAR_LETTER1, .GET_BYTE, __current_bank, .MyString\n works but is kinda useless unless you wanna store exactly 1 letter from MyString...\nOne can just use the inefficient method I used in the mon stat lookup.",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_GBVM_SCRIPT",
+      "args": {
+        "script": ";const_def constants?\n; const NO_MOVE ;=0\n; const BITE;1\n; const TACKLE;2, etc.\n \nTableNames:\n .asciz \"Attacky\"\n .asciz \"Bite\"\n .asciz \"Tackle\" \n .db 255\n \n TableMoves:\n;  .db NO_MOVE\n  .db 1 ;power \n  .db 2 ; type \n  .db 3 ;effect \n  .db 255\n  ;use dw for storing in a word, db for storing a byte.\n  \n;VM_SET_CONST VAR_LETTER1, \"C\"\n;VM_SET_CONST VAR_LETTER2, \"A\"\n;VM_SET_CONST VAR_LETTER3, \"T\"\n\n"
+      },
+      "id": "9ed27448-5972-4878-9e6f-9719734b6545"
+    }
+  ]
+}

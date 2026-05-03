@@ -4,19 +4,20 @@
 #include "gbs_types.h"
 #include "data/sprite_checkbox_tileset.h"
 
+
 BANKREF(sprite_checkbox)
 
-#define SPRITE_30_STATE_DEFAULT 0
-#define SPRITE_30_STATE_EXPLODE 0
-#define SPRITE_30_STATE_OPEN 0
+#define SPRITE_19_STATE_DEFAULT 0
+#define SPRITE_19_STATE_EXPLODE 0
+#define SPRITE_19_STATE_OPEN 0
 
 const metasprite_t sprite_checkbox_metasprite_0[]  = {
-    { 0, 0, 0, 0 },
+    { 8, 8, 0, 0 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_checkbox_metasprite_1[]  = {
-    { 0, 0, 2, 0 },
+    { 8, 8, 2, 0 },
     {metasprite_end}
 };
 
@@ -61,7 +62,7 @@ const struct animation_t sprite_checkbox_animations[] = {
 };
 
 const UWORD sprite_checkbox_animations_lookup[] = {
-    SPRITE_30_STATE_DEFAULT
+    SPRITE_19_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_checkbox = {
@@ -74,10 +75,10 @@ const struct spritesheet_t sprite_checkbox = {
     .animations = sprite_checkbox_animations,
     .animations_lookup = sprite_checkbox_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_checkbox_tileset),
     .cgb_tileset = { NULL, NULL }

@@ -1,0 +1,102 @@
+{
+  "_resourceType": "sprite",
+  "id": "1bad1f09-f372-477b-8d69-987652048f1f",
+  "name": "octopus",
+  "symbol": "sprite_octopus",
+  "states": [
+    {
+      "id": "42a82ce0-1ae9-41bd-9a8a-7615e849f1bb",
+      "name": "",
+      "animationType": "multi_movement",
+      "flipLeft": true,
+      "animations": [
+        {
+          "id": "c13dc893-9b53-429d-aab5-6e0587d2674f",
+          "frames": [
+            {
+              "id": "78818bbe-1edc-4877-848c-ebdcd86df812",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "f766c83f-664f-4b3d-b435-9ddcaf1267d5",
+          "frames": [
+            {
+              "id": "3a1e88c8-f025-4ee1-bacd-9b6a93e8c009",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "07169a6f-be52-4ae5-9fc9-297cdaf82c44",
+          "frames": [
+            {
+              "id": "1d57f762-f7c0-4b30-87bf-202c2c0e7def",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "7b481979-4cae-42ba-92e7-ef2484671c2b",
+          "frames": [
+            {
+              "id": "8d19c41f-2f40-4adc-86e8-e0f1852a29d3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "6844a9ec-4160-4b4f-9812-e524f53fca96",
+          "frames": [
+            {
+              "id": "37c97760-ffc1-4000-8de7-3b8cfdf9a1e3",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "06401483-a930-4643-9a1d-06abb530cfc2",
+          "frames": [
+            {
+              "id": "76cce9c0-1669-4efd-9e67-befe480e6a74",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "b848dcd0-f6e0-4f8a-a11a-94735ce6b1ec",
+          "frames": [
+            {
+              "id": "3bd3b7ee-abea-4493-985d-0929615f8fb9",
+              "tiles": []
+            }
+          ]
+        },
+        {
+          "id": "c1304dc8-ced8-4e3c-9ebd-8c2603a4e71f",
+          "frames": [
+            {
+              "id": "1b698991-9aea-404e-aeb1-67e8542b6da3",
+              "tiles": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "numTiles": 0,
+  "canvasOriginX": 0,
+  "canvasOriginY": 0,
+  "canvasWidth": 32,
+  "canvasHeight": 32,
+  "boundsX": 0,
+  "boundsY": -8,
+  "boundsWidth": 16,
+  "boundsHeight": 16,
+  "animSpeed": 15,
+  "filename": "octopus.png",
+  "width": 32,
+  "height": 32,
+  "checksum": "b643e4408f9f42b4f75d48fb8d824a84bd827692"
+}

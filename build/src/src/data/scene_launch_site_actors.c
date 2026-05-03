@@ -23,45 +23,41 @@ const struct actor_t scene_launch_site_actors[] = {
     {
         // Pod Door,
         .pos = {
-            .x = 120 * 16,
-            .y = 72 * 16
+            .x = 3840,
+            .y = 2304
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_pod_door),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 255,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .reserve_tiles = 0
     },
     {
         // Scientist,
         .pos = {
-            .x = 64 * 16,
-            .y = 96 * 16
+            .x = 2048,
+            .y = 3072
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_UP,
         .sprite = TO_FAR_PTR_T(sprite_npc005),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_scientist_update),
         .script = TO_FAR_PTR_T(actor_scientist_interact),
         .reserve_tiles = 0
@@ -69,92 +65,84 @@ const struct actor_t scene_launch_site_actors[] = {
     {
         // Machine,
         .pos = {
-            .x = 32 * 16,
-            .y = 64 * 16
+            .x = 1024,
+            .y = 2048
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_machine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_machine_interact),
         .reserve_tiles = 0
     },
     {
         // Machine,
         .pos = {
-            .x = 16 * 16,
-            .y = 64 * 16
+            .x = 512,
+            .y = 2048
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_machine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_machine_0_interact),
         .reserve_tiles = 0
     },
     {
         // Machine,
         .pos = {
-            .x = 48 * 16,
-            .y = 80 * 16
+            .x = 1536,
+            .y = 2560
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_machine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_machine_1_interact),
         .reserve_tiles = 0
     },
     {
         // Machine,
         .pos = {
-            .x = 64 * 16,
-            .y = 80 * 16
+            .x = 2048,
+            .y = 2560
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_machine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_machine_2_interact),
         .reserve_tiles = 0
     }

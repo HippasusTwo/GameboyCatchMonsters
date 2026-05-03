@@ -1,0 +1,11 @@
+#ifndef SPRITE_TYPE6_TILESET_H
+#define SPRITE_TYPE6_TILESET_H
+
+// Tileset: sprite_type6_tileset
+
+#include "gbs_types.h"
+
+BANKREF_EXTERN(sprite_type6_tileset)
+extern const struct tileset_t sprite_type6_tileset;
+
+#endif

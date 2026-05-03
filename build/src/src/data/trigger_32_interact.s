@@ -18,17 +18,25 @@ _trigger_32_interact::
 
         VM_RESERVE              4
 
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 0
-
         ; Actor Set Position
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 12800
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 1664
+        ; -- Calculate coordinate values
+        VM_RPN
+            .R_INT16    25600
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    3328
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
+            .R_STOP
+        ; -- Position Actor
+        VM_SET_CONST            .LOCAL_ACTOR, 0
         VM_ACTOR_SET_POS        .LOCAL_ACTOR
 
         ; Camera Shake
         VM_SET_CONST            .LOCAL_TMP1_CAMERA_SHAKE_ARGS, 6
         VM_SET_CONST            ^/(.LOCAL_TMP1_CAMERA_SHAKE_ARGS + 1)/, .CAMERA_SHAKE_X
+        VM_RPN
+            .R_INT16    5
+            .R_REF_SET  ^/(.LOCAL_TMP1_CAMERA_SHAKE_ARGS + 2)/
+            .R_STOP
         VM_INVOKE               b_camera_shake_frames, _camera_shake_frames, 0, .LOCAL_TMP1_CAMERA_SHAKE_ARGS
 
         ; Stop Script

@@ -4,19 +4,20 @@
 #include "gbs_types.h"
 #include "data/sprite_ferret_tileset.h"
 
+
 BANKREF(sprite_ferret)
 
-#define SPRITE_9_STATE_DEFAULT 0
-#define SPRITE_9_STATE_EXPLODE 0
-#define SPRITE_9_STATE_OPEN 0
+#define SPRITE_34_STATE_DEFAULT 0
+#define SPRITE_34_STATE_EXPLODE 0
+#define SPRITE_34_STATE_OPEN 0
 
 const metasprite_t sprite_ferret_metasprite_0[]  = {
-    { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
+    { 8, 16, 0, 4 }, { 0, -8, 2, 4 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_ferret_metasprite_1[]  = {
-    { 0, 8, 4, 0 }, { 0, -8, 6, 0 },
+    { 8, 16, 4, 4 }, { 0, -8, 6, 4 },
     {metasprite_end}
 };
 
@@ -61,7 +62,7 @@ const struct animation_t sprite_ferret_animations[] = {
 };
 
 const UWORD sprite_ferret_animations_lookup[] = {
-    SPRITE_9_STATE_DEFAULT
+    SPRITE_34_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_ferret = {
@@ -74,10 +75,10 @@ const struct spritesheet_t sprite_ferret = {
     .animations = sprite_ferret_animations,
     .animations_lookup = sprite_ferret_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_ferret_tileset),
     .cgb_tileset = { NULL, NULL }

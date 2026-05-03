@@ -4,19 +4,20 @@
 #include "gbs_types.h"
 #include "data/sprite_machine_tileset.h"
 
+
 BANKREF(sprite_machine)
 
-#define SPRITE_41_STATE_DEFAULT 0
-#define SPRITE_41_STATE_EXPLODE 0
-#define SPRITE_41_STATE_OPEN 0
+#define SPRITE_32_STATE_DEFAULT 0
+#define SPRITE_32_STATE_EXPLODE 0
+#define SPRITE_32_STATE_OPEN 0
 
 const metasprite_t sprite_machine_metasprite_0[]  = {
-    { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
+    { 8, 16, 0, 6 }, { 0, -8, 2, 6 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_machine_metasprite_1[]  = {
-    { 0, 8, 4, 0 }, { 0, -8, 6, 0 },
+    { 8, 16, 4, 6 }, { 0, -8, 6, 6 },
     {metasprite_end}
 };
 
@@ -61,7 +62,7 @@ const struct animation_t sprite_machine_animations[] = {
 };
 
 const UWORD sprite_machine_animations_lookup[] = {
-    SPRITE_41_STATE_DEFAULT
+    SPRITE_32_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_machine = {
@@ -74,10 +75,10 @@ const struct spritesheet_t sprite_machine = {
     .animations = sprite_machine_animations,
     .animations_lookup = sprite_machine_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_machine_tileset),
     .cgb_tileset = { NULL, NULL }

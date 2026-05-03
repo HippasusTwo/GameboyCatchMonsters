@@ -4,7 +4,7 @@
 // Actors
 
 #include "gbs_types.h"
-#include "data/sprite_mouse.h"
+#include "data/sprite_ant.h"
 #include "data/actor_54_update.h"
 #include "data/actor_54_interact.h"
 #include "data/sprite_npc004.h"
@@ -22,25 +22,23 @@ BANKREF(scene_26_actors)
 
 const struct actor_t scene_26_actors[] = {
     {
-        // Actor 1,
+        // Critter,
         .pos = {
-            .x = 48 * 16,
-            .y = 40 * 16
+            .x = 1536,
+            .y = 1536
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
-        .sprite = TO_FAR_PTR_T(sprite_mouse),
-        .move_speed = 16,
+        .sprite = TO_FAR_PTR_T(sprite_ant),
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_54_update),
         .script = TO_FAR_PTR_T(actor_54_interact),
         .reserve_tiles = 0
@@ -48,115 +46,105 @@ const struct actor_t scene_26_actors[] = {
     {
         // Actor 2,
         .pos = {
-            .x = 112 * 16,
-            .y = 112 * 16
+            .x = 3584,
+            .y = 3584
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_RIGHT,
         .sprite = TO_FAR_PTR_T(sprite_npc004),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_66_interact),
         .reserve_tiles = 0
     },
     {
         // Actor 3,
         .pos = {
-            .x = 184 * 16,
-            .y = 64 * 16
+            .x = 5888,
+            .y = 2048
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_LEFT,
         .sprite = TO_FAR_PTR_T(sprite_npc004),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_67_interact),
         .reserve_tiles = 0
     },
     {
         // Rock 2,
         .pos = {
-            .x = 48 * 16,
-            .y = 256 * 16
+            .x = 1536,
+            .y = 8192
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_rock),
-        .move_speed = 8,
+        .move_speed = 16,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_68_interact),
         .reserve_tiles = 0
     },
     {
         // Rock 2,
         .pos = {
-            .x = 88 * 16,
-            .y = 56 * 16
+            .x = 2816,
+            .y = 1792
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_rock),
-        .move_speed = 8,
+        .move_speed = 16,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_69_interact),
         .reserve_tiles = 0
     },
     {
         // Rock 2,
         .pos = {
-            .x = 64 * 16,
-            .y = 32 * 16
+            .x = 2048,
+            .y = 1024
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_rock),
-        .move_speed = 8,
+        .move_speed = 16,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .script = TO_FAR_PTR_T(actor_70_interact),
         .reserve_tiles = 0
     }

@@ -3,11 +3,10 @@
 .include "vm.i"
 .include "data/game_globals.i"
 
-.globl b_wait_frames, _wait_frames, _fade_frames_per_step
+.globl _fade_frames_per_step
 
 .area _CODE_255
 
-.LOCAL_TMP0_WAIT_ARGS = -1
 
 ___bank_scene_24_init = 255
 .globl ___bank_scene_24_init
@@ -15,11 +14,11 @@ ___bank_scene_24_init = 255
 _scene_24_init::
         VM_LOCK
 
-        VM_RESERVE              1
+        ; Set Sprite Mode: 8x16
+        VM_SET_SPRITE_MODE      .MODE_8X16
 
-        ; Wait N Frames
-        VM_SET_CONST            .LOCAL_TMP0_WAIT_ARGS, 1
-        VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP0_WAIT_ARGS
+        ; Idle
+        VM_IDLE
 
         ; Fade In
         VM_SET_CONST_INT8       _fade_frames_per_step, 1

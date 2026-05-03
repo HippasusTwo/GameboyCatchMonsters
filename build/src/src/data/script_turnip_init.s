@@ -15,21 +15,26 @@ ___bank_script_turnip_init = 255
 _script_turnip_init::
         VM_RESERVE              4
 
-        ; If Variable True
+        ; If
+        ; -- If Truthy
         VM_PUSH_VALUE_IND       .SCRIPT_ARG_INDIRECT_0_VARIABLE
-        VM_IF_CONST             .GT, .ARG0, 0, 1$, 1
+        VM_IF_CONST             .NE, .ARG0, 0, 1$, 1
         VM_JUMP                 2$
 1$:
         ; Actor Deactivate
         VM_SET                  .LOCAL_ACTOR, .SCRIPT_ARG_1_ACTOR
         VM_ACTOR_DEACTIVATE     .LOCAL_ACTOR
 
-        ; Actor Set Active
-        VM_SET                  .LOCAL_ACTOR, .SCRIPT_ARG_1_ACTOR
-
         ; Actor Set Position
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 0
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 0
+        ; -- Calculate coordinate values
+        VM_RPN
+            .R_INT16    0
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    0
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
+            .R_STOP
+        ; -- Position Actor
+        VM_SET                  .LOCAL_ACTOR, .SCRIPT_ARG_1_ACTOR
         VM_ACTOR_SET_POS        .LOCAL_ACTOR
 
 2$:

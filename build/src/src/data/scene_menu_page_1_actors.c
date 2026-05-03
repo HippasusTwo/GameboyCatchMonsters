@@ -10,6 +10,7 @@
 #include "data/sprite_checkbox.h"
 #include "data/sprite_checkbox.h"
 #include "data/sprite_checkbox.h"
+#include "data/sprite_checkbox.h"
 
 BANKREF(scene_menu_page_1_actors)
 
@@ -17,133 +18,141 @@ const struct actor_t scene_menu_page_1_actors[] = {
     {
         // Quest1,
         .pos = {
-            .x = 16 * 16,
-            .y = 32 * 16
+            .x = 512,
+            .y = 1024
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_checkbox),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 255,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .reserve_tiles = 0
     },
     {
         // Quest2,
         .pos = {
-            .x = 16 * 16,
-            .y = 48 * 16
+            .x = 512,
+            .y = 2816
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_checkbox),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 255,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .reserve_tiles = 0
     },
     {
         // Quest3,
         .pos = {
-            .x = 16 * 16,
-            .y = 64 * 16
+            .x = 512,
+            .y = 2048
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_checkbox),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 255,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .reserve_tiles = 0
     },
     {
         // Quest4,
         .pos = {
-            .x = 16 * 16,
-            .y = 88 * 16
+            .x = 512,
+            .y = 1536
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_checkbox),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 255,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .reserve_tiles = 0
     },
     {
         // Quest5,
         .pos = {
-            .x = 16 * 16,
-            .y = 104 * 16
+            .x = 512,
+            .y = 3840
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_checkbox),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 255,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
         .reserve_tiles = 0
     },
     {
         // Quest6,
         .pos = {
-            .x = 16 * 16,
-            .y = 120 * 16
+            .x = 512,
+            .y = 3328
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_checkbox),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 255,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = TRUE,
+        .reserve_tiles = 0
+    },
+    {
+        // Quest2,
+        .pos = {
+            .x = 512,
+            .y = 2560
+        },
+        .bounds = {
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
+        },
+        .dir = DIR_DOWN,
+        .sprite = TO_FAR_PTR_T(sprite_checkbox),
+        .move_speed = 32,
+        .anim_tick = 255,
+        .flags = ACTOR_FLAG_COLLISION,
+        .collision_group = COLLISION_GROUP_NONE,
         .reserve_tiles = 0
     }
 };

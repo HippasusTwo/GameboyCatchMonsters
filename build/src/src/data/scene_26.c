@@ -5,8 +5,8 @@
 #include "gbs_types.h"
 #include "data/bg_overworld_playground_pix.h"
 #include "data/scene_26_collisions.h"
-#include "data/palette_13.h"
-#include "data/palette_17.h"
+#include "data/palette_15.h"
+#include "data/palette_19.h"
 #include "data/sprite_blackplayer.h"
 #include "data/scene_26_actors.h"
 #include "data/scene_26_triggers.h"
@@ -22,10 +22,16 @@ const struct scene_t scene_26 = {
     .background = TO_FAR_PTR_T(bg_overworld_playground_pix),
     .collisions = TO_FAR_PTR_T(scene_26_collisions),
     .parallax_rows = {
-        PARALLAX_STEP(0,0,0)
+        PARALLAX_STEP(0, 0, 0)
     },
-    .palette = TO_FAR_PTR_T(palette_13),
-    .sprite_palette = TO_FAR_PTR_T(palette_17),
+    .scroll_bounds = {
+        .left = 0,
+        .top = 0,
+        .right = 160,
+        .bottom = 176
+    },
+    .palette = TO_FAR_PTR_T(palette_15),
+    .sprite_palette = TO_FAR_PTR_T(palette_19),
     .reserve_tiles = 0,
     .player_sprite = TO_FAR_PTR_T(sprite_blackplayer),
     .n_actors = 6,

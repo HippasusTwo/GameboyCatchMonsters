@@ -14,37 +14,37 @@ BANKREF(scene_22_triggers)
 const struct trigger_t scene_22_triggers[] = {
     {
         // Trigger 1,
-        .x = 0,
-        .y = 0,
-        .width = 32,
-        .height = 1,
+        .left = 0,
+        .top = 0,
+        .right = 31,
+        .bottom = 0,
         .script = TO_FAR_PTR_T(trigger_51_interact),
         .script_flags = TRIGGER_HAS_ENTER_SCRIPT
     },
     {
         // Trigger 2,
-        .x = 31,
-        .y = 2,
-        .width = 1,
-        .height = 28,
+        .left = 31,
+        .top = 2,
+        .right = 31,
+        .bottom = 29,
         .script = TO_FAR_PTR_T(trigger_56_interact),
         .script_flags = TRIGGER_HAS_ENTER_SCRIPT
     },
     {
         // Trigger 3,
-        .x = 0,
-        .y = 2,
-        .width = 1,
-        .height = 29,
+        .left = 0,
+        .top = 2,
+        .right = 0,
+        .bottom = 30,
         .script = TO_FAR_PTR_T(trigger_58_interact),
         .script_flags = TRIGGER_HAS_ENTER_SCRIPT
     },
     {
         // Trigger 4,
-        .x = 2,
-        .y = 31,
-        .width = 28,
-        .height = 1,
+        .left = 2,
+        .top = 31,
+        .right = 29,
+        .bottom = 31,
         .script = TO_FAR_PTR_T(trigger_74_interact),
         .script_flags = TRIGGER_HAS_ENTER_SCRIPT
     }

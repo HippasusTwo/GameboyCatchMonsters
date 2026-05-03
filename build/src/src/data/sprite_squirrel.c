@@ -4,19 +4,20 @@
 #include "gbs_types.h"
 #include "data/sprite_squirrel_tileset.h"
 
+
 BANKREF(sprite_squirrel)
 
-#define SPRITE_12_STATE_DEFAULT 0
-#define SPRITE_12_STATE_EXPLODE 0
-#define SPRITE_12_STATE_OPEN 0
+#define SPRITE_8_STATE_DEFAULT 0
+#define SPRITE_8_STATE_EXPLODE 0
+#define SPRITE_8_STATE_OPEN 0
 
 const metasprite_t sprite_squirrel_metasprite_0[]  = {
-    { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
+    { 8, 16, 0, 3 }, { 0, -8, 2, 3 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_squirrel_metasprite_1[]  = {
-    { 0, 8, 4, 0 }, { 0, -8, 6, 0 },
+    { 8, 16, 4, 3 }, { 0, -8, 6, 3 },
     {metasprite_end}
 };
 
@@ -61,7 +62,7 @@ const struct animation_t sprite_squirrel_animations[] = {
 };
 
 const UWORD sprite_squirrel_animations_lookup[] = {
-    SPRITE_12_STATE_DEFAULT
+    SPRITE_8_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_squirrel = {
@@ -74,10 +75,10 @@ const struct spritesheet_t sprite_squirrel = {
     .animations = sprite_squirrel_animations,
     .animations_lookup = sprite_squirrel_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_squirrel_tileset),
     .cgb_tileset = { NULL, NULL }

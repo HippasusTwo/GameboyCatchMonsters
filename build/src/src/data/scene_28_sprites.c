@@ -9,6 +9,7 @@
 #include "data/sprite_pc_car.h"
 #include "data/sprite_hpbarfull.h"
 #include "data/sprite_player.h"
+#include "data/sprite_signpost.h"
 
 BANKREF(scene_28_sprites)
 
@@ -17,5 +18,6 @@ const far_ptr_t scene_28_sprites[] = {
     TO_FAR_PTR_T(sprite_ferret),
     TO_FAR_PTR_T(sprite_pc_car),
     TO_FAR_PTR_T(sprite_hpbarfull),
-    TO_FAR_PTR_T(sprite_player)
+    TO_FAR_PTR_T(sprite_player),
+    TO_FAR_PTR_T(sprite_signpost)
 };

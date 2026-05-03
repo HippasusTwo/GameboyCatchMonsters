@@ -4,19 +4,20 @@
 #include "gbs_types.h"
 #include "data/sprite_chest_tileset.h"
 
+
 BANKREF(sprite_chest)
 
-#define SPRITE_42_STATE_DEFAULT 0
-#define SPRITE_42_STATE_EXPLODE 0
-#define SPRITE_42_STATE_OPEN 8
+#define SPRITE_33_STATE_DEFAULT 0
+#define SPRITE_33_STATE_EXPLODE 0
+#define SPRITE_33_STATE_OPEN 8
 
 const metasprite_t sprite_chest_metasprite_0[]  = {
-    { 0, 8, 0, 0 }, { 0, -8, 0, 32 },
+    { 8, 16, 0, 5 }, { 0, -8, 0, 37 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_chest_metasprite_1[]  = {
-    { 0, 8, 2, 0 }, { 0, -8, 2, 32 },
+    { 8, 16, 2, 5 }, { 0, -8, 2, 37 },
     {metasprite_end}
 };
 
@@ -93,9 +94,9 @@ const struct animation_t sprite_chest_animations[] = {
 };
 
 const UWORD sprite_chest_animations_lookup[] = {
-    SPRITE_42_STATE_DEFAULT,
-    SPRITE_42_STATE_EXPLODE,
-    SPRITE_42_STATE_OPEN
+    SPRITE_33_STATE_DEFAULT,
+    SPRITE_33_STATE_EXPLODE,
+    SPRITE_33_STATE_OPEN
 };
 
 const struct spritesheet_t sprite_chest = {
@@ -108,10 +109,10 @@ const struct spritesheet_t sprite_chest = {
     .animations = sprite_chest_animations,
     .animations_lookup = sprite_chest_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_chest_tileset),
     .cgb_tileset = { NULL, NULL }

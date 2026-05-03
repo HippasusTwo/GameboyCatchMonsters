@@ -4,7 +4,7 @@
 .include "data/game_globals.i"
 .include "macro.i"
 
-.globl _fade_frames_per_step, ___bank_scene_21, _scene_21
+.globl _fade_frames_per_step, _camera_settings, ___bank_scene_21, _scene_21
 
 .area _CODE_255
 
@@ -21,11 +21,17 @@ _trigger_62_interact::
         ; Load Scene
         VM_SET_CONST_INT8       _fade_frames_per_step, 3
         VM_FADE_OUT             1
+        ; -- Calculate coordinate values
+        VM_RPN
+            .R_INT16    14336
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    9472
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
+            .R_STOP
         VM_SET_CONST            .LOCAL_ACTOR, 0
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 7168
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 4736
         VM_ACTOR_SET_POS        .LOCAL_ACTOR
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_DOWN
+        VM_SET_CONST_INT8       _camera_settings, .CAMERA_LOCK
         VM_RAISE                EXCEPTION_CHANGE_SCENE, 3
             IMPORT_FAR_PTR_DATA _scene_21
 

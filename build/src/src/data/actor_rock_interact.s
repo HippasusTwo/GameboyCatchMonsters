@@ -29,42 +29,38 @@ _actor_rock_interact::
         VM_IF_CONST             .EQ, .LOCAL_TMP1_PUSH_DIR_VAR, .DIR_RIGHT, 3$, 0
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    256
+            .R_INT16    512
             .R_OPERATOR .ADD
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 1)/, .ARG0
-        VM_POP                  1
         VM_JUMP                 4$
 1$:
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    256
+            .R_INT16    512
             .R_OPERATOR .SUB
             .R_INT16    0
             .R_OPERATOR .MAX
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 1)/, .ARG0
-        VM_POP                  1
         VM_JUMP                 4$
 2$:
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    256
+            .R_INT16    512
             .R_OPERATOR .SUB
             .R_INT16    0
             .R_OPERATOR .MAX
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 1)/, .ARG0
-        VM_POP                  1
         VM_JUMP                 4$
 3$:
         VM_RPN
             .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    256
+            .R_INT16    512
             .R_OPERATOR .ADD
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 1)/, .ARG0
-        VM_POP                  1
 4$:
         VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_CHECK_COLL
         VM_ACTOR_MOVE_TO        .LOCAL_ACTOR

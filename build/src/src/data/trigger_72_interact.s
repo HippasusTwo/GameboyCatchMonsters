@@ -13,7 +13,7 @@ _trigger_72_interact::
         VM_LOCK
 
         ; Input Script Attach
-        VM_CONTEXT_PREPARE      4, ___bank_script_input_3, _script_input_3
+        VM_CONTEXT_PREPARE      4, ___bank_script_input_21, _script_input_21
         VM_INPUT_ATTACH         16, 4
 
         ; Stop Script

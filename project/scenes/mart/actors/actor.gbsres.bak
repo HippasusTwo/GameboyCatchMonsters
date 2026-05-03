@@ -1,0 +1,73 @@
+{
+  "_resourceType": "actor",
+  "id": "35e1ac17-f691-4733-87b3-3fff6d256d0b",
+  "_index": 0,
+  "symbol": "actor_51",
+  "prefabId": "",
+  "name": "",
+  "coordinateType": "tiles",
+  "x": 2,
+  "y": 12,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "ca9d8e99-6850-4bde-841d-562e77c3bee1",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "collisionExtraFlags": [],
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "23",
+        "value": {
+          "type": "number",
+          "value": 13
+        }
+      },
+      "id": "9cbcca4b-e356-4948-853a-f9c53c5bbfed"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Nice haircut!\nOh sorry, we're out.\nWanna fight instead?"
+        ],
+        "avatarId": ""
+      },
+      "id": "6e73b4a8-86b6-427c-8ea6-1167216b5d85"
+    },
+    {
+      "command": "EVENT_SCENE_PUSH_STATE",
+      "args": {},
+      "id": "f424d909-99c5-469f-96be-b8666b6f568c"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "18945f27-9b63-4318-8a24-4f2e4997f098",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "2cc7bd7e-7a6a-4914-8b9c-cbe5dc8016ff"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

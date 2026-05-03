@@ -36,7 +36,7 @@
       "command": "EVENT_TEXT",
       "args": {
         "text": [
-          "Nice haircut!\nOh sorry, we're out.\nWanna fight instead?"
+          "Nice haircut!\nOh sorry, we're out now.\nWanna fight instead?"
         ],
         "avatarId": ""
       },

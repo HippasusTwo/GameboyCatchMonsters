@@ -32,57 +32,37 @@ _script_turnip_movement::
             .R_STOP
         VM_IF_CONST             .EQ, .ARG0, 0, 1$, 1
 
-        ; Actor Set Active
-        VM_SET                  .LOCAL_ACTOR, .SCRIPT_ARG_0_ACTOR
-
         ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    -512
-            .R_OPERATOR .ADD
+            .R_REF      .SCRIPT_ARG_0_ACTOR
+            .R_INT16    -1024
             .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    0
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, ^/(.ACTOR_ATTR_CHECK_COLL | .ACTOR_ATTR_H_FIRST)/
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        ; -- Move Actor
+        VM_ACTOR_MOVE_TO_INIT   .ARG2, ^/(.ACTOR_ATTR_CHECK_COLL_WALLS | .ACTOR_ATTR_CHECK_COLL_ACTORS | .ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_ACTOR_MOVE_TO_SET_DIR_X .ARG2
+        VM_ACTOR_MOVE_TO_X      .ARG2, ^/(.ACTOR_ATTR_CHECK_COLL_WALLS | .ACTOR_ATTR_CHECK_COLL_ACTORS | .ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_POP                  3
 
         VM_JUMP                 2$
 1$:
-        ; Actor Set Active
-        VM_SET                  .LOCAL_ACTOR, .SCRIPT_ARG_0_ACTOR
-
         ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    512
-            .R_OPERATOR .ADD
+            .R_REF      .SCRIPT_ARG_0_ACTOR
+            .R_INT16    1024
             .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    0
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, ^/(.ACTOR_ATTR_CHECK_COLL | .ACTOR_ATTR_H_FIRST)/
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        ; -- Move Actor
+        VM_ACTOR_MOVE_TO_INIT   .ARG2, ^/(.ACTOR_ATTR_CHECK_COLL_WALLS | .ACTOR_ATTR_CHECK_COLL_ACTORS | .ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_ACTOR_MOVE_TO_SET_DIR_X .ARG2
+        VM_ACTOR_MOVE_TO_X      .ARG2, ^/(.ACTOR_ATTR_CHECK_COLL_WALLS | .ACTOR_ATTR_CHECK_COLL_ACTORS | .ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_POP                  3
 
 2$:
 
-        ; Wait N Frames
+        ; Wait 60 frames
         VM_SET_CONST            .LOCAL_TMP2_WAIT_ARGS, 60
         VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP2_WAIT_ARGS
 

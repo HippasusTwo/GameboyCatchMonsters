@@ -4,6 +4,7 @@
 #include "gbs_types.h"
 #include "data/sprite_cat_tileset.h"
 
+
 BANKREF(sprite_cat)
 
 #define SPRITE_4_STATE_DEFAULT 0
@@ -11,12 +12,12 @@ BANKREF(sprite_cat)
 #define SPRITE_4_STATE_OPEN 0
 
 const metasprite_t sprite_cat_metasprite_0[]  = {
-    { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
+    { 8, 16, 0, 4 }, { 0, -8, 2, 4 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_cat_metasprite_1[]  = {
-    { 0, 8, 4, 0 }, { 0, -8, 6, 0 },
+    { 8, 16, 4, 4 }, { 0, -8, 6, 4 },
     {metasprite_end}
 };
 
@@ -74,10 +75,10 @@ const struct spritesheet_t sprite_cat = {
     .animations = sprite_cat_animations,
     .animations_lookup = sprite_cat_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_cat_tileset),
     .cgb_tileset = { NULL, NULL }

@@ -48,8 +48,8 @@
     },
     {
       "id": "9",
-      "name": "Quest10",
-      "symbol": "var_quest10"
+      "name": "QuestCoin",
+      "symbol": "var_questcoin"
     },
     {
       "id": "10",
@@ -178,8 +178,8 @@
     },
     {
       "id": "35",
-      "name": "BattlerSpecies5",
-      "symbol": "var_battlerspecies5"
+      "name": "BattlerSpecies7",
+      "symbol": "var_battlerspecies7"
     },
     {
       "id": "36",
@@ -525,6 +525,11 @@
       "id": "471",
       "name": "BattlerSpecies2",
       "symbol": "var_battlerspecies2"
+    },
+    {
+      "id": "470",
+      "name": "BattlerSpecies6",
+      "symbol": "var_battlerspecies6"
     }
   ],
   "constants": []

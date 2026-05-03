@@ -4,29 +4,30 @@
 #include "gbs_types.h"
 #include "data/sprite_fire_tileset.h"
 
+
 BANKREF(sprite_fire)
 
-#define SPRITE_23_STATE_DEFAULT 0
-#define SPRITE_23_STATE_EXPLODE 0
-#define SPRITE_23_STATE_OPEN 0
+#define SPRITE_11_STATE_DEFAULT 0
+#define SPRITE_11_STATE_EXPLODE 0
+#define SPRITE_11_STATE_OPEN 0
 
 const metasprite_t sprite_fire_metasprite_0[]  = {
-    { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
+    { 8, 16, 0, 3 }, { 0, -8, 2, 3 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_fire_metasprite_1[]  = {
-    { 0, 8, 4, 0 }, { 0, -8, 6, 0 },
+    { 8, 16, 4, 3 }, { 0, -8, 6, 3 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_fire_metasprite_2[]  = {
-    { 0, 8, 8, 0 }, { 0, -8, 10, 0 },
+    { 8, 16, 8, 3 }, { 0, -8, 10, 3 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_fire_metasprite_3[]  = {
-    { 0, 8, 12, 0 }, { 0, -8, 14, 0 },
+    { 8, 16, 12, 3 }, { 0, -8, 14, 3 },
     {metasprite_end}
 };
 
@@ -73,7 +74,7 @@ const struct animation_t sprite_fire_animations[] = {
 };
 
 const UWORD sprite_fire_animations_lookup[] = {
-    SPRITE_23_STATE_DEFAULT
+    SPRITE_11_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_fire = {
@@ -86,10 +87,10 @@ const struct spritesheet_t sprite_fire = {
     .animations = sprite_fire_animations,
     .animations_lookup = sprite_fire_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_fire_tileset),
     .cgb_tileset = { NULL, NULL }

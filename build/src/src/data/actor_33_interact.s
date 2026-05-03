@@ -3,6 +3,8 @@
 .include "vm.i"
 .include "data/game_globals.i"
 
+.globl _fade_frames_per_step
+
 .area _CODE_255
 
 .LOCAL_TMP0_HAS_LOADED = -1
@@ -16,10 +18,10 @@ _actor_33_interact::
         VM_RESERVE              1
 
         ; Text Multiple Choice
-        VM_LOAD_TEXT            0
-        .asciz "\001\001\003\003\002Save Game\n\003\003\003Cancel"
         VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/
         VM_OVERLAY_MOVE_TO      0, 14, .OVERLAY_IN_SPEED
+        VM_LOAD_TEXT            0
+        .asciz "\001\001\003\003\002Save Game\012\003\003\003Cancel"
         VM_DISPLAY_TEXT
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/
         VM_CHOICE               VAR_S20A0_LOCAL_0, ^/(.UI_MENU_LAST_0 | .UI_MENU_CANCEL_B)/, 2
@@ -28,8 +30,9 @@ _actor_33_interact::
         VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/
 
-        ; If Variable True
-        VM_IF_CONST             .GT, VAR_S20A0_LOCAL_0, 0, 1$, 0
+        ; If
+        ; -- If Truthy
+        VM_IF_CONST             .NE, VAR_S20A0_LOCAL_0, 0, 1$, 0
         VM_JUMP                 2$
 1$:
         ; Save Data to Slot 0
@@ -39,26 +42,39 @@ _actor_33_interact::
         VM_IF_CONST             .EQ, .LOCAL_TMP0_HAS_LOADED, 1, 3$, 0
 
         ; Text Dialogue
-        VM_LOAD_TEXT            0
-        .asciz "Game progress has\nbeen saved."
-        VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/
+        VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, .UI_DRAW_FRAME
+        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_SPEED_INSTANT
         VM_OVERLAY_MOVE_TO      0, 14, .OVERLAY_IN_SPEED
+        VM_OVERLAY_SET_SCROLL   1, 1, 18, 5, .UI_COLOR_WHITE
+        VM_LOAD_TEXT            0
+        .asciz "Game progress has\012been saved."
         VM_DISPLAY_TEXT
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT | .UI_WAIT_BTN_A)/
         VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/
 
         ; Text Dialogue
-        VM_LOAD_TEXT            0
-        .asciz "The Church of the Holy\nSavepoint welcomes you."
-        VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/
+        VM_OVERLAY_CLEAR        0, 0, 20, 4, .UI_COLOR_WHITE, .UI_DRAW_FRAME
+        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_SPEED_INSTANT
         VM_OVERLAY_MOVE_TO      0, 14, .OVERLAY_IN_SPEED
+        VM_OVERLAY_SET_SCROLL   1, 1, 18, 5, .UI_COLOR_WHITE
+        VM_LOAD_TEXT            0
+        .asciz "The Church of the Holy\012Savepoint welcomes you."
         VM_DISPLAY_TEXT
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT | .UI_WAIT_BTN_A)/
         VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/
 
+        VM_JUMP                 4$
 3$:
+        ; Idle
+        VM_IDLE
+
+        ; Fade In
+        VM_SET_CONST_INT8       _fade_frames_per_step, 3
+        VM_FADE_IN              1
+
+4$:
 
 2$:
 

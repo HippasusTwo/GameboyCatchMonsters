@@ -4,39 +4,40 @@
 #include "gbs_types.h"
 #include "data/sprite_enemy_ship_tileset.h"
 
+
 BANKREF(sprite_enemy_ship)
 
-#define SPRITE_33_STATE_DEFAULT 0
-#define SPRITE_33_STATE_EXPLODE 8
-#define SPRITE_33_STATE_OPEN 0
+#define SPRITE_22_STATE_DEFAULT 0
+#define SPRITE_22_STATE_EXPLODE 8
+#define SPRITE_22_STATE_OPEN 0
 
 const metasprite_t sprite_enemy_ship_metasprite_0[]  = {
-    { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
+    { 8, 16, 0, 4 }, { 0, -8, 2, 4 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_enemy_ship_metasprite_1[]  = {
-    { 0, 8, 4, 0 }, { 0, -8, 2, 0 },
+    { 8, 16, 4, 4 }, { 0, -8, 2, 4 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_enemy_ship_metasprite_2[]  = {
-    { 0, 8, 6, 0 }, { 0, -8, 8, 0 },
+    { 8, 16, 6, 0 }, { 0, -8, 8, 0 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_enemy_ship_metasprite_3[]  = {
-    { 0, 8, 10, 0 }, { 0, -8, 12, 0 },
+    { 8, 16, 10, 0 }, { 0, -8, 12, 0 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_enemy_ship_metasprite_4[]  = {
-    { 0, 8, 14, 0 }, { 0, -8, 16, 0 },
+    { 8, 16, 14, 0 }, { 0, -8, 16, 0 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_enemy_ship_metasprite_5[]  = {
-    { 0, 8, 18, 0 }, { 0, -8, 20, 0 },
+    { 8, 16, 18, 0 }, { 0, -8, 20, 0 },
     {metasprite_end}
 };
 
@@ -117,8 +118,8 @@ const struct animation_t sprite_enemy_ship_animations[] = {
 };
 
 const UWORD sprite_enemy_ship_animations_lookup[] = {
-    SPRITE_33_STATE_DEFAULT,
-    SPRITE_33_STATE_EXPLODE
+    SPRITE_22_STATE_DEFAULT,
+    SPRITE_22_STATE_EXPLODE
 };
 
 const struct spritesheet_t sprite_enemy_ship = {
@@ -131,10 +132,10 @@ const struct spritesheet_t sprite_enemy_ship = {
     .animations = sprite_enemy_ship_animations,
     .animations_lookup = sprite_enemy_ship_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_enemy_ship_tileset),
     .cgb_tileset = { NULL, NULL }

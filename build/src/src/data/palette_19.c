@@ -14,12 +14,12 @@ const struct palette_t palette_19 = {
     },
     .cgb_palette = {
         CGB_PALETTE(RGB(31, 30, 28), RGB(31, 30, 28), RGB(27, 16, 15), RGB(1, 4, 9)),
-        CGB_PALETTE(RGB(23, 26, 26), RGB(23, 26, 26), RGB(27, 16, 27), RGB(1, 4, 9)),
+        CGB_PALETTE(RGB(25, 26, 30), RGB(25, 26, 30), RGB(18, 19, 25), RGB(4, 5, 10)),
         CGB_PALETTE(RGB(28, 31, 20), RGB(28, 31, 20), RGB(15, 25, 7), RGB(1, 4, 9)),
-        CGB_PALETTE(RGB(31, 27, 21), RGB(31, 27, 21), RGB(28, 21, 15), RGB(1, 4, 9)),
-        CGB_PALETTE(RGB(23, 26, 26), RGB(23, 26, 26), RGB(27, 16, 27), RGB(1, 4, 9)),
-        CGB_PALETTE(RGB(25, 29, 31), RGB(25, 29, 31), RGB(29, 27, 23), RGB(4, 5, 10)),
-        CGB_PALETTE(RGB(29, 31, 24), RGB(29, 31, 24), RGB(22, 30, 30), RGB(4, 5, 20)),
-        CGB_PALETTE(RGB(31, 29, 25), RGB(31, 29, 25), RGB(27, 18, 9), RGB(1, 4, 9))
+        CGB_PALETTE(RGB(31, 21, 21), RGB(31, 21, 21), RGB(30, 8, 8), RGB(13, 4, 4)),
+        CGB_PALETTE(RGB(31, 14, 28), RGB(31, 14, 28), RGB(22, 9, 17), RGB(4, 5, 10)),
+        CGB_PALETTE(RGB(31, 31, 28), RGB(31, 31, 28), RGB(30, 30, 7), RGB(13, 6, 4)),
+        CGB_PALETTE(RGB(29, 30, 31), RGB(29, 30, 31), RGB(17, 22, 31), RGB(4, 5, 20)),
+        CGB_PALETTE(RGB(31, 27, 21), RGB(31, 27, 21), RGB(28, 21, 15), RGB(1, 4, 9))
     }
 };

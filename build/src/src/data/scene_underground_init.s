@@ -3,12 +3,11 @@
 .include "vm.i"
 .include "data/game_globals.i"
 
-.globl b_wait_frames, _wait_frames, _fade_frames_per_step
+.globl _fade_frames_per_step
 
 .area _CODE_255
 
 .LOCAL_ACTOR = -4
-.LOCAL_TMP1_WAIT_ARGS = -4
 
 ___bank_scene_underground_init = 255
 .globl ___bank_scene_underground_init
@@ -18,21 +17,25 @@ _scene_underground_init::
 
         VM_RESERVE              4
 
-        ; If Variable True
-        VM_IF_CONST             .GT, VAR_VARIABLE_1, 0, 1$, 0
-        ; Actor Deactivate
-        VM_SET_CONST            .LOCAL_ACTOR, 6
-        VM_ACTOR_DEACTIVATE     .LOCAL_ACTOR
-
-        VM_JUMP                 2$
-1$:
+        ; If
+        ; -- If Falsy
+        VM_IF_CONST             .EQ, VAR_QUEST2, 0, 1$, 0
         ; Actor Set Active
         VM_SET_CONST            .LOCAL_ACTOR, 6
 
         ; Actor Set Collisions
         VM_ACTOR_SET_COLL_ENABLED .LOCAL_ACTOR, 0
 
+        VM_JUMP                 2$
+1$:
+        ; Actor Deactivate
+        VM_SET_CONST            .LOCAL_ACTOR, 6
+        VM_ACTOR_DEACTIVATE     .LOCAL_ACTOR
+
 2$:
+
+        ; Set Sprite Mode: 8x16
+        VM_SET_SPRITE_MODE      .MODE_8X16
 
         ; Call Script: Init Menu
         VM_CALL_FAR             ___bank_script_init_menu, _script_init_menu
@@ -40,23 +43,27 @@ _scene_underground_init::
         ; Music Play
         VM_MUSIC_PLAY           ___bank_song_rulz_undergroundcave_0_Data, _song_rulz_undergroundcave_0_Data, .MUSIC_NO_LOOP
 
-        ; If Variable True
-        VM_IF_CONST             .GT, VAR_VARIABLE_16, 0, 3$, 0
+        ; If
+        ; -- If Truthy
+        VM_IF_CONST             .NE, VAR_PUSHED_ICE_BLOCK, 0, 3$, 0
         VM_JUMP                 4$
 3$:
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 2
-
         ; Actor Set Position
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 3072
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 1920
+        ; -- Calculate coordinate values
+        VM_RPN
+            .R_INT16    6144
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    3840
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
+            .R_STOP
+        ; -- Position Actor
+        VM_SET_CONST            .LOCAL_ACTOR, 2
         VM_ACTOR_SET_POS        .LOCAL_ACTOR
 
 4$:
 
-        ; Wait N Frames
-        VM_SET_CONST            .LOCAL_TMP1_WAIT_ARGS, 1
-        VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP1_WAIT_ARGS
+        ; Idle
+        VM_IDLE
 
         ; Fade In
         VM_SET_CONST_INT8       _fade_frames_per_step, 1

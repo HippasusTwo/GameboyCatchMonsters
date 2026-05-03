@@ -4,49 +4,50 @@
 #include "gbs_types.h"
 #include "data/sprite_pc_car_tileset.h"
 
+
 BANKREF(sprite_pc_car)
 
-#define SPRITE_52_STATE_DEFAULT 0
-#define SPRITE_52_STATE_EXPLODE 0
-#define SPRITE_52_STATE_OPEN 0
+#define SPRITE_54_STATE_DEFAULT 0
+#define SPRITE_54_STATE_EXPLODE 0
+#define SPRITE_54_STATE_OPEN 0
 
 const metasprite_t sprite_pc_car_metasprite_0[]  = {
-    { 0, 8, 6, 96 }, { 0, -8, 4, 96 },
+    { 8, 16, 6, 99 }, { 0, -8, 4, 99 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_pc_car_metasprite_1[]  = {
-    { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
+    { 8, 16, 0, 3 }, { 0, -8, 2, 3 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_pc_car_metasprite_2[]  = {
-    { 0, 8, 4, 0 }, { 0, -8, 6, 0 },
+    { 8, 16, 4, 3 }, { 0, -8, 6, 3 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_pc_car_metasprite_3[]  = {
-    { 0, 0, 0, 32 }, { 0, 8, 2, 32 },
+    { 8, 8, 0, 35 }, { 0, 8, 2, 35 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_pc_car_metasprite_4[]  = {
-    { 0, 8, 14, 96 }, { 0, -8, 12, 96 },
+    { 8, 16, 14, 99 }, { 0, -8, 12, 99 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_pc_car_metasprite_5[]  = {
-    { 0, 8, 8, 0 }, { 0, -8, 10, 0 },
+    { 8, 16, 8, 3 }, { 0, -8, 10, 3 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_pc_car_metasprite_6[]  = {
-    { 0, 8, 12, 0 }, { 0, -8, 14, 0 },
+    { 8, 16, 12, 3 }, { 0, -8, 14, 3 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_pc_car_metasprite_7[]  = {
-    { 0, 0, 8, 32 }, { 0, 8, 10, 32 },
+    { 8, 8, 8, 35 }, { 0, 8, 10, 35 },
     {metasprite_end}
 };
 
@@ -101,7 +102,7 @@ const struct animation_t sprite_pc_car_animations[] = {
 };
 
 const UWORD sprite_pc_car_animations_lookup[] = {
-    SPRITE_52_STATE_DEFAULT
+    SPRITE_54_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_pc_car = {
@@ -114,10 +115,10 @@ const struct spritesheet_t sprite_pc_car = {
     .animations = sprite_pc_car_animations,
     .animations_lookup = sprite_pc_car_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_pc_car_tileset),
     .cgb_tileset = { NULL, NULL }

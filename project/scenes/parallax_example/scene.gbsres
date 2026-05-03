@@ -95,7 +95,8 @@
       "command": "EVENT_MUSIC_PLAY",
       "args": {
         "musicId": "9aac47ff-51d7-48bf-9f15-1ce01b3872a4",
-        "loop": true
+        "loop": true,
+        "__collapse": true
       }
     },
     {
@@ -104,6 +105,65 @@
         "customEventId": "15f99150-e8d9-4117-99ad-2f112df523d0"
       },
       "id": "ed36dca4-20cd-4b69-9be8-687f555e4ad4"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "510",
+        "value": {
+          "type": "number",
+          "value": 66
+        }
+      },
+      "id": "d00be303-018d-4a8d-8190-65ee407108da"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "509",
+        "value": {
+          "type": "number",
+          "value": 67
+        }
+      },
+      "id": "edbe1274-661c-4421-a1eb-5899a54b85db"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "505",
+        "value": {
+          "type": "number",
+          "value": 65
+        }
+      },
+      "id": "8d745298-3b26-40e7-af99-ff468e535c45"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "%c$510$ %c$509$ %d$505$ #505#"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30,
+        "__comment": true
+      },
+      "id": "ccaeb0e8-253a-4bee-b5e7-ac8c8c13301e"
     }
   ],
   "playerHit1Script": [],

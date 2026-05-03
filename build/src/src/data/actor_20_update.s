@@ -14,8 +14,9 @@ _actor_20_update::
         VM_RESERVE              4
 
 1$:
-        ; If Variable True
-        VM_IF_CONST             .GT, VAR_MUSIC_HOUSE_PLAYING, 0, 2$, 0
+        ; If
+        ; -- If Truthy
+        VM_IF_CONST             .NE, VAR_MUSIC_HOUSE_PLAYING, 0, 2$, 0
         ; Actor Set Active
         VM_SET_CONST            .LOCAL_ACTOR, 3
 

@@ -1,0 +1,12 @@
+#ifndef SCENE_TYPES_H
+#define SCENE_TYPES_H
+
+typedef enum {
+    SCENE_TYPE_ADVENTURE = 0,
+    SCENE_TYPE_LOGO,
+    SCENE_TYPE_PLATFORM,
+    SCENE_TYPE_POINTNCLICK,
+    SCENE_TYPE_SHMUP,
+    SCENE_TYPE_TOPDOWN
+} scene_type_e;
+#endif

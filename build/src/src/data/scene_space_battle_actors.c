@@ -57,45 +57,41 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 1,
         .pos = {
-            .x = 0 * 16,
-            .y = 8 * 16
+            .x = 0,
+            .y = 256
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_ui_weapon),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = TRUE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_PINNED,
         .collision_group = COLLISION_GROUP_NONE,
-        .collision_enabled = FALSE,
         .reserve_tiles = 0
     },
     {
         // Actor 2,
         .pos = {
-            .x = 288 * 16,
-            .y = 72 * 16
+            .x = 9216,
+            .y = 2304
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_enemy_ship),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_3_update),
         .script = TO_FAR_PTR_T(actor_3_interact),
         .reserve_tiles = 0
@@ -103,23 +99,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 3,
         .pos = {
-            .x = 536 * 16,
-            .y = 112 * 16
+            .x = 17152,
+            .y = 3584
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_enemy_ship),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_4_update),
         .script = TO_FAR_PTR_T(actor_4_interact),
         .reserve_tiles = 0
@@ -127,23 +121,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 4,
         .pos = {
-            .x = 608 * 16,
-            .y = 32 * 16
+            .x = 19456,
+            .y = 1024
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_enemy_ship),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_5_update),
         .script = TO_FAR_PTR_T(actor_5_interact),
         .reserve_tiles = 0
@@ -151,23 +143,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 5,
         .pos = {
-            .x = 688 * 16,
-            .y = 112 * 16
+            .x = 22016,
+            .y = 3584
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_enemy_ship),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_6_update),
         .script = TO_FAR_PTR_T(actor_6_interact),
         .reserve_tiles = 0
@@ -175,23 +165,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 6,
         .pos = {
-            .x = 1824 * 16,
-            .y = 24 * 16
+            .x = 58368,
+            .y = 768
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_enemy_ship),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_7_update),
         .script = TO_FAR_PTR_T(actor_7_interact),
         .reserve_tiles = 0
@@ -199,23 +187,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 7,
         .pos = {
-            .x = 1744 * 16,
-            .y = 72 * 16
+            .x = 55808,
+            .y = 2304
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_enemy_ship),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_8_update),
         .script = TO_FAR_PTR_T(actor_8_interact),
         .reserve_tiles = 0
@@ -223,23 +209,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 8,
         .pos = {
-            .x = 1832 * 16,
-            .y = 120 * 16
+            .x = 58624,
+            .y = 3840
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_enemy_ship),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_9_update),
         .script = TO_FAR_PTR_T(actor_9_interact),
         .reserve_tiles = 0
@@ -247,23 +231,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 9,
         .pos = {
-            .x = 888 * 16,
-            .y = 72 * 16
+            .x = 28416,
+            .y = 2304
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_space_mine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_10_update),
         .script = TO_FAR_PTR_T(actor_10_interact),
         .reserve_tiles = 0
@@ -271,23 +253,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 10,
         .pos = {
-            .x = 1040 * 16,
-            .y = 24 * 16
+            .x = 33280,
+            .y = 768
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_space_mine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_11_update),
         .script = TO_FAR_PTR_T(actor_11_interact),
         .reserve_tiles = 0
@@ -295,23 +275,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 11,
         .pos = {
-            .x = 1320 * 16,
-            .y = 120 * 16
+            .x = 42240,
+            .y = 3840
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_space_mine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_12_update),
         .script = TO_FAR_PTR_T(actor_12_interact),
         .reserve_tiles = 0
@@ -319,23 +297,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 12,
         .pos = {
-            .x = 1120 * 16,
-            .y = 24 * 16
+            .x = 35840,
+            .y = 768
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_space_mine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_13_update),
         .script = TO_FAR_PTR_T(actor_13_interact),
         .reserve_tiles = 0
@@ -343,23 +319,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 13,
         .pos = {
-            .x = 1200 * 16,
-            .y = 24 * 16
+            .x = 38400,
+            .y = 768
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_space_mine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_14_update),
         .script = TO_FAR_PTR_T(actor_14_interact),
         .reserve_tiles = 0
@@ -367,23 +341,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 14,
         .pos = {
-            .x = 1400 * 16,
-            .y = 120 * 16
+            .x = 44800,
+            .y = 3840
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_space_mine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_15_update),
         .script = TO_FAR_PTR_T(actor_15_interact),
         .reserve_tiles = 0
@@ -391,23 +363,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 15,
         .pos = {
-            .x = 1480 * 16,
-            .y = 120 * 16
+            .x = 47360,
+            .y = 3840
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_space_mine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_16_update),
         .script = TO_FAR_PTR_T(actor_16_interact),
         .reserve_tiles = 0
@@ -415,23 +385,21 @@ const struct actor_t scene_space_battle_actors[] = {
     {
         // Actor 16,
         .pos = {
-            .x = 1648 * 16,
-            .y = 72 * 16
+            .x = 52736,
+            .y = 2304
         },
         .bounds = {
-            .left = 0,
-            .bottom = 7,
-            .right = 15,
-            .top = -8
+            .left = PX_TO_SUBPX(0),
+            .bottom = PX_TO_SUBPX(8) - 1,
+            .right = PX_TO_SUBPX(16) - 1,
+            .top = PX_TO_SUBPX(-8)
         },
         .dir = DIR_DOWN,
         .sprite = TO_FAR_PTR_T(sprite_space_mine),
-        .move_speed = 16,
+        .move_speed = 32,
         .anim_tick = 15,
-        .pinned = FALSE,
-        .persistent = FALSE,
+        .flags = ACTOR_FLAG_COLLISION,
         .collision_group = COLLISION_GROUP_1,
-        .collision_enabled = TRUE,
         .script_update = TO_FAR_PTR_T(actor_17_update),
         .script = TO_FAR_PTR_T(actor_17_interact),
         .reserve_tiles = 0

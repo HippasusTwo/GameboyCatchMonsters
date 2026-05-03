@@ -4,29 +4,30 @@
 #include "gbs_types.h"
 #include "data/sprite_npc007_tileset.h"
 
+
 BANKREF(sprite_npc007)
 
-#define SPRITE_21_STATE_DEFAULT 0
-#define SPRITE_21_STATE_EXPLODE 0
-#define SPRITE_21_STATE_OPEN 0
+#define SPRITE_9_STATE_DEFAULT 0
+#define SPRITE_9_STATE_EXPLODE 0
+#define SPRITE_9_STATE_OPEN 0
 
 const metasprite_t sprite_npc007_metasprite_0[]  = {
-    { 0, 8, 8, 0 }, { 0, -8, 10, 0 },
+    { 8, 16, 8, 6 }, { 0, -8, 10, 6 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_npc007_metasprite_1[]  = {
-    { 0, 8, 0, 0 }, { 0, -8, 2, 0 },
+    { 8, 16, 0, 6 }, { 0, -8, 2, 6 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_npc007_metasprite_2[]  = {
-    { 0, 8, 4, 0 }, { 0, -8, 6, 0 },
+    { 8, 16, 4, 6 }, { 0, -8, 6, 6 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_npc007_metasprite_3[]  = {
-    { 0, 0, 0, 32 }, { 0, 8, 2, 32 },
+    { 8, 8, 0, 38 }, { 0, 8, 2, 38 },
     {metasprite_end}
 };
 
@@ -73,7 +74,7 @@ const struct animation_t sprite_npc007_animations[] = {
 };
 
 const UWORD sprite_npc007_animations_lookup[] = {
-    SPRITE_21_STATE_DEFAULT
+    SPRITE_9_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_npc007 = {
@@ -86,10 +87,10 @@ const struct spritesheet_t sprite_npc007 = {
     .animations = sprite_npc007_animations,
     .animations_lookup = sprite_npc007_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_npc007_tileset),
     .cgb_tileset = { NULL, NULL }

@@ -11,7 +11,7 @@ ___bank_script_init_menu = 255
 
 _script_init_menu::
         ; Input Script Attach
-        VM_CONTEXT_PREPARE      1, ___bank_script_input_0, _script_input_0
+        VM_CONTEXT_PREPARE      1, ___bank_script_input, _script_input
         VM_INPUT_ATTACH         128, ^/(1 | .OVERRIDE_DEFAULT)/
 
         VM_RET_FAR

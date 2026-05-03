@@ -19,33 +19,21 @@ _trigger_13_interact::
         VM_SET_CONST            .LOCAL_ACTOR, 9
         VM_ACTOR_ACTIVATE       .LOCAL_ACTOR
 
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 9
-
         ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    9
             .R_INT16    0
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    128
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
+            .R_INT16    256
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_H_FIRST
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        ; -- Move Actor
+        VM_ACTOR_MOVE_TO_INIT   .ARG2, ^/(.ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_ACTOR_MOVE_TO_SET_DIR_Y .ARG2
+        VM_ACTOR_MOVE_TO_Y      .ARG2, ^/(.ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_POP                  3
 
-        ; Actor Set Active
+        ; Actor Set Direction To
         VM_SET_CONST            .LOCAL_ACTOR, 9
-
-        ; Actor Set Direction
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_LEFT
 
         ; Actor Set Active
@@ -54,49 +42,55 @@ _trigger_13_interact::
         ; Actor Emote
         VM_ACTOR_EMOTE          .LOCAL_ACTOR, ___bank_emote_shock, _emote_shock
 
+        ; If Variable .EQ Value
+        VM_IF_CONST             .EQ, VAR_QUESTGRUMPY, 0, 5$, 0
         ; Text Dialogue
-        VM_LOAD_TEXT            0
-        .asciz "HEY!!!\nKEEP OFF MY\nFLOWERS!"
-        VM_OVERLAY_CLEAR        0, 0, 20, 5, .UI_COLOR_WHITE, ^/(.UI_AUTO_SCROLL | .UI_DRAW_FRAME)/
+        VM_OVERLAY_CLEAR        0, 0, 20, 5, .UI_COLOR_WHITE, .UI_DRAW_FRAME
+        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_SPEED_INSTANT
         VM_OVERLAY_MOVE_TO      0, 13, .OVERLAY_IN_SPEED
+        VM_OVERLAY_SET_SCROLL   1, 1, 18, 5, .UI_COLOR_WHITE
+        VM_LOAD_TEXT            0
+        .asciz "Hmf. I suppose my\012kid can come home now.\012Still stay off my flowers!"
         VM_DISPLAY_TEXT
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT | .UI_WAIT_BTN_A)/
         VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED
         VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/
 
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 0
+        VM_JUMP                 6$
+5$:
+        ; Text Dialogue
+        VM_OVERLAY_CLEAR        0, 0, 20, 5, .UI_COLOR_WHITE, .UI_DRAW_FRAME
+        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_SPEED_INSTANT
+        VM_OVERLAY_MOVE_TO      0, 13, .OVERLAY_IN_SPEED
+        VM_OVERLAY_SET_SCROLL   1, 1, 18, 5, .UI_COLOR_WHITE
+        VM_LOAD_TEXT            0
+        .asciz "HEY!!!\012KEEP OFF MY\012FLOWERS!"
+        VM_DISPLAY_TEXT
+        VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT | .UI_WAIT_BTN_A)/
+        VM_OVERLAY_MOVE_TO      0, 18, .OVERLAY_OUT_SPEED
+        VM_OVERLAY_WAIT         .UI_MODAL, ^/(.UI_WAIT_WINDOW | .UI_WAIT_TEXT)/
+
+6$:
 
         ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
-            .R_INT16    -256
-            .R_OPERATOR .ADD
             .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
+            .R_INT16    -512
             .R_INT16    0
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_H_FIRST
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        ; -- Move Actor
+        VM_ACTOR_MOVE_TO_INIT   .ARG2, ^/(.ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_ACTOR_MOVE_TO_SET_DIR_X .ARG2
+        VM_ACTOR_MOVE_TO_X      .ARG2, ^/(.ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_POP                  3
 
-        ; Actor Set Active
+        ; Actor Set Direction To
         VM_SET_CONST            .LOCAL_ACTOR, 0
-
-        ; Actor Set Direction
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_RIGHT
 
-        ; Actor Set Active
+        ; Actor Set Direction To
         VM_SET_CONST            .LOCAL_ACTOR, 9
-
-        ; Actor Set Direction
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_UP
 
         ; Actor Set Active
@@ -105,35 +99,25 @@ _trigger_13_interact::
         ; Actor Emote
         VM_ACTOR_EMOTE          .LOCAL_ACTOR, ___bank_emote_anger, _emote_anger
 
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 9
-
         ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    9
             .R_INT16    0
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    -128
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
+            .R_INT16    -256
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, .ACTOR_ATTR_H_FIRST
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        ; -- Move Actor
+        VM_ACTOR_MOVE_TO_INIT   .ARG2, ^/(.ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_ACTOR_MOVE_TO_SET_DIR_Y .ARG2
+        VM_ACTOR_MOVE_TO_Y      .ARG2, ^/(.ACTOR_ATTR_H_FIRST | .ACTOR_ATTR_RELATIVE_SNAP_TILE)/
+        VM_POP                  3
 
         ; Actor Deactivate
         VM_SET_CONST            .LOCAL_ACTOR, 9
         VM_ACTOR_DEACTIVATE     .LOCAL_ACTOR
 
-        ; Variable Set To True
-        VM_SET_CONST            VAR_VARIABLE_6, 1
+        ; Variable Set To
+        VM_SET_CONST            VAR_QUESTFLORIST, 1
 
         ; Stop Script
         VM_STOP

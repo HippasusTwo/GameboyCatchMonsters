@@ -6,7 +6,7 @@
 #include "data/bg_underground.h"
 #include "data/scene_underground_collisions.h"
 #include "data/palette_1.h"
-#include "data/palette_17.h"
+#include "data/palette_19.h"
 #include "data/sprite_blackplayer.h"
 #include "data/scene_underground_actors.h"
 #include "data/scene_underground_triggers.h"
@@ -22,10 +22,16 @@ const struct scene_t scene_underground = {
     .background = TO_FAR_PTR_T(bg_underground),
     .collisions = TO_FAR_PTR_T(scene_underground_collisions),
     .parallax_rows = {
-        PARALLAX_STEP(0,0,0)
+        PARALLAX_STEP(0, 0, 0)
+    },
+    .scroll_bounds = {
+        .left = 0,
+        .top = 0,
+        .right = 96,
+        .bottom = 112
     },
     .palette = TO_FAR_PTR_T(palette_1),
-    .sprite_palette = TO_FAR_PTR_T(palette_17),
+    .sprite_palette = TO_FAR_PTR_T(palette_19),
     .reserve_tiles = 0,
     .player_sprite = TO_FAR_PTR_T(sprite_blackplayer),
     .n_actors = 6,

@@ -4,19 +4,20 @@
 #include "gbs_types.h"
 #include "data/sprite_frog_tileset.h"
 
+
 BANKREF(sprite_frog)
 
-#define SPRITE_6_STATE_DEFAULT 0
-#define SPRITE_6_STATE_EXPLODE 0
-#define SPRITE_6_STATE_OPEN 0
+#define SPRITE_44_STATE_DEFAULT 0
+#define SPRITE_44_STATE_EXPLODE 0
+#define SPRITE_44_STATE_OPEN 0
 
 const metasprite_t sprite_frog_metasprite_0[]  = {
-    { 0, 8, 0, 2 }, { 0, -8, 2, 2 },
+    { 8, 16, 0, 2 }, { 0, -8, 2, 2 },
     {metasprite_end}
 };
 
 const metasprite_t sprite_frog_metasprite_1[]  = {
-    { 0, 8, 4, 2 }, { 0, -8, 6, 2 },
+    { 8, 16, 4, 2 }, { 0, -8, 6, 2 },
     {metasprite_end}
 };
 
@@ -61,7 +62,7 @@ const struct animation_t sprite_frog_animations[] = {
 };
 
 const UWORD sprite_frog_animations_lookup[] = {
-    SPRITE_6_STATE_DEFAULT
+    SPRITE_44_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_frog = {
@@ -74,10 +75,10 @@ const struct spritesheet_t sprite_frog = {
     .animations = sprite_frog_animations,
     .animations_lookup = sprite_frog_animations_lookup,
     .bounds = {
-        .left = 0,
-        .bottom = 7,
-        .right = 15,
-        .top = -8
+        .left = PX_TO_SUBPX(0),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(16) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_frog_tileset),
     .cgb_tileset = { NULL, NULL }

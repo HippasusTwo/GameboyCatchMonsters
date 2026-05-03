@@ -4,7 +4,7 @@
 .include "data/game_globals.i"
 .include "macro.i"
 
-.globl _fade_frames_per_step, ___bank_scene_deeper_underground, _scene_deeper_underground
+.globl _fade_frames_per_step, _camera_settings, ___bank_scene_deeper_underground, _scene_deeper_underground
 
 .area _CODE_255
 
@@ -18,18 +18,25 @@ _trigger_17_interact::
 
         VM_RESERVE              4
 
-        ; If Variable True
-        VM_IF_CONST             .GT, VAR_VARIABLE_1, 0, 1$, 0
+        ; If
+        ; -- If Truthy
+        VM_IF_CONST             .NE, VAR_QUEST2, 0, 1$, 0
         VM_JUMP                 2$
 1$:
         ; Load Scene
         VM_SET_CONST_INT8       _fade_frames_per_step, 3
         VM_FADE_OUT             1
+        ; -- Calculate coordinate values
+        VM_RPN
+            .R_INT16    1280
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 1)/
+            .R_INT16    768
+            .R_REF_SET  ^/(.LOCAL_ACTOR + 2)/
+            .R_STOP
         VM_SET_CONST            .LOCAL_ACTOR, 0
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 1)/, 640
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 2)/, 384
         VM_ACTOR_SET_POS        .LOCAL_ACTOR
         VM_ACTOR_SET_DIR        .LOCAL_ACTOR, .DIR_RIGHT
+        VM_SET_CONST_INT8       _camera_settings, .CAMERA_LOCK
         VM_RAISE                EXCEPTION_CHANGE_SCENE, 3
             IMPORT_FAR_PTR_DATA _scene_deeper_underground
 

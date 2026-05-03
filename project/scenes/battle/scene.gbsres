@@ -996,10 +996,21 @@
       "id": "84d5d9a1-fb89-48f0-a290-18618a8ab1d3"
     },
     {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "f7480d50-347e-470c-9e3a-ea02c347168a",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "481"
+        }
+      },
+      "id": "af2b27b1-722a-4500-bc2f-9bedfb5d11b8"
+    },
+    {
       "command": "EVENT_TEXT",
       "args": {
         "text": [
-          "$504$ HP LV $479$, \nEnemyHP $503$ LV $477$\nType $480$, EnemyType $481$"
+          "$504$ HP LV $479$, Type $480$\nEnemy: %c$510$%c$509$%c$505$%c$499$%c$498$%c$497$%c$490$%c$489$\nEnemyHP $503$ LV $477$\nEnemyType: $481$ %c$511$%c$508$%c$507$%c$506$%c$501$%c$500$"
         ],
         "avatarId": ""
       },

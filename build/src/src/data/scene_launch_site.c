@@ -6,7 +6,7 @@
 #include "data/bg_launch_site.h"
 #include "data/scene_launch_site_collisions.h"
 #include "data/palette_9.h"
-#include "data/palette_17.h"
+#include "data/palette_19.h"
 #include "data/sprite_blackplayer.h"
 #include "data/scene_launch_site_actors.h"
 #include "data/scene_launch_site_triggers.h"
@@ -22,10 +22,16 @@ const struct scene_t scene_launch_site = {
     .background = TO_FAR_PTR_T(bg_launch_site),
     .collisions = TO_FAR_PTR_T(scene_launch_site_collisions),
     .parallax_rows = {
-        PARALLAX_STEP(0,0,0)
+        PARALLAX_STEP(0, 0, 0)
+    },
+    .scroll_bounds = {
+        .left = 0,
+        .top = 0,
+        .right = 0,
+        .bottom = 0
     },
     .palette = TO_FAR_PTR_T(palette_9),
-    .sprite_palette = TO_FAR_PTR_T(palette_17),
+    .sprite_palette = TO_FAR_PTR_T(palette_19),
     .reserve_tiles = 0,
     .player_sprite = TO_FAR_PTR_T(sprite_blackplayer),
     .n_actors = 6,

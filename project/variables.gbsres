@@ -48,8 +48,8 @@
     },
     {
       "id": "9",
-      "name": "Quest10",
-      "symbol": "var_quest10"
+      "name": "QuestCoin",
+      "symbol": "var_questcoin"
     },
     {
       "id": "10",
@@ -308,13 +308,13 @@
     },
     {
       "id": "489",
-      "name": "Letters2",
-      "symbol": "var_letters2"
+      "name": "Letter8",
+      "symbol": "var_letter8"
     },
     {
       "id": "490",
-      "name": "Letters1",
-      "symbol": "var_letters1"
+      "name": "Letter7",
+      "symbol": "var_letter7"
     },
     {
       "id": "491",

@@ -4,14 +4,15 @@
 #include "gbs_types.h"
 #include "data/sprite_keyboard_tileset.h"
 
+
 BANKREF(sprite_keyboard)
 
-#define SPRITE_44_STATE_DEFAULT 0
-#define SPRITE_44_STATE_EXPLODE 0
-#define SPRITE_44_STATE_OPEN 0
+#define SPRITE_38_STATE_DEFAULT 0
+#define SPRITE_38_STATE_EXPLODE 0
+#define SPRITE_38_STATE_OPEN 0
 
 const metasprite_t sprite_keyboard_metasprite_0[]  = {
-    { 0, 16, 0, 0 }, { 0, -8, 2, 0 }, { 0, -8, 4, 0 }, { 0, -8, 6, 0 },
+    { 8, 24, 0, 4 }, { 0, -8, 2, 4 }, { 0, -8, 4, 4 }, { 0, -8, 6, 4 },
     {metasprite_end}
 };
 
@@ -55,7 +56,7 @@ const struct animation_t sprite_keyboard_animations[] = {
 };
 
 const UWORD sprite_keyboard_animations_lookup[] = {
-    SPRITE_44_STATE_DEFAULT
+    SPRITE_38_STATE_DEFAULT
 };
 
 const struct spritesheet_t sprite_keyboard = {
@@ -68,10 +69,10 @@ const struct spritesheet_t sprite_keyboard = {
     .animations = sprite_keyboard_animations,
     .animations_lookup = sprite_keyboard_animations_lookup,
     .bounds = {
-        .left = -8,
-        .bottom = 7,
-        .right = 23,
-        .top = -8
+        .left = PX_TO_SUBPX(-8),
+        .bottom = PX_TO_SUBPX(8) - 1,
+        .right = PX_TO_SUBPX(24) - 1,
+        .top = PX_TO_SUBPX(-8)
     },
     .tileset = TO_FAR_PTR_T(sprite_keyboard_tileset),
     .cgb_tileset = { NULL, NULL }

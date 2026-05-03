@@ -6,7 +6,7 @@
 #include "data/bg_police_station.h"
 #include "data/scene_20_collisions.h"
 #include "data/palette_4.h"
-#include "data/palette_19.h"
+#include "data/palette_21.h"
 #include "data/sprite_blackplayer.h"
 #include "data/scene_20_actors.h"
 #include "data/scene_20_triggers.h"
@@ -22,10 +22,16 @@ const struct scene_t scene_20 = {
     .background = TO_FAR_PTR_T(bg_police_station),
     .collisions = TO_FAR_PTR_T(scene_20_collisions),
     .parallax_rows = {
-        PARALLAX_STEP(0,0,0)
+        PARALLAX_STEP(0, 0, 0)
+    },
+    .scroll_bounds = {
+        .left = 0,
+        .top = 0,
+        .right = 96,
+        .bottom = 112
     },
     .palette = TO_FAR_PTR_T(palette_4),
-    .sprite_palette = TO_FAR_PTR_T(palette_19),
+    .sprite_palette = TO_FAR_PTR_T(palette_21),
     .reserve_tiles = 0,
     .player_sprite = TO_FAR_PTR_T(sprite_blackplayer),
     .n_actors = 2,

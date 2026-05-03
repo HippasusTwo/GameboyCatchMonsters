@@ -37,8 +37,9 @@ _script_enemy_ship_destroy::
 
         ; Actor Set Animation State
         VM_ACTOR_SET_ANIM_SET   .LOCAL_ACTOR, STATE_EXPLODE
+        VM_ACTOR_SET_FLAGS      .LOCAL_ACTOR, 0, .ACTOR_FLAG_ANIM_NOLOOP
 
-        ; Wait N Frames
+        ; Wait 30 frames
         VM_SET_CONST            .LOCAL_TMP1_WAIT_ARGS, 30
         VM_INVOKE               b_wait_frames, _wait_frames, 0, .LOCAL_TMP1_WAIT_ARGS
 

@@ -26,60 +26,42 @@ _scene_30_p_hit1::
         ; Actor Emote
         VM_ACTOR_EMOTE          .LOCAL_ACTOR, ___bank_emote_shock, _emote_shock
 
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 0
-
         ; If Actor Facing Direction
-        VM_ACTOR_GET_DIR        .LOCAL_ACTOR, .LOCAL_TMP2_ACTOR_DIR
-        VM_IF_CONST             .NE, .LOCAL_TMP2_ACTOR_DIR, .DIR_DOWN, 3$, 0
-
-        ; Actor Set Active
         VM_SET_CONST            .LOCAL_ACTOR, 0
+        VM_ACTOR_GET_DIR        .LOCAL_ACTOR, .LOCAL_TMP2_ACTOR_DIR
+        ; -- Calculate value
+        VM_RPN
+            .R_INT16    .DIR_DOWN
+            .R_STOP
+        VM_IF                   .NE, ^/(.LOCAL_TMP2_ACTOR_DIR - 1)/, .ARG0, 3$, 1
 
         ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
             .R_INT16    0
-            .R_OPERATOR .ADD
             .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    -128
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
+            .R_INT16    -256
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, 0
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        ; -- Move Actor
+        VM_ACTOR_MOVE_TO_INIT   .ARG2, .ACTOR_ATTR_RELATIVE_SNAP_TILE
+        VM_ACTOR_MOVE_TO_SET_DIR_Y .ARG2
+        VM_ACTOR_MOVE_TO_Y      .ARG2, .ACTOR_ATTR_RELATIVE_SNAP_TILE
+        VM_POP                  3
 
         VM_JUMP                 4$
 3$:
-        ; Actor Set Active
-        VM_SET_CONST            .LOCAL_ACTOR, 0
-
         ; Actor Move Relative
-        VM_ACTOR_GET_POS        .LOCAL_ACTOR
+        ; -- Calculate coordinate values
         VM_RPN
-            .R_REF      ^/(.LOCAL_ACTOR + 1)/
             .R_INT16    0
-            .R_OPERATOR .ADD
             .R_INT16    0
-            .R_OPERATOR .MAX
-            .R_REF      ^/(.LOCAL_ACTOR + 2)/
-            .R_INT16    128
-            .R_OPERATOR .ADD
-            .R_INT16    0
-            .R_OPERATOR .MAX
+            .R_INT16    256
             .R_STOP
-        VM_SET                  ^/(.LOCAL_ACTOR + 1 - 2)/, .ARG1
-        VM_SET                  ^/(.LOCAL_ACTOR + 2 - 2)/, .ARG0
-        VM_POP                  2
-        VM_SET_CONST            ^/(.LOCAL_ACTOR + 3)/, 0
-        VM_ACTOR_MOVE_TO        .LOCAL_ACTOR
+        ; -- Move Actor
+        VM_ACTOR_MOVE_TO_INIT   .ARG2, .ACTOR_ATTR_RELATIVE_SNAP_TILE
+        VM_ACTOR_MOVE_TO_SET_DIR_Y .ARG2
+        VM_ACTOR_MOVE_TO_Y      .ARG2, .ACTOR_ATTR_RELATIVE_SNAP_TILE
+        VM_POP                  3
 
 4$:
 
